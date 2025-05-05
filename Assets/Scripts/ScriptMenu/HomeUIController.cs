@@ -11,6 +11,9 @@ public class HomeUIController : MonoBehaviour
     // goi mở Player details
     [SerializeField] private GameObject playerDetails;
 
+    // dong mo gift special
+    [SerializeField] private GameObject gift;
+
     // gọi nhạc ở đâyđây
     private void Start()
     {
@@ -18,6 +21,7 @@ public class HomeUIController : MonoBehaviour
         settingPanel.SetActive(false);
         renamePanel.SetActive(false);
         playerDetails.SetActive(false);
+        gift.SetActive(false);
     }
                                     
     public void OpenShop()
@@ -63,5 +67,13 @@ public class HomeUIController : MonoBehaviour
 
     public void ClosePlayerDetails(){
         playerDetails.SetActive(false);
+    }
+
+    // dong mo Gift Special
+    public void OpenGiftSpecial(){
+        gift.SetActive(true);
+    }
+    public void CloseGiftSpecial(){
+        gift.SetActive(false);
     }
 }
