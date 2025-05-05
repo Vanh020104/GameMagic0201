@@ -8,12 +8,16 @@ public class HomeUIController : MonoBehaviour
     // goi mở thanh rename
     [SerializeField] private GameObject renamePanel;
 
+    // goi mở Player details
+    [SerializeField] private GameObject playerDetails;
+
     // gọi nhạc ở đâyđây
     private void Start()
     {
         AudioManager.Instance.PlayMusic(AudioManager.Instance.bgmHome);
         settingPanel.SetActive(false);
         renamePanel.SetActive(false);
+        playerDetails.SetActive(false);
     }
                                     
     public void OpenShop()
@@ -49,5 +53,15 @@ public class HomeUIController : MonoBehaviour
     // close rename
     public void CloseRename(){
         renamePanel.SetActive(false);
+    }
+
+    // goi dong mo playerDetails
+
+    public void OpenPlayerDetails(){
+        playerDetails.SetActive(true);
+    }
+
+    public void ClosePlayerDetails(){
+        playerDetails.SetActive(false);
     }
 }
