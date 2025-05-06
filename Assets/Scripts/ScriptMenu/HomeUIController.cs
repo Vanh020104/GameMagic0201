@@ -14,6 +14,9 @@ public class HomeUIController : MonoBehaviour
     // dong mo gift special
     [SerializeField] private GameObject gift;
 
+    // goi dong mo daily tasks
+    [SerializeField] private GameObject dailyTasks;
+
     // gọi nhạc ở đâyđây
     private void Start()
     {
@@ -22,6 +25,7 @@ public class HomeUIController : MonoBehaviour
         renamePanel.SetActive(false);
         playerDetails.SetActive(false);
         gift.SetActive(false);
+        dailyTasks.SetActive(false);
     }
                                     
     public void OpenShop()
@@ -75,5 +79,14 @@ public class HomeUIController : MonoBehaviour
     }
     public void CloseGiftSpecial(){
         gift.SetActive(false);
+    }
+
+    // dong mo daily tasks
+    public void OpenDailyTasks(){
+        dailyTasks.SetActive(true);
+    }
+
+    public void CloseDailyTasks(){
+        dailyTasks.SetActive(false);
     }
 }
