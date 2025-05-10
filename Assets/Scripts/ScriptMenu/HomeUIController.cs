@@ -16,6 +16,9 @@ public class HomeUIController : MonoBehaviour
 
     // goi dong mo daily tasks
     [SerializeField] private GameObject dailyTasks;
+    [SerializeField] private GameObject panelBuyGold;
+    [SerializeField] private GameObject welcomeRewardPanel;
+
 
     // gọi nhạc ở đâyđây
     private void Start()
@@ -26,8 +29,22 @@ public class HomeUIController : MonoBehaviour
         playerDetails.SetActive(false);
         gift.SetActive(false);
         dailyTasks.SetActive(false);
+        panelBuyGold.SetActive(false);
     }
-                                    
+    private void Awake()
+    {
+        if (!PlayerPrefs.HasKey("IsFirstLogin"))
+        {
+            PlayerPrefs.SetInt("Gold", 500);
+            PlayerPrefs.SetInt("Gem", 20);
+            PlayerPrefs.SetInt("IsFirstLogin", 1);
+            PlayerPrefs.Save();
+
+            if (welcomeRewardPanel != null)
+                welcomeRewardPanel.SetActive(true);
+        }
+    }
+                          
     public void OpenShop()
     {
         shopPanel.SetActive(true);
@@ -88,5 +105,16 @@ public class HomeUIController : MonoBehaviour
 
     public void CloseDailyTasks(){
         dailyTasks.SetActive(false);
+    }
+     // dong mo panelBuyGold
+    public void OpenPanelBuyGold(){
+        panelBuyGold.SetActive(true);
+    }
+
+    public void ClosePanelBuyGold(){
+        panelBuyGold.SetActive(false);
+    }
+    public void CloseWellcomReward(){
+        welcomeRewardPanel.SetActive(false);
     }
 }

@@ -44,9 +44,14 @@ public class HeroDetailUIHandler : MonoBehaviour
 
         bigHeroImage.sprite = data.heroIcon;
         nameText.text = data.heroName;
-        healthText.text = data.baseHealth.ToString();
-        damageText.text = data.baseDamage.ToString();
-        speedText.text = data.baseSpeed.ToString();
+
+        int savedHealth = PlayerPrefs.GetInt($"HeroHealth_{data.heroId}", data.baseHealth);
+        int savedDamage = PlayerPrefs.GetInt($"HeroDamage_{data.heroId}", data.baseDamage);
+        int savedSpeed  = PlayerPrefs.GetInt($"HeroSpeed_{data.heroId}", data.baseSpeed);
+
+        healthText.text = savedHealth.ToString();
+        damageText.text = savedDamage.ToString();
+        speedText.text = savedSpeed.ToString();
 
         levelText.text = $"{currentPlayerHero.currentLevel}/{data.maxLevel}";
         levelSlider.maxValue = data.maxLevel;
@@ -60,17 +65,29 @@ public class HeroDetailUIHandler : MonoBehaviour
         }
 
         upgradeCostText.text = GetUpgradeCost(currentPlayerHero.currentLevel).ToString();
+
+        // Ẩn nút nâng cấp nếu đạt max level
+        if (currentPlayerHero.currentLevel >= currentData.maxLevel)
+        {
+            upgradeButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            upgradeButton.gameObject.SetActive(true);
+        }
+
     }
 
     private int GetUpgradeCost(int level)
     {
-        return 700 + (int)Mathf.Pow(level, 2) * 100;
+        return 500 + (int)Mathf.Pow(level, 2) * 100;
     }
 
     private void OnUpgradeClicked()
     {
         if (currentPlayerHero.currentLevel >= currentData.maxLevel)
         {
+
             Debug.Log("Hero đã đạt cấp tối đa");
             return;
         }
@@ -79,11 +96,25 @@ public class HeroDetailUIHandler : MonoBehaviour
         if (GoldGemManager.Instance != null && GoldGemManager.Instance.SpendGold(cost))
         {
             currentPlayerHero.currentLevel++;
+
+            int currentHealth = PlayerPrefs.GetInt($"HeroHealth_{currentData.heroId}", currentData.baseHealth);
+            int currentDamage = PlayerPrefs.GetInt($"HeroDamage_{currentData.heroId}", currentData.baseDamage);
+            int currentSpeed  = PlayerPrefs.GetInt($"HeroSpeed_{currentData.heroId}",  currentData.baseSpeed);
+
+            int healthBonus = Random.Range(3, 6); // 3–5
+            int damageBonus = Random.Range(0, 3); // 0–2
+            int speedBonus  = Random.Range(0, 4); // 0–3
+
+            currentHealth += healthBonus;
+            currentDamage += damageBonus;
+            currentSpeed  += speedBonus;
+
             PlayerPrefs.SetInt($"HeroLevel_{currentData.heroId}", currentPlayerHero.currentLevel);
+            PlayerPrefs.SetInt($"HeroHealth_{currentData.heroId}", currentHealth);
+            PlayerPrefs.SetInt($"HeroDamage_{currentData.heroId}", currentDamage);
+            PlayerPrefs.SetInt($"HeroSpeed_{currentData.heroId}", currentSpeed);
             PlayerPrefs.Save();
 
-
-            // Cập nhật UI các HeroItem dưới danh sách
             HeroUIItem[] allItems = FindObjectsOfType<HeroUIItem>();
             foreach (var item in allItems)
             {
@@ -99,6 +130,10 @@ public class HeroDetailUIHandler : MonoBehaviour
         else
         {
             Debug.Log("Không đủ vàng để nâng cấp");
+            var home = FindObjectOfType<HomeUIController>();
+            if(home != null){
+                home.OpenPanelBuyGold();
+            }
         }
     }
 }
