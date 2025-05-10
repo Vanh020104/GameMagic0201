@@ -3,11 +3,18 @@ using UnityEngine;
 
 public class GoldGemManager : MonoBehaviour
 {
+    public static GoldGemManager Instance;
+
     public TextMeshProUGUI goldText;
     public TextMeshProUGUI gemText;
 
     private int goldAmount;
     private int gemAmount;
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+    }
 
     private void Start()
     {
@@ -33,7 +40,6 @@ public class GoldGemManager : MonoBehaviour
         gemText.text = gemAmount.ToString("N0");
     }
 
-
     public void AddGold(int amount)
     {
         goldAmount += amount;
@@ -47,4 +53,18 @@ public class GoldGemManager : MonoBehaviour
         UpdateUI();
         SaveCurrencies();
     }
+
+    public bool SpendGold(int amount)
+    {
+        if (goldAmount >= amount)
+        {
+            goldAmount -= amount;
+            UpdateUI();
+            SaveCurrencies();
+            return true;
+        }
+        return false;
+    }
+
+    public int GetGold() => goldAmount;
 }

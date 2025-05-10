@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillData : MonoBehaviour
+[System.Serializable]
+public class SkillData
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string skillName;
+    public Sprite skillIcon;
+    public string description;
+    public float cooldown;
 }
