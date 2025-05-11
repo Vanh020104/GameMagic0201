@@ -28,13 +28,27 @@ public class HeroDetailUIHandler : MonoBehaviour
         upgradeButton.onClick.AddListener(OnUpgradeClicked);
 
         string savedHeroId = PlayerPrefs.GetString("SelectedHeroId", "");
-        if (!string.IsNullOrEmpty(savedHeroId))
+        
+        // ✅ Nếu chưa có Hero được chọn → chọn hero đầu tiên
+        if (string.IsNullOrEmpty(savedHeroId))
         {
-            HeroData selected = HeroManager.Instance.GetHeroById(savedHeroId);
-            if (selected != null)
-                ShowHero(selected);
+            if (HeroManager.Instance.allHeroes.Count > 0)
+            {
+                HeroData firstHero = HeroManager.Instance.allHeroes[0];
+                savedHeroId = firstHero.heroId;
+                PlayerPrefs.SetString("SelectedHeroId", savedHeroId);
+                PlayerPrefs.Save();
+            }
+        }
+
+        // ✅ Hiển thị Hero đã chọn (dù là mới chọn hay đã lưu trước đó)
+        HeroData selected = HeroManager.Instance.GetHeroById(savedHeroId);
+        if (selected != null)
+        {
+            ShowHero(selected);
         }
     }
+
 
     public void ShowHero(HeroData data)
     {

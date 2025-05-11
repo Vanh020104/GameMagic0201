@@ -31,6 +31,11 @@ public class HeroUIItem : MonoBehaviour
         PlayerPrefs.Save();
 
         HeroDetailUIHandler.Instance?.ShowHero(heroData);
+
+        // 👉 Gọi cập nhật ảnh player ngoài màn Home
+        var updater = FindObjectOfType<PlayerImageUpdater>();
+        if (updater != null)
+        updater.UpdateImage();
     }
 
     public string GetHeroId()
