@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 2142113969036593098}
   - component: {fileID: 6815937984062802516}
   m_Layer: 5
-  m_Name: HomeScene_Panel_Ranking
+  m_Name: HomeScene_Panel_Ranking 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

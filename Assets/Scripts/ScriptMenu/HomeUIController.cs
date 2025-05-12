@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class HomeUIController : MonoBehaviour
@@ -18,12 +19,16 @@ public class HomeUIController : MonoBehaviour
     [SerializeField] private GameObject dailyTasks;
     [SerializeField] private GameObject panelBuyGold;
     [SerializeField] private GameObject welcomeRewardPanel;
+    [SerializeField] private TMP_Text playerNameText;
 
 
     // gọi nhạc ở đâyđây
     private void Start()
     {
         AudioManager.Instance.PlayMusic(AudioManager.Instance.bgmHome);
+        string name = PlayerPrefs.GetString("PlayerName", "PlayerXXXX");
+        playerNameText.text = name;
+
         settingPanel.SetActive(false);
         renamePanel.SetActive(false);
         playerDetails.SetActive(false);
@@ -38,6 +43,9 @@ public class HomeUIController : MonoBehaviour
             PlayerPrefs.SetInt("Gold", 500);
             PlayerPrefs.SetInt("Gem", 20);
             PlayerPrefs.SetInt("IsFirstLogin", 1);
+            int randomNum = Random.Range(1000, 9999);
+            string randomName = "Player" + randomNum;
+            PlayerPrefs.SetString("PlayerName", randomName);
             PlayerPrefs.Save();
 
             if (welcomeRewardPanel != null)

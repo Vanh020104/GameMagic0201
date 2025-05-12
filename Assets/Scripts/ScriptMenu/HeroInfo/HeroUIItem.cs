@@ -36,6 +36,10 @@ public class HeroUIItem : MonoBehaviour
         var updater = FindObjectOfType<PlayerImageUpdater>();
         if (updater != null)
         updater.UpdateImage();
+
+        // update skill
+        var skillDisplay = FindObjectOfType<PlayerImageUpdater>();
+        if (skillDisplay != null) skillDisplay.UpdateSkillIcons();
     }
 
     public string GetHeroId()

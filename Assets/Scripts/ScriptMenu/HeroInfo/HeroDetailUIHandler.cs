@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class HeroDetailUIHandler : MonoBehaviour
 {
@@ -19,6 +20,12 @@ public class HeroDetailUIHandler : MonoBehaviour
     private HeroPlayerData currentPlayerHero;
 
     public TMP_Text levelTopLeftText;
+
+    [Header("FX")]
+    public GameObject smokeFxInstance;
+
+    private Coroutine smokeRoutine;
+
 
 
     private void Awake() => Instance = this;
@@ -52,6 +59,14 @@ public class HeroDetailUIHandler : MonoBehaviour
 
     public void ShowHero(HeroData data)
     {
+        if (smokeFxInstance != null)
+        {
+            if (smokeRoutine != null)
+                StopCoroutine(smokeRoutine);
+
+            smokeRoutine = StartCoroutine(PlaySmoke());
+        }
+            
         currentData = data;
         int savedLevel = PlayerPrefs.GetInt($"HeroLevel_{data.heroId}", data.defaultLevel);
         currentPlayerHero = new HeroPlayerData(data.heroId, savedLevel);
@@ -91,6 +106,23 @@ public class HeroDetailUIHandler : MonoBehaviour
         }
 
     }
+private IEnumerator PlaySmoke()
+{
+    smokeFxInstance.SetActive(true); // bật lên
+
+    // CHẮC CHẮN phát lại ParticleSystem
+    var ps = smokeFxInstance.GetComponent<ParticleSystem>();
+    if (ps != null)
+    {
+        ps.Clear(); // Xoá hạt cũ
+        ps.Play();  // Phát lại
+    }
+
+    yield return new WaitForSeconds(2f);
+    smokeFxInstance.SetActive(false); // ẩn sau khi xong
+}
+
+
 
     private int GetUpgradeCost(int level)
     {
