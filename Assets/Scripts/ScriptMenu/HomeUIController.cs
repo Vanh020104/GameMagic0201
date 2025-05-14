@@ -1,41 +1,31 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
+/// <summary>
+/// Quản lý UI màn hình chính: tên người chơi, level, exp, panel shop, setting, rename, v.v.
+/// </summary>
 public class HomeUIController : MonoBehaviour
 {
+    [Header("Panels")]
     [SerializeField] private GameObject shopPanel;
-    [SerializeField] private ShopTabController shopTabController; 
+    [SerializeField] private ShopTabController shopTabController;
     [SerializeField] private GameObject settingPanel;
-    // goi mở thanh rename
     [SerializeField] private GameObject renamePanel;
-
-    // goi mở Player details
     [SerializeField] private GameObject playerDetails;
-
-    // dong mo gift special
     [SerializeField] private GameObject gift;
-
-    // goi dong mo daily tasks
     [SerializeField] private GameObject dailyTasks;
     [SerializeField] private GameObject panelBuyGold;
     [SerializeField] private GameObject welcomeRewardPanel;
+
+    [Header("UI Texts & Slider")]
     [SerializeField] private TMP_Text playerNameText;
+    [SerializeField] private TMP_Text levelNumberText;
+    [SerializeField] private Slider levelSlider;
 
-
-    // gọi nhạc ở đâyđây
-    private void Start()
-    {
-        AudioManager.Instance.PlayMusic(AudioManager.Instance.bgmHome);
-        string name = PlayerPrefs.GetString("PlayerName", "PlayerXXXX");
-        playerNameText.text = name;
-
-        settingPanel.SetActive(false);
-        renamePanel.SetActive(false);
-        playerDetails.SetActive(false);
-        gift.SetActive(false);
-        dailyTasks.SetActive(false);
-        panelBuyGold.SetActive(false);
-    }
+    /// <summary>
+    /// Khởi tạo dữ liệu mặc định cho người chơi mới (chỉ chạy 1 lần).
+    /// </summary>
     private void Awake()
     {
         if (!PlayerPrefs.HasKey("IsFirstLogin"))
@@ -43,86 +33,115 @@ public class HomeUIController : MonoBehaviour
             PlayerPrefs.SetInt("Gold", 500);
             PlayerPrefs.SetInt("Gem", 20);
             PlayerPrefs.SetInt("IsFirstLogin", 1);
+
             int randomNum = Random.Range(1000, 9999);
             string randomName = "Player" + randomNum;
             PlayerPrefs.SetString("PlayerName", randomName);
+
+            int startingLevel = 1;
+            int giftExp = Mathf.FloorToInt(GetRequiredExp(startingLevel) * 0.3f); // 🎁 Tặng 30% exp ban đầu
+            PlayerPrefs.SetInt("PlayerLevel", startingLevel);
+            PlayerPrefs.SetInt("PlayerExp", giftExp);
+
             PlayerPrefs.Save();
 
             if (welcomeRewardPanel != null)
                 welcomeRewardPanel.SetActive(true);
         }
     }
-                          
-    public void OpenShop()
+
+    /// <summary>
+    /// Khởi động UI khi vào scene.
+    /// </summary>
+    private void Start()
     {
-        shopPanel.SetActive(true);
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.bgmHome);
+
+        string name = PlayerPrefs.GetString("PlayerName", "PlayerXXXX");
+        playerNameText.text = name;
+
+        UpdateLevelUI();
+
+        // Tắt các panel mặc định
+        settingPanel.SetActive(false);
+        renamePanel.SetActive(false);
+        playerDetails.SetActive(false);
+        gift.SetActive(false);
+        dailyTasks.SetActive(false);
+        panelBuyGold.SetActive(false);
     }
 
+    /// <summary>
+    /// Cập nhật UI level + thanh exp người chơi.
+    /// </summary>
+    private void UpdateLevelUI()
+    {
+        int level = PlayerPrefs.GetInt("PlayerLevel", 1);
+        int exp = PlayerPrefs.GetInt("PlayerExp", 0);
+        int requiredExp = GetRequiredExp(level);
+
+        levelNumberText.text = level.ToString();
+        levelSlider.maxValue = requiredExp;
+        levelSlider.value = exp;
+    }
+
+    /// <summary>
+    /// Tính số EXP cần thiết để lên level tiếp theo.
+    /// </summary>
+    private int GetRequiredExp(int level)
+    {
+        return Mathf.FloorToInt(100 * Mathf.Pow(level, 1.5f));
+    }
+
+    /// <summary> Mở shop </summary>
+    public void OpenShop() => shopPanel.SetActive(true);
+
+    /// <summary> Mở shop và chọn tab cụ thể </summary>
     public void OpenShopAndSelectTab(int tabIndex)
     {
         shopPanel.SetActive(true);
         shopTabController.SelectTab(tabIndex);
     }
 
-    public void CloseShop()
-    {
-        shopPanel.SetActive(false);
-    }
-    public void OpenSetting()
-    {
-        settingPanel.SetActive(true); 
-    }
+    /// <summary> Đóng shop </summary>
+    public void CloseShop() => shopPanel.SetActive(false);
 
-    public void CloseSetting()
-    {
-        settingPanel.SetActive(false); 
-    }
+    /// <summary> Mở setting </summary>
+    public void OpenSetting() => settingPanel.SetActive(true);
 
-    // open rename
-    public void OpenRename(){
-        renamePanel.SetActive(true);
-    }
+    /// <summary> Đóng setting </summary>
+    public void CloseSetting() => settingPanel.SetActive(false);
 
-    // close rename
-    public void CloseRename(){
-        renamePanel.SetActive(false);
-    }
+    /// <summary> Mở rename panel </summary>
+    public void OpenRename() => renamePanel.SetActive(true);
 
-    // goi dong mo playerDetails
+    /// <summary> Đóng rename panel </summary>
+    public void CloseRename() => renamePanel.SetActive(false);
 
-    public void OpenPlayerDetails(){
-        playerDetails.SetActive(true);
-    }
+    /// <summary> Mở chi tiết người chơi </summary>
+    public void OpenPlayerDetails() => playerDetails.SetActive(true);
 
-    public void ClosePlayerDetails(){
-        playerDetails.SetActive(false);
-    }
+    /// <summary> Đóng chi tiết người chơi </summary>
+    public void ClosePlayerDetails() => playerDetails.SetActive(false);
 
-    // dong mo Gift Special
-    public void OpenGiftSpecial(){
-        gift.SetActive(true);
-    }
-    public void CloseGiftSpecial(){
-        gift.SetActive(false);
-    }
+    /// <summary> Mở gift panel </summary>
+    public void OpenGiftSpecial() => gift.SetActive(true);
 
-    // dong mo daily tasks
-    public void OpenDailyTasks(){
-        dailyTasks.SetActive(true);
-    }
+    /// <summary> Đóng gift panel </summary>
+    public void CloseGiftSpecial() => gift.SetActive(false);
 
-    public void CloseDailyTasks(){
-        dailyTasks.SetActive(false);
-    }
-     // dong mo panelBuyGold
-    public void OpenPanelBuyGold(){
-        panelBuyGold.SetActive(true);
-    }
+    /// <summary> Mở daily tasks </summary>
+    public void OpenDailyTasks() => dailyTasks.SetActive(true);
 
-    public void ClosePanelBuyGold(){
-        panelBuyGold.SetActive(false);
-    }
-    public void CloseWellcomReward(){
-        welcomeRewardPanel.SetActive(false);
-    }
+    /// <summary> Đóng daily tasks </summary>
+    public void CloseDailyTasks() => dailyTasks.SetActive(false);
+
+    /// <summary> Mở panel mua vàng </summary>
+    public void OpenPanelBuyGold() => panelBuyGold.SetActive(true);
+
+    /// <summary> Đóng panel mua vàng </summary>
+    public void ClosePanelBuyGold() => panelBuyGold.SetActive(false);
+
+    /// <summary> Đóng popup quà chào mừng </summary>
+    public void CloseWellcomReward() => welcomeRewardPanel.SetActive(false);
 }
