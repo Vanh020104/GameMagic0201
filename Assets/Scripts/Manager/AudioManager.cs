@@ -11,13 +11,13 @@ public class AudioManager : MonoBehaviour
     public AudioClip bgmCombat;
     public AudioClip bgmLoading;
 
-    void Start()
-    {
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.Save();
-        Debug.Log("🔥 Reset PlayerPrefs: Đã xoá sạch dữ liệu, vào lại sẽ là tài khoản mới.");
+    // void Start()
+    // {
+    //     PlayerPrefs.DeleteAll();
+    //     PlayerPrefs.Save();
+    //     Debug.Log("🔥 Reset PlayerPrefs: Đã xoá sạch dữ liệu, vào lại sẽ là tài khoản mới.");
 
-    }
+    // }
     private void Awake()
     {
         if (Instance != null)

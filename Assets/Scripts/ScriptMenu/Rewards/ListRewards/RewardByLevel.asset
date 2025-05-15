@@ -26,7 +26,7 @@ MonoBehaviour:
       rewardName: Chest01
       background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
-  - level: 1
+  - level: 2
     freeReward:
       icon: {fileID: 21300000, guid: 860c362617f024dfba1036e58f007ea0, type: 3}
       quantity: 1
