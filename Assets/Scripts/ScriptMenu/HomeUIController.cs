@@ -22,6 +22,10 @@ public class HomeUIController : MonoBehaviour
     [SerializeField] private TMP_Text playerNameText;
     [SerializeField] private TMP_Text levelNumberText;
     [SerializeField] private Slider levelSlider;
+    [SerializeField] private TMP_InputField usernameInputField;
+    [SerializeField] private NotificationPopupUI notificationPopup;
+    [SerializeField] private GameObject luckyPanel;
+
 
     /// <summary>
     /// Khởi tạo dữ liệu mặc định cho người chơi mới (chỉ chạy 1 lần).
@@ -69,6 +73,7 @@ public class HomeUIController : MonoBehaviour
         gift.SetActive(false);
         dailyTasks.SetActive(false);
         panelBuyGold.SetActive(false);
+        luckyPanel.SetActive(false);
     }
 
     /// <summary>
@@ -92,6 +97,36 @@ public class HomeUIController : MonoBehaviour
     {
         return Mathf.FloorToInt(100 * Mathf.Pow(level, 1.5f));
     }
+
+    ///
+    /// code rename
+    /// 
+    /// 
+
+    public void ConfirmRename()
+    {
+        string newName = usernameInputField.text.Trim();
+
+        if (string.IsNullOrEmpty(newName))
+        {
+            notificationPopup.Show("Name cannot be blank!");
+            return;
+        }
+
+        if (newName.Length < 1 || newName.Length > 10)
+        {
+            notificationPopup.Show("Name must be between 1 and 10 characters!");
+            return;
+        }
+
+        PlayerPrefs.SetString("PlayerName", newName);
+        PlayerPrefs.Save();
+        // notificationPopup.Show("Rename successful!");
+
+        playerNameText.text = newName;
+        CloseRename();
+    }
+
 
     /// <summary> Mở shop </summary>
     public void OpenShop() => shopPanel.SetActive(true);
@@ -144,4 +179,10 @@ public class HomeUIController : MonoBehaviour
 
     /// <summary> Đóng popup quà chào mừng </summary>
     public void CloseWellcomReward() => welcomeRewardPanel.SetActive(false);
+
+    /// mở lucky panel
+    public void OpenLuckPanel() => luckyPanel.SetActive(true);
+
+    /// dong lucky panel
+    public void CloseLuckPanel() => luckyPanel.SetActive(false);
 }

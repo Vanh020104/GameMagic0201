@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class EnergyBarManager : MonoBehaviour
 
     private int currentEnergy;
     private readonly int[] keyMilestones = { 40, 120, 200 };
+    public TMP_Text energyText;
+
 
     private void Start()
     {
@@ -29,6 +32,9 @@ public class EnergyBarManager : MonoBehaviour
     {
         energySlider.maxValue = maxEnergy;
         energySlider.value = currentEnergy;
+         // 🔹 Hiển thị current/max
+        if (energyText != null)
+            energyText.text = $"{currentEnergy}/{maxEnergy}";
 
         for (int i = 0; i < keyMilestones.Length; i++)
         {
