@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da36f29d009b09488fad4cd8b1ad688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGoldReward: 1
+  isGoldReward: 0
   amountText: {fileID: 4445223505971881269}
 --- !u!1 &2270120780735467705
 GameObject:

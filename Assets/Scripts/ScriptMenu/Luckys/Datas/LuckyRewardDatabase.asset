@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc7c85e2e32c2343b4239295bea9a4b, type: 3}
+  m_Name: LuckyRewardDatabase
+  m_EditorClassIdentifier: 
+  allRewards:
+  - id: gold001
+    rewardName: Gold1
+    rewardIcon: {fileID: 21300000, guid: b07aa74ee0e384a70899d165d4ce92dd, type: 3}
+    amount: 10
+    tier: 0
+  - id: gold002
+    rewardName: Gold2
+    rewardIcon: {fileID: 21300000, guid: f2fdb9b17dc0a4f0682afc764e2aab0d, type: 3}
+    amount: 30
+    tier: 1
+  - id: gold003
+    rewardName: Gold3
+    rewardIcon: {fileID: 21300000, guid: 19153f657a43d4a1789cb568e9791be7, type: 3}
+    amount: 100
+    tier: 2
+  - id: gem001
+    rewardName: Gem01
+    rewardIcon: {fileID: 21300000, guid: 6feb259e591f94c548943bde8ec07132, type: 3}
+    amount: 5
+    tier: 0
+  - id: gem002
+    rewardName: Gem02
+    rewardIcon: {fileID: 21300000, guid: 6d91f8e68e42f40ce9ae75f1443d3370, type: 3}
+    amount: 10
+    tier: 0
+  - id: gem003
+    rewardName: Gem03
+    rewardIcon: {fileID: 21300000, guid: 896ebf9e064a043cc8641b947f932f24, type: 3}
+    amount: 50
+    tier: 2
+  - id: item001
+    rewardName: Item001
+    rewardIcon: {fileID: 21300000, guid: d71691a584ef44f7eb2f7d39358f7e34, type: 3}
+    amount: 1
+    tier: 0
+  - id: item002
+    rewardName: Item002
+    rewardIcon: {fileID: 21300000, guid: 4c201fa6be75f46239ead888baf26f20, type: 3}
+    amount: 1
+    tier: 2
+  - id: item003
+    rewardName: Item003
+    rewardIcon: {fileID: 21300000, guid: 6fff73edd8f7a434fa8aa73b28d24d45, type: 3}
+    amount: 1
+    tier: 0
+  - id: item004
+    rewardName: Item004
+    rewardIcon: {fileID: 21300000, guid: bb7981dd8df324b23b62fa2dc4a927ab, type: 3}
+    amount: 1
+    tier: 1
+  - id: item005
+    rewardName: Item005
+    rewardIcon: {fileID: 21300000, guid: 0ad3335e9d4cc40429913a696cc4f9f9, type: 3}
+    amount: 1
+    tier: 0
+  - id: item006
+    rewardName: Item006
+    rewardIcon: {fileID: 21300000, guid: 7a92fc98e0e1b446fa1816110bcf4990, type: 3}
+    amount: 1
+    tier: 0
+  - id: item007
+    rewardName: Item007
+    rewardIcon: {fileID: 21300000, guid: 85d853b32fa1e4b75a1ec4e6ea947c8e, type: 3}
+    amount: 1
+    tier: 1
+  - id: item008
+    rewardName: Item008
+    rewardIcon: {fileID: 21300000, guid: f60ab444bf8dd435e95255b13a6b12c1, type: 3}
+    amount: 1
+    tier: 2
+  - id: item009
+    rewardName: Item009
+    rewardIcon: {fileID: 21300000, guid: 66adb4c942df7411f9d6a7b3921828c6, type: 3}
+    amount: 1
+    tier: 0
+  - id: item0010
+    rewardName: Item0010
+    rewardIcon: {fileID: 21300000, guid: 445fc86f8a0d64d4fad742694686ea10, type: 3}
+    amount: 1
+    tier: 0
+  - id: item0011
+    rewardName: Item0011
+    rewardIcon: {fileID: 21300000, guid: 50f230650e0f64202b103a1403bc360c, type: 3}
+    amount: 1
+    tier: 0
+  - id: item0012
+    rewardName: Item0012
+    rewardIcon: {fileID: 21300000, guid: 6ce93abd5bdf749a88210c6733cd989b, type: 3}
+    amount: 1
+    tier: 1

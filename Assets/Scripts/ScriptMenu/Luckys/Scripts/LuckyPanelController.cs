@@ -1,198 +1,144 @@
-// using UnityEngine;
-// using UnityEngine.UI;
-// using System.Collections.Generic;
-// using DG.Tweening;
-
-// public class LuckyPanelController : MonoBehaviour
-// {
-//     [Header("Card Setup")]
-//     public GameObject cardPrefab;                // Prefab lá bài
-//     public Transform cardSpawnParent;            // Nơi chứa các lá bài sinh ra
-//     public Transform cardCenterPoint;            // Vị trí tụ bài (chính giữa)
-//     public Transform cardPointsRoot;             // Gốc chứa 9 điểm target (Point_0_0 → Point_2_2)
-
-//     [Header("Buttons")]
-//     public Button buttonStart;                   // Nút bắt đầu chia bài
-//     public Button buttonReset;                   // Nút gom bài về lại tụ
-
-//     private List<GameObject> cards = new();      // Danh sách 9 lá bài
-//     private List<RectTransform> targetPoints = new(); // Danh sách các điểm đích (tọa độ chia bài)
-//     public GameObject fingerHint;
-//     /// <summary>
-//     /// Hàm khởi tạo khi mở panel – tạo bài, gán listener cho nút
-//     /// </summary>
-//     void Start()
-//     {
-//         SpawnAllCards();
-
-//         buttonStart.onClick.AddListener(() =>
-//         {
-//             DealCards();
-//             HideHint();
-//         });
-
-//         buttonReset.onClick.AddListener(ResetCards);
-
-//         for (int i = 0; i < cardPointsRoot.childCount; i++)
-//         {
-//             targetPoints.Add(cardPointsRoot.GetChild(i).GetComponent<RectTransform>());
-//         }
-
-//         ShowHint();
-//     }
-
-
-//     /// <summary>
-//     /// Sinh 9 lá bài tại vị trí tụ bài chính giữa
-//     /// </summary>
-//     public void SpawnAllCards()
-//     {
-//         cards.Clear();
-
-//         for (int i = 0; i < 9; i++)
-//         {
-//             var card = Instantiate(cardPrefab, cardSpawnParent);
-//             card.name = $"Card_{i}";
-
-//             RectTransform rt = card.GetComponent<RectTransform>();
-//             rt.anchoredPosition = cardCenterPoint.GetComponent<RectTransform>().anchoredPosition;
-
-//             cards.Add(card);
-//         }
-//     }
-
-//     /// <summary>
-//     /// Chia 9 lá bài ra 9 vị trí Point_0_0 → Point_2_2 theo dạng 3x3
-//     /// </summary>
-//     public void DealCards()
-//     {
-//         for (int i = 0; i < cards.Count; i++)
-//         {
-//             var card = cards[i].GetComponent<RectTransform>();
-//             var target = targetPoints[i].anchoredPosition;
-
-//             card.DOAnchorPos(target, 0.5f)
-//                 .SetEase(Ease.OutBack)
-//                 .SetDelay(i * 0.05f);
-//         }
-//     }
-
-//     /// <summary>
-//     /// Gom tất cả bài trở lại vị trí tụ giữa màn hình
-//     /// </summary>
-//     public void ResetCards()
-//     {
-//         var center = cardCenterPoint.GetComponent<RectTransform>().anchoredPosition;
-
-//         foreach (var cardGO in cards)
-//         {
-//             var rt = cardGO.GetComponent<RectTransform>();
-//             rt.DOAnchorPos(center, 0.4f).SetEase(Ease.InBack);
-//         }
-//     }
-
-//     // gọi ngón tay chỉ
-//     private void ShowHint()
-//     {
-//         fingerHint.SetActive(true);
-
-//         RectTransform rt = fingerHint.GetComponent<RectTransform>();
-//         Vector2 original = rt.anchoredPosition;
-
-//         rt.DOAnchorPos(original + new Vector2(-20f, 20f), 0.5f)
-//         .SetLoops(-1, LoopType.Yoyo)
-//         .SetEase(Ease.InOutSine);
-//     }
-
-
-//     private void HideHint()
-//     {
-//         fingerHint.SetActive(false);
-//         fingerHint.transform.DOKill(); // stop animation
-//     }
-
-// }
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using DG.Tweening;
+using System.Collections;
+using TMPro;
 
 public class LuckyPanelController : MonoBehaviour
 {
     [Header("Card Setup")]
-    public GameObject cardPrefab;                // Prefab lá bài
-    public Transform cardSpawnParent;            // Nơi chứa các lá bài sinh ra
-    public Transform cardCenterPoint;            // Vị trí tụ bài (chính giữa)
-    public Transform cardPointsRoot;             // Gốc chứa 9 điểm target (Point_0_0 → Point_2_2)
+    public GameObject cardPrefab;
+    public Transform cardSpawnParent;
+    public Transform cardCenterPoint;
+    public Transform cardPointsRoot;
 
     [Header("Buttons")]
-    public Button buttonStart;                   // Nút dùng để random viền sáng sau này
-    public Button buttonReset;                   // Nút gom bài về lại tụ
+    public Button buttonStart;
+    public Button buttonReset;
 
-    public GameObject fingerHint;                // Icon chỉ tay
+    public GameObject fingerHint;
 
-    private List<GameObject> cards = new();      // Danh sách các lá bài
-    private List<RectTransform> targetPoints = new(); // Danh sách các điểm đích (tọa độ chia bài)
+    private List<GameObject> cards = new();
+    private List<RectTransform> targetPoints = new();
 
-    private bool hasDealt = false;
-    private Vector2 fingerOriginalPos; 
+    private Vector2 fingerOriginalPos;
 
-    /// <summary>
-    /// Hàm khởi tạo khi mở panel – tạo tụ bài, gán listener cho nút
-    /// </summary>
+    private enum PanelState { PreviewPhase, WaitingSecondClick, PlayingPhase }
+    private PanelState currentState = PanelState.PreviewPhase;
+
+    [Header("Highlight Frame")]
+    public GameObject highlightFramePrefab;
+    private GameObject highlightInstance;
+
+    [Header("Reward Data")]
+    public LuckyData rewardDatabase;
+
+    [Header("Result Popup")]
+    public GameObject panelRewardResult;
+    public Image rewardIconUI;
+    public TMPro.TextMeshProUGUI rewardNameUI;
+    public TMPro.TextMeshProUGUI rewardAmountUI;
+
+    [Header("Start Hint")]
+    public GameObject handHintStart;
+
+    [Header("Key Display")]
+    public TMP_Text keyAmountText;
+
+    private int currentKeyCount = 0;
+
     void Start()
     {
-        SpawnCenterCard();
+        currentKeyCount = PlayerPrefs.GetInt("LuckyKey", 3);
+        UpdateKeyUI();
 
+        buttonStart.gameObject.SetActive(false);
         buttonReset.onClick.AddListener(ResetCards);
 
-        // Gán sẵn target points
         for (int i = 0; i < cardPointsRoot.childCount; i++)
         {
             targetPoints.Add(cardPointsRoot.GetChild(i).GetComponent<RectTransform>());
         }
 
+        SpawnCenterCard();
         ShowHint();
+
+        buttonStart.onClick.AddListener(() =>
+        {
+            if (currentKeyCount <= 0) return;
+
+            currentKeyCount--;
+            PlayerPrefs.SetInt("LuckyKey", currentKeyCount);
+            UpdateKeyUI();
+
+            if (handHintStart != null)
+            {
+                handHintStart.transform.DOKill();
+                handHintStart.SetActive(false);
+            }
+
+            buttonStart.gameObject.SetActive(false);
+            StartCoroutine(HighlightRandomCard());
+        });
     }
 
-    /// <summary>
-    /// Sinh 1 lá tụ bài duy nhất ở giữa, cho phép click để chia bài
-    /// </summary>
     public void SpawnCenterCard()
     {
-        cards.Clear();
+        ClearCards();
 
         var card = Instantiate(cardPrefab, cardSpawnParent);
-        card.name = $"Card_Tu";
+        card.name = "Card_Tu";
 
         RectTransform rt = card.GetComponent<RectTransform>();
         rt.anchoredPosition = cardCenterPoint.GetComponent<RectTransform>().anchoredPosition;
 
-        // Lấy button có sẵn trong prefab
         Button btn = card.GetComponent<Button>();
         if (btn != null)
         {
+            btn.interactable = true;
             btn.onClick.RemoveAllListeners();
             btn.onClick.AddListener(() =>
             {
-                btn.interactable = false;    // Không cho click lại
-                DealCards(card);             // Bắt đầu chia
-                hasDealt = true;
-                HideHint();                  // Ẩn icon chỉ tay
+                btn.interactable = false;
+                HideHint();
+
+                if (currentState == PanelState.PreviewPhase)
+                {
+                    DealCards(() => StartCoroutine(PreviewSequence()));
+                }
+                else if (currentState == PanelState.WaitingSecondClick)
+                {
+                    DealCards(() =>
+                    {
+                        currentState = PanelState.PlayingPhase;
+                        buttonStart.gameObject.SetActive(true);
+                        UpdateKeyUI();
+
+                        if (handHintStart != null)
+                        {
+                            handHintStart.SetActive(true);
+                            RectTransform rt = handHintStart.GetComponent<RectTransform>();
+                            rt.DOAnchorPos(rt.anchoredPosition + new Vector2(20f, 0), 0.5f)
+                                .SetLoops(-1, LoopType.Yoyo)
+                                .SetEase(Ease.InOutSine);
+                        }
+                    });
+                }
             });
         }
 
         cards.Add(card);
     }
 
-    /// <summary>
-    /// Chia bài ra 9 lá bài tại vị trí 3x3, từ vị trí trung tâm
-    /// </summary>
-    public void DealCards(GameObject oldCard)
+    public void DealCards(System.Action onComplete)
     {
-        Destroy(oldCard); // Xoá lá tụ cũ
+        GameObject oldCard = cards.Count > 0 ? cards[0] : null;
+        if (oldCard != null) Destroy(oldCard);
 
         cards.Clear();
+
+        List<LuckyItemData> pickedRewards = LuckyRewardPicker.Pick(rewardDatabase.allRewards, 9);
 
         for (int i = 0; i < 9; i++)
         {
@@ -204,54 +150,95 @@ public class LuckyPanelController : MonoBehaviour
 
             cards.Add(card);
 
+            var cardScript = card.GetComponent<LuckyCardItem>();
+            if (cardScript != null)
+            {
+                cardScript.SetReward(pickedRewards[i]);
+                cardScript.FlipToBack();
+            }
+
             var target = targetPoints[i].anchoredPosition;
             rt.DOAnchorPos(target, 0.5f)
               .SetEase(Ease.OutBack)
               .SetDelay(i * 0.05f);
         }
+
+        StartCoroutine(InvokeAfterDelay(0.6f + 9 * 0.05f, onComplete));
     }
 
-    /// <summary>
-    /// Reset toàn bộ bài về trạng thái ban đầu – ẩn hết và tạo lại 1 tụ bài
-    /// </summary>
+    private IEnumerator PreviewSequence()
+    {
+        foreach (var card in cards)
+        {
+            FlipCard(card, true);
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        yield return new WaitForSeconds(2.5f);
+
+        foreach (var card in cards)
+        {
+            FlipCard(card, false);
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        yield return new WaitForSeconds(1f);
+        ResetCardsAfterPreview();
+    }
+
+    private void ResetCardsAfterPreview()
+    {
+        ClearCards();
+        SpawnCenterCard();
+        ShowHint();
+        currentState = PanelState.WaitingSecondClick;
+    }
+
     public void ResetCards()
     {
-        // Xoá toàn bộ lá bài hiện tại
+        ClearCards();
+        SpawnCenterCard();
+        ShowHint();
+        currentState = PanelState.PreviewPhase;
+        buttonStart.gameObject.SetActive(false);
+        UpdateKeyUI();
+         if (handHintStart != null)
+        {
+            handHintStart.transform.DOKill();
+            handHintStart.SetActive(false);
+        }
+    }
+
+    private void ClearCards()
+    {
         foreach (var card in cards)
         {
             if (card != null)
             {
-                // Kill tween trước khi destroy
                 RectTransform rt = card.GetComponent<RectTransform>();
-                rt.DOKill(); // Dừng tất cả tween liên quan object này
-
+                rt.DOKill();
                 Destroy(card);
             }
         }
-
         cards.Clear();
-
-        // Tạo lại lá tụ duy nhất
-        SpawnCenterCard();
-
-        // Hiện icon chỉ tay lại
-        ShowHint();
-
-        hasDealt = false;
     }
 
+    private void FlipCard(GameObject cardGO, bool toFront)
+    {
+        var flip = cardGO.GetComponent<LuckyCardItem>();
+        if (flip == null) return;
 
+        if (toFront)
+            flip.FlipToFront();
+        else
+            flip.FlipToBack();
+    }
 
-    /// <summary>
-    /// Hiện icon ngón tay và lắc nhẹ để dụ nhấn vào tụ
-    /// </summary>
     private void ShowHint()
     {
         fingerHint.SetActive(true);
 
         RectTransform rt = fingerHint.GetComponent<RectTransform>();
-
-        // 🔒 Gán vị trí gốc 1 lần duy nhất
         if (fingerOriginalPos == Vector2.zero)
             fingerOriginalPos = rt.anchoredPosition;
 
@@ -262,12 +249,69 @@ public class LuckyPanelController : MonoBehaviour
             .SetEase(Ease.InOutSine);
     }
 
-    /// <summary>
-    /// Ẩn icon chỉ tay
-    /// </summary>
     private void HideHint()
     {
         fingerHint.SetActive(false);
-        fingerHint.transform.DOKill(); // stop animation
+        fingerHint.transform.DOKill();
     }
-}
+
+    private IEnumerator InvokeAfterDelay(float delay, System.Action action)
+    {
+        yield return new WaitForSeconds(delay);
+        action?.Invoke();
+    }
+
+    private IEnumerator HighlightRandomCard()
+    {
+        if (highlightInstance == null)
+        {
+            highlightInstance = Instantiate(highlightFramePrefab, cardSpawnParent);
+            highlightInstance.SetActive(true);
+        }
+
+        RectTransform frameRect = highlightInstance.GetComponent<RectTransform>();
+        int total = cards.Count;
+        int currentIndex = 0;
+        int rounds = Random.Range(20, 30);
+        float baseDelay = 0.05f;
+
+        for (int i = 0; i < rounds; i++)
+        {
+            GameObject currentCard = cards[currentIndex];
+            frameRect.SetParent(currentCard.transform);
+            frameRect.anchoredPosition = Vector2.zero;
+            frameRect.SetAsLastSibling();
+
+            currentIndex = (currentIndex + 1) % total;
+            yield return new WaitForSeconds(baseDelay + i * 0.003f);
+        }
+
+        int selectedIndex = (currentIndex + total - 1) % total;
+        GameObject selectedCard = cards[selectedIndex];
+        FlipCard(selectedCard, true);
+        var reward = selectedCard.GetComponent<LuckyCardItem>().GetReward();
+        ShowRewardPopup(reward);
+        Debug.Log($"🎁 Bạn đã nhận được: {reward.rewardName} x{reward.amount}");
+    }
+
+    private void ShowRewardPopup(LuckyItemData reward)
+    {
+        panelRewardResult.SetActive(true);
+
+        rewardIconUI.sprite = reward.rewardIcon;
+        rewardNameUI.text = reward.rewardName;
+        rewardAmountUI.text = $"x{reward.amount}";
+    }
+
+    public void HideRewardPopup()
+    {
+        panelRewardResult.SetActive(false);
+        ResetCards();
+    }
+
+    private void UpdateKeyUI()
+    {
+        keyAmountText.text = currentKeyCount.ToString();
+        buttonStart.interactable = currentKeyCount > 0;
+    }
+} 
