@@ -26,6 +26,13 @@ public class HomeUIController : MonoBehaviour
     [SerializeField] private NotificationPopupUI notificationPopup;
     [SerializeField] private GameObject luckyPanel;
 
+    [SerializeField] private GameObject rankingPanel;
+
+    [Header("UI Rank Panel - Player Info")]
+    [SerializeField] private TMP_Text playerNameInRankPanel;
+    [SerializeField] private TMP_Text levelTextInRankPanel;
+    [SerializeField] private Slider expSliderInRankPanel;
+
 
     /// <summary>
     /// Khởi tạo dữ liệu mặc định cho người chơi mới (chỉ chạy 1 lần).
@@ -65,7 +72,7 @@ public class HomeUIController : MonoBehaviour
         playerNameText.text = name;
 
         UpdateLevelUI();
-
+        UpdateRankPanelUI();
         // Tắt các panel mặc định
         settingPanel.SetActive(false);
         renamePanel.SetActive(false);
@@ -74,6 +81,7 @@ public class HomeUIController : MonoBehaviour
         dailyTasks.SetActive(false);
         panelBuyGold.SetActive(false);
         luckyPanel.SetActive(false);
+        rankingPanel.SetActive(false);
     }
 
     /// <summary>
@@ -124,8 +132,54 @@ public class HomeUIController : MonoBehaviour
         // notificationPopup.Show("Rename successful!");
 
         playerNameText.text = newName;
+        UpdateRankPanelUI();
         CloseRename();
     }
+
+
+    // hien thong tin player trong details
+    void UpdateRankPanelUI()
+    {
+        int level = PlayerPrefs.GetInt("PlayerLevel", 1);
+        int exp = PlayerPrefs.GetInt("PlayerExp", 0);
+        int requiredExp = GetRequiredExp(level);
+        string name = PlayerPrefs.GetString("PlayerName", "PlayerXXXX");
+
+        if (playerNameInRankPanel != null)
+            playerNameInRankPanel.text = name;
+
+        if (levelTextInRankPanel != null)
+            levelTextInRankPanel.text = level.ToString();
+
+        if (expSliderInRankPanel != null)
+        {
+            expSliderInRankPanel.maxValue = requiredExp;
+            expSliderInRankPanel.value = exp;
+        }
+    }
+
+    // lên level 
+    public void AddExp(int amount)
+    {
+        int level = PlayerPrefs.GetInt("PlayerLevel", 1);
+        int exp = PlayerPrefs.GetInt("PlayerExp", 0);
+
+        exp += amount;
+
+        while (exp >= GetRequiredExp(level))
+        {
+            exp -= GetRequiredExp(level);
+            level++;
+        }
+
+        PlayerPrefs.SetInt("PlayerLevel", level);
+        PlayerPrefs.SetInt("PlayerExp", exp);
+        PlayerPrefs.Save();
+
+        UpdateLevelUI();         // 🔁 cập nhật ở UI chính
+        UpdateRankPanelUI();     // 🔁 cập nhật chỗ ảnh (rank panel)
+    }
+
 
 
     /// <summary> Mở shop </summary>
@@ -185,4 +239,7 @@ public class HomeUIController : MonoBehaviour
 
     /// dong lucky panel
     public void CloseLuckPanel() => luckyPanel.SetActive(false);
+
+    public void OpenRankingPanel() => rankingPanel.SetActive(true);
+    public void CloseRankingPanel() => rankingPanel.SetActive(false);
 }

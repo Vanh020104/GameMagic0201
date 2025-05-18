@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c94b60f1f683f74c9780203306aa948, type: 3}
+  m_Name: RankDatabase
+  m_EditorClassIdentifier: 
+  ranks:
+  - tier: 0
+    displayName: Bronze I
+    rankIcon: {fileID: 21300000, guid: 7a03613c33a31614ea37ff039461dbbb, type: 3}
+    rankBackgroundIcon: {fileID: 21300000, guid: 88a9321bc99abb7498be296553264e0a,
+      type: 3}
+    medalIcon: {fileID: 21300000, guid: d9182d7766fa11640beb4adcc97dcc3c, type: 3}
+    requiredExp: 0
+  - tier: 1
+    displayName: Bronze II
+    rankIcon: {fileID: 21300000, guid: 6711410380ce17942882d074d493eecb, type: 3}
+    rankBackgroundIcon: {fileID: 21300000, guid: 59b19a06537a5a14fa8bf884c4256b32,
+      type: 3}
+    medalIcon: {fileID: 21300000, guid: d9182d7766fa11640beb4adcc97dcc3c, type: 3}
+    requiredExp: 200
+  - tier: 2
+    displayName: Bronze III
+    rankIcon: {fileID: 21300000, guid: ffc12c2b8e5dc60459827fdb80e63501, type: 3}
+    rankBackgroundIcon: {fileID: 21300000, guid: be3a44c5b33c19d43bea41cf8e1c69b2,
+      type: 3}
+    medalIcon: {fileID: 21300000, guid: d9182d7766fa11640beb4adcc97dcc3c, type: 3}
+    requiredExp: 500
+  - tier: 3
+    displayName: Silver I
+    rankIcon: {fileID: 21300000, guid: dc9b8c422031f9c4d98e2b702e9695a7, type: 3}
+    rankBackgroundIcon: {fileID: 21300000, guid: 956b480feba48e742a428df6002d0b1e,
+      type: 3}
+    medalIcon: {fileID: 21300000, guid: 00ca63ef3d10f99439b186fdfef1faf5, type: 3}
+    requiredExp: 900
+  - tier: 4
+    displayName: Silver II
+    rankIcon: {fileID: 21300000, guid: 0ca43e729df40df43aea922a931f4497, type: 3}
+    rankBackgroundIcon: {fileID: 21300000, guid: b667b39941c2c4141ae505370ce8e28a,
+      type: 3}
+    medalIcon: {fileID: 21300000, guid: 00ca63ef3d10f99439b186fdfef1faf5, type: 3}
+    requiredExp: 1300
+  - tier: 5
+    displayName: Silver III
+    rankIcon: {fileID: 21300000, guid: efc93daa1b67aa94ea558343f31e7dd7, type: 3}
+    rankBackgroundIcon: {fileID: 21300000, guid: a5db87e95857715428da39e509038795,
+      type: 3}
+    medalIcon: {fileID: 21300000, guid: 00ca63ef3d10f99439b186fdfef1faf5, type: 3}
+    requiredExp: 1700
+  - tier: 6
+    displayName: Gold I
+    rankIcon: {fileID: 21300000, guid: d2c2fa4b48be9f449b5fd2168313bdb4, type: 3}
+    rankBackgroundIcon: {fileID: 21300000, guid: b2ca9225fcc727b4aa3bfd343e402a89,
+      type: 3}
+    medalIcon: {fileID: 21300000, guid: 4be4495c991bac24496c00b0678cf0f4, type: 3}
+    requiredExp: 2100
+  - tier: 7
+    displayName: Gold II
+    rankIcon: {fileID: 21300000, guid: bc3ee96b8bb22d0478aae4cb8eccda4e, type: 3}
+    rankBackgroundIcon: {fileID: 21300000, guid: 7cd1cb22758072c4e90a4bc1432317f3,
+      type: 3}
+    medalIcon: {fileID: 21300000, guid: 4be4495c991bac24496c00b0678cf0f4, type: 3}
+    requiredExp: 2500
+  - tier: 8
+    displayName: Gold III
+    rankIcon: {fileID: 21300000, guid: 7ef1c44f53900ac42bfd97e52828e2ea, type: 3}
+    rankBackgroundIcon: {fileID: 21300000, guid: 9c4c8b6f5d7a6404fabc9fda99c656d9,
+      type: 3}
+    medalIcon: {fileID: 21300000, guid: 4be4495c991bac24496c00b0678cf0f4, type: 3}
+    requiredExp: 3000
