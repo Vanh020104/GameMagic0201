@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -16,5 +17,11 @@ public class NotificationPopupUI : MonoBehaviour
     private void Hide()
     {
         gameObject.SetActive(false);
+    }
+
+
+    public static class HeroEvents
+    {
+        public static Action<string> OnHeroSelected;
     }
 }

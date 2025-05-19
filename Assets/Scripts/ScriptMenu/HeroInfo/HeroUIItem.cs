@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static NotificationPopupUI;
 
 public class HeroUIItem : MonoBehaviour
 {
@@ -28,7 +29,9 @@ public class HeroUIItem : MonoBehaviour
     void OnClick()
     {
         PlayerPrefs.SetString("SelectedHeroId", heroData.heroId);
-        PlayerPrefs.Save();
+        PlayerPrefs.Save(); 
+        HeroEvents.OnHeroSelected?.Invoke(heroData.heroId);
+
 
         HeroDetailUIHandler.Instance?.ShowHero(heroData);
 

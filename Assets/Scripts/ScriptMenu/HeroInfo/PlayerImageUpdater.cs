@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using static NotificationPopupUI;
 
 public class PlayerImageUpdater : MonoBehaviour
 {
@@ -52,4 +53,20 @@ public class PlayerImageUpdater : MonoBehaviour
             }
         }
     }
+
+    void OnEnable()
+    {
+        HeroEvents.OnHeroSelected += OnHeroSelected;
+    }
+    void OnDisable()
+    {
+        HeroEvents.OnHeroSelected -= OnHeroSelected;
+    }
+
+    private void OnHeroSelected(string heroId)
+    {
+        UpdateImage();
+        UpdateSkillIcons();
+    }
+
 }

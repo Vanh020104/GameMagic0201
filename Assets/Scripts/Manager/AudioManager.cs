@@ -9,15 +9,7 @@ public class AudioManager : MonoBehaviour
     [Header("Clips")]
     public AudioClip bgmHome;
     public AudioClip bgmCombat;
-    public AudioClip bgmLoading;
-
-    // void Start()
-    // {
-    //     PlayerPrefs.DeleteAll();
-    //     PlayerPrefs.Save();
-    //     Debug.Log("🔥 Reset PlayerPrefs: Đã xoá sạch dữ liệu, vào lại sẽ là tài khoản mới.");
-
-    // }
+    public AudioClip bgmLoading;    
     private void Awake()
     {
         if (Instance != null)

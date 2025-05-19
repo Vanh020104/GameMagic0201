@@ -33,6 +33,10 @@ public class HomeUIController : MonoBehaviour
     [SerializeField] private TMP_Text levelTextInRankPanel;
     [SerializeField] private Slider expSliderInRankPanel;
 
+    [SerializeField] private GameObject bagPanel;
+    [SerializeField] private GameObject upgradePanel;
+
+
 
     /// <summary>
     /// Khởi tạo dữ liệu mặc định cho người chơi mới (chỉ chạy 1 lần).
@@ -41,20 +45,20 @@ public class HomeUIController : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("IsFirstLogin"))
         {
-            PlayerPrefs.SetInt("Gold", 500);
-            PlayerPrefs.SetInt("Gem", 20);
-            PlayerPrefs.SetInt("IsFirstLogin", 1);
+            // PlayerPrefs.SetInt("Gold", 500);
+            // PlayerPrefs.SetInt("Gem", 20);
+            // PlayerPrefs.SetInt("IsFirstLogin", 1);
 
-            int randomNum = Random.Range(1000, 9999);
-            string randomName = "Player" + randomNum;
-            PlayerPrefs.SetString("PlayerName", randomName);
+            // int randomNum = Random.Range(1000, 9999);
+            // string randomName = "Player" + randomNum;
+            // PlayerPrefs.SetString("PlayerName", randomName);
 
-            int startingLevel = 1;
-            int giftExp = Mathf.FloorToInt(GetRequiredExp(startingLevel) * 0.3f); // 🎁 Tặng 30% exp ban đầu
-            PlayerPrefs.SetInt("PlayerLevel", startingLevel);
-            PlayerPrefs.SetInt("PlayerExp", giftExp);
+            // int startingLevel = 1;
+            // int giftExp = Mathf.FloorToInt(GetRequiredExp(startingLevel) * 0.3f); // 🎁 Tặng 30% exp ban đầu
+            // PlayerPrefs.SetInt("PlayerLevel", startingLevel);
+            // PlayerPrefs.SetInt("PlayerExp", giftExp);
 
-            PlayerPrefs.Save();
+            // PlayerPrefs.Save();
 
             if (welcomeRewardPanel != null)
                 welcomeRewardPanel.SetActive(true);
@@ -82,6 +86,8 @@ public class HomeUIController : MonoBehaviour
         panelBuyGold.SetActive(false);
         luckyPanel.SetActive(false);
         rankingPanel.SetActive(false);
+        bagPanel.SetActive(false);
+        upgradePanel.SetActive(false);
     }
 
     /// <summary>
@@ -242,4 +248,9 @@ public class HomeUIController : MonoBehaviour
 
     public void OpenRankingPanel() => rankingPanel.SetActive(true);
     public void CloseRankingPanel() => rankingPanel.SetActive(false);
+
+    public void OpenBagPanel() => bagPanel.SetActive(true);
+    public void CloseBagPanel() => bagPanel.SetActive(false);
+    public void OpenUpgradePanel() => upgradePanel.SetActive(true);
+    public void CloseUpgradePanel() => upgradePanel.SetActive(false);
 }

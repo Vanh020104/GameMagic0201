@@ -579,6 +579,7 @@ MonoBehaviour:
   textAmount: {fileID: 4445223505971881269}
   textPrice: {fileID: 2104438203964744686}
   buttonBuy: {fileID: 8754802460948893492}
+  notificationPopupUI: {fileID: 0}
 --- !u!1 &4168225046544397493
 GameObject:
   m_ObjectHideFlags: 0
