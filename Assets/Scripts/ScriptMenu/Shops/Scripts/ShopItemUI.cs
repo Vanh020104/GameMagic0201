@@ -48,6 +48,23 @@ public class ShopItemUI : MonoBehaviour
     {
         Debug.Log($"🛒 Buying item: {data.itemName} | ID: {data.id} | Price: {data.priceText}");
 
+        // Nếu là gói mua GOLD
+        if (data.id.StartsWith("gold"))
+        {
+            GoldGemManager.Instance.AddGold(data.amount);
+            Debug.Log($"✅ Đã cộng {data.amount} gold!");
+            return;
+        }
+
+        // Nếu là gói mua GEM
+        if (data.id.StartsWith("gem"))
+        {
+            GoldGemManager.Instance.AddGem(data.amount);
+            Debug.Log($"✅ Đã cộng {data.amount} gem!");
+            return;
+        }
+
+        // Nếu là gói mua ITEM
         if (!int.TryParse(data.priceText, out int price)) return;
 
         if (PlayerPrefs.GetInt($"Equip_{data.id}_Unlocked", 0) == 1)
@@ -59,10 +76,11 @@ public class ShopItemUI : MonoBehaviour
         if (GoldGemManager.Instance.SpendGold(price))
         {
             PlayerPrefs.SetInt($"Equip_{data.id}_Unlocked", 1);
+            PlayerPrefs.SetInt($"Equip_{data.id}_Level", 1);
             PlayerPrefs.Save();
 
-            isOwned = true; 
-            UpdateUI(); 
+            isOwned = true;
+            UpdateUI();
 
             BagEvent.InvokeItemBought();
         }
@@ -71,6 +89,5 @@ public class ShopItemUI : MonoBehaviour
             Debug.LogWarning("❌ Không đủ vàng để mua!");
         }
     }
-
 
 }
