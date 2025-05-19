@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class EquipItemUI : MonoBehaviour
 {
     public Image icon;
-    public GameObject selectedFrame; 
+    public GameObject selectedFrame;
 
     private EquipItemSO itemData;
     private System.Action<EquipItemSO, EquipItemUI> onClick;
@@ -24,5 +24,9 @@ public class EquipItemUI : MonoBehaviour
     {
         if (selectedFrame != null)
             selectedFrame.SetActive(isSelected);
+    }   
+    public EquipItemSO GetData()
+    {
+        return itemData;
     }
 }

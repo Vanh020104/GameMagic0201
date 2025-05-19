@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static NotificationPopupUI;
 
 public class ShopItemUI : MonoBehaviour
 {
@@ -8,50 +9,68 @@ public class ShopItemUI : MonoBehaviour
     public TMP_Text textAmount;
     public TMP_Text textPrice;
     public Button buttonBuy;
+    [SerializeField] private GameObject lockPanel;
 
     private ShopItemData data;
-    [SerializeField] private NotificationPopupUI notificationPopupUI;
-
+    private bool isOwned;
     public void Setup(ShopItemData itemData)
     {
         data = itemData;
+
         icon.sprite = data.icon;
         textAmount.text = data.amount.ToString("N0");
         textPrice.text = data.priceText;
 
-        buttonBuy.onClick.RemoveAllListeners();
-        buttonBuy.onClick.AddListener(OnBuyClick);
+        isOwned = PlayerPrefs.GetInt($"Equip_{data.id}_Unlocked", 0) == 1;
+
+        UpdateUI();
+    }
+    private void UpdateUI()
+    {
+        if (isOwned)
+        {
+            buttonBuy.interactable = false;
+            textPrice.alpha = 0.5f;
+            if (lockPanel != null) lockPanel.SetActive(true);
+        }
+        else
+        {
+            buttonBuy.interactable = true;
+            textPrice.alpha = 1f;
+            if (lockPanel != null) lockPanel.SetActive(false);
+
+            buttonBuy.onClick.RemoveAllListeners();
+            buttonBuy.onClick.AddListener(OnBuyClick);
+        }
     }
 
     private void OnBuyClick()
     {
         Debug.Log($"🛒 Buying item: {data.itemName} | ID: {data.id} | Price: {data.priceText}");
 
-        if (data.id.StartsWith("gold"))
+        if (!int.TryParse(data.priceText, out int price)) return;
+
+        if (PlayerPrefs.GetInt($"Equip_{data.id}_Unlocked", 0) == 1)
         {
-            GoldGemManager.Instance.AddGold(data.amount);
+            Debug.Log("⚠️ Item đã được sở hữu, không thể mua lại.");
+            return;
         }
-        else if (data.id.StartsWith("gem"))
+
+        if (GoldGemManager.Instance.SpendGold(price))
         {
-            GoldGemManager.Instance.AddGem(data.amount);
+            PlayerPrefs.SetInt($"Equip_{data.id}_Unlocked", 1);
+            PlayerPrefs.Save();
+
+            isOwned = true; 
+            UpdateUI(); 
+
+            BagEvent.InvokeItemBought();
         }
         else
         {
-            if (!int.TryParse(data.priceText, out int price))
-            {
-                return;
-            }
-            if (GoldGemManager.Instance.SpendGold(price))
-            {
-                Debug.Log($"✅ Mua thành công item {data.id}");
-                PlayerPrefs.SetInt($"Equip_{data.id}_Unlocked", 1);
-                PlayerPrefs.Save();
-            }
-            else
-            {
-                Debug.LogWarning("❌ Không đủ vàng để mua!");
-            }
+            Debug.LogWarning("❌ Không đủ vàng để mua!");
         }
     }
+
 
 }

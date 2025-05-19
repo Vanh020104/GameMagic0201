@@ -20,8 +20,21 @@ public class NotificationPopupUI : MonoBehaviour
     }
 
 
+    // tự động refesh sau khi chọn hero và bagbag
     public static class HeroEvents
     {
         public static Action<string> OnHeroSelected;
     }
+
+
+    public static class BagEvent
+    {
+        public static event System.Action OnItemBought;
+
+        public static void InvokeItemBought()
+        {
+            OnItemBought?.Invoke();
+        }
+    }
+
 }
