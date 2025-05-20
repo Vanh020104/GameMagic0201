@@ -18,88 +18,148 @@ MonoBehaviour:
     rewardIcon: {fileID: 21300000, guid: b07aa74ee0e384a70899d165d4ce92dd, type: 3}
     amount: 10
     tier: 0
+    rewardType: 0
   - id: gold002
     rewardName: Gold2
     rewardIcon: {fileID: 21300000, guid: f2fdb9b17dc0a4f0682afc764e2aab0d, type: 3}
     amount: 30
     tier: 1
+    rewardType: 0
   - id: gold003
     rewardName: Gold3
     rewardIcon: {fileID: 21300000, guid: 19153f657a43d4a1789cb568e9791be7, type: 3}
     amount: 100
     tier: 2
+    rewardType: 0
   - id: gem001
     rewardName: Gem01
     rewardIcon: {fileID: 21300000, guid: 6feb259e591f94c548943bde8ec07132, type: 3}
     amount: 5
     tier: 0
+    rewardType: 0
   - id: gem002
     rewardName: Gem02
     rewardIcon: {fileID: 21300000, guid: 6d91f8e68e42f40ce9ae75f1443d3370, type: 3}
     amount: 10
     tier: 0
+    rewardType: 0
   - id: gem003
     rewardName: Gem03
     rewardIcon: {fileID: 21300000, guid: 896ebf9e064a043cc8641b947f932f24, type: 3}
     amount: 50
     tier: 2
-  - id: item001
-    rewardName: Item001
-    rewardIcon: {fileID: 21300000, guid: d71691a584ef44f7eb2f7d39358f7e34, type: 3}
+    rewardType: 0
+  - id: gold004
+    rewardName: Gold04
+    rewardIcon: {fileID: 21300000, guid: c8b5c899f26d84dcf8d1c8cc66ab5271, type: 3}
+    amount: 80
+    tier: 2
+    rewardType: 0
+  - id: gold005
+    rewardName: Gold05
+    rewardIcon: {fileID: 21300000, guid: f2fdb9b17dc0a4f0682afc764e2aab0d, type: 3}
+    amount: 150
+    tier: 2
+    rewardType: 0
+  - id: gold006
+    rewardName: Gold06
+    rewardIcon: {fileID: 21300000, guid: dc9f747fbfa5d402894e6331bbd00273, type: 3}
+    amount: 200
+    tier: 1
+    rewardType: 0
+  - id: Gem004
+    rewardName: Gem4
+    rewardIcon: {fileID: 21300000, guid: b92cee43810af4d5995728a2f42c806b, type: 3}
+    amount: 80
+    tier: 1
+    rewardType: 1
+  - id: Gem005
+    rewardName: Gem5
+    rewardIcon: {fileID: 21300000, guid: ef471fb8d8de3474bbb41b339d3656d3, type: 3}
+    amount: 120
+    tier: 1
+    rewardType: 1
+  - id: Gem006
+    rewardName: Gem6
+    rewardIcon: {fileID: 21300000, guid: 298ca0950c4cd4f3ab57b16d0da39d13, type: 3}
+    amount: 110
+    tier: 2
+    rewardType: 1
+  - id: Key001
+    rewardName: Key01
+    rewardIcon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
     amount: 1
     tier: 0
-  - id: item002
-    rewardName: Item002
-    rewardIcon: {fileID: 21300000, guid: 4c201fa6be75f46239ead888baf26f20, type: 3}
+    rewardType: 2
+  - id: Key002
+    rewardName: Key02
+    rewardIcon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
+    amount: 2
+    tier: 0
+    rewardType: 2
+  - id: Key003
+    rewardName: Key03
+    rewardIcon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
+    amount: 3
+    tier: 1
+    rewardType: 2
+  - id: Key005
+    rewardName: Key05
+    rewardIcon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
+    amount: 5
+    tier: 2
+    rewardType: 2
+  - id: Key006
+    rewardName: Key06
+    rewardIcon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
+    amount: 6
+    tier: 2
+    rewardType: 2
+  - id: Armor_09
+    rewardName: Armor_09
+    rewardIcon: {fileID: 21300000, guid: e3d82774f0e0e40d2beb154c1f51023a, type: 3}
     amount: 1
     tier: 2
-  - id: item003
-    rewardName: Item003
-    rewardIcon: {fileID: 21300000, guid: 6fff73edd8f7a434fa8aa73b28d24d45, type: 3}
-    amount: 1
-    tier: 0
-  - id: item004
-    rewardName: Item004
-    rewardIcon: {fileID: 21300000, guid: bb7981dd8df324b23b62fa2dc4a927ab, type: 3}
-    amount: 1
-    tier: 1
-  - id: item005
-    rewardName: Item005
-    rewardIcon: {fileID: 21300000, guid: 0ad3335e9d4cc40429913a696cc4f9f9, type: 3}
-    amount: 1
-    tier: 0
-  - id: item006
-    rewardName: Item006
-    rewardIcon: {fileID: 21300000, guid: 7a92fc98e0e1b446fa1816110bcf4990, type: 3}
-    amount: 1
-    tier: 0
-  - id: item007
-    rewardName: Item007
-    rewardIcon: {fileID: 21300000, guid: 85d853b32fa1e4b75a1ec4e6ea947c8e, type: 3}
-    amount: 1
-    tier: 1
-  - id: item008
-    rewardName: Item008
-    rewardIcon: {fileID: 21300000, guid: f60ab444bf8dd435e95255b13a6b12c1, type: 3}
+    rewardType: 3
+  - id: Armor_10
+    rewardName: Armor_10
+    rewardIcon: {fileID: 21300000, guid: 72b1680ee3c064774b9031d8511be2c3, type: 3}
     amount: 1
     tier: 2
-  - id: item009
-    rewardName: Item009
-    rewardIcon: {fileID: 21300000, guid: 66adb4c942df7411f9d6a7b3921828c6, type: 3}
+    rewardType: 3
+  - id: Armor_11
+    rewardName: Armor_11
+    rewardIcon: {fileID: 21300000, guid: 89a66d7c5467044b89968421bec3cb6c, type: 3}
     amount: 1
-    tier: 0
-  - id: item0010
-    rewardName: Item0010
-    rewardIcon: {fileID: 21300000, guid: 445fc86f8a0d64d4fad742694686ea10, type: 3}
+    tier: 2
+    rewardType: 3
+  - id: Hat_12
+    rewardName: Hat_12
+    rewardIcon: {fileID: 21300000, guid: b53792f3c805e4adb93faea45ac40833, type: 3}
     amount: 1
-    tier: 0
-  - id: item0011
-    rewardName: Item0011
-    rewardIcon: {fileID: 21300000, guid: 50f230650e0f64202b103a1403bc360c, type: 3}
+    tier: 2
+    rewardType: 3
+  - id: Hat_11
+    rewardName: Hat_11
+    rewardIcon: {fileID: 21300000, guid: 7eeec9c8f37c14d01bee308d6d4a0440, type: 3}
     amount: 1
-    tier: 0
-  - id: item0012
-    rewardName: Item0012
-    rewardIcon: {fileID: 21300000, guid: 6ce93abd5bdf749a88210c6733cd989b, type: 3}
+    tier: 2
+    rewardType: 3
+  - id: Hat_10
+    rewardName: Hat_10
+    rewardIcon: {fileID: 21300000, guid: 3d3acbc5a2b1a416982d5be18e2210cb, type: 3}
     amount: 1
-    tier: 1
+    tier: 2
+    rewardType: 3
+  - id: Boots_10
+    rewardName: Boots_10
+    rewardIcon: {fileID: 21300000, guid: ee373459be0c9473ba72debeb0ce2d50, type: 3}
+    amount: 1
+    tier: 2
+    rewardType: 3
+  - id: Boots_11
+    rewardName: Boots_11
+    rewardIcon: {fileID: 21300000, guid: a702079a8730a426a820959675581a74, type: 3}
+    amount: 1
+    tier: 2
+    rewardType: 3

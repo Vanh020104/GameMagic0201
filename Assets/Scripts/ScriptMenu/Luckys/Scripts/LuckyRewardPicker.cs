@@ -9,6 +9,13 @@ public static class LuckyRewardPicker
 
         foreach (var item in source)
         {
+            if (item.id.StartsWith("Item") && PlayerPrefs.GetInt($"Equip_{item.id}_Unlocked", 0) == 1)
+                continue;
+
+            if (item.id.StartsWith("Hero") && PlayerPrefs.GetInt($"HeroUnlocked_{item.id}", 0) == 1)
+                continue;
+
+
             switch (item.tier)
             {
                 case RewardTier.Common:
@@ -18,7 +25,7 @@ public static class LuckyRewardPicker
                     pool.Add(item); pool.Add(item);
                     break;
                 case RewardTier.VIP:
-                    if (Random.value < 0.1f)
+                    if (Random.value < 0.1f) 
                         pool.Add(item);
                     break;
             }
@@ -27,4 +34,5 @@ public static class LuckyRewardPicker
         pool.Shuffle();
         return pool.GetRange(0, Mathf.Min(count, pool.Count));
     }
+
 }

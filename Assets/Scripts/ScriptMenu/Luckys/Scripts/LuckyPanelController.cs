@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using System.Collections;
 using TMPro;
+using static NotificationPopupUI;
 
 public class LuckyPanelController : MonoBehaviour
 {
@@ -294,14 +295,45 @@ public class LuckyPanelController : MonoBehaviour
         Debug.Log($"🎁 Bạn đã nhận được: {reward.rewardName} x{reward.amount}");
     }
 
+    // private void ShowRewardPopup(LuckyItemData reward)
+    // {
+    //     panelRewardResult.SetActive(true);
+
+    //     rewardIconUI.sprite = reward.rewardIcon;
+    //     rewardNameUI.text = reward.rewardName;
+    //     rewardAmountUI.text = $"x{reward.amount}";
+    // }
     private void ShowRewardPopup(LuckyItemData reward)
     {
         panelRewardResult.SetActive(true);
-
         rewardIconUI.sprite = reward.rewardIcon;
         rewardNameUI.text = reward.rewardName;
         rewardAmountUI.text = $"x{reward.amount}";
+
+        switch (reward.rewardType)
+        {
+            case RewardType.Gold:
+                GoldGemManager.Instance.AddGold(reward.amount);
+                break;
+            case RewardType.Gem:
+                GoldGemManager.Instance.AddGem(reward.amount);
+                break;
+            case RewardType.Key:
+                int key = PlayerPrefs.GetInt("LuckyKey", 0);
+                key += reward.amount;
+                PlayerPrefs.SetInt("LuckyKey", key);
+                PlayerPrefs.Save();
+                UpdateKeyUI(); 
+                break;
+                
+            case RewardType.Item:
+                PlayerPrefs.SetInt($"Equip_{reward.id}_Unlocked", 1);
+                PlayerPrefs.Save();
+                BagEvent.InvokeItemBought(); 
+                break;
+        }
     }
+
 
     public void HideRewardPopup()
     {

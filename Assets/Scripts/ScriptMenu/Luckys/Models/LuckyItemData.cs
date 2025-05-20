@@ -8,4 +8,5 @@ public class LuckyItemData
     public Sprite rewardIcon;
     public int amount;
     public RewardTier tier;
+    public RewardType rewardType;
 }
