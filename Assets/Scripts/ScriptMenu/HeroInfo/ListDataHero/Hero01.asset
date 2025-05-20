@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ceb3f5e7f949247b660b17f548126c, type: 3}
   m_Name: Hero01
   m_EditorClassIdentifier: 
-  heroId: 01
+  heroId: Hero01
   heroName: Spooky Witch
   heroIcon: {fileID: 21300000, guid: 519d2341882cec04c8bb6642cc25c85e, type: 3}
   baseHealth: 250

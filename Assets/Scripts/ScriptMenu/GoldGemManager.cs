@@ -65,6 +65,18 @@ public class GoldGemManager : MonoBehaviour
         }
         return false;
     }
+    public bool SpendGem(int amount)
+    {
+        if (gemAmount >= amount)
+        {
+            gemAmount -= amount;
+            UpdateUI();
+            SaveCurrencies();
+            return true;
+        }
+        return false;
+    }
+
 
     public int GetGold() => goldAmount;
 }

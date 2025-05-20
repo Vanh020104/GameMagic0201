@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06ceb3f5e7f949247b660b17f548126c, type: 3}
-  m_Name: Hero03
+  m_Name: Hero04
   m_EditorClassIdentifier: 
-  heroId: Hero03
-  heroName: Boris
-  heroIcon: {fileID: 21300000, guid: 7d0cac62bd214da43bb3f073858db3ee, type: 3}
-  baseHealth: 400
-  baseDamage: 80
-  baseSpeed: 8
+  heroId: Hero04
+  heroName: Authur
+  heroIcon: {fileID: 21300000, guid: 6b9b4dee943567e4d8de773b11f60e65, type: 3}
+  baseHealth: 200
+  baseDamage: 20
+  baseSpeed: 3
   defaultLevel: 1
-  maxLevel: 60
+  maxLevel: 30
   skills:
   - skillName: ' Heal'
-    skillIcon: {fileID: 21300000, guid: e232c984bd6bd4636b912938cd4eb8d6, type: 3}
+    skillIcon: {fileID: 21300000, guid: 7014dc5a8fae9420db6939857c08cfb5, type: 3}
     description: Maximum healing
     cooldown: 20
   - skillName: Shoot Magic
-    skillIcon: {fileID: 21300000, guid: b6c24d18808644d89a414099832e3fb1, type: 3}
+    skillIcon: {fileID: 21300000, guid: 40a53334d3a9949709cb2d4eb478e0c3, type: 3}
     description: Shoot Magic
     cooldown: 10
   - skillName: Poisonous fire
-    skillIcon: {fileID: 21300000, guid: 490ce39c0656043e688bfff17fa7c776, type: 3}
+    skillIcon: {fileID: 21300000, guid: 884e4ff38c9034793b1ecbe1d84f73d4, type: 3}
     description: Poisonous fire
     cooldown: 25

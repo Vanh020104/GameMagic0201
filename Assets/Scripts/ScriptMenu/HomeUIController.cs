@@ -36,7 +36,7 @@ public class HomeUIController : MonoBehaviour
     [SerializeField] private GameObject bagPanel;
     [SerializeField] private GameObject upgradePanel;
 
-
+    
 
     /// <summary>
     /// Khởi tạo dữ liệu mặc định cho người chơi mới (chỉ chạy 1 lần).
@@ -70,6 +70,7 @@ public class HomeUIController : MonoBehaviour
     /// </summary>
     private void Start()
     {
+
         AudioManager.Instance.PlayMusic(AudioManager.Instance.bgmHome);
 
         string name = PlayerPrefs.GetString("PlayerName", "PlayerXXXX");
@@ -123,7 +124,8 @@ public class HomeUIController : MonoBehaviour
 
         if (string.IsNullOrEmpty(newName))
         {
-            notificationPopup.Show("Name cannot be blank!");
+            NotificationPopupUI.Instance?.Show("Name cannot be blank!", false);
+
             return;
         }
 
@@ -135,7 +137,7 @@ public class HomeUIController : MonoBehaviour
 
         PlayerPrefs.SetString("PlayerName", newName);
         PlayerPrefs.Save();
-        // notificationPopup.Show("Rename successful!");
+        NotificationPopupUI.Instance?.Show("Rename successful!");
 
         playerNameText.text = newName;
         UpdateRankPanelUI();

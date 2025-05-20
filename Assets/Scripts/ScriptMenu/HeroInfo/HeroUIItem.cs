@@ -29,7 +29,7 @@ public class HeroUIItem : MonoBehaviour
     void OnClick()
     {
         PlayerPrefs.SetString("SelectedHeroId", heroData.heroId);
-        PlayerPrefs.Save(); 
+        PlayerPrefs.Save();
         HeroEvents.OnHeroSelected?.Invoke(heroData.heroId);
 
 
@@ -38,7 +38,7 @@ public class HeroUIItem : MonoBehaviour
         // 👉 Gọi cập nhật ảnh player ngoài màn Home
         var updater = FindObjectOfType<PlayerImageUpdater>();
         if (updater != null)
-        updater.UpdateImage();
+            updater.UpdateImage();
 
         // update skill
         var skillDisplay = FindObjectOfType<PlayerImageUpdater>();

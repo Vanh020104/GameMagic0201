@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ceb3f5e7f949247b660b17f548126c, type: 3}
   m_Name: Hero02
   m_EditorClassIdentifier: 
-  heroId: 02
+  heroId: Hero02
   heroName: Zombie
   heroIcon: {fileID: 21300000, guid: a0415e54cd988fe49951550415a51aa7, type: 3}
   baseHealth: 400

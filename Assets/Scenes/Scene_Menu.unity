@@ -1938,6 +1938,7 @@ GameObject:
   - component: {fileID: 1904407305}
   - component: {fileID: 1904407307}
   - component: {fileID: 1904407308}
+  - component: {fileID: 1904407309}
   m_Layer: 0
   m_Name: BlinkController
   m_TagString: Untagged
@@ -2002,6 +2003,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558a80e32a2a816429c46d7b6a0d0bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1904407309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904407304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e1d89a2a5e6f94595e1ea5c8e818f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipDatabase: {fileID: 11400000, guid: f3b67e7b44a9a094f8d61888004b6753, type: 2}
 --- !u!1 &1958824664
 GameObject:
   m_ObjectHideFlags: 0
