@@ -14,6 +14,11 @@ public class PlayerInfo : MonoBehaviour
 
     private bool hasDied = false;
 
+
+    void Start()
+    {
+        StartCoroutine(RegenerateMana());
+    }
     void Update()
     {
         _hpSlider.value = _hp / (float)_hpMax;
@@ -48,5 +53,21 @@ public class PlayerInfo : MonoBehaviour
 
         // Xoá toàn bộ player
         Destroy(gameObject);
+    }
+
+    private IEnumerator RegenerateMana()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            if (_mana < _manaMax)
+            {
+                _mana += Mathf.CeilToInt(3f);
+                if (_mana > _manaMax)
+                {
+                    _mana = _manaMax;
+                }
+            }
+        }
     }
 }

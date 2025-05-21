@@ -18,10 +18,16 @@ public class LevelUI : MonoBehaviour
 
     void Start()
     {
+        expToNext = GetExpToNextLevel(level);
         expSlider.minValue = 0f;
         expSlider.maxValue = 100f;
         expSlider.value = 0f;
         levelText.text = $"Level {level}";
+    }
+
+    private int GetExpToNextLevel(int level)
+    {
+        return Mathf.RoundToInt(100 * Mathf.Pow(1.2f, level - 1));
     }
 
     void Update()
@@ -39,7 +45,6 @@ public class LevelUI : MonoBehaviour
     public void AddExp(int amount)
     {
         currentExp += amount;
-
         bool leveledUp = false;
 
         while (currentExp >= expToNext)
@@ -47,16 +52,19 @@ public class LevelUI : MonoBehaviour
             currentExp -= expToNext;
             level++;
             leveledUp = true;
+
+            expToNext = GetExpToNextLevel(level); 
+            currentFill = 0f; 
+            expSlider.value = 0f;
         }
 
         if (leveledUp)
         {
             levelText.text = $"Level {level}";
-            currentFill = 0f;
-            expSlider.value = 0f; 
             OnLevelChanged?.Invoke(level);
         }
 
         targetFill = (float)currentExp / expToNext * 100f;
     }
+
 }
