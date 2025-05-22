@@ -313,6 +313,37 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &431093579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431093580}
+  m_Layer: 0
+  m_Name: GemContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &431093580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431093579}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &992667605
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,8 +392,14 @@ MonoBehaviour:
   playerPrefab: {fileID: 1465103619070292657, guid: 822af22e77b72b14ca8ae01fef0c097e,
     type: 3}
   spawnPoint: {fileID: 354948150}
-  mapPrefab: {fileID: 566713091559318860, guid: 3766c3ada1cfe8941bc6e288dbdafa09,
+  mapPrefab: {fileID: 4389655451339081302, guid: 03420cadc0a55924d95a0711c5f060da,
     type: 3}
+  botPrefabs:
+  - {fileID: 3869331661245222372, guid: 8957cb042f3cb864ea014b8fd56fb779, type: 3}
+  - {fileID: 4192621411052091301, guid: 6208fcdc13f10b54582bad54360c6074, type: 3}
+  - {fileID: 4196747223367310728, guid: a7a58d6cc4d954b4ab19b90553bad29c, type: 3}
+  totalCharacter: 10
+  mapSize: {x: 1000, y: 1000}
 --- !u!114 &992667609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +417,7 @@ MonoBehaviour:
   initialGemCount: 800
   mapSize: {x: 400, y: 400}
   height: 1.8
+  gemContainer: {fileID: 431093580}
 --- !u!1 &1146913562
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,3 +582,4 @@ SceneRoots:
   - {fileID: 240693987}
   - {fileID: 992667607}
   - {fileID: 354948150}
+  - {fileID: 431093580}

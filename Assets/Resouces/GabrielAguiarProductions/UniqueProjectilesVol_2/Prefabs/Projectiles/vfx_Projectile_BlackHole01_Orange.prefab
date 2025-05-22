@@ -34046,6 +34046,7 @@ GameObject:
   - component: {fileID: 114319037007308074}
   - component: {fileID: 65914357743795882}
   - component: {fileID: 54266746368845782}
+  - component: {fileID: 6217740983416045493}
   m_Layer: 0
   m_Name: vfx_Projectile_BlackHole01_Orange
   m_TagString: Untagged
@@ -34148,3 +34149,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6217740983416045493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737381284161942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e0c8ef5052dca4fb74a486281d7ab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatingTextPrefab: {fileID: 0}
+  rotate: 0
+  rotateAmount: 45
+  bounce: 0
+  bounceForce: 10
+  speed: 0
+  accuracy: 0
+  fireRate: 0
+  muzzlePrefab: {fileID: 0}
+  hitPrefab: {fileID: 0}
+  trails: []
+  owner: {fileID: 0}

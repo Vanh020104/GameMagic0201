@@ -102,6 +102,8 @@ public class PlayerController : MonoBehaviour
     void AddBullet(){
         var newProjectile = Instantiate(prefabProjectile, projectileProsition);
         newProjectile.GetComponent<ProjectileMoveScript>().owner = playerInfo;
+        // var moveScript = newProjectile.GetComponent<ProjectileMoveScript>();
+        // moveScript.rotate = false;
         newProjectile.transform.forward = _transform.forward;
         newProjectile.transform.SetParent(null);
         newProjectile.transform.position = projectileProsition.position;

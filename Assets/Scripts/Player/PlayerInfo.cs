@@ -12,7 +12,7 @@ public class PlayerInfo : MonoBehaviour
     public Slider _manaSlider;
     public Animator _animator;
 
-    private bool hasDied = false;
+    public bool hasDied = false;
 
 
     void Start()

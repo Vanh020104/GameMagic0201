@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3463094049148144652}
   - component: {fileID: 4857324436310559600}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Hero_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,13 +84,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3584603588918192854}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1.6666666, z: 1.5}
+  m_LocalRotation: {x: -0, y: 0.13052596, z: -0, w: 0.99144495}
+  m_LocalPosition: {x: 0, y: 1.5, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4959683978859205628}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
 --- !u!1001 &4854580439410816023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,17 +122,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5d45ef7e7439cbd45addecc9513a9d5e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d45ef7e7439cbd45addecc9513a9d5e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d45ef7e7439cbd45addecc9513a9d5e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d45ef7e7439cbd45addecc9513a9d5e,
         type: 3}
@@ -491,7 +491,7 @@ MonoBehaviour:
   second_attack_button: {fileID: 0}
   third_attack_button: {fileID: 0}
   _targetPosition: {fileID: 4959683978859205628}
-  prefabProjectile: {fileID: 1737381284161942, guid: b8745ef0ea7bca949a6f69de8538afbc,
+  prefabProjectile: {fileID: 1929353877246504, guid: 750b538505824ef4a805dbd8a75d131b,
     type: 3}
   projectileProsition: {fileID: 2057012870056976221}
   playerInfo: {fileID: 3368674838923196717}
@@ -517,6 +517,7 @@ MonoBehaviour:
   _hpSlider: {fileID: 0}
   _manaSlider: {fileID: 0}
   _animator: {fileID: 8455217680542892930}
+  hasDied: 0
 --- !u!136 &5072947511245686708
 CapsuleCollider:
   m_ObjectHideFlags: 0

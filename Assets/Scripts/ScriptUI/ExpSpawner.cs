@@ -8,6 +8,7 @@ public class ExpSpawner : MonoBehaviour
     public int initialGemCount = 800; 
     public Vector2 mapSize = new Vector2(400, 400);
     public float height = 1.5f;
+    public Transform gemContainer;
 
     private List<GameObject> activeGems = new List<GameObject>();
 
@@ -27,7 +28,7 @@ public class ExpSpawner : MonoBehaviour
             Random.Range(-mapSize.y / 2, mapSize.y / 2)
         );
 
-        GameObject gem = Instantiate(expGemPrefab, pos, Quaternion.identity);
+        GameObject gem = Instantiate(expGemPrefab, pos, Quaternion.identity, gemContainer);
         gem.GetComponent<ExpGem>().Init(this);
         activeGems.Add(gem);
     }
