@@ -3,11 +3,11 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
-    public Vector3 offset = new Vector3(0, 35, -25);
-    public float smoothSpeed = 5f;
+    public Vector3 offset = new Vector3(0, 45, -35);
+    public float smoothSpeed = 10f;
 
     public bool enableSmoothRotation = false;
-    public float rotationSmoothSpeed = 5f;
+    public float rotationSmoothSpeed = 10f;
 
     void LateUpdate()
     {

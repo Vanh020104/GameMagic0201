@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7227501720567151453}
+  - component: {fileID: 8718507760835266655}
   m_Layer: 0
   m_Name: Bot_02
   m_TagString: Untagged
@@ -32,6 +33,33 @@ Transform:
   - {fileID: 604187144616272845}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &8718507760835266655
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4192621411052091301}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &6904323425005178959
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +85,7 @@ Transform:
   m_GameObject: {fileID: 6904323425005178959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 1.75}
+  m_LocalPosition: {x: 0, y: 1.25, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -162,10 +190,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c8ac33dc32392b248937fa21d69d114a,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6087138313483726768}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c8ac33dc32392b248937fa21d69d114a,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 8961393769511113889}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c8ac33dc32392b248937fa21d69d114a,
         type: 3}
@@ -179,6 +203,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7789240244684022562}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c8ac33dc32392b248937fa21d69d114a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6524045711872723654}
   m_SourcePrefab: {fileID: 100100000, guid: c8ac33dc32392b248937fa21d69d114a, type: 3}
 --- !u!1 &227803061207546231 stripped
 GameObject:
@@ -186,33 +214,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1146228213514011686}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &6087138313483726768
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227803061207546231}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!95 &8961393769511113889
 Animator:
   serializedVersion: 7
@@ -265,16 +266,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6056b944fa54a4241ae10b1ed13505d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12
-  detectionRadius: 35
-  attackRange: 25
+  moveSpeed: 15
+  detectionRadius: 100
+  attackRange: 50
+  fireCooldown: 3
   firePoint: {fileID: 6402715239506428794}
   projectilePrefab: {fileID: 1929353877246504, guid: 750b538505824ef4a805dbd8a75d131b,
     type: 3}
   targetLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  rb: {fileID: 6087138313483726768}
+    m_Bits: 136
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  rb: {fileID: 8718507760835266655}
 --- !u!136 &7789240244684022562
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -298,6 +303,33 @@ CapsuleCollider:
   m_Height: 2.25
   m_Direction: 1
   m_Center: {x: 0, y: 1.125, z: 0}
+--- !u!54 &6524045711872723654
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227803061207546231}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!4 &604187144616272845 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c8ac33dc32392b248937fa21d69d114a,

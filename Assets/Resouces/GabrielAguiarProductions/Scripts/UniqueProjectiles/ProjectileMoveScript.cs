@@ -42,6 +42,7 @@ public class ProjectileMoveScript : MonoBehaviour {
 
     // sua de ban danj
     public PlayerInfo owner;
+    public BotStats ownerBot;
     private bool collided22 = false;
 
 	void Start () {
@@ -93,15 +94,23 @@ public class ProjectileMoveScript : MonoBehaviour {
 
 	void OnCollisionEnter (Collision co) {
         var heroInfo = co.GetContact(0).otherCollider.GetComponentInParent<PlayerInfo>();
-        if (heroInfo != null && heroInfo == owner)
+        var botInfo = co.GetContact(0).otherCollider.GetComponentInParent<BotStats>();
+       if ((heroInfo != null && heroInfo == owner) || (botInfo != null && botInfo == ownerBot))
         {
-            return;
+            return; 
         }
-        if (heroInfo != null)
+
+        if (botInfo != null)
+        {
+            botInfo.currentHP -= 50;
+            Debug.Log($"Máu bot còn lại: {botInfo.currentHP}");
+        }
+        else if (heroInfo != null)
         {
             heroInfo._hp -= 50;
-            Debug.Log($"Mau con lai: {heroInfo._hp}");
+            Debug.Log($"Máu player còn lại: {heroInfo._hp}");
         }
+
 
         
         if (!bounce)
@@ -153,8 +162,8 @@ public class ProjectileMoveScript : MonoBehaviour {
             rb.useGravity = true;
             rb.drag = 0.5f;
             ContactPoint contact = co.contacts[0];
-            rb.AddForce (Vector3.Reflect((contact.point - startPos).normalized, contact.normal) * bounceForce, ForceMode.Impulse);
-            Destroy ( this );
+            rb.AddForce(Vector3.Reflect((contact.point - startPos).normalized, contact.normal) * bounceForce, ForceMode.Impulse);
+            Destroy(this);
         }
 	}
 
