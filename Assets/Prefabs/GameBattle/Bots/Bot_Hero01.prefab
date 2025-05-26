@@ -155,11 +155,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectRange: 60
   attackRange: 40
-  minAttackDistance: 5
-  fleeDistance: 10
+  minAttackDistance: 15
+  fleeDistance: 25
   cooldownMoveDistance: 50
-  moveSpeed: 15
+  moveSpeed: 16
   attackCooldown: 2
+  safeAttackDistance: 20
+  avoidRadius: 5
+  rotateSpeed: 12
   target: {fileID: 0}
   projectilePrefab: {fileID: 1929353877246504, guid: 750b538505824ef4a805dbd8a75d131b,
     type: 3}
