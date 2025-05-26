@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     // time hồi chiêu normal
     [Header("Countdown Normal Attack")]
     private bool canUserNormalAttack = true;
-    public float normalAttackCoundown = 1.5f;
+    public float normalAttackCoundown = 2f;
     public Image cooldownOverlayNormalAttack;
     public LevelUI levelUI;
 
@@ -88,7 +88,6 @@ public class PlayerController : MonoBehaviour
         if (!canUserNormalAttack) return;
 
         _animator.SetTrigger("Attack");
-        playerInfo._mana -= 30;
         StartCoroutine(DelayAddBullet());
         // hồi chiêuchiêu
         StartCoroutine(NormalAttackCooldown());

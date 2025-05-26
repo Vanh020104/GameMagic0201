@@ -42,6 +42,7 @@ public class ProjectileMoveScript : MonoBehaviour {
 
     // sua de ban danj
     public PlayerInfo owner;
+    public BotStats ownerBot;
     private bool collided22 = false;
 
 	void Start () {
@@ -93,15 +94,54 @@ public class ProjectileMoveScript : MonoBehaviour {
 
 	void OnCollisionEnter (Collision co) {
         var heroInfo = co.GetContact(0).otherCollider.GetComponentInParent<PlayerInfo>();
-        if (heroInfo != null && heroInfo == owner)
+        var botInfo = co.GetContact(0).otherCollider.GetComponentInParent<BotStats>();
+       if ((heroInfo != null && heroInfo == owner) || (botInfo != null && botInfo == ownerBot))
         {
-            return;
+            return; 
         }
-        if (heroInfo != null)
+
+        if (botInfo != null)
+        {
+            botInfo.currentHP -= 50;
+
+            if (botInfo.currentHP <= 0)
+            {
+                string killerName = "Unknown";
+                if (ownerBot != null)
+                    killerName = ownerBot.botName;
+                else if (owner != null)
+                    killerName = PlayerPrefs.GetString("PlayerName", "Player");
+
+                string victimName = botInfo.botName;
+
+                if (owner != null && owner.isLocalPlayer)
+                    FindObjectOfType<KillInfoUIHandler>()?.AddKill();
+
+                FindObjectOfType<KillFeedUI>()?.ShowKill(killerName, victimName);
+            }
+        }
+        else if (heroInfo != null)
         {
             heroInfo._hp -= 50;
-            Debug.Log($"Mau con lai: {heroInfo._hp}");
+
+            if (heroInfo._hp <= 0)
+            {
+                string killerName = "Unknown";
+                if (ownerBot != null)
+                    killerName = ownerBot.botName;
+                else if (owner != null)
+                    killerName = PlayerPrefs.GetString("PlayerName", "Player");
+
+                string victimName = heroInfo.playerName;
+
+                if (owner != null && owner.isLocalPlayer)
+                    FindObjectOfType<KillInfoUIHandler>()?.AddKill();
+
+                FindObjectOfType<KillFeedUI>()?.ShowKill(killerName, victimName);
+            }
         }
+
+
 
         
         if (!bounce)
@@ -153,8 +193,8 @@ public class ProjectileMoveScript : MonoBehaviour {
             rb.useGravity = true;
             rb.drag = 0.5f;
             ContactPoint contact = co.contacts[0];
-            rb.AddForce (Vector3.Reflect((contact.point - startPos).normalized, contact.normal) * bounceForce, ForceMode.Impulse);
-            Destroy ( this );
+            rb.AddForce(Vector3.Reflect((contact.point - startPos).normalized, contact.normal) * bounceForce, ForceMode.Impulse);
+            Destroy(this);
         }
 	}
 

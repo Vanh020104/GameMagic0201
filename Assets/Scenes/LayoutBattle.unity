@@ -389,17 +389,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e109967f00c8943b306e1ec5ed4b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 1465103619070292657, guid: 822af22e77b72b14ca8ae01fef0c097e,
+  playerPrefab: {fileID: 3539661821103264745, guid: e3316c79a73da4d4aa6b19a1b6534a97,
     type: 3}
   spawnPoint: {fileID: 354948150}
   mapPrefab: {fileID: 4389655451339081302, guid: 03420cadc0a55924d95a0711c5f060da,
     type: 3}
   botPrefabs:
-  - {fileID: 3869331661245222372, guid: 8957cb042f3cb864ea014b8fd56fb779, type: 3}
-  - {fileID: 4192621411052091301, guid: 6208fcdc13f10b54582bad54360c6074, type: 3}
-  - {fileID: 4196747223367310728, guid: a7a58d6cc4d954b4ab19b90553bad29c, type: 3}
-  totalCharacter: 10
-  mapSize: {x: 1000, y: 1000}
+  - {fileID: 18952434338952443, guid: 7bce05c5eee3bf84e8d91cf885576103, type: 3}
+  - {fileID: 4609492447879971784, guid: 77b36dcd20e6d844599c5586abb1bf51, type: 3}
 --- !u!114 &992667609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,6 +415,74 @@ MonoBehaviour:
   mapSize: {x: 400, y: 400}
   height: 1.8
   gemContainer: {fileID: 431093580}
+--- !u!1 &1068378772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068378775}
+  - component: {fileID: 1068378774}
+  - component: {fileID: 1068378773}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1068378773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068378772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1068378774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068378772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1068378775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068378772}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1146913562
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,10 +634,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  offset: {x: 0, y: 35, z: -25}
-  smoothSpeed: 5
+  offset: {x: 0, y: 55, z: -45}
+  smoothSpeed: 10
   enableSmoothRotation: 0
-  rotationSmoothSpeed: 5
+  rotationSmoothSpeed: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -583,3 +648,4 @@ SceneRoots:
   - {fileID: 992667607}
   - {fileID: 354948150}
   - {fileID: 431093580}
+  - {fileID: 1068378775}

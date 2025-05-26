@@ -18960,9 +18960,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1117634925}
-        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
-        m_MethodName: OpenLobby
+      - m_Target: {fileID: 1117634938}
+        m_TargetAssemblyTypeName: PlayButtonController, Assembly-CSharp
+        m_MethodName: OnClickPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26906,8 +26906,8 @@ GameObject:
   - component: {fileID: 1117634933}
   - component: {fileID: 1117634934}
   - component: {fileID: 1117634935}
-  - component: {fileID: 1117634936}
   - component: {fileID: 1117634937}
+  - component: {fileID: 1117634938}
   m_Layer: 0
   m_Name: HomeController
   m_TagString: Untagged
@@ -27217,19 +27217,6 @@ MonoBehaviour:
   tabTitleText: {fileID: 75846057}
   upgradePanelUI: {fileID: 1117634937}
   upgradePanelGO: {fileID: 1264717704}
---- !u!114 &1117634936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117634918}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72e1d89a2a5e6f94595e1ea5c8e818f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  equipDatabase: {fileID: 11400000, guid: f3b67e7b44a9a094f8d61888004b6753, type: 2}
 --- !u!114 &1117634937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27250,6 +27237,19 @@ MonoBehaviour:
   progressSlider: {fileID: 1880763463}
   upgradeButton: {fileID: 1766335712}
   panelBuyGold: {fileID: 369790362}
+--- !u!114 &1117634938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117634918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d07d3700607c14e8e05f634eaf7b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: LayoutBattle
 --- !u!1 &1118960199
 GameObject:
   m_ObjectHideFlags: 0

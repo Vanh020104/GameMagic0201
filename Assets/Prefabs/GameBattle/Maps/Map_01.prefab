@@ -30,7 +30,163 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4359691225725058527}
+  - {fileID: 3058693701507319443}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &613368591739930354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7908836034726712887}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7908836034726712887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613368591739930354}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 158, y: 0, z: 145}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1502303568306485405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2789089672578378952}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2789089672578378952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502303568306485405}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27.25, y: 0, z: -164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1581612836527289277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 709363557900033030}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &709363557900033030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581612836527289277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -35, y: 0, z: -38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1761599512664422956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5483864669920869533}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5483864669920869533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761599512664422956}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 100, y: 0, z: 31.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3471266147371472822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559064297347538525}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &559064297347538525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3471266147371472822}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -84, y: 0, z: 117}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3841134870691065520
 GameObject:
@@ -446,6 +602,358 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &4981096886919309288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5795432713957723037}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5795432713957723037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4981096886919309288}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 155, y: 0, z: -14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5215203740577498945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8983160270463071764}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8983160270463071764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5215203740577498945}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -159, y: 0, z: -112}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5317968460901310075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3392181386925260502}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3392181386925260502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5317968460901310075}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -132, y: 0, z: 29.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5588714776232524356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3466601681262386785}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3466601681262386785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5588714776232524356}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 157, y: 0, z: -131}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6010093187681826292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6866814291562475460}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6866814291562475460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6010093187681826292}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.5, y: 0, z: 106}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6598417824011672652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8132419467593629834}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8132419467593629834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6598417824011672652}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -162}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7038729314581953376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5119855345263160773}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5119855345263160773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7038729314581953376}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7356350820129340376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3058693701507319443}
+  - component: {fileID: 2146047871742888945}
+  m_Layer: 0
+  m_Name: BotSpawnPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3058693701507319443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7356350820129340376}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7319277766976695129}
+  - {fileID: 8132419467593629834}
+  - {fileID: 6866814291562475460}
+  - {fileID: 3392181386925260502}
+  - {fileID: 709363557900033030}
+  - {fileID: 8983160270463071764}
+  - {fileID: 5483864669920869533}
+  - {fileID: 5795432713957723037}
+  - {fileID: 3466601681262386785}
+  - {fileID: 7908836034726712887}
+  - {fileID: 2789089672578378952}
+  - {fileID: 1887004171227290410}
+  - {fileID: 559064297347538525}
+  - {fileID: 5119855345263160773}
+  m_Father: {fileID: 1895288242212333418}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2146047871742888945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7356350820129340376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f415de09d67dffb418987d67522dc17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 7319277766976695129}
+  - {fileID: 8132419467593629834}
+  - {fileID: 6866814291562475460}
+  - {fileID: 3392181386925260502}
+  - {fileID: 709363557900033030}
+  - {fileID: 8983160270463071764}
+  - {fileID: 5483864669920869533}
+  - {fileID: 5795432713957723037}
+  - {fileID: 3466601681262386785}
+  - {fileID: 7908836034726712887}
+  - {fileID: 2789089672578378952}
+  - {fileID: 1887004171227290410}
+  - {fileID: 559064297347538525}
+  - {fileID: 5119855345263160773}
+--- !u!1 &8228138283421992871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887004171227290410}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1 (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1887004171227290410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228138283421992871}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.25, y: 0, z: 74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8446479187050355002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7319277766976695129}
+  m_Layer: 0
+  m_Name: BotSpawnPoint_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7319277766976695129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8446479187050355002}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.25, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3058693701507319443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &58719799075036210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -524,6 +1032,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -547,6 +1060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -637,6 +1155,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3863313576614964610, guid: e3817462290a1744191b575ab6095c01,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4917993146247128472, guid: e3817462290a1744191b575ab6095c01,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -726,6 +1249,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Rock 3 '
       objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -814,6 +1342,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Rock 5 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -969,6 +1502,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -992,6 +1530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -1152,6 +1695,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_B (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1241,6 +1789,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1264,6 +1817,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -1354,6 +1912,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Tree 2 '
       objectReference: {fileID: 0}
+    - target: {fileID: 3863313576614964610, guid: e3817462290a1744191b575ab6095c01,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4917993146247128472, guid: e3817462290a1744191b575ab6095c01,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1442,6 +2005,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -1602,6 +2170,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8825e3671b0454549b6337a0d1499f09,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1657,6 +2230,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -1812,6 +2390,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'House 3 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8663616352357696623, guid: aa82e02ef557ddf46b4e1aaf3952339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1905,6 +2488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: waterlily_B (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2000,6 +2588,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8825e3671b0454549b6337a0d1499f09,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2055,6 +2648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -2145,6 +2743,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 5  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2233,6 +2836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -2393,6 +3001,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Bridge '
       objectReference: {fileID: 0}
+    - target: {fileID: 3075355609481063172, guid: 0c3537d9eb4a4a941abe84656680124c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2486,6 +3099,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: tree_single_A (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1b9f19f89e936a4a81cb9e8e8da5663,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2613,6 +3231,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_B (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2acf7b9b14d74e448f2b1362a5a4c1c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2668,6 +3291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -2828,6 +3456,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_B (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2acf7b9b14d74e448f2b1362a5a4c1c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2953,6 +3586,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_single_D (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3080,6 +3718,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_E (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1345a907f4205cc41b4b3fd70ea96ad6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3135,6 +3778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -3295,6 +3943,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3350,6 +4003,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -3440,6 +4098,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 5  (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3529,6 +4192,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 3  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3617,6 +4285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lake
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071296285362736313, guid: 593e0e180426ce14fa1e7f97fe769bc0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5168159829239232145, guid: 593e0e180426ce14fa1e7f97fe769bc0,
         type: 3}
@@ -3777,6 +4450,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_B (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3800,6 +4478,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -3890,6 +4573,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 3  (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3978,6 +4666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree 2  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863313576614964610, guid: e3817462290a1744191b575ab6095c01,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4917993146247128472, guid: e3817462290a1744191b575ab6095c01,
         type: 3}
@@ -4143,6 +4836,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree_single_A
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1b9f19f89e936a4a81cb9e8e8da5663,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4264,6 +4962,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4353,6 +5056,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Road 1 '
       objectReference: {fileID: 0}
+    - target: {fileID: 6965276927511497642, guid: a5e40d8eb9e7ea840824a0bfd6a748c3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4376,6 +5084,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -4465,6 +5178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -4625,6 +5343,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_A (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4719,6 +5442,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: hills_B_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa8b5e2e0ddeda54fac485954f2d416c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4774,6 +5502,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -4934,6 +5667,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5060,6 +5798,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_A
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59874a51a1aef894ea3a5063de61a040,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5083,6 +5826,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Rock 4 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -5243,6 +5991,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5364,6 +6117,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 2  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3569514730305494252, guid: 334dbd2d6ef2feb48bb985a433078768,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5387,6 +6145,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -5547,6 +6310,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree_single_B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a5f185a471a4eb4ebb94d8de2287444,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5668,6 +6436,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: House 3  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8663616352357696623, guid: aa82e02ef557ddf46b4e1aaf3952339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5762,6 +6535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_B (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2acf7b9b14d74e448f2b1362a5a4c1c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5817,6 +6595,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Rock 5 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -5977,6 +6760,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2acf7b9b14d74e448f2b1362a5a4c1c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6098,6 +6886,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterplant_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a9567c32ee0248a4eb6b9ea44c363681,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6121,6 +6914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -6276,6 +7074,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6369,6 +7172,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_single_D (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6496,6 +7304,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_C (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c8c4306d45f0f8448a0d00af816f74a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6551,6 +7364,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -6711,6 +7529,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8773858514399207794, guid: a424a5dee94798b4e852edf7cb90c092,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6805,6 +7628,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_A (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6828,6 +7656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mountain 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675683959644820646, guid: 8f2efc50a4cf362408c6165b04f3d15c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6336497869414535676, guid: 8f2efc50a4cf362408c6165b04f3d15c,
         type: 3}
@@ -6917,6 +7750,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -7072,6 +7910,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7161,6 +8004,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Tent 1 '
       objectReference: {fileID: 0}
+    - target: {fileID: 3618055832051179746, guid: 5974c30bdf0a2ee468a0feda7607d4a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7184,6 +8032,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -7339,6 +8192,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7362,6 +8220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -7522,6 +8385,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_C
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c8c4306d45f0f8448a0d00af816f74a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7648,6 +8516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree_single_B (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a5f185a471a4eb4ebb94d8de2287444,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7703,6 +8576,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree 1  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 930026083976683566, guid: 8b63f536dcb9512418bb18c53c2565c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2191666470857331508, guid: 8b63f536dcb9512418bb18c53c2565c6,
         type: 3}
@@ -7858,6 +8736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Watch Tower '
       objectReference: {fileID: 0}
+    - target: {fileID: 8274077260532194656, guid: e66e47acabbcbae4693cd4edf04a45b5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7947,10 +8830,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -101816619712315968, guid: 9d89a3c88e4315944b6742e1cf0489d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9d89a3c88e4315944b6742e1cf0489d3,
         type: 3}
       propertyPath: m_Name
       value: building_windmill_red (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9d89a3c88e4315944b6742e1cf0489d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581981415042721925, guid: 9d89a3c88e4315944b6742e1cf0489d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8073,10 +8971,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7494348099408552305, guid: 4222e04871c6b8d4589591479019ed59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4222e04871c6b8d4589591479019ed59,
         type: 3}
       propertyPath: m_Name
       value: building_tower_catapult_red
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4222e04871c6b8d4589591479019ed59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2562748990820693998, guid: 4222e04871c6b8d4589591479019ed59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8133,6 +9046,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -8293,6 +9211,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8414,10 +9337,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -101816619712315968, guid: 9d89a3c88e4315944b6742e1cf0489d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9d89a3c88e4315944b6742e1cf0489d3,
         type: 3}
       propertyPath: m_Name
       value: building_windmill_red
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9d89a3c88e4315944b6742e1cf0489d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581981415042721925, guid: 9d89a3c88e4315944b6742e1cf0489d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8540,6 +9478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Road 2 '
       objectReference: {fileID: 0}
+    - target: {fileID: 3987463891162874686, guid: c461097f0ee49f84aaa97f183d912cc3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8563,6 +9506,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Gate '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388706015582397040, guid: c1f349fbba3134c46807ca13bd968a5a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6026326186303650809, guid: c1f349fbba3134c46807ca13bd968a5a,
         type: 3}
@@ -8689,6 +9637,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Water Fall
+      objectReference: {fileID: 0}
+    - target: {fileID: 23394108171409030, guid: 9fdd0f3597e216a448290da4138a3418,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1988487740193981534, guid: 9fdd0f3597e216a448290da4138a3418,
         type: 3}
@@ -8854,6 +9807,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car 3  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8586222705244006480, guid: 7de8886ae0ce24341aa407c8e3ec460a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8877,6 +9835,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -8966,6 +9929,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lake
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071296285362736313, guid: 593e0e180426ce14fa1e7f97fe769bc0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5168159829239232145, guid: 593e0e180426ce14fa1e7f97fe769bc0,
         type: 3}
@@ -9141,6 +10109,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic Light  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9017324328738691334, guid: 51037e8ebcbe7934e9fd19d0bb3f9763,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3896144993066684706, guid: 51037e8ebcbe7934e9fd19d0bb3f9763, type: 3}
     m_RemovedGameObjects: []
@@ -9196,6 +10169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -9356,6 +10334,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree_single_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a5f185a471a4eb4ebb94d8de2287444,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9482,6 +10465,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_A (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9576,6 +10564,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9631,6 +10624,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -9791,6 +10789,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_E (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1345a907f4205cc41b4b3fd70ea96ad6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9884,6 +10887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_single_D (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10011,6 +11019,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10137,6 +11150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 7 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8773858514399207794, guid: a424a5dee94798b4e852edf7cb90c092,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10225,6 +11243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 2  (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569514730305494252, guid: 334dbd2d6ef2feb48bb985a433078768,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10320,6 +11343,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_B (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10413,6 +11441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: waterlily_B (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10508,6 +11541,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_A (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10531,6 +11569,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -10620,6 +11663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -10780,6 +11828,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree_single_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1b9f19f89e936a4a81cb9e8e8da5663,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10835,6 +11888,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -10925,6 +11983,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 3  (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -11013,6 +12076,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -11173,6 +12241,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: building_lumbermill_red
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 95df50a6f3f9e9144b9e3a87e82fe56d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044515699993763739, guid: 95df50a6f3f9e9144b9e3a87e82fe56d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579136327535600649, guid: 95df50a6f3f9e9144b9e3a87e82fe56d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11298,6 +12381,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_single_D (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11425,6 +12513,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building_mine_red
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 056aebcc13c96034fa4b0bb18939b192,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11480,6 +12573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -11635,6 +12733,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11728,6 +12831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: mountain_C (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f84b83b27fcf2114bb24b7d571a6b471,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11855,6 +12963,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountain_C_grass_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b210dd0b563c7a645845e7c68a6eaea5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11910,6 +13023,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644402326784274311, guid: 57e9bcdf261a3384eac9e4b8b62615be,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6791162048596852372, guid: 57e9bcdf261a3384eac9e4b8b62615be,
         type: 3}
@@ -12070,6 +13188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_B (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8825e3671b0454549b6337a0d1499f09,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12195,6 +13318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: mountain_C (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f84b83b27fcf2114bb24b7d571a6b471,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12322,6 +13450,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12411,6 +13544,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 2  (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3569514730305494252, guid: 334dbd2d6ef2feb48bb985a433078768,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12434,6 +13572,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -12594,6 +13737,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building_well_green
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b31ecb4f07330a042a6ddb7357e48b2f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12719,6 +13867,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: hills_B_trees
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa8b5e2e0ddeda54fac485954f2d416c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12846,6 +13999,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_B (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12935,6 +14093,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'House 3 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8663616352357696623, guid: aa82e02ef557ddf46b4e1aaf3952339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12958,6 +14121,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -13118,6 +14286,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_B (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13206,6 +14379,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 1  (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13296,6 +14474,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13319,6 +14502,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -13479,6 +14667,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13604,6 +14797,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_single_C (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c8c4306d45f0f8448a0d00af816f74a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13731,6 +14929,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building_castle_red
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c0a815b2ba8306448651da50fbf7e60,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13857,6 +15060,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_E (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1345a907f4205cc41b4b3fd70ea96ad6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13950,6 +15158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: building_castle_red (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c0a815b2ba8306448651da50fbf7e60,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14072,6 +15285,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14095,6 +15313,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -14184,6 +15407,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -14344,6 +15572,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountain_C (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f84b83b27fcf2114bb24b7d571a6b471,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14399,6 +15632,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -14554,6 +15792,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Rock 2 '
       objectReference: {fileID: 0}
+    - target: {fileID: 3569514730305494252, guid: 334dbd2d6ef2feb48bb985a433078768,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14648,6 +15891,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: hills_C_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a70a505f387fcc49b5da45113631ceb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14703,6 +15951,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -14863,6 +16116,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14984,6 +16242,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Rock 2 '
       objectReference: {fileID: 0}
+    - target: {fileID: 3569514730305494252, guid: 334dbd2d6ef2feb48bb985a433078768,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15078,6 +16341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_A (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15101,6 +16369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -15256,6 +16529,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bridge  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3075355609481063172, guid: 0c3537d9eb4a4a941abe84656680124c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15350,6 +16628,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_B (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15439,6 +16722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Rock 1 '
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15462,6 +16750,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -15551,6 +16844,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'House 2 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 477598291328391428, guid: e9f5963fc4a61ee4b93518a6c6748831,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8344490353556159687, guid: e9f5963fc4a61ee4b93518a6c6748831,
         type: 3}
@@ -15645,6 +16943,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Rock 4 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -15800,6 +17103,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Rock 1 '
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15823,6 +17131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -15983,6 +17296,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree_single_A (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1b9f19f89e936a4a81cb9e8e8da5663,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16104,6 +17422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16127,6 +17450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -16287,6 +17615,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16342,6 +17675,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321067519362931901, guid: 4d09acfefa4b0e44388ef8e7322b9a76,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8540284270324451307, guid: 4d09acfefa4b0e44388ef8e7322b9a76,
         type: 3}
@@ -16431,6 +17769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -16591,6 +17934,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountain_C (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f84b83b27fcf2114bb24b7d571a6b471,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16614,6 +17962,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -16774,6 +18127,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_C (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c8c4306d45f0f8448a0d00af816f74a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16895,6 +18253,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16988,6 +18351,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: building_watermill_blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aefb21a7ebb4bcb47aeea3e3e0958dcc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685066967014656488, guid: aefb21a7ebb4bcb47aeea3e3e0958dcc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17083,6 +18456,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 7 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8773858514399207794, guid: a424a5dee94798b4e852edf7cb90c092,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17106,6 +18484,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -17266,6 +18649,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17321,6 +18709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Tree 1 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 930026083976683566, guid: 8b63f536dcb9512418bb18c53c2565c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2191666470857331508, guid: 8b63f536dcb9512418bb18c53c2565c6,
         type: 3}
@@ -17415,6 +18808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -17570,6 +18968,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17593,6 +18996,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -17753,6 +19161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17776,6 +19189,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Rock 3 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -17865,6 +19283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Water Well
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132554433598260195, guid: eb93887867009ba4b8ae05818fcc0c58,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3781501836483615435, guid: eb93887867009ba4b8ae05818fcc0c58,
         type: 3}
@@ -18020,6 +19443,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Mill '
       objectReference: {fileID: 0}
+    - target: {fileID: 6545576631236773151, guid: fc5c037b45f7cb24894a869b0cbb858e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18043,6 +19471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -18198,6 +19631,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18221,6 +19659,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -18310,6 +19753,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -18470,6 +19918,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: hills_C_trees (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ae57424537df85f48ab1cc0664bd2daa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18606,6 +20059,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Car 3 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8586222705244006480, guid: 7de8886ae0ce24341aa407c8e3ec460a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18700,6 +20158,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18755,6 +20218,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -18915,6 +20383,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18970,6 +20443,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -19125,6 +20603,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 2  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3569514730305494252, guid: 334dbd2d6ef2feb48bb985a433078768,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19219,6 +20702,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_C (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c8c4306d45f0f8448a0d00af816f74a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19274,6 +20762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -19429,6 +20922,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19452,6 +20950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -19607,6 +21110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Mountain 2 '
       objectReference: {fileID: 0}
+    - target: {fileID: 7725382070131304987, guid: ad2e499151a0627469e6752051229209,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19630,6 +21138,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -19790,6 +21303,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building_home_A_red
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71849042599d25f45aae097d28dc9eae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19845,6 +21363,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -20000,6 +21523,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: House 3  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8663616352357696623, guid: aa82e02ef557ddf46b4e1aaf3952339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20023,6 +21551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -20112,6 +21645,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lake (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071296285362736313, guid: 593e0e180426ce14fa1e7f97fe769bc0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5168159829239232145, guid: 593e0e180426ce14fa1e7f97fe769bc0,
         type: 3}
@@ -20272,6 +21810,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_A
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5147a573c639f5c46b93a21726afe970,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20327,6 +21870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -20487,6 +22035,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_A (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20581,6 +22134,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_A (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20670,6 +22228,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7594105588133860644, guid: 1876e96a48eea50458d7e14f141123ed,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20693,6 +22256,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -20783,6 +22351,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 4  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -20871,6 +22444,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -20961,6 +22539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 5  (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -21049,6 +22632,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -21209,6 +22797,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountain_C_grass_trees (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b210dd0b563c7a645845e7c68a6eaea5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21330,6 +22923,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21418,6 +23016,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 1  (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21512,6 +23115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: tree_single_B (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a5f185a471a4eb4ebb94d8de2287444,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21639,6 +23247,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_B (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21728,6 +23341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: House 3  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8663616352357696623, guid: aa82e02ef557ddf46b4e1aaf3952339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21751,6 +23369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree 2  (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863313576614964610, guid: e3817462290a1744191b575ab6095c01,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4917993146247128472, guid: e3817462290a1744191b575ab6095c01,
         type: 3}
@@ -21845,6 +23468,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Tent 2 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 662849226753079980, guid: d575e9574cca5534cb591b5326d89833,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6887647206871145868, guid: d575e9574cca5534cb591b5326d89833,
         type: 3}
@@ -22000,6 +23628,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterplant_C
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a48324b5befa08f429010f3cc1bd6609,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22088,6 +23721,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 1  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22182,6 +23820,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: building_tower_A_blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f0e338d257445f34992bac80d12c0fe8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064860502559145200, guid: f0e338d257445f34992bac80d12c0fe8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22304,6 +23952,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22398,6 +24051,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22453,6 +24111,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -22613,6 +24276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: hills_A_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7957c15e6afc2b4b885217c2d8049bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22668,6 +24336,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -22828,6 +24501,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_C (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c8c4306d45f0f8448a0d00af816f74a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22954,6 +24632,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: building_tower_A_blue (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d1318a8cc4d5a54438e64aa06b590451,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064860502559145200, guid: d1318a8cc4d5a54438e64aa06b590451,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23009,6 +24697,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -23098,6 +24791,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -23258,6 +24956,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Car 2 '
       objectReference: {fileID: 0}
+    - target: {fileID: 3365577525225607571, guid: 097f938ab30dad44eb0996f9121199a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23281,6 +24984,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -23436,6 +25144,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Rock 1 '
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23529,6 +25242,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_single_C (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c8c4306d45f0f8448a0d00af816f74a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23651,10 +25369,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4833478254850078820, guid: 36a4e4ddde8db564995fd0c081a6ac83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 36a4e4ddde8db564995fd0c081a6ac83,
         type: 3}
       propertyPath: m_Name
       value: building_windmill_green
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36a4e4ddde8db564995fd0c081a6ac83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500082328499903411, guid: 36a4e4ddde8db564995fd0c081a6ac83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23711,6 +25444,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -23801,6 +25539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8321067519362931901, guid: 4d09acfefa4b0e44388ef8e7322b9a76,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8540284270324451307, guid: 4d09acfefa4b0e44388ef8e7322b9a76,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -23890,6 +25633,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 4  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -23978,6 +25726,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -24138,6 +25891,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24227,6 +25985,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24250,6 +26013,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -24410,6 +26178,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building_mine_blue
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d0bbaf7fb8888844b9d2f1ecc6ea8a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24536,6 +26309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building_tower_base_red
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c1e06ad95ddef9045b1b9abad55df9ca,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24657,6 +26435,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 2  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3569514730305494252, guid: 334dbd2d6ef2feb48bb985a433078768,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24751,6 +26534,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountain_A_grass_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 47bfe6f4ea3d3b1429e6e444784a515d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24806,6 +26594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -24966,6 +26759,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_A (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25055,6 +26853,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'House 5 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8181453423359535207, guid: 48d2e97472f3bf84a844879441514e87,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25078,6 +26881,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -25238,6 +27046,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: building_barracks_red
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 998089291e27f7a4f940a7ebbfb351eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25359,6 +27172,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 1  (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7014438214332345154, guid: 39697217dc8529043b03c28ebdf10e8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25452,6 +27270,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rock_single_B (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2acf7b9b14d74e448f2b1362a5a4c1c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25579,6 +27402,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountain_C_grass_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b210dd0b563c7a645845e7c68a6eaea5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25634,6 +27462,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -25723,6 +27556,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lake (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071296285362736313, guid: 593e0e180426ce14fa1e7f97fe769bc0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5168159829239232145, guid: 593e0e180426ce14fa1e7f97fe769bc0,
         type: 3}
@@ -25883,6 +27721,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_B (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2acf7b9b14d74e448f2b1362a5a4c1c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25938,6 +27781,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -26027,6 +27875,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -26187,6 +28040,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26242,6 +28100,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -26332,6 +28195,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 4  (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -26420,6 +28288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -26575,6 +28448,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 2  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3569514730305494252, guid: 334dbd2d6ef2feb48bb985a433078768,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26598,6 +28476,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -26687,6 +28570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff 4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321067519362931901, guid: 4d09acfefa4b0e44388ef8e7322b9a76,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8540284270324451307, guid: 4d09acfefa4b0e44388ef8e7322b9a76,
         type: 3}
@@ -26847,6 +28735,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_A (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26940,6 +28833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: building_tower_base_yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9cf1cefe1a5908047a718491d52da6be,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27067,6 +28965,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountain_C (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f84b83b27fcf2114bb24b7d571a6b471,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27160,6 +29063,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Traffic Light '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017324328738691334, guid: 51037e8ebcbe7934e9fd19d0bb3f9763,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3896144993066684706, guid: 51037e8ebcbe7934e9fd19d0bb3f9763, type: 3}
@@ -27287,6 +29195,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountain_C
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f84b83b27fcf2114bb24b7d571a6b471,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27342,6 +29255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree 1  (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 930026083976683566, guid: 8b63f536dcb9512418bb18c53c2565c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2191666470857331508, guid: 8b63f536dcb9512418bb18c53c2565c6,
         type: 3}
@@ -27502,6 +29420,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_A (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27595,6 +29518,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: waterlily_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e150e63d8cb235c47a922db2f334623a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27690,6 +29618,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27745,6 +29678,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -27905,6 +29843,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountain_B_grass
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 86d26f25f3b057a49b56603819830d0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27960,6 +29903,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -28120,6 +30068,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_E
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1345a907f4205cc41b4b3fd70ea96ad6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28175,6 +30128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -28264,6 +30222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Tree 1 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 930026083976683566, guid: 8b63f536dcb9512418bb18c53c2565c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2191666470857331508, guid: 8b63f536dcb9512418bb18c53c2565c6,
         type: 3}
@@ -28424,6 +30387,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_D
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8eeefb555854b0f4e9ea49473137edda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28550,6 +30518,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountain_C (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f84b83b27fcf2114bb24b7d571a6b471,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28671,6 +30644,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 2  (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3569514730305494252, guid: 334dbd2d6ef2feb48bb985a433078768,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28760,6 +30738,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7594105588133860644, guid: 1876e96a48eea50458d7e14f141123ed,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28783,6 +30766,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -28873,6 +30861,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3863313576614964610, guid: e3817462290a1744191b575ab6095c01,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4917993146247128472, guid: e3817462290a1744191b575ab6095c01,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -28962,6 +30955,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 5  (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -29050,6 +31048,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -29205,6 +31208,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Mill '
       objectReference: {fileID: 0}
+    - target: {fileID: 6545576631236773151, guid: fc5c037b45f7cb24894a869b0cbb858e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29294,6 +31302,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Watch Tower '
       objectReference: {fileID: 0}
+    - target: {fileID: 8274077260532194656, guid: e66e47acabbcbae4693cd4edf04a45b5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29317,6 +31330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lake (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071296285362736313, guid: 593e0e180426ce14fa1e7f97fe769bc0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5168159829239232145, guid: 593e0e180426ce14fa1e7f97fe769bc0,
         type: 3}
@@ -29477,6 +31495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_B (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29500,6 +31523,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 3  (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
@@ -29590,6 +31618,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 5  (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -29679,6 +31712,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 5  (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -29767,6 +31805,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Car 1 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202561854835830196, guid: 163210dddc5038c469594285e970e3f0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3301772411682046595, guid: 163210dddc5038c469594285e970e3f0,
         type: 3}
@@ -29932,6 +31975,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: trees_A_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 433f00afe7842db47bb71f2dcae8597d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29987,6 +32035,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Tree 2 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863313576614964610, guid: e3817462290a1744191b575ab6095c01,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4917993146247128472, guid: e3817462290a1744191b575ab6095c01,
         type: 3}
@@ -30082,6 +32135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 3  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6985135927572928683, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8793908306048412606, guid: 746f3ea53dc15cd46a8e5db5f10005f9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -30170,6 +32228,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -30330,6 +32393,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree_single_B (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a5f185a471a4eb4ebb94d8de2287444,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30424,6 +32492,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_single_B (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e2acf7b9b14d74e448f2b1362a5a4c1c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30447,6 +32520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lake (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071296285362736313, guid: 593e0e180426ce14fa1e7f97fe769bc0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5168159829239232145, guid: 593e0e180426ce14fa1e7f97fe769bc0,
         type: 3}
@@ -30537,6 +32615,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Rock 5 '
       objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -30625,6 +32708,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 5  (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089105264207930510, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7761915777394392194, guid: 912f2a04d53dd844f845eb73d7ed2fa5,
         type: 3}
@@ -30785,6 +32873,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waterlily_B (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78f7ddd20c45e044b9f1c922510234e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30808,6 +32901,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 4  (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 576571883394086813, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3449991424911147866, guid: a68fd9ce7b1d50d4da362904b5e2bb61,
         type: 3}
@@ -30967,6 +33065,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: building_market_green
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3fbe5e04b7b61fc4394270d88aa7b272,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

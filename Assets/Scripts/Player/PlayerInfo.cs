@@ -13,6 +13,8 @@ public class PlayerInfo : MonoBehaviour
     public Animator _animator;
 
     public bool hasDied = false;
+    public bool isLocalPlayer = false;
+    public string playerName;
 
 
     void Start()
@@ -32,28 +34,25 @@ public class PlayerInfo : MonoBehaviour
     }
 
     IEnumerator HandleDeath()
-    {
-        // Chạy animation die
+    {   
+        FindObjectOfType<KillInfoUIHandler>()?.PlayerDied();
         _animator.SetTrigger("Die");
-
-        // Tắt điều khiển (nếu cần)
         PlayerController controller = GetComponent<PlayerController>();
         if (controller) controller.enabled = false;
-
-        // Dừng Rigidbody
         Rigidbody rb = GetComponent<Rigidbody>();
-        if (rb) rb.velocity = Vector3.zero;
-
-        // Optional: tắt collider nếu ko muốn bị va chạm
+        if (rb)
+        {
+            rb.velocity = Vector3.zero;
+            rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
+            rb.isKinematic = true; 
+            rb.useGravity = false;
+        }
         Collider col = GetComponent<Collider>();
         if (col) col.enabled = false;
-
-        // Chờ 3s cho animation xong
-        yield return new WaitForSeconds(3f);
-
-        // Xoá toàn bộ player
+        yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }
+
 
     private IEnumerator RegenerateMana()
     {
