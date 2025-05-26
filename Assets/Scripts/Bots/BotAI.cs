@@ -9,9 +9,9 @@ public class BotAI : MonoBehaviour
     [Header("Settings")]
     public float detectRange = 60f;
     public float attackRange = 40f;
-    public float minAttackDistance = 5f;
-    public float fleeDistance = 10f;
-    public float cooldownMoveDistance = 45f;
+    public float minAttackDistance = 15f;
+    public float fleeDistance = 25f;
+    public float cooldownMoveDistance = 50f;
     public float moveSpeed = 15f;
     public float attackCooldown = 2f;
 
@@ -269,7 +269,9 @@ public class BotAI : MonoBehaviour
         if (dir != Vector3.zero)
         {
             Quaternion targetRot = Quaternion.LookRotation(dir);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 30f);
+            Quaternion smoothRot = Quaternion.Slerp(rb.rotation, targetRot, Time.deltaTime * 30f);
+            rb.MoveRotation(smoothRot);
+
         }
     }
 
@@ -302,7 +304,9 @@ public class BotAI : MonoBehaviour
         if (dir.sqrMagnitude > 0.01f)
         {
             Quaternion lookRot = Quaternion.LookRotation(dir);
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 20f);
+            Quaternion newRotation = Quaternion.Slerp(rb.rotation, lookRot, Time.deltaTime * 20f);
+            rb.MoveRotation(newRotation);
+
         }
         anim.SetFloat("Speed", 1f);
     }
@@ -350,14 +354,24 @@ public class BotAI : MonoBehaviour
 
     void HandleDeath()
     {
+        FindObjectOfType<KillInfoUIHandler>()?.PlayerDied();
         currentState = State.Die;
         anim.SetTrigger("Die");
         rb.velocity = Vector3.zero;
+        Collider col = GetComponent<Collider>();
+        if (col != null)
+            col.enabled = false;
+        rb.isKinematic = true;
+        rb.detectCollisions = false;
+
         pathPoints.Clear();
         currentPathIndex = 0;
-        if (worldUI != null) Destroy(worldUI, 5f);
+
+        if (worldUI != null)
+            Destroy(worldUI, 5f);
         Destroy(gameObject, 5f);
     }
+
 
     void ForceMoveIfIdle()
     {

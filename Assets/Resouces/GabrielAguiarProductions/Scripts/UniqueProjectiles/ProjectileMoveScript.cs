@@ -103,13 +103,44 @@ public class ProjectileMoveScript : MonoBehaviour {
         if (botInfo != null)
         {
             botInfo.currentHP -= 50;
-            Debug.Log($"Máu bot còn lại: {botInfo.currentHP}");
+
+            if (botInfo.currentHP <= 0)
+            {
+                string killerName = "Unknown";
+                if (ownerBot != null)
+                    killerName = ownerBot.botName;
+                else if (owner != null)
+                    killerName = PlayerPrefs.GetString("PlayerName", "Player");
+
+                string victimName = botInfo.botName;
+
+                if (owner != null && owner.isLocalPlayer)
+                    FindObjectOfType<KillInfoUIHandler>()?.AddKill();
+
+                FindObjectOfType<KillFeedUI>()?.ShowKill(killerName, victimName);
+            }
         }
         else if (heroInfo != null)
         {
             heroInfo._hp -= 50;
-            Debug.Log($"Máu player còn lại: {heroInfo._hp}");
+
+            if (heroInfo._hp <= 0)
+            {
+                string killerName = "Unknown";
+                if (ownerBot != null)
+                    killerName = ownerBot.botName;
+                else if (owner != null)
+                    killerName = PlayerPrefs.GetString("PlayerName", "Player");
+
+                string victimName = heroInfo.playerName;
+
+                if (owner != null && owner.isLocalPlayer)
+                    FindObjectOfType<KillInfoUIHandler>()?.AddKill();
+
+                FindObjectOfType<KillFeedUI>()?.ShowKill(killerName, victimName);
+            }
         }
+
 
 
         

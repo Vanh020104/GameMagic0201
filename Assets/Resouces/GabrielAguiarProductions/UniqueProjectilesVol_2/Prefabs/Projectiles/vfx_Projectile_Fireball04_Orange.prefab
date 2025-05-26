@@ -38969,7 +38969,7 @@ GameObject:
   - component: {fileID: 135330449751369596}
   m_Layer: 7
   m_Name: vfx_Projectile_Fireball04_Orange
-  m_TagString: Bullet
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39030,6 +39030,7 @@ MonoBehaviour:
   - {fileID: 1038054446430336}
   - {fileID: 1111706152486094}
   owner: {fileID: 0}
+  ownerBot: {fileID: 0}
 --- !u!54 &54270707880095282
 Rigidbody:
   m_ObjectHideFlags: 0

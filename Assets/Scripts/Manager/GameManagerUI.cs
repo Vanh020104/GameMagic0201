@@ -9,15 +9,19 @@ public class GameManagerUI : MonoBehaviour
     public GameObject mapPrefab;
     public List<GameObject> botPrefabs;
 
-
+    private GameObject botContainer;
 
     void Start()
     {
         GameObject map = Instantiate(mapPrefab, Vector3.zero, Quaternion.identity);
         GameObject player = Instantiate(playerPrefab, spawnPoint.position, Quaternion.identity);
         Camera.main.GetComponent<CameraFollow>().target = player.transform;
+        player.GetComponent<PlayerInfo>().playerName = PlayerPrefs.GetString("PlayerName", "Player");
+        player.GetComponent<PlayerInfo>().isLocalPlayer = true;
 
-        // Tìm BotSpawnPointGroup trong map
+        // Tạo container chứa bot cho gọn hierarchy
+        botContainer = new GameObject("BotContainer");
+
         BotSpawnPointGroup spawnGroup = map.GetComponentInChildren<BotSpawnPointGroup>();
         if (spawnGroup == null || spawnGroup.spawnPoints.Length == 0)
         {
@@ -27,13 +31,18 @@ public class GameManagerUI : MonoBehaviour
 
         int totalSpawnPoints = spawnGroup.spawnPoints.Length;
 
-        // Spawn bot tại mỗi điểm, dùng prefab luân phiên
         for (int i = 0; i < totalSpawnPoints; i++)
         {
-            GameObject botPrefab = botPrefabs[i % botPrefabs.Count]; // quay vòng 3 prefab
+            GameObject botPrefab = botPrefabs[i % botPrefabs.Count];
             Transform spawnPos = spawnGroup.spawnPoints[i];
 
-            Instantiate(botPrefab, spawnPos.position, spawnPos.rotation);
+            GameObject bot = Instantiate(botPrefab, spawnPos.position, spawnPos.rotation);
+
+            // Đóng bot vào container
+            bot.transform.SetParent(botContainer.transform);
         }
+
+        int total = totalSpawnPoints + 1; // 1 player chính
+        FindObjectOfType<KillInfoUIHandler>()?.Init(total);
     }
 }

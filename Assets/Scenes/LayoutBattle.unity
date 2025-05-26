@@ -396,6 +396,7 @@ MonoBehaviour:
     type: 3}
   botPrefabs:
   - {fileID: 18952434338952443, guid: 7bce05c5eee3bf84e8d91cf885576103, type: 3}
+  - {fileID: 4609492447879971784, guid: 77b36dcd20e6d844599c5586abb1bf51, type: 3}
 --- !u!114 &992667609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  offset: {x: 0, y: 45, z: -35}
+  offset: {x: 0, y: 55, z: -45}
   smoothSpeed: 10
   enableSmoothRotation: 0
   rotationSmoothSpeed: 10

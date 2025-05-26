@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6459458340175927370}
   - component: {fileID: 7344914519600431549}
   - component: {fileID: 6009054076370791542}
-  - component: {fileID: 5534808765086080626}
   - component: {fileID: 3904294106719559266}
   - component: {fileID: 7830757487030579261}
   - component: {fileID: -687483894060716373}
@@ -73,7 +72,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &6009054076370791542
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -97,28 +96,6 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 1.5, z: 0}
---- !u!195 &5534808765086080626
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18952434338952443}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!95 &3904294106719559266
 Animator:
   serializedVersion: 7
@@ -158,16 +135,13 @@ MonoBehaviour:
   minAttackDistance: 15
   fleeDistance: 25
   cooldownMoveDistance: 50
-  moveSpeed: 16
+  moveSpeed: 15
   attackCooldown: 2
-  safeAttackDistance: 20
-  avoidRadius: 5
-  rotateSpeed: 12
   target: {fileID: 0}
   projectilePrefab: {fileID: 1929353877246504, guid: 750b538505824ef4a805dbd8a75d131b,
     type: 3}
   projectileSpawnPoint: {fileID: 4558919667173453136}
-  projectileLifetime: 3
+  projectileLifetime: 2
 --- !u!114 &-687483894060716373
 MonoBehaviour:
   m_ObjectHideFlags: 0

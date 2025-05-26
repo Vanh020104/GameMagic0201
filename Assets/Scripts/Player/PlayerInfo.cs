@@ -13,6 +13,8 @@ public class PlayerInfo : MonoBehaviour
     public Animator _animator;
 
     public bool hasDied = false;
+    public bool isLocalPlayer = false;
+    public string playerName;
 
 
     void Start()
@@ -32,7 +34,8 @@ public class PlayerInfo : MonoBehaviour
     }
 
     IEnumerator HandleDeath()
-    {
+    {   
+        FindObjectOfType<KillInfoUIHandler>()?.PlayerDied();
         _animator.SetTrigger("Die");
         PlayerController controller = GetComponent<PlayerController>();
         if (controller) controller.enabled = false;
