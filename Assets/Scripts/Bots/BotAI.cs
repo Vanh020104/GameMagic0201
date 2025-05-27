@@ -361,6 +361,8 @@ public class BotAI : MonoBehaviour
         Collider col = GetComponent<Collider>();
         if (col != null)
             col.enabled = false;
+
+        rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
         rb.isKinematic = true;
         rb.detectCollisions = false;
 
