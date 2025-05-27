@@ -13,7 +13,28 @@ public class GameManagerUI : MonoBehaviour
 
     void Start()
     {
-        GameObject map = Instantiate(mapPrefab, Vector3.zero, Quaternion.identity);
+        GameObject map;
+
+        if (GameData.SelectedMap != null)
+        {
+            var loaded = Resources.Load<GameObject>(GameData.SelectedMap.prefabPath);
+            if (loaded != null)
+            {
+                map = Instantiate(loaded, Vector3.zero, Quaternion.identity);
+            }
+            else
+            {
+                Debug.LogError("❌ Không tìm thấy prefab map: " + GameData.SelectedMap.prefabPath);
+                return;
+            }
+        }
+        else
+        {
+            // fallback: dùng map mặc định nếu chưa chọn (tránh lỗi)
+            map = Instantiate(mapPrefab, Vector3.zero, Quaternion.identity);
+            Debug.LogWarning("⚠️ Chưa chọn map, dùng map mặc định.");
+        }
+
         GameObject player = Instantiate(playerPrefab, spawnPoint.position, Quaternion.identity);
         Camera.main.GetComponent<CameraFollow>().target = player.transform;
         player.GetComponent<PlayerInfo>().playerName = PlayerPrefs.GetString("PlayerName", "Player");
