@@ -12,7 +12,7 @@ public class SceneLoader : MonoBehaviour
     public TextMeshProUGUI loadingText;
 
     [Header("Scene")]
-    public string sceneToLoad = "Scene_Battle";
+    public string sceneToLoad = "Scenes_Home_Game";
 
     private bool isTapped = false;
 

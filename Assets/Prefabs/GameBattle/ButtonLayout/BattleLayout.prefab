@@ -143,7 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: LayoutBattle
-  sceneHome: Scenes_Home_Game
 --- !u!1 &171386114157902921
 GameObject:
   m_ObjectHideFlags: 0
@@ -3384,7 +3383,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4100676775190059700}
         m_TargetAssemblyTypeName: PlayButtonController, Assembly-CSharp
-        m_MethodName: BackHome
+        m_MethodName: ReturnToHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

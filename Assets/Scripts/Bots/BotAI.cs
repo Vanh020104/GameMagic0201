@@ -45,7 +45,13 @@ public class BotAI : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
     public float projectileLifetime = 2f;
+    private float aiTickTimer = 0f;
+    private float aiTickRate = 0.2f;
 
+    private float pathTickTimer = 0f;
+    private float pathTickRate = 0.5f;
+
+    private float animSpeed = 0f;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -65,13 +71,17 @@ public class BotAI : MonoBehaviour
             HandleDeath();
             return;
         }
-
         if (currentState == State.Die) return;
+
+        aiTickTimer += Time.deltaTime;
+        if (aiTickTimer >= aiTickRate)
+        {
+            aiTickTimer = 0f;
+            UpdateStateLogic();
+        }
 
         ForceMoveIfIdle();
         CheckStuckAndResetIfNeeded();
-
-        UpdateStateLogic();
 
         switch (currentState)
         {
@@ -313,6 +323,10 @@ public class BotAI : MonoBehaviour
 
     void ResetPathIfTargetChanged(Vector3 destination)
     {
+        pathTickTimer += Time.deltaTime;
+        if (pathTickTimer < pathTickRate) return;
+        pathTickTimer = 0f;
+
         if (pathPoints.Count == 0 || Vector3.Distance(destination, pathPoints[^1]) > 2f)
         {
             Vector3 currentPos = ClampToNavMesh(transform.position);
@@ -324,6 +338,7 @@ public class BotAI : MonoBehaviour
             }
         }
     }
+
 
     Vector3 ClampToNavMesh(Vector3 pos)
     {
