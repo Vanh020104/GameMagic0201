@@ -697,8 +697,8 @@ MonoBehaviour:
   _animator: {fileID: 852894344991660333}
   fixedJoystick: {fileID: 0}
   _rigidbody: {fileID: 2313994733066002507}
-  speedPlayer: 15
-  rotationSpeed: 10
+  speedPlayer: 17
+  rotationSpeed: 15
   normal_attack_button: {fileID: 0}
   first_attack_button: {fileID: 0}
   second_attack_button: {fileID: 0}
@@ -731,6 +731,8 @@ MonoBehaviour:
   _manaSlider: {fileID: 0}
   _animator: {fileID: 852894344991660333}
   hasDied: 0
+  isLocalPlayer: 0
+  playerName: 
 --- !u!136 &4100065321693879579
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NotificationPopupUI : MonoBehaviour
 {
-    public static NotificationPopupUI Instance; 
+    public static NotificationPopupUI Instance;
 
     public TMP_Text messageText;
     public Image backgroundImage;
@@ -20,7 +20,7 @@ public class NotificationPopupUI : MonoBehaviour
 
     private void Start()
     {
-        gameObject.SetActive(false); 
+        gameObject.SetActive(false);
     }
 
     public void Show(string message, bool isSuccess = true, float duration = 2f)
@@ -59,4 +59,15 @@ public class NotificationPopupUI : MonoBehaviour
             OnItemBought?.Invoke();
         }
     }
+    
+    public static class KeyEvent
+    {
+        public static event Action OnKeyChanged;
+
+        public static void InvokeKeyChanged()
+        {
+            OnKeyChanged?.Invoke();
+        }
+    }
+
 }

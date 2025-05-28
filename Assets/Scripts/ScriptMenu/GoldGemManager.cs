@@ -10,6 +10,12 @@ public class GoldGemManager : MonoBehaviour
 
     private int goldAmount;
     private int gemAmount;
+    public static event System.Action OnCurrencyChanged;
+
+    private void NotifyCurrencyChange()
+    {
+        OnCurrencyChanged?.Invoke();
+    }
 
     private void Awake()
     {
@@ -45,6 +51,7 @@ public class GoldGemManager : MonoBehaviour
         goldAmount += amount;
         UpdateUI();
         SaveCurrencies();
+        NotifyCurrencyChange();
     }
 
     public void AddGem(int amount)
@@ -52,6 +59,8 @@ public class GoldGemManager : MonoBehaviour
         gemAmount += amount;
         UpdateUI();
         SaveCurrencies();
+        NotifyCurrencyChange();
+
     }
 
     public bool SpendGold(int amount)

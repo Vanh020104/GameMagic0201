@@ -324,6 +324,7 @@ public class LuckyPanelController : MonoBehaviour
                 PlayerPrefs.SetInt("LuckyKey", key);
                 PlayerPrefs.Save();
                 UpdateKeyUI(); 
+                KeyEvent.InvokeKeyChanged();
                 break;
                 
             case RewardType.Item:
@@ -343,6 +344,7 @@ public class LuckyPanelController : MonoBehaviour
 
     private void UpdateKeyUI()
     {
+        currentKeyCount = PlayerPrefs.GetInt("LuckyKey", 0);
         keyAmountText.text = currentKeyCount.ToString();
         buttonStart.interactable = currentKeyCount > 0;
     }

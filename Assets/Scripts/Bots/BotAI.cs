@@ -94,6 +94,12 @@ public class BotAI : MonoBehaviour
 
     void UpdateStateLogic()
     {
+        // if (ZoneManager.Instance != null && !ZoneManager.Instance.IsInsideZone(transform.position))
+        // {
+        //     cooldownTarget = ZoneManager.Instance.GetSafePoint(transform.position);
+        //     currentState = State.Cooldown;
+        //     return;
+        // }
         Transform newTarget = FindClosestTarget();
         if (newTarget == null)
         {

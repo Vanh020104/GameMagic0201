@@ -15,3 +15,5 @@ MonoBehaviour:
   allMaps:
   - {fileID: 11400000, guid: 543c9a795be5bee4abf6043be3b498f0, type: 2}
   - {fileID: 11400000, guid: a4bb8b2b15f97fe4390dbbde2822df6f, type: 2}
+  - {fileID: 11400000, guid: f41a4e1bd023e2a40884ba78b8072075, type: 2}
+  - {fileID: 11400000, guid: 29206516a088b7940b41d0c34d032907, type: 2}

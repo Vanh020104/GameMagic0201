@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
     public void NormalAttack()
     {
         if (!canUserNormalAttack) return;
-
+        playerInfo._mana -= 5;
         _animator.SetTrigger("Attack");
         StartCoroutine(DelayAddBullet());
         // hồi chiêuchiêu
