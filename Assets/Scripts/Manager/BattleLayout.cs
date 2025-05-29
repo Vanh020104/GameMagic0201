@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,4 +16,5 @@ public class BattleLayout : MonoBehaviour
     public Slider healthPlayer;
     public Slider manaPlayer;
     public LevelUI levelUI;
+    public TMP_Text playerNameText;
 }

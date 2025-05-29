@@ -130,6 +130,7 @@ MonoBehaviour:
   healthPlayer: {fileID: 8412039256947871810}
   manaPlayer: {fileID: 9010916965755014810}
   levelUI: {fileID: 5101663926420143351}
+  playerNameText: {fileID: 7413985617906037006}
 --- !u!114 &4100676775190059700
 MonoBehaviour:
   m_ObjectHideFlags: 0

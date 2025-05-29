@@ -19,6 +19,9 @@ public class UIManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
 
             currentLayout = Instantiate(battleLayoutPrefab);
+            string playerName = PlayerPrefs.GetString("PlayerName", "Player");
+            currentLayout.playerNameText.text = playerName;
+
         }
         else
         {
