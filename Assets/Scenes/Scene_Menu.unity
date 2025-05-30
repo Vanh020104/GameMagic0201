@@ -1084,53 +1084,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &649919982
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 649919984}
-  - component: {fileID: 649919983}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &649919983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649919982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68657a60831f8de41b70b2781449c568, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgmHome: {fileID: 8300000, guid: 8f6c47f1a3291f34aacbd3c7df9a421d, type: 3}
-  bgmCombat: {fileID: 8300000, guid: 453e265127897b44bad8e8f817e26d15, type: 3}
-  bgmLoading: {fileID: 0}
---- !u!4 &649919984
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649919982}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7704966, y: 0.9999995, z: -1630}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &695532408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,6 +1937,7 @@ GameObject:
   - component: {fileID: 1904407307}
   - component: {fileID: 1904407308}
   - component: {fileID: 1904407309}
+  - component: {fileID: 1904407310}
   m_Layer: 0
   m_Name: BlinkController
   m_TagString: Untagged
@@ -2061,6 +2015,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipDatabase: {fileID: 11400000, guid: f3b67e7b44a9a094f8d61888004b6753, type: 2}
+--- !u!114 &1904407310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904407304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68657a60831f8de41b70b2781449c568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmHome: {fileID: 8300000, guid: 8f6c47f1a3291f34aacbd3c7df9a421d, type: 3}
+  bgmCombat: {fileID: 8300000, guid: 453e265127897b44bad8e8f817e26d15, type: 3}
+  bgmLoading: {fileID: 0}
 --- !u!1 &1958824664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2296,4 +2265,3 @@ SceneRoots:
   - {fileID: 211771511}
   - {fileID: 87919550}
   - {fileID: 1904407306}
-  - {fileID: 649919984}
