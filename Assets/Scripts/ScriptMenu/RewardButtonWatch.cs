@@ -10,7 +10,7 @@ public class RewardButtonWatcj : MonoBehaviour
   [Header("Reward Settings")]
     public bool isGoldReward = true;          
     public TextMeshProUGUI amountText;     
-
+    public AdManager adManager;
     private Button button;
     private GoldGemManager goldGemManager;
 
@@ -34,20 +34,15 @@ public class RewardButtonWatcj : MonoBehaviour
         }
 
         // Parse số lượng từ Text
-        if (int.TryParse(amountText.text.Replace(",", ""), out int amount))
+         adManager.ShowRewardedAd(() =>
         {
-            if (isGoldReward)
+            if (int.TryParse(amountText.text.Replace(",", ""), out int amount))
             {
-                goldGemManager.AddGold(amount);
+                if (isGoldReward)
+                    goldGemManager.AddGold(amount);
+                else
+                    goldGemManager.AddGem(amount);
             }
-            else
-            {
-                goldGemManager.AddGem(amount);
-            }
-        }
-        else
-        {
-            Debug.LogWarning("Không đọc được số lượng reward từ text.");
-        }
+        });
     }
 }

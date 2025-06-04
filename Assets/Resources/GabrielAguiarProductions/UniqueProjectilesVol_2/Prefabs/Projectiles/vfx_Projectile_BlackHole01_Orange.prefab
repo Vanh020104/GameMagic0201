@@ -34091,7 +34091,7 @@ MonoBehaviour:
   rotateAmount: 45
   bounce: 0
   bounceForce: 10
-  speed: 45
+  speed: 40
   accuracy: 95
   fireRate: 2
   muzzlePrefab: {fileID: 1733395234720496, guid: af44cf4fb7c45134b84d6889379a7478,

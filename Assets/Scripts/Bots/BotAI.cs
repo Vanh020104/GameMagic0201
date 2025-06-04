@@ -44,7 +44,7 @@ public class BotAI : MonoBehaviour
     [Header("Attack Settings")]
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
-    public float projectileLifetime = 2f;
+    public float projectileLifetime = 1f;
     private float aiTickTimer = 0f;
     private float aiTickRate = 0.2f;
 

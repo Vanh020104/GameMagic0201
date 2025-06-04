@@ -1,10 +1,40 @@
+// using UnityEngine;
+// using UnityEngine.SceneManagement;
+
+// public class PlayButtonController : MonoBehaviour
+// {
+//     [SerializeField] private string homeScene = "Scenes_Home_Game";
+//     [SerializeField] private string battleScene = "LayoutBattle";
+//     public void OnClickPlay()
+//     {
+//         SceneManager.LoadScene(battleScene, LoadSceneMode.Single);
+//     }
+
+//     public void BackHome()
+//     {
+//         SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
+//     }
+
+// }
+
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayButtonController : MonoBehaviour
 {
     [SerializeField] private string homeScene = "Scenes_Home_Game";
     [SerializeField] private string battleScene = "LayoutBattle";
+    [SerializeField] private float delayBeforeLoad = 1.5f; // thời gian chờ sau khi show ads
+
+    private AdManager adManager;
+
+    private void Start()
+    {
+        adManager = FindObjectOfType<AdManager>();
+    }
+
     public void OnClickPlay()
     {
         SceneManager.LoadScene(battleScene, LoadSceneMode.Single);
@@ -12,8 +42,22 @@ public class PlayButtonController : MonoBehaviour
 
     public void BackHome()
     {
-        SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
+        if (adManager != null && adManager.HasInterstitialReady())
+        {
+            adManager.ShowInterstitialAd(() => {
+                SceneManager.LoadScene(homeScene, LoadSceneMode.Single); // chỉ chuyển khi ads xong
+            });
+        }
+        else
+        {
+            SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
+        }
     }
 
-}
 
+    private IEnumerator DelayLoadHomeScene()
+    {
+        yield return new WaitForSeconds(delayBeforeLoad);
+        SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
+    }
+}

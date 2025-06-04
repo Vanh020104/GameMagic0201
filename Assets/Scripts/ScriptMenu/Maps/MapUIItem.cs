@@ -23,6 +23,16 @@ public class MapUIItem : MonoBehaviour
     private void OnPlayClicked()
     {
         GameData.SelectedMap = currentMap;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("LayoutBattle");
+
+        if (GlobalLoadingController.Instance != null)
+        {
+            GlobalLoadingController.Instance.LoadSceneWithDelay("LayoutBattle", 2f);
+        }
+        else
+        {
+
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LayoutBattle");
+        }
     }
+
 }
