@@ -57,6 +57,7 @@ public class GoldGemManager : MonoBehaviour
     public void AddGem(int amount)
     {
         gemAmount += amount;
+         Debug.Log($"💎 AddGem called: +{amount} → {gemAmount}");
         UpdateUI();
         SaveCurrencies();
         NotifyCurrencyChange();

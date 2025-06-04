@@ -1,25 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class PlayButtonController : MonoBehaviour
 {
-    [SerializeField] private string sceneToLoad = "LayoutBattle";
-    [SerializeField] private string sceneHome = "Scenes_Home_Game";
-
+    [SerializeField] private string homeScene = "Scenes_Home_Game";
+    [SerializeField] private string battleScene = "LayoutBattle";
     public void OnClickPlay()
     {
-        StartCoroutine(DelayLoadScene());
-    }
-
-    IEnumerator DelayLoadScene()
-    {
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene(battleScene, LoadSceneMode.Single);
     }
 
     public void BackHome()
     {
-        SceneManager.LoadScene(sceneHome);
+        SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
     }
+
 }
+

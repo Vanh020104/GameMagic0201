@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -17,15 +18,36 @@ public class UIManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-
-            currentLayout = Instantiate(battleLayoutPrefab);
-            string playerName = PlayerPrefs.GetString("PlayerName", "Player");
-            currentLayout.playerNameText.text = playerName;
-
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (currentLayout != null)
+        {
+            Destroy(currentLayout.gameObject);
+        }
+
+        if (scene.name == "LayoutBattle")
+        {
+            currentLayout = Instantiate(battleLayoutPrefab);
+            string playerName = PlayerPrefs.GetString("PlayerName", "Player");
+            currentLayout.playerNameText.text = playerName;
+            AudioManager.Instance.PlayMusic(AudioManager.Instance.bgmCombat);
+        }
+        else if (scene.name == "Scenes_Home_Game")
+        {
+            AudioManager.Instance.PlayMusic(AudioManager.Instance.bgmHome);
         }
     }
 
