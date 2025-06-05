@@ -29,12 +29,14 @@ public class PlayerInfo : MonoBehaviour
         if (!hasDied && _hp <= 0)
         {
             hasDied = true;
+            FindObjectOfType<BattleEndManager>().isWin = false;
+            FindObjectOfType<BattleEndManager>().EndMatch();
             StartCoroutine(HandleDeath());
         }
     }
 
     IEnumerator HandleDeath()
-    {   
+    {
         FindObjectOfType<KillInfoUIHandler>()?.PlayerDied();
         _animator.SetTrigger("Die");
         PlayerController controller = GetComponent<PlayerController>();
@@ -44,7 +46,7 @@ public class PlayerInfo : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
-            rb.isKinematic = true; 
+            rb.isKinematic = true;
             rb.useGravity = false;
         }
         Collider col = GetComponent<Collider>();

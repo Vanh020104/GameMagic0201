@@ -27,6 +27,15 @@ public class KillInfoUIHandler : MonoBehaviour
     {
         totalPlayers--;
         UpdateUI();
+        if (totalPlayers == 1 && FindObjectOfType<PlayerInfo>()?.isLocalPlayer == true)
+        {
+            var endManager = FindObjectOfType<BattleEndManager>();
+            if (endManager != null)
+            {
+                endManager.isWin = true;
+                endManager.EndMatch();
+            }
+        }
     }
 
     private void UpdateUI()

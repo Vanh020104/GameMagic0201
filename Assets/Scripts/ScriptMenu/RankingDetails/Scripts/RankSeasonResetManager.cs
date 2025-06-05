@@ -6,7 +6,6 @@ public class RankSeasonResetManager : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private TMP_Text countdownText;
-    [SerializeField] private RankManager rankManager;
     [SerializeField] private TMP_Text seasonNumberText;
     private int currentSeasonIndex;
 
@@ -15,7 +14,7 @@ public class RankSeasonResetManager : MonoBehaviour
 
     private DateTime fixedSeasonStart => new DateTime(2025, 5, 1, 0, 0, 0, DateTimeKind.Utc);
     private DateTime nextResetTime;
-
+    private bool hasResetThisCycle = false;
     void Start()
     {
         UpdateNextResetTime();
@@ -25,13 +24,15 @@ public class RankSeasonResetManager : MonoBehaviour
     {
         TimeSpan remaining = nextResetTime - DateTime.UtcNow;
 
-        if (remaining.TotalSeconds <= 0)
+        if (remaining.TotalSeconds <= 0 && !hasResetThisCycle)
         {
             ResetRankSeason();
-            UpdateNextResetTime(); // set lại cho mùa tiếp theo
+            UpdateNextResetTime();
+            hasResetThisCycle = true;
         }
-        else
+        else if (remaining.TotalSeconds > 0)
         {
+            hasResetThisCycle = false;
             countdownText.text = FormatTime(remaining);
         }
     }
@@ -39,7 +40,7 @@ public class RankSeasonResetManager : MonoBehaviour
     private void UpdateNextResetTime()
     {
         TimeSpan sinceStart = DateTime.UtcNow - fixedSeasonStart;
-        currentSeasonIndex = Mathf.FloorToInt((float)(sinceStart.TotalDays / seasonDurationDays)) + 1; 
+        currentSeasonIndex = Mathf.FloorToInt((float)(sinceStart.TotalDays / seasonDurationDays)) + 1;
         nextResetTime = fixedSeasonStart.AddDays(currentSeasonIndex * seasonDurationDays);
 
         if (seasonNumberText != null)
@@ -58,6 +59,9 @@ public class RankSeasonResetManager : MonoBehaviour
         PlayerPrefs.DeleteKey("PlayerRankIndex");
         PlayerPrefs.DeleteKey("PlayerRankExp");
 
-        rankManager?.ResetToDefaultRank();
+        if (RankDataManager.Instance != null)
+        {
+            RankDataManager.Instance.LoadRank();
+        }
     }
 }
