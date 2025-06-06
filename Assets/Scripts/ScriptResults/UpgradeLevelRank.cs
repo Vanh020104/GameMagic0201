@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class UpgradeLevelRank : MonoBehaviour
 {
@@ -15,8 +16,66 @@ public class UpgradeLevelRank : MonoBehaviour
 
     void Start()
     {
-        ShowLevelInfo();
+        Debug.Log("⚡ UpgradeLevelRank Start()");
+        StartCoroutine(AnimateLevelThenRank());
     }
+    IEnumerator AnimateLevelThenRank()
+    {
+        yield return AnimateLevelExp(); // Cộng Level trước
+        yield return new WaitForSeconds(0.4f);
+
+        var rankUI = FindObjectOfType<RankUIController>();
+        if (rankUI != null)
+        {
+            yield return rankUI.AnimateRankGain(
+                GameResultData.rankBefore,
+                GameResultData.rankExpBefore,
+                GameResultData.rankExpGained
+            );
+        }
+    }
+    private IEnumerator AnimateLevelExp()
+    {
+        int level = GameResultData.levelBefore;
+        int exp = GameResultData.expBefore;
+        int expToNext = GetExpToNextLevel(level);
+        int gained = GameResultData.expGained;
+
+        levelText.text = $"Level {level}";
+        levelSlider.maxValue = expToNext;
+        levelSlider.value = exp;
+
+        int currentExp = exp;
+
+        while (gained > 0)
+        {
+            int step = Mathf.Min(1, gained);
+            currentExp += step;
+            gained -= step;
+
+            if (currentExp >= expToNext)
+            {
+                level++;
+                currentExp = 0;
+                expToNext = GetExpToNextLevel(level);
+                levelSlider.maxValue = expToNext;
+                levelText.text = $"Level {level}";
+
+                // Gợi ý: thêm hiệu ứng lên cấp ở đây
+            }
+
+            levelSlider.value = currentExp;
+            levelExpText.text = $"{currentExp} / {expToNext}";
+
+            yield return new WaitForSeconds(0.01f); // ⏱ chỉnh 0.01f → 0.03f cho mượt
+        }
+
+
+        levelExpText.text = $"{currentExp} / {expToNext}";
+        levelExpGainedText.text = $"+{GameResultData.expGained} LEVEL EXP";
+        rankExpGainedText.text = $"+{GameResultData.rankExpGained} Rank EXP";
+    }
+
 
     void ShowLevelInfo()
     {
