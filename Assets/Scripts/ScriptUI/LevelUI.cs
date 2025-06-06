@@ -15,7 +15,7 @@ public class LevelUI : MonoBehaviour
     private float targetFill = 0f;
     private float fillSpeed = 100f;
     public System.Action<int> OnLevelChanged;
-
+    public int CurrentBattleLevel => level;
     void Start()
     {
         expToNext = GetExpToNextLevel(level);

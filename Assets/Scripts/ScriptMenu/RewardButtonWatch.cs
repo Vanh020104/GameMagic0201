@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class RewardButtonWatcj : MonoBehaviour
+public class RewardButtonWatch : MonoBehaviour
 {
   [Header("Reward Settings")]
     public bool isGoldReward = true;          

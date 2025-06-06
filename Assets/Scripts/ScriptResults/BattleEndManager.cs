@@ -8,36 +8,80 @@ public class BattleEndManager : MonoBehaviour
     public int killCount = 0;
 
     private RankDataManager rankData;
+    private LevelUI levelUI;
 
     void Awake()
     {
         rankData = RankDataManager.Instance;
+        levelUI = FindObjectOfType<LevelUI>();
 
         if (rankData == null)
-        {
-            Debug.LogError("❌ Không tìm thấy RankDataManager. Đảm bảo nó tồn tại ở scene Home và có DontDestroyOnLoad.");
-        }
+            Debug.LogError("❌ Không tìm thấy RankDataManager.");
     }
 
-    void Update() => timer += Time.deltaTime;
+    void Update()
+    {
+        timer += Time.deltaTime;
+    }
 
     public void EndMatch()
     {
-        // ------------------------
-        // 1. Match Stats
-        // ------------------------
+        // ========== 1. Match Stats ==========
         GameResultData.matchTime = timer;
-        GameResultData.killCount = killCount;
+        var killUI = FindObjectOfType<KillInfoUIHandler>();
+        if (killUI != null)
+        {
+            GameResultData.killCount = killUI != null ? int.Parse(killUI.killText.text) : 0;
+        }
 
-        // ------------------------
-        // 2. Level & EXP
-        // ------------------------
+
+        // ========== 2. Cập nhật Battle Level từ UI ==========
+        LevelUI levelUI = FindObjectOfType<LevelUI>();
+        if (levelUI != null)
+        {
+            GameResultData.battleLevel = levelUI.CurrentBattleLevel;
+        }
+        else
+        {
+            GameResultData.battleLevel = PlayerPrefs.GetInt("PlayerLevel", 1);
+            Debug.LogWarning("⚠️ Không tìm thấy LevelUI (Prefab chưa spawn?) => Gán battleLevel từ PlayerLevel.");
+        }
+
+        // ========== 3. Tính EXP cho PlayerLevel & Rank ==========
+        int levelExp = 0;
+        int rankExp = 0;
+
+        // EXP theo thời gian sống
+        if (timer >= 20f)
+        {
+            int timeExp = Mathf.FloorToInt(timer * 0.6f);
+            levelExp += timeExp;
+            rankExp += Mathf.FloorToInt(timeExp * 0.5f);
+        }
+
+        // EXP theo số kill
+        if (killCount > 0)
+        {
+            int killExp = killCount * 12;
+            levelExp += killExp;
+            rankExp += Mathf.FloorToInt(killExp * 0.6f);
+        }
+
+        // EXP thưởng nếu thắng
+        if (isWin)
+        {
+            levelExp += 40;
+            rankExp += 50;
+        }
+
+        Debug.Log($"[EXP] Level: {levelExp}, Rank: {rankExp}");
+
+        // ========== 4. Cập nhật Level ==========
         int level = PlayerPrefs.GetInt("PlayerLevel", 1);
         int expBefore = PlayerPrefs.GetInt("PlayerExp", 0);
         int expToNext = GetExpToNextLevel(level);
 
-        int expGained = 50 + killCount * 10 + Mathf.FloorToInt(timer * 1.5f);
-        int newExp = expBefore + expGained;
+        int newExp = expBefore + levelExp;
         bool leveledUp = false;
 
         while (newExp >= expToNext)
@@ -55,44 +99,35 @@ public class BattleEndManager : MonoBehaviour
         GameResultData.levelBefore = level - (leveledUp ? 1 : 0);
         GameResultData.levelAfter = level;
         GameResultData.expBefore = expBefore;
-        GameResultData.expGained = expGained;
+        GameResultData.expGained = levelExp;
         GameResultData.expToNext = expToNext;
 
-        // ------------------------
-        // 3. Rank & Rank EXP
-        // ------------------------
+        // ========== 5. Cập nhật Rank ==========
         if (rankData != null)
         {
             GameResultData.rankBefore = rankData.CurrentRankIndex;
             GameResultData.rankExpBefore = rankData.CurrentRankExp;
 
-            rankData.AddRankExp(expGained);
+            rankData.AddRankExp(rankExp);
 
             GameResultData.rankAfter = rankData.CurrentRankIndex;
             GameResultData.rankExpToNext = rankData.GetNextRankRequiredExp();
-            GameResultData.rankExpGained = expGained;
-        }
-        else
-        {
-            Debug.LogWarning("⚠️ Không thể cập nhật Rank vì thiếu RankDataManager.");
+            GameResultData.rankExpGained = rankExp;
         }
 
-        // ------------------------
-        // 4. Reward: Gold / Gem / Key
-        // ------------------------
+        // ========== 6. Reward ==========
         int timeBonus = Mathf.FloorToInt(timer * 1.5f);
-        int gold = 100 + killCount * 30 + timeBonus;
+        int gold = 200 + killCount * 30 + timeBonus;
 
         int gem = 0;
         if (killCount >= 3 && timer >= 60)
             gem = Random.Range(1, 4);
         else if (killCount >= 1)
             gem = 1;
-
         if (isWin)
         {
             gem += 5;
-            Debug.Log("🎉 Thắng trận, cộng thêm 5 GEM bonus!");
+            Debug.Log("🎉 Win bonus: +5 GEM!");
         }
 
         int key = 0;
@@ -105,9 +140,7 @@ public class BattleEndManager : MonoBehaviour
         GameResultData.gem = gem;
         GameResultData.key = key;
 
-        // ------------------------
-        // 5. Cộng vào tài khoản
-        // ------------------------
+        // ========== 7. Add reward to account ==========
         GoldGemManager.Instance?.AddGold(gold);
         GoldGemManager.Instance?.AddGem(gem);
 
@@ -115,15 +148,12 @@ public class BattleEndManager : MonoBehaviour
         PlayerPrefs.SetInt("LuckyKey", currentKey + key);
         PlayerPrefs.Save();
 
-        // ------------------------
-        // 6. Load Result Scene
-        // ------------------------
+        // ========== 8. Load Result Scene ==========
         SceneManager.LoadScene("Scene_Result");
     }
 
     private int GetExpToNextLevel(int level)
     {
-        return Mathf.RoundToInt(100 * Mathf.Pow(1.2f, level - 1));
+        return Mathf.RoundToInt(100 * Mathf.Pow(1.5f, level - 1));
     }
-    
 }

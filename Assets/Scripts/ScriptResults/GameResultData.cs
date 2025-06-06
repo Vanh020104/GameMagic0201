@@ -20,4 +20,6 @@ public static class GameResultData
     public static int gold;
     public static int gem;
     public static int key;
+    public static int battleLevel;
+    public static int playerRank;
 }

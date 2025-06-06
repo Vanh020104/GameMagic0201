@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7489501006743418927}
   - component: {fileID: 6902297631003982629}
   - component: {fileID: 8754802460948893492}
-  - component: {fileID: 1968985104010115033}
   m_Layer: 5
   m_Name: ButtonBuy
   m_TagString: Untagged
@@ -122,20 +121,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1968985104010115033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822980097258930903}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6da36f29d009b09488fad4cd8b1ad688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGoldReward: 0
-  amountText: {fileID: 4445223505971881269}
 --- !u!1 &2270120780735467705
 GameObject:
   m_ObjectHideFlags: 0

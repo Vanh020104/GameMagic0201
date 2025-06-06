@@ -29,6 +29,8 @@ public class PlayerInfo : MonoBehaviour
         if (!hasDied && _hp <= 0)
         {
             hasDied = true;
+            int currentAlive = FindObjectOfType<KillInfoUIHandler>().GetAliveCount();
+            GameResultData.playerRank = currentAlive + 1;
             FindObjectOfType<BattleEndManager>().isWin = false;
             FindObjectOfType<BattleEndManager>().EndMatch();
             StartCoroutine(HandleDeath());

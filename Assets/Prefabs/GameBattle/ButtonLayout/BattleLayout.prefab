@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   homeScene: Scenes_Home_Game
   battleScene: LayoutBattle
+  delayBeforeLoad: 1.5
 --- !u!114 &5214783211234528987
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class KillInfoUIHandler : MonoBehaviour
     public void AddKill()
     {
         kills++;
+        GameResultData.killCount = kills;
         UpdateUI();
     }
 
@@ -32,6 +33,7 @@ public class KillInfoUIHandler : MonoBehaviour
             var endManager = FindObjectOfType<BattleEndManager>();
             if (endManager != null)
             {
+                GameResultData.playerRank = 1;
                 endManager.isWin = true;
                 endManager.EndMatch();
             }
@@ -43,4 +45,9 @@ public class KillInfoUIHandler : MonoBehaviour
         aliveText.text = totalPlayers.ToString();
         killText.text = kills.ToString();
     }
+    public int GetAliveCount()
+    {
+        return totalPlayers;
+    }
+
 }
