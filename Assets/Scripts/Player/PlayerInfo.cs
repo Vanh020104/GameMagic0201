@@ -16,8 +16,9 @@ public class PlayerInfo : MonoBehaviour
     public bool isLocalPlayer = false;
     public string playerName;
     private ReviveManager reviveManager;
+    public bool isInvincible = false;
 
-
+    public LevelUI levelUI;
     void Start()
     {
         StartCoroutine(RegenerateMana());
@@ -87,12 +88,29 @@ public class PlayerInfo : MonoBehaviour
 
     public void ReviveFromDeath()
     {
-        hasDied = false;
+        if (!hasDied) return;
+
         _hp = _hpMax;
         _mana = _manaMax;
+        EnablePhysics();
 
         _animator.SetTrigger("Revive");
+        isInvincible = true;
         StartCoroutine(WaitForReviveAnimation());
+    }
+
+    private void EnablePhysics()
+    {
+        var rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+            rb.useGravity = true;
+            rb.velocity = Vector3.zero;
+        }
+
+        var col = GetComponent<Collider>();
+        if (col != null) col.enabled = true;
     }
 
     private IEnumerator WaitForReviveAnimation()
@@ -103,6 +121,10 @@ public class PlayerInfo : MonoBehaviour
             yield return null;
         var controller = GetComponent<PlayerController>();
         if (controller != null) controller.enabled = true;
+        yield return new WaitForSeconds(1.5f);
+
+        isInvincible = false;
+        hasDied = false;
     }
 
 

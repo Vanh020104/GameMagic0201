@@ -49,7 +49,7 @@ public class GoldGemManager : MonoBehaviour
     public void AddGold(int amount)
     {
         goldAmount += amount;
-         Debug.Log($" AddGold called: +{amount} → {goldAmount}");
+        Debug.Log($" AddGold called: +{amount} → {goldAmount}");
         UpdateUI();
         SaveCurrencies();
         NotifyCurrencyChange();
@@ -58,7 +58,7 @@ public class GoldGemManager : MonoBehaviour
     public void AddGem(int amount)
     {
         gemAmount += amount;
-         Debug.Log($"💎 AddGem called: +{amount} → {gemAmount}");
+        Debug.Log($"💎 AddGem called: +{amount} → {gemAmount}");
         UpdateUI();
         SaveCurrencies();
         NotifyCurrencyChange();
@@ -90,4 +90,6 @@ public class GoldGemManager : MonoBehaviour
 
 
     public int GetGold() => goldAmount;
+    public int GetGem() => gemAmount;
+
 }

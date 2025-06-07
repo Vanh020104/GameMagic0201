@@ -1,36 +1,90 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using System.Collections;
 
 public class MatchStatistics : MonoBehaviour
 {
     public TMP_Text killText, timeText, goldText, gemText, keyText, battleLevelText, resultMessageText, topText;
+    public Button doubleRewardButton;
+    private bool hasClaimedDouble = false;
+    public GameObject upgradeLevelRankPanel;
     void Start()
     {
+        // Hiển thị kết quả
         killText.text = GameResultData.killCount.ToString();
         timeText.text = FormatTime(GameResultData.matchTime);
         goldText.text = GameResultData.gold.ToString();
         gemText.text = GameResultData.gem.ToString();
         keyText.text = GameResultData.key.ToString();
-        // heroLevelText.text = GameResultData.levelAfter.ToString();
-        battleLevelText.text = GameResultData.battleLevel.ToString();
-        topText.text = GetRankWithSuffix(GameResultData.playerRank);
-        ShowRankMessage();
+        battleLevelText.text = $"{GameResultData.battleLevel}";
+
+        // Cộng phần thưởng (chỉ 1 lần duy nhất ở đây)
+        GoldGemManager.Instance.AddGold(GameResultData.gold);
+        GoldGemManager.Instance.AddGem(GameResultData.gem);
+
+        int currentKey = PlayerPrefs.GetInt("LuckyKey", 0);
+        PlayerPrefs.SetInt("LuckyKey", currentKey + GameResultData.key);
+        PlayerPrefs.Save();
+
+        // Gắn sự kiện x2 nếu có
+        doubleRewardButton.onClick.AddListener(HandleDoubleRewardAd);
+          // Ẩn panel UpgradeLevelRank nếu có
+        if (upgradeLevelRankPanel != null)
+            upgradeLevelRankPanel.SetActive(false);
+
+        // Bắt đầu coroutine delay 1s → show panel
+        StartCoroutine(ShowUpgradePanelDelayed());
     }
-    string GetRankWithSuffix(int rank)
-{
-    if (rank <= 0) return "-";
-
-    if (rank % 100 >= 11 && rank % 100 <= 13)
-        return $"TOP {rank}";
-
-    switch (rank % 10)
+    private IEnumerator ShowUpgradePanelDelayed()
     {
-        case 1: return $"TOP {rank}";
-        case 2: return $"TOP {rank}";
-        case 3: return $"TOP {rank}";
-        default: return $"TOP {rank}";
+        yield return new WaitForSeconds(0.5f);
+        if (upgradeLevelRankPanel != null)
+            upgradeLevelRankPanel.SetActive(true);
     }
-}
+
+
+    private void HandleDoubleRewardAd()
+    {
+        if (hasClaimedDouble) return;
+
+        AdManager.Instance.ShowRewardedAd(() =>
+        {
+            GoldGemManager.Instance.AddGold(GameResultData.gold);
+            GoldGemManager.Instance.AddGem(GameResultData.gem);
+
+            int currentKey = PlayerPrefs.GetInt("LuckyKey", 0);
+            PlayerPrefs.SetInt("LuckyKey", currentKey + GameResultData.key);
+            PlayerPrefs.Save();
+
+            // Cập nhật lại UI sau khi cộng x2
+            goldText.text = (GameResultData.gold * 2).ToString();
+            gemText.text = (GameResultData.gem * 2).ToString();
+            keyText.text = (GameResultData.key * 2).ToString();
+
+            doubleRewardButton.interactable = false;
+            hasClaimedDouble = true;
+        });
+    }
+
+
+
+
+    string GetRankWithSuffix(int rank)
+    {
+        if (rank <= 0) return "-";
+
+        if (rank % 100 >= 11 && rank % 100 <= 13)
+            return $"TOP {rank}";
+
+        switch (rank % 10)
+        {
+            case 1: return $"TOP {rank}";
+            case 2: return $"TOP {rank}";
+            case 3: return $"TOP {rank}";
+            default: return $"TOP {rank}";
+        }
+    }
 
     string FormatTime(float t)
     {
@@ -101,6 +155,23 @@ public class MatchStatistics : MonoBehaviour
     }
 
 
+    public void RetryCurrentMap()
+    {
+        if (GameData.SelectedMap != null)
+        {
+            Debug.Log($"🔁 Retry map: {GameData.SelectedMap.mapName}");
+
+            // Dùng Loading nếu có
+            if (GlobalLoadingController.Instance != null)
+                GlobalLoadingController.Instance.LoadSceneWithDelay("LayoutBattle", 2f);
+            else
+                UnityEngine.SceneManagement.SceneManager.LoadScene("LayoutBattle");
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ GameData.SelectedMap is null. Can't retry!");
+        }
+    }
 
 
     //     void ShowRankMessage()

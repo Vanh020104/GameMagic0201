@@ -40,6 +40,7 @@ public class BattleEndManager : MonoBehaviour
         if (levelUI != null)
         {
             GameResultData.battleLevel = levelUI.CurrentBattleLevel;
+
         }
         else
         {
@@ -139,15 +140,6 @@ public class BattleEndManager : MonoBehaviour
         GameResultData.gold = gold;
         GameResultData.gem = gem;
         GameResultData.key = key;
-
-        // ========== 7. Add reward to account ==========
-        GoldGemManager.Instance?.AddGold(gold);
-        GoldGemManager.Instance?.AddGem(gem);
-
-        int currentKey = PlayerPrefs.GetInt("LuckyKey", 0);
-        PlayerPrefs.SetInt("LuckyKey", currentKey + key);
-        PlayerPrefs.Save();
-
         // ========== 8. Load Result Scene ==========
         SceneManager.LoadScene("Scene_Result");
     }

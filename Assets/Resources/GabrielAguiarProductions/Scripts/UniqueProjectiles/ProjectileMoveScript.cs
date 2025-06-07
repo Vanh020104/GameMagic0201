@@ -142,6 +142,7 @@ public class ProjectileMoveScript : MonoBehaviour
         }
         else if (heroInfo != null && heroInfo != owner)
         {
+            if (heroInfo.isInvincible) return;
             heroInfo._hp -= 50;
 
             if (heroInfo._hp <= 0)

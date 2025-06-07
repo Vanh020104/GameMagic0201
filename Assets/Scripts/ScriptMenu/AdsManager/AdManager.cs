@@ -14,7 +14,15 @@ public class AdManager : MonoBehaviour
     [SerializeField] private string interstitialAdUnitId = "ca-app-pub-3940256099942544/1033173712";  // TEST interstitial
 
     private Action onRewardedCallback;
-    void Awake() => DontDestroyOnLoad(this.gameObject);
+    public static AdManager Instance;
+
+    void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+        DontDestroyOnLoad(this.gameObject);
+    }
+
 
     void Start()
     {
