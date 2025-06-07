@@ -15,12 +15,15 @@ public class PlayerInfo : MonoBehaviour
     public bool hasDied = false;
     public bool isLocalPlayer = false;
     public string playerName;
+    private ReviveManager reviveManager;
 
 
     void Start()
     {
         StartCoroutine(RegenerateMana());
+        reviveManager = FindObjectOfType<ReviveManager>();
     }
+
     void Update()
     {
         _hpSlider.value = _hp / (float)_hpMax;
@@ -29,13 +32,21 @@ public class PlayerInfo : MonoBehaviour
         if (!hasDied && _hp <= 0)
         {
             hasDied = true;
-            int currentAlive = FindObjectOfType<KillInfoUIHandler>().GetAliveCount();
-            GameResultData.playerRank = currentAlive + 1;
-            FindObjectOfType<BattleEndManager>().isWin = false;
-            FindObjectOfType<BattleEndManager>().EndMatch();
-            StartCoroutine(HandleDeath());
+            var controller = GetComponent<PlayerController>();
+            if (controller != null) controller.enabled = false;
+            _animator.SetTrigger("Die");
+            StartCoroutine(WaitThenShowRevivePanel());
         }
     }
+    private IEnumerator WaitThenShowRevivePanel()
+    {
+        // chờ 1.5s cho Die animation chạy
+        yield return new WaitForSeconds(2f);
+
+        reviveManager.TriggerRevive(this);
+    }
+
+
 
     IEnumerator HandleDeath()
     {
@@ -73,4 +84,35 @@ public class PlayerInfo : MonoBehaviour
             }
         }
     }
+
+    public void ReviveFromDeath()
+    {
+        hasDied = false;
+        _hp = _hpMax;
+        _mana = _manaMax;
+
+        _animator.SetTrigger("Revive");
+        StartCoroutine(WaitForReviveAnimation());
+    }
+
+    private IEnumerator WaitForReviveAnimation()
+    {
+        while (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Revive"))
+            yield return null;
+        while (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
+            yield return null;
+        var controller = GetComponent<PlayerController>();
+        if (controller != null) controller.enabled = true;
+    }
+
+
+    public void FinishDeath()
+    {
+        int currentAlive = FindObjectOfType<KillInfoUIHandler>().GetAliveCount();
+        GameResultData.playerRank = currentAlive + 1;
+        FindObjectOfType<BattleEndManager>().isWin = false;
+        FindObjectOfType<BattleEndManager>().EndMatch();
+        StartCoroutine(HandleDeath());
+    }
+
 }
