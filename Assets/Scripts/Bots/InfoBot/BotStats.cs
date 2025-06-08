@@ -7,6 +7,8 @@ public class BotStats : MonoBehaviour
     public float currentHP = 200f;
     public float maxMana = 100f;
     public float currentMana = 100f;
+    public GameObject floatingTextPrefab;
+    public Transform popupPoint;
     private static readonly string[] RandomNames =
     {
         "DarkWolf", "Shadow", "FlameZ", "NoobMaster", "Pro999", "BotDemon", "MagicBoy", "QueenAI", "Zetta", "Raze","Peter",

@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3797629982042954098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4738093974844200114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5952646458401484296}
+  m_Layer: 0
+  m_Name: DamagePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5952646458401484296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4738093974844200114}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3797629982042954098}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4823365412580414912
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +197,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3925488944318450792}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64b5705dac81d5142834ed1ea0b63f07,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5952646458401484296}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 64b5705dac81d5142834ed1ea0b63f07,
         type: 3}
@@ -313,10 +348,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   botName: 
-  maxHP: 300
-  currentHP: 300
+  maxHP: 600
+  currentHP: 600
   maxMana: 100
   currentMana: 100
+  floatingTextPrefab: {fileID: 5342096560126195339, guid: 87a2614f99614934e8ba2e4308898173,
+    type: 3}
+  popupPoint: {fileID: 5952646458401484296}
 --- !u!114 &3603524435322754724
 MonoBehaviour:
   m_ObjectHideFlags: 0

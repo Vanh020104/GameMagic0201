@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +24,8 @@ public class PlayerController : MonoBehaviour
     public Transform _targetPosition;
     public GameObject prefabProjectile;
     public Transform projectileProsition;
+    public Transform skill01Prosition;
+    public Transform skill02Prosition;
     public PlayerInfo playerInfo;
 
     // time hồi chiêu normal
@@ -30,9 +33,29 @@ public class PlayerController : MonoBehaviour
     private bool canUserNormalAttack = true;
     public float normalAttackCoundown = 2f;
     public Image cooldownOverlayNormalAttack;
+
+    [Header("Countdown First Skill")]
+    private bool canUseFirstSkill = true;
+    public float firstSkillCooldown = 30f;
+    public Image cooldownOverlayFirstSkill;
+    public TMP_Text firstCooldownText;
+
     public LevelUI levelUI;
 
-   void Start()
+    [Header("Custom Skills")]
+    public BaseSkill skill2;
+    public BaseSkill skill3;
+
+    // skill 2, 3 
+    public Image cooldownOverlaySecondSkill;
+    public TMP_Text secondCooldownText;
+    public Image cooldownOverlayThirdSkill;
+    public TMP_Text thirdCooldownText;
+
+    private bool canUseSecondSkill = true;
+    private bool canUseThirdSkill = true;
+
+    void Start()
     {
         BattleLayout layout = UIManager.Instance.GetLayout();
 
@@ -45,6 +68,24 @@ public class PlayerController : MonoBehaviour
         playerInfo._hpSlider = layout.healthPlayer;
         playerInfo._manaSlider = layout.manaPlayer;
         levelUI = layout.levelUI;
+
+        // hồi chiêu và lắng nghe của chiêu 1 
+        cooldownOverlayFirstSkill = layout.firstCooldownOverlay;
+
+        firstCooldownText = layout.firstCooldownText;
+        firstCooldownText.gameObject.SetActive(false);
+
+        cooldownOverlaySecondSkill = layout.secondCooldownOverlay;
+        secondCooldownText = layout.secondCooldownText;
+        secondCooldownText.gameObject.SetActive(false);
+
+        cooldownOverlayThirdSkill = layout.thirdCooldownOverlay;
+        thirdCooldownText = layout.thirdCooldownText;
+        thirdCooldownText.gameObject.SetActive(false);
+        first_attack_button.onClick.AddListener(UseFirstSkill);
+        second_attack_button.onClick.AddListener(UseSecondSkill);
+        third_attack_button.onClick.AddListener(UseThirdSkill);
+
 
         normal_attack_button.onClick.AddListener(NormalAttack);
     }
@@ -83,22 +124,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Lisst cac chiêu của hero
+    /// 
+    /// </summary>
+
+
+
+    /// Chiêu Normal bắn đạn 
     public void NormalAttack()
     {
         if (!canUserNormalAttack) return;
-        playerInfo._mana -= 5;
+        // playerInfo._mana -= 5;
         _animator.SetTrigger("Attack");
         StartCoroutine(DelayAddBullet());
         // hồi chiêuchiêu
         StartCoroutine(NormalAttackCooldown());
     }
     // ham đợi để bắn chiêu cho trùng với aniamtion chémchém
-    private IEnumerator DelayAddBullet(){
+    private IEnumerator DelayAddBullet()
+    {
         yield return new WaitForSeconds(0.3f);
         AddBullet();
     }
 
-    void AddBullet(){
+    void AddBullet()
+    {
         var newProjectile = Instantiate(prefabProjectile, projectileProsition);
         newProjectile.GetComponent<ProjectileMoveScript>().owner = playerInfo;
         // var moveScript = newProjectile.GetComponent<ProjectileMoveScript>();
@@ -119,7 +170,7 @@ public class PlayerController : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             cooldownOverlayNormalAttack.fillAmount = 1 - (elapsed / normalAttackCoundown);
-            
+
             float remainingTime = normalAttackCoundown - elapsed;
             yield return null;
         }
@@ -127,4 +178,118 @@ public class PlayerController : MonoBehaviour
         cooldownOverlayNormalAttack.fillAmount = 0;
         canUserNormalAttack = true;
     }
+
+
+
+    // end
+
+    // Chiêu 1 + Hồi máu 
+    public void UseFirstSkill()
+    {
+        if (!canUseFirstSkill || playerInfo._mana < 10) return;
+
+        // Khóa ngay lập tức để ngăn spam
+        canUseFirstSkill = false;
+
+        playerInfo._mana -= 10;
+        int totalHealAmount = 50;
+         playerInfo._mana += 30;
+        if (playerInfo._mana > playerInfo._manaMax)
+        playerInfo._mana = playerInfo._manaMax;
+
+        StartCoroutine(playerInfo.HealOverTime(totalHealAmount));
+        StartCoroutine(FirstSkillCooldown());
+    }
+
+
+
+    private IEnumerator FirstSkillCooldown()
+    {
+        float elapsed = 0f;
+        cooldownOverlayFirstSkill.fillAmount = 1;
+        firstCooldownText.gameObject.SetActive(true);
+
+        while (elapsed < firstSkillCooldown)
+        {
+            elapsed += Time.deltaTime;
+            cooldownOverlayFirstSkill.fillAmount = 1 - (elapsed / firstSkillCooldown);
+            firstCooldownText.text = Mathf.CeilToInt(firstSkillCooldown - elapsed).ToString();
+            yield return null;
+        }
+
+        cooldownOverlayFirstSkill.fillAmount = 0;
+        firstCooldownText.gameObject.SetActive(false);
+        canUseFirstSkill = true;
+    }
+
+
+
+    // end
+
+
+
+    // chiêu 2,3
+    void UseSkill(BaseSkill skill)
+    {
+        if (skill == null) return;
+        skill.Activate(playerInfo, skill01Prosition);
+    }
+
+    // - Thêm trong PlayerController.cs:
+    void UseSecondSkill()
+    {
+        if (!canUseSecondSkill || skill2 == null) return;
+
+        // Khóa lại ngay lập tức
+        canUseSecondSkill = false;
+
+        // Gọi kỹ năng
+        skill2.Activate(playerInfo, skill01Prosition);
+
+        // Bắt đầu hồi chiêu
+        StartCoroutine(SkillCooldown(
+            cooldownOverlaySecondSkill,
+            secondCooldownText,
+            skill2.cooldown,
+            () => canUseSecondSkill = true
+        ));
+    }
+
+    void UseThirdSkill()
+    {
+        if (!canUseThirdSkill || skill3 == null) return;
+
+        canUseThirdSkill = false;
+
+        skill3.Activate(playerInfo, skill02Prosition);
+
+        StartCoroutine(SkillCooldown(
+            cooldownOverlayThirdSkill,
+            thirdCooldownText,
+            skill3.cooldown,
+            () => canUseThirdSkill = true
+        ));
+    }
+
+
+    IEnumerator SkillCooldown(Image overlay, TMP_Text text, float duration, System.Action setReady)
+    {
+        float elapsed = 0f;
+        overlay.fillAmount = 1;
+        text.gameObject.SetActive(true);
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            overlay.fillAmount = 1 - (elapsed / duration);
+            text.text = Mathf.CeilToInt(duration - elapsed).ToString();
+            yield return null;
+        }
+
+        overlay.fillAmount = 0;
+        text.gameObject.SetActive(false);
+        setReady();
+    }
+
+
 }

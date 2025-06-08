@@ -97,6 +97,15 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.inputsystem": {
+      "version": "1.7.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.localization": {
       "version": "1.4.5",
       "depth": 0,
@@ -162,7 +171,7 @@
     },
     "com.unity.render-pipelines.core": {
       "version": "16.0.5",
-      "depth": 1,
+      "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.mathematics": "1.2.4",
@@ -186,7 +195,7 @@
     },
     "com.unity.rendering.light-transport": {
       "version": "1.0.1",
-      "depth": 2,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.collections": "1.4.0",
@@ -203,7 +212,7 @@
     },
     "com.unity.searcher": {
       "version": "4.9.2",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -221,7 +230,7 @@
     },
     "com.unity.shadergraph": {
       "version": "16.0.5",
-      "depth": 1,
+      "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "16.0.5",
@@ -430,6 +439,12 @@
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.modules.hierarchycore": "1.0.0"
       }
+    },
+    "com.unity.modules.uielementsnative": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
     },
     "com.unity.modules.umbra": {
       "version": "1.0.0",

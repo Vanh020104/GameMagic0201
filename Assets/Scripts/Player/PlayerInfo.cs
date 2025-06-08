@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +18,8 @@ public class PlayerInfo : MonoBehaviour
     public string playerName;
     private ReviveManager reviveManager;
     public bool isInvincible = false;
-
+    public GameObject floatingTextPrefab;
+    public Transform floatingTextPosition;
     public LevelUI levelUI;
     void Start()
     {
@@ -136,5 +138,48 @@ public class PlayerInfo : MonoBehaviour
         FindObjectOfType<BattleEndManager>().EndMatch();
         StartCoroutine(HandleDeath());
     }
+
+    public IEnumerator HealOverTime(int totalAmount)
+    {
+        int healed = 0;
+        while (healed < totalAmount)
+        {
+            // Random giá trị mỗi lần cộng
+            int healThisTick = Random.Range(5, Mathf.Min(20, totalAmount - healed + 1));
+
+            _hp = Mathf.Min(_hp + healThisTick, _hpMax);
+            healed += healThisTick;
+
+            ShowFloatingHeal(healThisTick);
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+    void ShowFloatingHeal(int amount)
+    {
+        if (floatingTextPrefab == null || floatingTextPosition == null) return;
+
+        // Random vị trí lệch nhẹ quanh đầu nhân vật
+        Vector3 randomOffset = new Vector3(
+            Random.Range(-0.5f, 0.5f),
+            Random.Range(0f, 0.5f),
+            Random.Range(-1f, 1f)
+        );
+
+        GameObject go = Instantiate(floatingTextPrefab);
+        go.transform.SetParent(floatingTextPosition);
+        go.transform.localPosition = randomOffset; // Lệch nhẹ quanh đầu
+
+        var text = go.GetComponent<TextMeshPro>();
+        text.text = "+  +";
+        // text.text = "+" + amount;
+        text.color = Color.green;
+
+        go.AddComponent<FaceCamera>();        // luôn quay về camera
+        go.AddComponent<FloatingTextEffect>(); // bay lên mờ dần
+
+        Destroy(go, 1.5f);
+    }
+
+
 
 }

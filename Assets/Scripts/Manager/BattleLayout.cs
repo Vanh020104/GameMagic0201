@@ -17,4 +17,17 @@ public class BattleLayout : MonoBehaviour
     public Slider manaPlayer;
     public LevelUI levelUI;
     public TMP_Text playerNameText;
+
+    [Header("Chiêu Hồi máu")]
+    public TMP_Text firstCooldownText;
+    public Image firstCooldownOverlay;
+
+    [Header("Chiêu 2")]
+    public TMP_Text secondCooldownText;
+    public Image secondCooldownOverlay;
+
+    [Header("Chiêu 3")]
+    public TMP_Text thirdCooldownText;
+    public Image thirdCooldownOverlay;
+
 }

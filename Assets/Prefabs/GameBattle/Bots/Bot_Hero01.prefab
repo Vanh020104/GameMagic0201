@@ -44,6 +44,7 @@ Transform:
   - {fileID: 802251848028258336}
   - {fileID: 7888462705588160384}
   - {fileID: 4558919667173453136}
+  - {fileID: 2679545272754899302}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7344914519600431549
@@ -170,10 +171,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   botName: 
-  maxHP: 200
-  currentHP: 200
+  maxHP: 600
+  currentHP: 600
   maxMana: 100
   currentMana: 100
+  floatingTextPrefab: {fileID: 5342096560126195339, guid: 87a2614f99614934e8ba2e4308898173,
+    type: 3}
+  popupPoint: {fileID: 2679545272754899302}
 --- !u!1 &481384121979026188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,6 +1383,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5328474672874851467}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3297051772093128353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2679545272754899302}
+  m_Layer: 0
+  m_Name: DamagePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2679545272754899302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297051772093128353}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6459458340175927370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3380201141726261572
 GameObject:

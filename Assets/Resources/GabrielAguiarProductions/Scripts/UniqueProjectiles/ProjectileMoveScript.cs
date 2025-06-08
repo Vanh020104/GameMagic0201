@@ -134,7 +134,16 @@ public class ProjectileMoveScript : MonoBehaviour
         if (botInfo != null && botInfo != ownerBot)
         {
             botInfo.currentHP -= 50;
-
+            if (botInfo.floatingTextPrefab && botInfo.popupPoint)
+            {
+                var popup = Instantiate(botInfo.floatingTextPrefab, botInfo.popupPoint.position, Quaternion.identity);
+                var text = popup.GetComponent<TMPro.TextMeshPro>();
+                if (text != null)
+                {
+                    text.text = "50";
+                    text.color = Color.red;
+                }
+            }
             if (botInfo.currentHP <= 0)
             {
                 HandleKill(owner, ownerBot, botInfo.botName);
