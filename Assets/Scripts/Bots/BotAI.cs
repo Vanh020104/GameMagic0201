@@ -20,7 +20,7 @@ public class BotAI : MonoBehaviour
 
     private Rigidbody rb;
     private Animator anim;
-    private BotStats botStats;
+    public BotStats botStats;
     private GameObject worldUI;
 
     private NavMeshPath path;
@@ -451,4 +451,30 @@ public class BotAI : MonoBehaviour
         var b = t.GetComponent<BotStats>();
         return b != null && b.currentHP <= 0;
     }
+
+
+private float originalSpeed;
+
+void Awake()
+{
+    originalSpeed = moveSpeed;
+}
+
+public void SetSpeed(float newSpeed)
+{
+    moveSpeed = newSpeed;
+}
+
+public void ResetSpeed()
+{
+    moveSpeed = originalSpeed;
+}
+
+public void ForceDie()
+{
+    if (botStats.currentHP <= 0) return;
+    botStats.currentHP = 0;
+    HandleDeath();
+}
+
 }

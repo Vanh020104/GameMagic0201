@@ -87,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 4974472136729659487}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -822,7 +822,7 @@ MonoBehaviour:
   firstCooldownText: {fileID: 0}
   levelUI: {fileID: 0}
   skill2: {fileID: 11400000, guid: cae0d7a773e0f524da91178915d966ca, type: 2}
-  skill3: {fileID: 11400000, guid: 43d41e5870a60ca41980e37625d80d4e, type: 2}
+  skill3: {fileID: 11400000, guid: 031958795ced4444b917c10cae68bcca, type: 2}
   cooldownOverlaySecondSkill: {fileID: 0}
   secondCooldownText: {fileID: 0}
   cooldownOverlayThirdSkill: {fileID: 0}
@@ -839,9 +839,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbc010274ca9744e8a4430c46fb0824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 600
+  _hp: 9090900
   _mana: 100
-  _hpMax: 600
+  _hpMax: 9090900
   _manaMax: 100
   _hpSlider: {fileID: 0}
   _manaSlider: {fileID: 0}
@@ -850,9 +850,9 @@ MonoBehaviour:
   isLocalPlayer: 0
   playerName: 
   isInvincible: 0
-  floatingTextPrefab: {fileID: 5342096560126195339, guid: 61d83ff899cd8384eb1cfc354da25e28,
+  vfxHealPrefab: {fileID: 9017484664307500583, guid: 1245b8d2997d5b34fb1637be70a7eb05,
     type: 3}
-  floatingTextPosition: {fileID: 1601974896915195323}
+  vfxAttachPoint: {fileID: 1601974896915195323}
   levelUI: {fileID: 0}
 --- !u!136 &4100065321693879579
 CapsuleCollider:

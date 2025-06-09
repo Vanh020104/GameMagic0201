@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Fireball_Skill_Asset
   m_EditorClassIdentifier: 
   skillName: Fireball_Skill_Asset
-  cooldown: 30
-  manaCost: 20
+  cooldown: 1
+  manaCost: 1
   vfxPrefab: {fileID: 3156866507962234106, guid: 645ebd7cef59b7b40b27c29bf3e99cf2,
     type: 3}
   range: 30

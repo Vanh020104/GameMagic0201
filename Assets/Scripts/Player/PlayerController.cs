@@ -197,6 +197,13 @@ public class PlayerController : MonoBehaviour
         if (playerInfo._mana > playerInfo._manaMax)
         playerInfo._mana = playerInfo._manaMax;
 
+
+        if (playerInfo.vfxHealPrefab != null && playerInfo.vfxAttachPoint != null)
+        {
+            GameObject vfx = Instantiate(playerInfo.vfxHealPrefab, playerInfo.vfxAttachPoint);
+            vfx.transform.localPosition = Vector3.zero;
+            Destroy(vfx, 3f);
+        }
         StartCoroutine(playerInfo.HealOverTime(totalHealAmount));
         StartCoroutine(FirstSkillCooldown());
     }
