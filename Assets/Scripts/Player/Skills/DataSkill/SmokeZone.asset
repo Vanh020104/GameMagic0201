@@ -9,17 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40b8c694d2e1f604eb69bb5242a1d6bd, type: 3}
-  m_Name: LaserZoneSkill
+  m_Script: {fileID: 11500000, guid: 891b0ad52940c404b8528db989a66380, type: 3}
+  m_Name: SmokeZone
   m_EditorClassIdentifier: 
-  skillName: LaserZoneSkill
-  cooldown: 30
+  skillName: SmokeZone
+  cooldown: 1
   manaCost: 20
-  vfxPrefab: {fileID: 7478731271839673279, guid: 4d3c8045dd8857a4b8d34c2361c61045,
+  vfxPrefab: {fileID: 5034656251238326012, guid: 9de2fa19f0390d44491264d9cab8cec5,
     type: 3}
-  vfxPrefabLaser01: {fileID: 0}
   distanceInFront: 20
-  aoeRadius: 5
-  duration: 4.5
-  damagePerTick: 50
+  aoeRadius: 10
+  duration: 2
+  damagePerTick: 60
   tickRate: 0.5

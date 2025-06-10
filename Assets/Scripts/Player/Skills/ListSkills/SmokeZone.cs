@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Skill/LaserZoneSkill_UsingPrefabButNoScriptOnIt")]
-public class LaserZoneSkill : BaseSkill
+[CreateAssetMenu(menuName = "Skill/SmokeZone")]
+public class SmokeZone : BaseSkill
 {
     public float distanceInFront = 20f;
     public float aoeRadius = 5f;

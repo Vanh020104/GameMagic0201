@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Skill/LaserZoneSkill_UsingPrefabButNoScriptOnIt")]
-public class LaserZoneSkill : BaseSkill
+[CreateAssetMenu(menuName = "Skill/ZoneSkills02")]
+public class ZoneSkills02 : BaseSkill
 {
     public float distanceInFront = 20f;
-    public float aoeRadius = 5f;
-    public float duration = 5f;
+    public float aoeRadius = 8f;
+    public float duration = 2f;
     public int damagePerTick = 100;
-    public float tickRate = 0.5f;
+    public float tickRate = 1.5f;
 
     public override void Activate(PlayerInfo owner, Transform castPoint)
     {
@@ -66,8 +66,6 @@ public class LaserZoneSkill : BaseSkill
                             text.color = Color.red;
                         }
                     }
-
-                    bot.SetSpeed(5f);
 
                     if (bot.botStats.currentHP <= 0)
                     {

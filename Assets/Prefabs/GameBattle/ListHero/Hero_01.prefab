@@ -822,7 +822,7 @@ MonoBehaviour:
   firstCooldownText: {fileID: 0}
   levelUI: {fileID: 0}
   skill2: {fileID: 11400000, guid: cae0d7a773e0f524da91178915d966ca, type: 2}
-  skill3: {fileID: 11400000, guid: 031958795ced4444b917c10cae68bcca, type: 2}
+  skill3: {fileID: 11400000, guid: 80df88b0c14d57f40b3be77dacc5454c, type: 2}
   cooldownOverlaySecondSkill: {fileID: 0}
   secondCooldownText: {fileID: 0}
   cooldownOverlayThirdSkill: {fileID: 0}
