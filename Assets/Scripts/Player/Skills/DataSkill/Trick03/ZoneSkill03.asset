@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d40c4498f13e3942afdc91c8828bd16, type: 3}
+  m_Name: ZoneSkill03
+  m_EditorClassIdentifier: 
+  skillName: ZoneSkill03
+  cooldown: 35
+  manaCost: 20
+  vfxPrefab: {fileID: 161766660727748596, guid: 05ce920d629922a4eb4795ef7494ce5c,
+    type: 3}
+  distanceInFront: 20
+  aoeRadius: 6
+  duration: 3
+  damagePerTick: 100
+  tickRate: 0.5

@@ -13,10 +13,8 @@ MonoBehaviour:
   m_Name: ZoneSkills02
   m_EditorClassIdentifier: 
   skillName: ZoneSkills02
-  cooldown: 1
+  cooldown: 35
   manaCost: 20
-  vfxPrefab: {fileID: 8378648546881499446, guid: 867c572a5be680d42a042d2349f10143,
-    type: 3}
   vfxPrefab: {fileID: 8378648546881499446, guid: 867c572a5be680d42a042d2349f10143,
     type: 3}
   distanceInFront: 20

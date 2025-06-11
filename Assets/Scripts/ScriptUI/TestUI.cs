@@ -5,11 +5,11 @@ using UnityEngine;
 public class TestUI : MonoBehaviour
 {
     [SerializeField] private LevelUI levelUI;
-    [SerializeField] private int testExpAmount = 25;
+    [SerializeField] private int testExpAmount = 100000;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             Debug.Log($"[TEST] Tăng {testExpAmount} EXP");
             levelUI.AddExp(testExpAmount);

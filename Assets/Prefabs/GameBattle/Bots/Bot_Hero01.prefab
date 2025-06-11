@@ -139,6 +139,7 @@ MonoBehaviour:
   moveSpeed: 15
   attackCooldown: 2
   target: {fileID: 0}
+  botStats: {fileID: 0}
   projectilePrefab: {fileID: 1929353877246504, guid: 750b538505824ef4a805dbd8a75d131b,
     type: 3}
   projectileSpawnPoint: {fileID: 4558919667173453136}

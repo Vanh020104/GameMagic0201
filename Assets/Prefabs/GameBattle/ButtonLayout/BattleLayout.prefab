@@ -3848,7 +3848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelUI: {fileID: 5101663926420143351}
-  testExpAmount: 25
+  testExpAmount: 10000
 --- !u!1 &2636643149964886467
 GameObject:
   m_ObjectHideFlags: 0
@@ -10244,7 +10244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf7fbff8c2f1c314592fe6697be11bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlockLevel: 1
+  unlockLevel: 10
   lockGroup: {fileID: 2515619399406832365}
   unlockButton: {fileID: 291094723959610949}
   glowBorder: {fileID: 6703400838415783012}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b8c694d2e1f604eb69bb5242a1d6bd, type: 3}
+  m_Name: LaserZoneSkill
+  m_EditorClassIdentifier: 
+  skillName: LaserZoneSkill
+  cooldown: 35
+  manaCost: 20
+  vfxPrefab: {fileID: 7478731271839673279, guid: 4d3c8045dd8857a4b8d34c2361c61045,
+    type: 3}
+  distanceInFront: 20
+  aoeRadius: 5
+  duration: 4.5
+  damagePerTick: 50
+  tickRate: 0.5

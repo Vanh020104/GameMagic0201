@@ -44,7 +44,7 @@ public class PlayerInfo : MonoBehaviour
     private IEnumerator WaitThenShowRevivePanel()
     {
         // chờ 1.5s cho Die animation chạy
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         reviveManager.TriggerRevive(this);
     }

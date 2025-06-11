@@ -9,14 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ab608f8e3169e14faaae7c993183fe8, type: 3}
-  m_Name: Fireball_Skill_Asset
+  m_Script: {fileID: 11500000, guid: c7a25d2694e38e74ab45eca12406d1bd, type: 3}
+  m_Name: ZoneSkill05
   m_EditorClassIdentifier: 
-  skillName: Fireball_Skill_Asset
+  skillName: ZoneSkill05
   cooldown: 1
   manaCost: 1
-  vfxPrefab: {fileID: 3156866507962234106, guid: 645ebd7cef59b7b40b27c29bf3e99cf2,
+  vfxPrefab: {fileID: 3744133877081091469, guid: a2a060732547fe64581bb0cb3c2bdf1d,
     type: 3}
-  range: 30
-  angle: 90
-  damage: 100
+  distanceInFront: 20
+  aoeRadius: 8
+  duration: 3
+  damagePerTick: 100
+  tickRate: 1

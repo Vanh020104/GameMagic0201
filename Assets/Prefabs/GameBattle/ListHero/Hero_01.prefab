@@ -822,7 +822,7 @@ MonoBehaviour:
   firstCooldownText: {fileID: 0}
   levelUI: {fileID: 0}
   skill2: {fileID: 11400000, guid: cae0d7a773e0f524da91178915d966ca, type: 2}
-  skill3: {fileID: 11400000, guid: 80df88b0c14d57f40b3be77dacc5454c, type: 2}
+  skill3: {fileID: 11400000, guid: d4a75edd55db8794c8e871fff278f390, type: 2}
   cooldownOverlaySecondSkill: {fileID: 0}
   secondCooldownText: {fileID: 0}
   cooldownOverlayThirdSkill: {fileID: 0}
@@ -839,9 +839,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbc010274ca9744e8a4430c46fb0824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 9090900
+  _hp: 650
   _mana: 100
-  _hpMax: 9090900
+  _hpMax: 650
   _manaMax: 100
   _hpSlider: {fileID: 0}
   _manaSlider: {fileID: 0}

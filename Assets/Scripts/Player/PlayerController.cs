@@ -192,7 +192,7 @@ public class PlayerController : MonoBehaviour
         canUseFirstSkill = false;
 
         playerInfo._mana -= 10;
-        int totalHealAmount = 50;
+        int totalHealAmount = 120;
          playerInfo._mana += 30;
         if (playerInfo._mana > playerInfo._manaMax)
         playerInfo._mana = playerInfo._manaMax;
