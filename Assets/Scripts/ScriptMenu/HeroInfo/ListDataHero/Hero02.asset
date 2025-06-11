@@ -20,6 +20,7 @@ MonoBehaviour:
   baseSpeed: 8
   defaultLevel: 1
   maxLevel: 30
+  prefabPath: Prefabs/GameBattle/ListHero/Hero_02
   skills:
   - skillName: ' Heal'
     skillIcon: {fileID: 21300000, guid: e232c984bd6bd4636b912938cd4eb8d6, type: 3}

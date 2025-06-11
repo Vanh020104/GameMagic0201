@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e109967f00c8943b306e1ec5ed4b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 7078636928559977652, guid: 59f6398bffd440b41be3858ed725007c,
+  playerPrefab: {fileID: 2404920666064808669, guid: 95e443bd98a7d714b8a5dae8770f7e4d,
     type: 3}
   spawnPoint: {fileID: 354948150}
   mapPrefab: {fileID: 4389655451339081302, guid: 03420cadc0a55924d95a0711c5f060da,

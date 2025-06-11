@@ -23,6 +23,14 @@ public class MapUIItem : MonoBehaviour
     private void OnPlayClicked()
     {
         GameData.SelectedMap = currentMap;
+        string selectedHeroId = PlayerPrefs.GetString("SelectedHeroId", "");
+        if (!string.IsNullOrEmpty(selectedHeroId))
+        {
+            HeroData selectedHero = HeroManager.Instance.GetHeroById(selectedHeroId);
+            GameData.SelectedHero = selectedHero;
+            Debug.Log("✔️ Hero đã chọn: " + selectedHero?.heroName + " - " + selectedHero?.prefabPath);
+        }
+
 
         if (GlobalLoadingController.Instance != null)
         {

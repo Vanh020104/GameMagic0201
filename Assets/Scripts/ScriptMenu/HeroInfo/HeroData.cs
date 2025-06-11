@@ -11,5 +11,6 @@ public class HeroData : ScriptableObject
     public int baseSpeed;
     public int defaultLevel = 1;
     public int maxLevel = 50;    
+    public string prefabPath;
     public SkillData[] skills = new SkillData[3];
 }

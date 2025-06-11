@@ -10,7 +10,7 @@ public class GameManagerUI : MonoBehaviour
     public List<GameObject> botPrefabs;
 
     private GameObject botContainer;
-
+    private GameObject player;
     void Start()
     {
         GameObject map;
@@ -35,7 +35,25 @@ public class GameManagerUI : MonoBehaviour
             Debug.LogWarning("⚠️ Chưa chọn map, dùng map mặc định.");
         }
 
-        GameObject player = Instantiate(playerPrefab, spawnPoint.position, Quaternion.identity);
+        if (GameData.SelectedHero != null)
+        {
+            var loaded = Resources.Load<GameObject>(GameData.SelectedHero.prefabPath);
+            if (loaded != null)
+            {
+                player = Instantiate(loaded, spawnPoint.position, Quaternion.identity);
+            }
+            else
+            {
+                Debug.LogError("❌ Không tìm thấy prefab Hero: " + GameData.SelectedHero.prefabPath);
+                return;
+            }
+        }
+        else
+        {
+            // fallback nếu chưa chọn hero
+            player = Instantiate(playerPrefab, spawnPoint.position, Quaternion.identity);
+            Debug.LogWarning("⚠️ Chưa chọn Hero → dùng mặc định");
+        }
         Camera.main.GetComponent<CameraFollow>().target = player.transform;
         player.GetComponent<PlayerInfo>().playerName = PlayerPrefs.GetString("PlayerName", "Player");
         player.GetComponent<PlayerInfo>().isLocalPlayer = true;
