@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ceb3f5e7f949247b660b17f548126c, type: 3}
+  m_Name: Hero08
+  m_EditorClassIdentifier: 
+  heroId: Hero08
+  heroName: Embergrim
+  heroIcon: {fileID: 21300000, guid: fce9b38086b183e43b58d6cf13ff3092, type: 3}
+  baseHealth: 1450
+  baseDamage: 80
+  baseSpeed: 17
+  defaultLevel: 1
+  maxLevel: 45
+  prefabPath: Prefabs/GameBattle/ListHero/Hero_08
+  skills:
+  - skillName: Regenerate
+    skillIcon: {fileID: 21300000, guid: e232c984bd6bd4636b912938cd4eb8d6, type: 3}
+    description: Maximum healing
+    cooldown: 30
+  - skillName: Arc Slash
+    skillIcon: {fileID: 21300000, guid: 38d206433dc134e87a225b7227bfd582, type: 3}
+    description: Slash forward with magical force
+    cooldown: 30
+  - skillName: Gravity Well
+    skillIcon: {fileID: 21300000, guid: 26b9c2fe684df47b99014f3449571aa9, type: 3}
+    description: Pull enemies into a gravity zone.
+    cooldown: 35

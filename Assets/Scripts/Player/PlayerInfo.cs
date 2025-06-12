@@ -21,6 +21,10 @@ public class PlayerInfo : MonoBehaviour
     public GameObject vfxHealPrefab;
     public Transform vfxAttachPoint;
     public LevelUI levelUI;
+    public int baseDamage = 50;
+    public TMPro.TMP_Text hpText;
+    public Image hpFillImage;
+
     void Start()
     {
         StartCoroutine(RegenerateMana());
@@ -40,6 +44,22 @@ public class PlayerInfo : MonoBehaviour
             _animator.SetTrigger("Die");
             StartCoroutine(WaitThenShowRevivePanel());
         }
+        if (hpText != null)
+        {
+            hpText.text = $"{_hp}/{_hpMax}";
+        }
+        // update thanh mau
+        if (hpFillImage != null)
+        {
+            float ratio = _hp / (float)_hpMax;
+
+            if (ratio > 0.6f)
+                hpFillImage.color = Color.green;
+            else
+                hpFillImage.color = Color.red;
+        }
+
+
     }
     private IEnumerator WaitThenShowRevivePanel()
     {

@@ -13,24 +13,24 @@ MonoBehaviour:
   m_Name: Hero02
   m_EditorClassIdentifier: 
   heroId: Hero02
-  heroName: Zombie
-  heroIcon: {fileID: 21300000, guid: a0415e54cd988fe49951550415a51aa7, type: 3}
-  baseHealth: 400
+  heroName: Pyroskull
+  heroIcon: {fileID: 21300000, guid: f67297fafc85fd44f97ddbe66865932c, type: 3}
+  baseHealth: 1253
   baseDamage: 80
-  baseSpeed: 8
+  baseSpeed: 17
   defaultLevel: 1
   maxLevel: 30
   prefabPath: Prefabs/GameBattle/ListHero/Hero_02
   skills:
   - skillName: ' Heal'
     skillIcon: {fileID: 21300000, guid: e232c984bd6bd4636b912938cd4eb8d6, type: 3}
-    description: Maximum healing
-    cooldown: 20
-  - skillName: Shoot Magic
+    description: Heal yourself over time
+    cooldown: 30
+  - skillName: Power Slash
     skillIcon: {fileID: 21300000, guid: b6c24d18808644d89a414099832e3fb1, type: 3}
-    description: Shoot Magic
-    cooldown: 10
-  - skillName: Poisonous fire
-    skillIcon: {fileID: 21300000, guid: 490ce39c0656043e688bfff17fa7c776, type: 3}
-    description: Poisonous fire
+    description: Power Slash
+    cooldown: 30
+  - skillName: Spider Trap
+    skillIcon: {fileID: 21300000, guid: fbad5194bc2074d2d8527d256c67abb5, type: 3}
+    description: Trap enemies in a smoky web
     cooldown: 25

@@ -133,14 +133,16 @@ public class ProjectileMoveScript : MonoBehaviour
 
         if (botInfo != null && botInfo != ownerBot)
         {
-            botInfo.currentHP -= 50;
+           int damage = owner != null ? owner.baseDamage : 50;
+            botInfo.currentHP -= damage;
+
             if (botInfo.floatingTextPrefab && botInfo.popupPoint)
             {
                 var popup = Instantiate(botInfo.floatingTextPrefab, botInfo.popupPoint.position, Quaternion.identity);
                 var text = popup.GetComponent<TMPro.TextMeshPro>();
                 if (text != null)
                 {
-                    text.text = "50";
+                   text.text = damage.ToString();
                     text.color = Color.red;
                 }
             }
@@ -152,7 +154,9 @@ public class ProjectileMoveScript : MonoBehaviour
         else if (heroInfo != null && heroInfo != owner)
         {
             if (heroInfo.isInvincible) return;
-            heroInfo._hp -= 50;
+            int damage = owner != null ? owner.baseDamage : 50;
+            heroInfo._hp -= damage;
+
 
             if (heroInfo._hp <= 0)
             {

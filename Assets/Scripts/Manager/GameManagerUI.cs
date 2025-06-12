@@ -41,6 +41,22 @@ public class GameManagerUI : MonoBehaviour
             if (loaded != null)
             {
                 player = Instantiate(loaded, spawnPoint.position, Quaternion.identity);
+                var info = player.GetComponent<PlayerInfo>();
+                if (info != null && GameData.SelectedHero != null)
+                {
+                    string heroId = GameData.SelectedHero.heroId;
+
+                    // Lấy máu và damage từ HeroData hoặc PlayerPrefs (nếu có hệ thống nâng cấp)
+                    int savedHealth = PlayerPrefs.GetInt($"HeroHealth_{heroId}", GameData.SelectedHero.baseHealth);
+                    int savedDamage = PlayerPrefs.GetInt($"HeroDamage_{heroId}", GameData.SelectedHero.baseDamage);
+
+                    info._hp = savedHealth;
+                    info._hpMax = savedHealth;
+                    info.baseDamage = savedDamage;
+
+                    Debug.Log($"✅ Hero [{heroId}] gán máu: {savedHealth}, damage: {savedDamage}");
+                }
+
             }
             else
             {

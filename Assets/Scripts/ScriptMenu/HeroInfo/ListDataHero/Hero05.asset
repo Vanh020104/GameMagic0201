@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ceb3f5e7f949247b660b17f548126c, type: 3}
+  m_Name: Hero05
+  m_EditorClassIdentifier: 
+  heroId: Hero05
+  heroName: Nyra
+  heroIcon: {fileID: 21300000, guid: 4741360025777c446bbbc4780e894c65, type: 3}
+  baseHealth: 1342
+  baseDamage: 80
+  baseSpeed: 17
+  defaultLevel: 1
+  maxLevel: 45
+  prefabPath: Prefabs/GameBattle/ListHero/Hero_05
+  skills:
+  - skillName: ' Heal'
+    skillIcon: {fileID: 21300000, guid: f180b2ea0f9eb4e64b9e095b37b1fee4, type: 3}
+    description: Maximum healing
+    cooldown: 30
+  - skillName: Arc Slash
+    skillIcon: {fileID: 21300000, guid: 8a147305483f44d6a8270a35fd118ed6, type: 3}
+    description: Slash forward with magical force
+    cooldown: 30
+  - skillName: Web Snare
+    skillIcon: {fileID: 21300000, guid: 3f388bc1c62ea49bfb016764c345826d, type: 3}
+    description: Slow enemies in a smoke trap.
+    cooldown: 35

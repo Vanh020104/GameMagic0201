@@ -13,24 +13,24 @@ MonoBehaviour:
   m_Name: Hero04
   m_EditorClassIdentifier: 
   heroId: Hero04
-  heroName: Authur
-  heroIcon: {fileID: 21300000, guid: 6b9b4dee943567e4d8de773b11f60e65, type: 3}
-  baseHealth: 200
-  baseDamage: 20
-  baseSpeed: 3
+  heroName: Aurelion
+  heroIcon: {fileID: 21300000, guid: e65981c0a5f79b54ebc5e92543de801d, type: 3}
+  baseHealth: 1342
+  baseDamage: 80
+  baseSpeed: 17
   defaultLevel: 1
-  maxLevel: 30
+  maxLevel: 45
   prefabPath: Prefabs/GameBattle/ListHero/Hero_04
   skills:
   - skillName: ' Heal'
-    skillIcon: {fileID: 21300000, guid: 7014dc5a8fae9420db6939857c08cfb5, type: 3}
+    skillIcon: {fileID: 21300000, guid: 78793786d6e644af39ed1da045493680, type: 3}
     description: Maximum healing
-    cooldown: 20
-  - skillName: Shoot Magic
-    skillIcon: {fileID: 21300000, guid: 40a53334d3a9949709cb2d4eb478e0c3, type: 3}
+    cooldown: 30
+  - skillName: Power Slash
+    skillIcon: {fileID: 21300000, guid: a222933a686f14c52a4bdc97f661029e, type: 3}
     description: Shoot Magic
-    cooldown: 10
-  - skillName: Poisonous fire
-    skillIcon: {fileID: 21300000, guid: 884e4ff38c9034793b1ecbe1d84f73d4, type: 3}
-    description: Poisonous fire
-    cooldown: 25
+    cooldown: 30
+  - skillName: Meteor Shield
+    skillIcon: {fileID: 21300000, guid: 490ce39c0656043e688bfff17fa7c776, type: 3}
+    description: ' Summon a shield that calls down strikes.'
+    cooldown: 35

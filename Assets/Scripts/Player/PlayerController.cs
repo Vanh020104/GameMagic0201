@@ -68,6 +68,8 @@ public class PlayerController : MonoBehaviour
         playerInfo._hpSlider = layout.healthPlayer;
         playerInfo._manaSlider = layout.manaPlayer;
         levelUI = layout.levelUI;
+        playerInfo.hpText = layout.healthPlayer.GetComponentInChildren<TMPro.TMP_Text>();
+        playerInfo.hpFillImage = layout.healthPlayer.fillRect.GetComponent<Image>();
 
         // hồi chiêu và lắng nghe của chiêu 1 
         cooldownOverlayFirstSkill = layout.firstCooldownOverlay;

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ceb3f5e7f949247b660b17f548126c, type: 3}
+  m_Name: Hero06
+  m_EditorClassIdentifier: 
+  heroId: Hero06
+  heroName: Kael
+  heroIcon: {fileID: 21300000, guid: c090e53365b128140b23ee7a1ce53182, type: 3}
+  baseHealth: 1342
+  baseDamage: 80
+  baseSpeed: 17
+  defaultLevel: 1
+  maxLevel: 45
+  prefabPath: Prefabs/GameBattle/ListHero/Hero_06
+  skills:
+  - skillName: Regenerate
+    skillIcon: {fileID: 21300000, guid: e232c984bd6bd4636b912938cd4eb8d6, type: 3}
+    description: Maximum healing
+    cooldown: 30
+  - skillName: Arc Slash
+    skillIcon: {fileID: 21300000, guid: b6c24d18808644d89a414099832e3fb1, type: 3}
+    description: Slash forward with magical force
+    cooldown: 30
+  - skillName: Flame Rain
+    skillIcon: {fileID: 21300000, guid: 16c97ed7944924a49bbbf022eeb00056, type: 3}
+    description: Rain fire in a vertical column.
+    cooldown: 35

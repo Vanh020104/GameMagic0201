@@ -13,24 +13,24 @@ MonoBehaviour:
   m_Name: Hero03
   m_EditorClassIdentifier: 
   heroId: Hero03
-  heroName: Boris
-  heroIcon: {fileID: 21300000, guid: 7d0cac62bd214da43bb3f073858db3ee, type: 3}
-  baseHealth: 400
+  heroName: Tharnor
+  heroIcon: {fileID: 21300000, guid: ced266ede0f73f44d914439ad8ac712e, type: 3}
+  baseHealth: 1253
   baseDamage: 80
-  baseSpeed: 8
+  baseSpeed: 17
   defaultLevel: 1
-  maxLevel: 60
+  maxLevel: 30
   prefabPath: Prefabs/GameBattle/ListHero/Hero_03
   skills:
   - skillName: ' Heal'
-    skillIcon: {fileID: 21300000, guid: e232c984bd6bd4636b912938cd4eb8d6, type: 3}
+    skillIcon: {fileID: 21300000, guid: f180b2ea0f9eb4e64b9e095b37b1fee4, type: 3}
     description: Maximum healing
-    cooldown: 20
-  - skillName: Shoot Magic
-    skillIcon: {fileID: 21300000, guid: b6c24d18808644d89a414099832e3fb1, type: 3}
+    cooldown: 30
+  - skillName: Power Slash
+    skillIcon: {fileID: 21300000, guid: 38d206433dc134e87a225b7227bfd582, type: 3}
     description: Shoot Magic
-    cooldown: 10
-  - skillName: Poisonous fire
+    cooldown: 30
+  - skillName: Frostfall
     skillIcon: {fileID: 21300000, guid: 490ce39c0656043e688bfff17fa7c776, type: 3}
-    description: Poisonous fire
-    cooldown: 25
+    description: Drop an icy spike from above
+    cooldown: 35

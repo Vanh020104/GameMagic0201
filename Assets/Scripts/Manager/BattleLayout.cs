@@ -30,4 +30,10 @@ public class BattleLayout : MonoBehaviour
     public TMP_Text thirdCooldownText;
     public Image thirdCooldownOverlay;
 
+
+    [Header("Skill Icon Images")]
+    public Image firstSkillIcon;
+    public Image secondSkillIcon;
+    public Image thirdSkillIcon;
+
 }

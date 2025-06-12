@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ceb3f5e7f949247b660b17f548126c, type: 3}
+  m_Name: Hero07
+  m_EditorClassIdentifier: 
+  heroId: Hero07
+  heroName: Voltash
+  heroIcon: {fileID: 21300000, guid: 92d39a11c3d2c2f4f81976d2e7a5c1a8, type: 3}
+  baseHealth: 1450
+  baseDamage: 80
+  baseSpeed: 17
+  defaultLevel: 1
+  maxLevel: 45
+  prefabPath: Prefabs/GameBattle/ListHero/Hero_07
+  skills:
+  - skillName: Regenerate
+    skillIcon: {fileID: 21300000, guid: f180b2ea0f9eb4e64b9e095b37b1fee4, type: 3}
+    description: Maximum healing
+    cooldown: 30
+  - skillName: Arc Slash
+    skillIcon: {fileID: 21300000, guid: 7014dc5a8fae9420db6939857c08cfb5, type: 3}
+    description: Slash forward with magical force
+    cooldown: 30
+  - skillName: Arcane Surge
+    skillIcon: {fileID: 21300000, guid: d5537b4eb27414eaa9abbb800c5c9872, type: 3}
+    description: Channel arcane energy to empower yourself.
+    cooldown: 35
