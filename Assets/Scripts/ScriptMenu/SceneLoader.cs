@@ -28,12 +28,24 @@ public class SceneLoader : MonoBehaviour
         if (isTapped) return;
         isTapped = true;
 
+        // ✅ Check login daily
+        string lastLoginDate = PlayerPrefs.GetString("LastLoginDate", "");
+        string today = System.DateTime.Now.ToString("yyyy-MM-dd");
+
+        if (lastLoginDate != today)
+        {
+            PlayerPrefs.SetString("LastLoginDate", today);
+            PlayerPrefs.Save();
+            DailyTaskProgressManager.Instance.AddProgress("login_daily");
+        }
+
         tapToPlayText.SetActive(false);
         loadingSlider.gameObject.SetActive(true);
         loadingText.gameObject.SetActive(true);
 
         StartCoroutine(SimulateLoading());
     }
+
 
     IEnumerator SimulateLoading()
     {

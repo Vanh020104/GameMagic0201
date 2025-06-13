@@ -72,6 +72,7 @@ public class LuckyPanelController : MonoBehaviour
             currentKeyCount--;
             PlayerPrefs.SetInt("LuckyKey", currentKeyCount);
             UpdateKeyUI();
+            DailyTaskProgressManager.Instance.AddProgress("use_spin");
 
             if (handHintStart != null)
             {

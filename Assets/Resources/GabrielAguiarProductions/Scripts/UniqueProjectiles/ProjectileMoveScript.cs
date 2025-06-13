@@ -117,7 +117,15 @@ public class ProjectileMoveScript : MonoBehaviour
         }
 
         if (owner != null && owner.isLocalPlayer)
+        {
             FindObjectOfType<KillInfoUIHandler>()?.AddKill();
+
+            // ✅ Ghi nhận nhiệm vụ giết địch
+            DailyTaskProgressManager.Instance.AddProgress("kill_10_enemies");
+            DailyTaskProgressManager.Instance.AddProgress("kill_20_enemies");
+        }
+
+
 
         FindObjectOfType<KillFeedUI>()?.ShowKill(killerName, victimName);
     }
@@ -135,6 +143,11 @@ public class ProjectileMoveScript : MonoBehaviour
         {
            int damage = owner != null ? owner.baseDamage : 50;
             botInfo.currentHP -= damage;
+            if (owner != null && owner.isLocalPlayer)
+            {
+                DailyTaskProgressManager.Instance.AddProgress("deal_500_damage", damage);
+                DailyTaskProgressManager.Instance.AddProgress("deal_1000_damage", damage);
+            }
 
             if (botInfo.floatingTextPrefab && botInfo.popupPoint)
             {

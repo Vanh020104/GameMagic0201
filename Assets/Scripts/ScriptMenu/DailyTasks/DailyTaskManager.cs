@@ -10,7 +10,7 @@ public class DailyTaskManager : MonoBehaviour
     public Transform contentParent;
     public EnergyBarManager energyBar;
 
-    private const int MaxDailyTasks = 5;
+    private const int MaxDailyTasks = 7;
     private const string DailyKey = "SelectedDailyTasks";
     private const string DateKey = "DailyDate";
 
@@ -20,7 +20,7 @@ public class DailyTaskManager : MonoBehaviour
     }
 
     private void InitTasks()
-    {
+    {   
         string today = DateTime.Now.ToString("yyyyMMdd");
         string savedDate = PlayerPrefs.GetString(DateKey, "");
 
@@ -29,6 +29,7 @@ public class DailyTaskManager : MonoBehaviour
             PlayerPrefs.DeleteKey(DailyKey);
             PlayerPrefs.SetString(DateKey, today);
             energyBar.ResetEnergyAndKeyProgress();
+            DailyTaskProgressManager.Instance.ResetAllProgress();
         }
 
         List<DailyTaskData> selectedTasks = GetTodayTasks();

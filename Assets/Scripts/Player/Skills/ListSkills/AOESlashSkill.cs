@@ -32,6 +32,12 @@ public class AOESlashSkill : BaseSkill
                 if (angleToTarget <= angle / 2f)
                 {
                     botTarget.currentHP -= damage;
+                    if (owner != null && owner.isLocalPlayer)
+                    {
+                        DailyTaskProgressManager.Instance.AddProgress("deal_500_damage", damage);
+                        DailyTaskProgressManager.Instance.AddProgress("deal_1000_damage", damage);
+                    }
+
                     // Hiển thị số damage
                     if (botTarget.floatingTextPrefab && botTarget.popupPoint)
                     {

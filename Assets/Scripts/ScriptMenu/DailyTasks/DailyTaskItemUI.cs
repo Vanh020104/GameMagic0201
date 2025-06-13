@@ -71,21 +71,25 @@ public class DailyTaskItemUI : MonoBehaviour
 
     private void UpdateUI()
     {
+        currentProgress = DailyTaskProgressManager.Instance.GetProgress(data.id);
         progressText.text = $"{currentProgress} / {data.requiredCount}";
 
         if (isClaimed)
         {
             SetButton("DONE", Color.gray, false);
         }
-        else if (isReadyToClaim)
+        else if (currentProgress >= data.requiredCount)
         {
-            SetButton("Receive", new Color(0.2f, 0.7f, 0.2f), true); // xanh lá
+            isReadyToClaim = true;
+            Color receiveColor = new Color32(0, 255, 113, 255); 
+            SetButton("Receive", receiveColor, true);
         }
         else
         {
             SetButton("GO", Color.gray, false);
         }
     }
+
 
     private void SetButton(string label, Color bgColor, bool interactable)
     {

@@ -145,15 +145,15 @@ private IEnumerator PlaySmoke()
 
             int currentHealth = PlayerPrefs.GetInt($"HeroHealth_{currentData.heroId}", currentData.baseHealth);
             int currentDamage = PlayerPrefs.GetInt($"HeroDamage_{currentData.heroId}", currentData.baseDamage);
-            int currentSpeed  = PlayerPrefs.GetInt($"HeroSpeed_{currentData.heroId}",  currentData.baseSpeed);
+            int currentSpeed = PlayerPrefs.GetInt($"HeroSpeed_{currentData.heroId}", currentData.baseSpeed);
 
             int healthBonus = Random.Range(3, 6); // 3–5
             int damageBonus = Random.Range(0, 3); // 0–2
-            int speedBonus  = Random.Range(0, 4); // 0–3
+            int speedBonus = Random.Range(0, 4); // 0–3
 
             currentHealth += healthBonus;
             currentDamage += damageBonus;
-            currentSpeed  += speedBonus;
+            currentSpeed += speedBonus;
 
             PlayerPrefs.SetInt($"HeroLevel_{currentData.heroId}", currentPlayerHero.currentLevel);
             PlayerPrefs.SetInt($"HeroHealth_{currentData.heroId}", currentHealth);
@@ -172,12 +172,14 @@ private IEnumerator PlaySmoke()
             }
 
             ShowHero(currentData);
+            DailyTaskProgressManager.Instance.AddProgress("upgrade_hero");
         }
         else
         {
             Debug.Log("Không đủ vàng để nâng cấp");
             var home = FindObjectOfType<HomeUIController>();
-            if(home != null){
+            if (home != null)
+            {
                 home.OpenPanelBuyGold();
             }
         }

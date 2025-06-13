@@ -199,13 +199,19 @@ public class HomeUIController : MonoBehaviour
     {
         shopPanel.SetActive(true);
         shopTabController.SelectTab(tabIndex);
+        DailyTaskProgressManager.Instance.AddProgress("open_shop");
     }
 
     /// <summary> Đóng shop </summary>
     public void CloseShop() => shopPanel.SetActive(false);
 
     /// <summary> Mở setting </summary>
-    public void OpenSetting() => settingPanel.SetActive(true);
+    public void OpenSetting()
+    {
+        settingPanel.SetActive(true);
+        DailyTaskProgressManager.Instance.AddProgress("open_setting");
+    }
+        
 
     /// <summary> Đóng setting </summary>
     public void CloseSetting() => settingPanel.SetActive(false);
@@ -252,8 +258,14 @@ public class HomeUIController : MonoBehaviour
     public void OpenRankingPanel() => rankingPanel.SetActive(true);
     public void CloseRankingPanel() => rankingPanel.SetActive(false);
 
-    public void OpenBagPanel() => bagPanel.SetActive(true);
+    public void OpenBagPanel() {
+        bagPanel.SetActive(true);
+        DailyTaskProgressManager.Instance.AddProgress("open_bag_panel");
+    } 
     public void CloseBagPanel() => bagPanel.SetActive(false);
-    public void OpenUpgradePanel() => upgradePanel.SetActive(true);
+    public void OpenUpgradePanel() {
+        upgradePanel.SetActive(true);
+        DailyTaskProgressManager.Instance.AddProgress("open_upgrade");
+    } 
     public void CloseUpgradePanel() => upgradePanel.SetActive(false);
 }

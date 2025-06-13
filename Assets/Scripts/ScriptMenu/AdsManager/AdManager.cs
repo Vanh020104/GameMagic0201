@@ -32,6 +32,7 @@ public class AdManager : MonoBehaviour
             LoadRewardedAd();
             LoadInterstitialAd();
         });
+        InvokeRepeating(nameof(EnsureRewardedAdReady), 5f, 10f);
     }
 
     #region Rewarded
@@ -120,5 +121,15 @@ public class AdManager : MonoBehaviour
         return interstitialAd != null && interstitialAd.CanShowAd();
     }
 
+    // Gọi trong Start() hoặc sau khi người chơi xem xong:
+
+    private void EnsureRewardedAdReady()
+    {
+        if (rewardedAd == null || !rewardedAd.CanShowAd())
+        {
+            Debug.Log("🔁 Re-loading rewarded ad due to not ready");
+            LoadRewardedAd();
+        }
+    }
 
 }

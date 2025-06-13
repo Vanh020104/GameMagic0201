@@ -33,6 +33,25 @@ public class MatchStatistics : MonoBehaviour
         if (upgradeLevelRankPanel != null)
             upgradeLevelRankPanel.SetActive(false);
 
+
+        // Daily Task Progress (chạy sau trận)
+        DailyTaskProgressManager.Instance.AddProgress("win_match");
+        DailyTaskProgressManager.Instance.AddProgress("win_3_match");
+
+        DailyTaskProgressManager.Instance.AddProgress("kill_1", GameResultData.killCount);
+        DailyTaskProgressManager.Instance.AddProgress("kill_10", GameResultData.killCount);
+
+        DailyTaskProgressManager.Instance.AddProgress("reach_level_5", GameResultData.levelAfter);
+        DailyTaskProgressManager.Instance.AddProgress("reach_level_10", GameResultData.levelAfter);
+
+        // Nếu đã xem quảng cáo x2
+        if (hasClaimedDouble)
+            DailyTaskProgressManager.Instance.AddProgress("watch_ads");
+
+        // Nếu người chơi đã đạt Top 1
+        if (GameResultData.playerRank == 1)
+            DailyTaskProgressManager.Instance.AddProgress("reach_top_1");
+
         // Bắt đầu coroutine delay 1s → show panel
         StartCoroutine(ShowUpgradePanelDelayed());
     }

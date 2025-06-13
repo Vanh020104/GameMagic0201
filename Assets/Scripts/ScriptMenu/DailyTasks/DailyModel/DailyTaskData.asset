@@ -13,51 +13,147 @@ MonoBehaviour:
   m_Name: DailyTaskData
   m_EditorClassIdentifier: 
   tasks:
-  - id: play_30_min
-    description: Play game for 30 minutes
-    icon: {fileID: 21300000, guid: 61158ef70bd434f6999672972874d97a, type: 3}
-    requiredCount: 30
+  - id: login_daily
+    description: Login today
+    icon: {fileID: 21300000, guid: 37e51e014236d45699f3ece77dabd8bd, type: 3}
+    requiredCount: 1
     goldReward: 100
+    energyReward: 15
+  - id: open_shop
+    description: Open shop once
+    icon: {fileID: 21300000, guid: a2d8ff1efcc5a4e0fb9f12190a368913, type: 3}
+    requiredCount: 1
+    goldReward: 50
     energyReward: 20
-  - id: kill_10_enemies
-    description: Defeat 10 enemies
-    icon: {fileID: 21300000, guid: 38d206433dc134e87a225b7227bfd582, type: 3}
-    requiredCount: 10
-    goldReward: 120
+  - id: watch_ad
+    description: Watch 1 ad
+    icon: {fileID: 21300000, guid: 07d3b481361c4403bac571c67f39ac91, type: 3}
+    requiredCount: 1
+    goldReward: 200
+    energyReward: 5
+  - id: watch_ad_3
+    description: Watch 3 ad
+    icon: {fileID: 21300000, guid: c4ada58901144487d9d4128196d5d0d8, type: 3}
+    requiredCount: 3
+    goldReward: 500
+    energyReward: 15
+  - id: upgrade_hero
+    description: Upgrade a hero once
+    icon: {fileID: 21300000, guid: cf1cf642909e546f3bc6123aeaf9015a, type: 3}
+    requiredCount: 1
+    goldReward: 100
+    energyReward: 15
+  - id: use_spin
+    description: Use lucky spin
+    icon: {fileID: 21300000, guid: 553f02465379144e28c06b5f5d25adbf, type: 3}
+    requiredCount: 1
+    goldReward: 150
+    energyReward: 20
+  - id: open_setting
+    description: Open settings
+    icon: {fileID: 21300000, guid: a897dfd90889d4f109d1f7ac9798747a, type: 3}
+    requiredCount: 1
+    goldReward: 20
     energyReward: 25
-  - id: win_3_matches
-    description: Win 3 matches
-    icon: {fileID: 21300000, guid: 904392d0f681b4a27bc0f3cf0d7de3a4, type: 3}
+  - id: open_bag_panel
+    description: Open your bag
+    icon: {fileID: 21300000, guid: 4db44faa8d98047d083547ff25794209, type: 3}
+    requiredCount: 1
+    goldReward: 20
+    energyReward: 20
+  - id: open_upgrade
+    description: Open upgrade panel
+    icon: {fileID: 21300000, guid: bb69d6d606b954d3f8519f24c22df1bf, type: 3}
+    requiredCount: 1
+    goldReward: 20
+    energyReward: 10
+  - id: kill_10_enemies
+    description: Kill 10 enemies
+    icon: {fileID: 21300000, guid: cf9386519492b4246a8f4eb6c398ff15, type: 3}
+    requiredCount: 10
+    goldReward: 200
+    energyReward: 30
+  - id: kill_20_enemies
+    description: Kill 20 enemies
+    icon: {fileID: 21300000, guid: 25674350e41f947a4826894944cc411d, type: 3}
+    requiredCount: 20
+    goldReward: 400
+    energyReward: 50
+  - id: use_skill_10
+    description: Use any skill 10 times
+    icon: {fileID: 21300000, guid: c15e50070a9984d29b83cb90d2ed9770, type: 3}
+    requiredCount: 10
+    goldReward: 400
+    energyReward: 40
+  - id: use_heal_5
+    description: Use healing skill 5 times
+    icon: {fileID: 21300000, guid: f180b2ea0f9eb4e64b9e095b37b1fee4, type: 3}
+    requiredCount: 5
+    goldReward: 100
+    energyReward: 40
+  - id: deal_500_damage
+    description: Deal 500 damage
+    icon: {fileID: 21300000, guid: 2ce09feb2cc834925a809e2f4eda0344, type: 3}
+    requiredCount: 500
+    goldReward: 250
+    energyReward: 30
+  - id: deal_1000_damage
+    description: Deal 1000 damage
+    icon: {fileID: 21300000, guid: 01064ca48288f49f2a3f3b279c11a586, type: 3}
+    requiredCount: 1000
+    goldReward: 500
+    energyReward: 50
+  - id: survive_60s
+    description: Survive for 60 seconds
+    icon: {fileID: 21300000, guid: c2e2a8212b84c4283b3bb2ecd33fc815, type: 3}
+    requiredCount: 60
+    goldReward: 100
+    energyReward: 25
+  - id: survive_180s
+    description: Survive for 180 seconds
+    icon: {fileID: 21300000, guid: b5fee323a503d4487a09730b8905b901, type: 3}
+    requiredCount: 180
+    goldReward: 200
+    energyReward: 40
+  - id: reach_level_5
+    description: Reach level 5 in a match
+    icon: {fileID: 21300000, guid: 553f02465379144e28c06b5f5d25adbf, type: 3}
+    requiredCount: 5
+    goldReward: 200
+    energyReward: 40
+  - id: reach_level_10
+    description: Reach level 10 in a match
+    icon: {fileID: 21300000, guid: 3f388bc1c62ea49bfb016764c345826d, type: 3}
+    requiredCount: 10
+    goldReward: 400
+    energyReward: 60
+  - id: win_match
+    description: Win 1 match
+    icon: {fileID: 21300000, guid: bb69d6d606b954d3f8519f24c22df1bf, type: 3}
+    requiredCount: 1
+    goldReward: 200
+    energyReward: 20
+  - id: win_3_match
+    description: Win 3 match
+    icon: {fileID: 21300000, guid: bb69d6d606b954d3f8519f24c22df1bf, type: 3}
+    requiredCount: 3
+    goldReward: 400
+    energyReward: 40
+  - id: revive_1_time
+    description: Revive 1 time
+    icon: {fileID: 21300000, guid: e232c984bd6bd4636b912938cd4eb8d6, type: 3}
+    requiredCount: 1
+    goldReward: 200
+    energyReward: 25
+  - id: upgrade_equip
+    description: Upgrade an item once
+    icon: {fileID: 21300000, guid: ac92e35e08f4f4f06af9e75033b96c76, type: 3}
+    requiredCount: 1
+    goldReward: 200
+    energyReward: 25
+  - id: revive_3_time
+    description: Revive 1 time
+    icon: {fileID: 21300000, guid: 884e4ff38c9034793b1ecbe1d84f73d4, type: 3}
     requiredCount: 3
     goldReward: 200
     energyReward: 30
-  - id: use_skill_20_times
-    description: "Use any skill 20 times\t"
-    icon: {fileID: 21300000, guid: fbad5194bc2074d2d8527d256c67abb5, type: 3}
-    requiredCount: 20
-    goldReward: 100
-    energyReward: 20
-  - id: play_5_matches
-    description: Play 5 matches
-    icon: {fileID: 21300000, guid: 76a68c74f9f8a42cbbe07c539fe57efa, type: 3}
-    requiredCount: 5
-    goldReward: 250
-    energyReward: 60
-  - id: vanh_test_1
-    description: vanh_test_1
-    icon: {fileID: 21300000, guid: 76a68c74f9f8a42cbbe07c539fe57efa, type: 3}
-    requiredCount: 5
-    goldReward: 250
-    energyReward: 60
-  - id: vanh_test_2
-    description: vanh_test_2
-    icon: {fileID: 21300000, guid: 76a68c74f9f8a42cbbe07c539fe57efa, type: 3}
-    requiredCount: 5
-    goldReward: 250
-    energyReward: 60
-  - id: vanh_test_3
-    description: vanh_test_3
-    icon: {fileID: 21300000, guid: 76a68c74f9f8a42cbbe07c539fe57efa, type: 3}
-    requiredCount: 5
-    goldReward: 250
-    energyReward: 60
