@@ -9,7 +9,6 @@ public class AdManager : MonoBehaviour
     private InterstitialAd interstitialAd;
     private Action onInterstitialClosed;
     [Header("Ad Unit IDs")]
-    [SerializeField] private string bannerAdUnitId = "ca-app-pub-3940256099942544/6300978111";        // TEST banner
     [SerializeField] private string rewardedAdUnitId = "ca-app-pub-3940256099942544/5224354917";      // TEST rewarded
     [SerializeField] private string interstitialAdUnitId = "ca-app-pub-3940256099942544/1033173712";  // TEST interstitial
 
@@ -29,23 +28,11 @@ public class AdManager : MonoBehaviour
         MobileAds.Initialize(initStatus =>
         {
             Debug.Log("AdMob Initialized");
-            LoadBannerAd();
+            // LoadBannerAd();
             LoadRewardedAd();
             LoadInterstitialAd();
         });
     }
-
-    #region Banner
-    private void LoadBannerAd()
-    {
-        if (bannerView != null)
-            bannerView.Destroy();
-
-        bannerView = new BannerView(bannerAdUnitId, AdSize.Banner, AdPosition.Bottom);
-        var adRequest = new AdRequest();
-        bannerView.LoadAd(adRequest);
-    }
-    #endregion
 
     #region Rewarded
     private void LoadRewardedAd()

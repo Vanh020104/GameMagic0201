@@ -80,7 +80,7 @@ public class BattleEndManager : MonoBehaviour
         // ========== 4. Cập nhật Level ==========
         int level = PlayerPrefs.GetInt("PlayerLevel", 1);
         int expBefore = PlayerPrefs.GetInt("PlayerExp", 0);
-        int expToNext = GetExpToNextLevel(level);
+        int expToNext = GameFormula.GetExpToNextLevel(level);
 
         int newExp = expBefore + levelExp;
         bool leveledUp = false;
@@ -89,7 +89,7 @@ public class BattleEndManager : MonoBehaviour
         {
             newExp -= expToNext;
             level++;
-            expToNext = GetExpToNextLevel(level);
+            expToNext = GameFormula.GetExpToNextLevel(level);
             leveledUp = true;
         }
 
@@ -144,8 +144,19 @@ public class BattleEndManager : MonoBehaviour
         SceneManager.LoadScene("Scene_Result");
     }
 
-    private int GetExpToNextLevel(int level)
+    // private int GetExpToNextLevel(int level)
+    // {
+    //     return Mathf.RoundToInt(100 * Mathf.Pow(1.5f, level - 1));
+    // }
+
+
+
+    public void ForceEndMatchByQuit()
     {
-        return Mathf.RoundToInt(100 * Mathf.Pow(1.5f, level - 1));
+        Debug.Log("🏳️ Người chơi thoát trận giữa chừng → EndMatch()");
+
+        isWin = false;
+        EndMatch(); // Tái sử dụng logic hiện tại
     }
+
 }

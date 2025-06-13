@@ -53,6 +53,34 @@ public class PlayButtonController : MonoBehaviour
             SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
         }
     }
+    public void ExitBattle()
+    {
+        if (adManager != null && adManager.HasInterstitialReady())
+        {
+            adManager.ShowInterstitialAd(() => {
+                TriggerForcedEnd(); // ← xử lý kết quả trước khi chuyển scene
+            });
+        }
+        else
+        {
+            TriggerForcedEnd();
+        }
+    }
+
+    private void TriggerForcedEnd()
+    {
+        BattleEndManager endManager = FindObjectOfType<BattleEndManager>();
+        if (endManager != null)
+        {
+            endManager.ForceEndMatchByQuit();
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ Không tìm thấy BattleEndManager. Về thẳng Home.");
+            SceneManager.LoadScene(homeScene); // fallback
+        }
+    }
+
 
 
     private IEnumerator DelayLoadHomeScene()

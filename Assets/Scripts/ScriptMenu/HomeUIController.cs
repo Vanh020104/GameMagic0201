@@ -110,8 +110,9 @@ public class HomeUIController : MonoBehaviour
     /// </summary>
     private int GetRequiredExp(int level)
     {
-        return Mathf.FloorToInt(100 * Mathf.Pow(level, 1.5f));
+        return GameFormula.GetExpToNextLevel(level);
     }
+
 
     ///
     /// code rename

@@ -27,6 +27,10 @@ public class PlayerInfo : MonoBehaviour
 
     void Start()
     {
+        int equipDamage = PlayerPrefs.GetInt("TotalEquipDamage", 0);
+        baseDamage += equipDamage;
+
+        Debug.Log($"🗡️ BaseDamage = {baseDamage} (Gốc + Trang bị)");
         StartCoroutine(RegenerateMana());
         reviveManager = FindObjectOfType<ReviveManager>();
     }
@@ -46,7 +50,9 @@ public class PlayerInfo : MonoBehaviour
         }
         if (hpText != null)
         {
-            hpText.text = $"{_hp}/{_hpMax}";
+            int clampedHP = Mathf.Clamp(_hp, 0, _hpMax);
+            hpText.text = $"{clampedHP}/{_hpMax}";
+
         }
         // update thanh mau
         if (hpFillImage != null)
@@ -172,8 +178,4 @@ public class PlayerInfo : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
-    
-
-
-
 }

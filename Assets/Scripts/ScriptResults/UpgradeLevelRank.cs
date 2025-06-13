@@ -94,8 +94,9 @@ public class UpgradeLevelRank : MonoBehaviour
 
     int GetExpToNextLevel(int level)
     {
-        return Mathf.FloorToInt(100 * Mathf.Pow(1.5f, level));
+        return GameFormula.GetExpToNextLevel(level);
     }
+
 
     public void ClosePanelUpgradeLevelRank()
     {

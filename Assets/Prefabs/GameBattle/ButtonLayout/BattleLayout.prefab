@@ -295,7 +295,6 @@ MonoBehaviour:
   firstSkillIcon: {fileID: 1280833243784170657}
   secondSkillIcon: {fileID: 6199334978289418557}
   thirdSkillIcon: {fileID: 2909109983447803240}
-  textHp: {fileID: 5737727391993576192}
 --- !u!114 &4100676775190059700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10933,7 +10932,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4100676775190059700}
         m_TargetAssemblyTypeName: PlayButtonController, Assembly-CSharp
-        m_MethodName: BackHome
+        m_MethodName: ExitBattle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
