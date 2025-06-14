@@ -192,14 +192,17 @@ public class HomeUIController : MonoBehaviour
 
 
     /// <summary> Mở shop </summary>
-    public void OpenShop() => shopPanel.SetActive(true);
+    public void OpenShop() {
+        shopPanel.SetActive(true);
+        DailyTaskProgressManager.Instance.AddProgress("open_shop");
+        DailyTaskManager.Instance?.RefreshAllTasksUI();
+    } 
 
     /// <summary> Mở shop và chọn tab cụ thể </summary>
     public void OpenShopAndSelectTab(int tabIndex)
     {
         shopPanel.SetActive(true);
         shopTabController.SelectTab(tabIndex);
-        DailyTaskProgressManager.Instance.AddProgress("open_shop");
     }
 
     /// <summary> Đóng shop </summary>
@@ -210,6 +213,7 @@ public class HomeUIController : MonoBehaviour
     {
         settingPanel.SetActive(true);
         DailyTaskProgressManager.Instance.AddProgress("open_setting");
+        DailyTaskManager.Instance?.RefreshAllTasksUI();
     }
         
 
@@ -235,7 +239,12 @@ public class HomeUIController : MonoBehaviour
     public void CloseGiftSpecial() => gift.SetActive(false);
 
     /// <summary> Mở daily tasks </summary>
-    public void OpenDailyTasks() => dailyTasks.SetActive(true);
+    public void OpenDailyTasks()
+    {
+        dailyTasks.SetActive(true);
+        DailyTaskManager.Instance?.RefreshAllTasksUI();
+    }
+
 
     /// <summary> Đóng daily tasks </summary>
     public void CloseDailyTasks() => dailyTasks.SetActive(false);
@@ -258,14 +267,18 @@ public class HomeUIController : MonoBehaviour
     public void OpenRankingPanel() => rankingPanel.SetActive(true);
     public void CloseRankingPanel() => rankingPanel.SetActive(false);
 
-    public void OpenBagPanel() {
+    public void OpenBagPanel()
+    {
         bagPanel.SetActive(true);
         DailyTaskProgressManager.Instance.AddProgress("open_bag_panel");
+        DailyTaskManager.Instance?.RefreshAllTasksUI();
     } 
     public void CloseBagPanel() => bagPanel.SetActive(false);
-    public void OpenUpgradePanel() {
+    public void OpenUpgradePanel()
+    {
         upgradePanel.SetActive(true);
         DailyTaskProgressManager.Instance.AddProgress("open_upgrade");
+        DailyTaskManager.Instance?.RefreshAllTasksUI();
     } 
     public void CloseUpgradePanel() => upgradePanel.SetActive(false);
 }

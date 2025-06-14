@@ -28,9 +28,10 @@ public class DailyTaskItemUI : MonoBehaviour
         goldText.text = data.goldReward.ToString();
         energyText.text = data.energyReward.ToString();
 
-        currentProgress = 0;
-        isClaimed = false;
-        isReadyToClaim = false;
+        // 👉 Thay vì hardcode = 0 → khôi phục
+        currentProgress = PlayerPrefs.GetInt($"DailyTaskProgress_{data.id}", 0);
+        isClaimed = PlayerPrefs.GetInt($"DailyTaskClaimed_{data.id}", 0) == 1;
+        isReadyToClaim = currentProgress >= data.requiredCount && !isClaimed;
 
         UpdateUI();
 
@@ -38,20 +39,28 @@ public class DailyTaskItemUI : MonoBehaviour
         goButton.onClick.AddListener(OnClick);
     }
 
+
     /// <summary>
     /// Gọi từ bên ngoài khi người chơi làm được 1 tiến trình
     /// </summary>
-    public void AddProgress(int amount)
+   public void AddProgress(int amount)
     {
         if (isClaimed) return;
 
         currentProgress = Mathf.Min(currentProgress + amount, data.requiredCount);
+
+        // 👉 Lưu lại
+        PlayerPrefs.SetInt($"DailyTaskProgress_{data.id}", currentProgress);
+        PlayerPrefs.Save();
+
         if (currentProgress >= data.requiredCount)
         {
             isReadyToClaim = true;
         }
+
         UpdateUI();
     }
+
 
     private void OnClick()
     {
@@ -61,10 +70,9 @@ public class DailyTaskItemUI : MonoBehaviour
         isClaimed = true;
         isReadyToClaim = false;
 
-        int gold = PlayerPrefs.GetInt("Gold", 0);
-        PlayerPrefs.SetInt("Gold", gold + data.goldReward);
-        energyBar.AddEnergy(data.energyReward);
-
+        GoldGemManager.Instance.AddGold(data.goldReward);
+        energyBar.AddEnergy(data.energyReward); 
+        PlayerPrefs.SetInt($"DailyTaskClaimed_{data.id}", 1);
         PlayerPrefs.Save();
         UpdateUI();
     }
@@ -81,7 +89,7 @@ public class DailyTaskItemUI : MonoBehaviour
         else if (currentProgress >= data.requiredCount)
         {
             isReadyToClaim = true;
-            Color receiveColor = new Color32(0, 255, 113, 255); 
+            Color receiveColor = new Color32(0, 255, 113, 255);
             SetButton("Receive", receiveColor, true);
         }
         else
@@ -98,4 +106,9 @@ public class DailyTaskItemUI : MonoBehaviour
         if (image != null) image.color = bgColor;
         goButton.interactable = interactable;
     }
+    public void RefreshUIManually()
+    {
+        UpdateUI();
+    }
+
 }

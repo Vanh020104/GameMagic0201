@@ -13,14 +13,22 @@ public class DailyTaskManager : MonoBehaviour
     private const int MaxDailyTasks = 7;
     private const string DailyKey = "SelectedDailyTasks";
     private const string DateKey = "DailyDate";
-
+    private List<DailyTaskItemUI> currentTaskUIs = new();
+    public static DailyTaskManager Instance;
     void Start()
     {
         InitTasks();
     }
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     private void InitTasks()
-    {   
+    {
         string today = DateTime.Now.ToString("yyyyMMdd");
         string savedDate = PlayerPrefs.GetString(DateKey, "");
 
@@ -41,6 +49,7 @@ public class DailyTaskManager : MonoBehaviour
             var go = Instantiate(itemDailyPrefab, contentParent);
             var ui = go.GetComponent<DailyTaskItemUI>();
             ui.Setup(task, energyBar);
+            currentTaskUIs.Add(ui);
         }
     }
 
@@ -59,4 +68,13 @@ public class DailyTaskManager : MonoBehaviour
             return random;
         }
     }
+
+    public void RefreshAllTasksUI()
+    {
+        foreach (var ui in currentTaskUIs)
+        {
+            ui.RefreshUIManually(); // tạo mới hàm này trong DailyTaskItemUI
+        }
+    }
+
 }

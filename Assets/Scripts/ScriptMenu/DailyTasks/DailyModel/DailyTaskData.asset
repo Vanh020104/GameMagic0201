@@ -13,12 +13,6 @@ MonoBehaviour:
   m_Name: DailyTaskData
   m_EditorClassIdentifier: 
   tasks:
-  - id: login_daily
-    description: Login today
-    icon: {fileID: 21300000, guid: 37e51e014236d45699f3ece77dabd8bd, type: 3}
-    requiredCount: 1
-    goldReward: 100
-    energyReward: 15
   - id: open_shop
     description: Open shop once
     icon: {fileID: 21300000, guid: a2d8ff1efcc5a4e0fb9f12190a368913, type: 3}
@@ -92,15 +86,15 @@ MonoBehaviour:
     goldReward: 100
     energyReward: 40
   - id: deal_500_damage
-    description: Deal 500 damage
+    description: Deal 5000 damage
     icon: {fileID: 21300000, guid: 2ce09feb2cc834925a809e2f4eda0344, type: 3}
-    requiredCount: 500
+    requiredCount: 5000
     goldReward: 250
     energyReward: 30
   - id: deal_1000_damage
-    description: Deal 1000 damage
+    description: Deal 10000 damage
     icon: {fileID: 21300000, guid: 01064ca48288f49f2a3f3b279c11a586, type: 3}
-    requiredCount: 1000
+    requiredCount: 10000
     goldReward: 500
     energyReward: 50
   - id: survive_60s
@@ -152,7 +146,7 @@ MonoBehaviour:
     goldReward: 200
     energyReward: 25
   - id: revive_3_time
-    description: Revive 1 time
+    description: Revive 3 time
     icon: {fileID: 21300000, guid: 884e4ff38c9034793b1ecbe1d84f73d4, type: 3}
     requiredCount: 3
     goldReward: 200
