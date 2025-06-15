@@ -63,6 +63,7 @@ MonoBehaviour:
   checkIcon: {fileID: 1648855128064766960}
   imageBg: {fileID: 6214545608993603702}
   imageBorder: {fileID: 1366469515547289583}
+  claimButton: {fileID: 4829736567497353151}
 --- !u!114 &1282949435381061217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,8 +482,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.25, y: -77.110504}
-  m_SizeDelta: {x: 137.5, y: 53.221}
+  m_AnchoredPosition: {x: 0, y: -72.61371}
+  m_SizeDelta: {x: 149, y: 62.221}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1630734609127513419
 CanvasRenderer:
