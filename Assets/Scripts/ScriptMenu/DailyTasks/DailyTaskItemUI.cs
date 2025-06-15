@@ -79,7 +79,7 @@ public class DailyTaskItemUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        currentProgress = DailyTaskProgressManager.Instance.GetProgress(data.id);
+        currentProgress = DailyTaskProgressManager.Instance.GetProgress(data.id, data.requiredCount);
         progressText.text = $"{currentProgress} / {data.requiredCount}";
 
         if (isClaimed)

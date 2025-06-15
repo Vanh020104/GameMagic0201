@@ -60,7 +60,7 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: bb69d6d606b954d3f8519f24c22df1bf, type: 3}
     requiredCount: 1
     goldReward: 20
-    energyReward: 10
+    energyReward: 20
   - id: kill_10_enemies
     description: Kill 10 enemies
     icon: {fileID: 21300000, guid: cf9386519492b4246a8f4eb6c398ff15, type: 3}

@@ -271,14 +271,13 @@ public class HomeUIController : MonoBehaviour
     {
         bagPanel.SetActive(true);
         DailyTaskProgressManager.Instance.AddProgress("open_bag_panel");
+        DailyTaskProgressManager.Instance.AddProgress("open_upgrade");
         DailyTaskManager.Instance?.RefreshAllTasksUI();
     } 
     public void CloseBagPanel() => bagPanel.SetActive(false);
     public void OpenUpgradePanel()
     {
         upgradePanel.SetActive(true);
-        DailyTaskProgressManager.Instance.AddProgress("open_upgrade");
-        DailyTaskManager.Instance?.RefreshAllTasksUI();
     } 
     public void CloseUpgradePanel() => upgradePanel.SetActive(false);
 }

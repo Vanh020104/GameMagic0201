@@ -21,7 +21,7 @@ public class DailyTaskProgressManager : MonoBehaviour
         }
     }
 
-    public int GetProgress(string taskId)
+    public int GetProgress(string taskId, int requiredCount)
     {
         if (!progressMap.ContainsKey(taskId))
         {
@@ -29,8 +29,9 @@ public class DailyTaskProgressManager : MonoBehaviour
             progressMap[taskId] = saved;
         }
 
-        return progressMap[taskId];
+        return Mathf.Min(progressMap[taskId], requiredCount); 
     }
+
 
 
     public void AddProgress(string taskId, int amount = 1)

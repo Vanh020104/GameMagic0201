@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static NotificationPopupUI;
 
 public class EnergyBarManager : MonoBehaviour
 {
@@ -9,9 +11,14 @@ public class EnergyBarManager : MonoBehaviour
     public int maxEnergy = 200;
 
     private int currentEnergy;
-    private readonly int[] keyMilestones = { 40, 120, 200 };
-    public TMP_Text energyText;
+    private readonly Dictionary<int, int> keyRewardMap = new()
+    {
+        { 40, 1 },
+        { 120, 2 },
+        { 200, 3 }
+    };
 
+    public TMP_Text energyText;
 
     private void Start()
     {
@@ -32,28 +39,43 @@ public class EnergyBarManager : MonoBehaviour
     {
         energySlider.maxValue = maxEnergy;
         energySlider.value = currentEnergy;
-         // 🔹 Hiển thị current/max
+
         if (energyText != null)
             energyText.text = $"{currentEnergy}/{maxEnergy}";
 
-        for (int i = 0; i < keyMilestones.Length; i++)
+        int i = 0;
+        foreach (var milestone in keyRewardMap.Keys)
         {
+            if (i >= keyIcons.Length) break;
+
             keyIcons[i].enabled = true;
-            bool unlocked = currentEnergy >= keyMilestones[i];
-            keyIcons[i].color = unlocked ? Color.white : new Color(1f, 1f, 1f, 0.3f); // sáng hoặc mờ
+            bool unlocked = currentEnergy >= milestone;
+            keyIcons[i].color = unlocked ? Color.white : new Color(1f, 1f, 1f, 0.3f);
+            i++;
         }
     }
 
     private void CheckRewardMilestones()
     {
-        for (int i = 0; i < keyMilestones.Length; i++)
+        foreach (var pair in keyRewardMap)
         {
-            string key = $"DailyKey_{keyMilestones[i]}";
-            if (currentEnergy >= keyMilestones[i] && PlayerPrefs.GetInt(key, 0) == 0)
+            int milestone = pair.Key;
+            int keyReward = pair.Value;
+
+            string key = $"DailyKey_{milestone}";
+
+            if (currentEnergy >= milestone && PlayerPrefs.GetInt(key, 0) == 0)
             {
                 PlayerPrefs.SetInt(key, 1);
                 PlayerPrefs.Save();
-                Debug.Log($"🎉 Nhận KEY mốc {keyMilestones[i]}");
+
+                int luckyKey = PlayerPrefs.GetInt("LuckyKey", 0);
+                luckyKey += keyReward;
+                PlayerPrefs.SetInt("LuckyKey", luckyKey);
+                PlayerPrefs.Save();
+
+                KeyEvent.InvokeKeyChanged();
+                NotificationPopupUI.Instance?.Show($" You've received {keyReward} Lucky Key for reaching {milestone} energy!");
             }
         }
     }
@@ -63,7 +85,7 @@ public class EnergyBarManager : MonoBehaviour
         currentEnergy = 0;
         PlayerPrefs.SetInt("DailyEnergy", 0);
 
-        foreach (var milestone in keyMilestones)
+        foreach (var milestone in keyRewardMap.Keys)
             PlayerPrefs.SetInt($"DailyKey_{milestone}", 0);
 
         PlayerPrefs.Save();
