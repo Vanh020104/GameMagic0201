@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroId: Hero02
   heroName: Pyroskull
-  heroIcon: {fileID: 21300000, guid: f67297fafc85fd44f97ddbe66865932c, type: 3}
+  heroIcon: {fileID: 21300000, guid: 496cf4eb09c2bbd498129fc66de51ebd, type: 3}
   baseHealth: 1253
   baseDamage: 80
   baseSpeed: 17

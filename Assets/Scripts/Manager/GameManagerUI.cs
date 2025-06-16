@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManagerUI : MonoBehaviour
 {
     public GameObject playerPrefab;
-    public Transform spawnPoint;
     public GameObject mapPrefab;
     public List<GameObject> botPrefabs;
 
@@ -21,6 +20,7 @@ public class GameManagerUI : MonoBehaviour
             if (loaded != null)
             {
                 map = Instantiate(loaded, Vector3.zero, Quaternion.identity);
+
             }
             else
             {
@@ -40,7 +40,16 @@ public class GameManagerUI : MonoBehaviour
             var loaded = Resources.Load<GameObject>(GameData.SelectedHero.prefabPath);
             if (loaded != null)
             {
-                player = Instantiate(loaded, spawnPoint.position, Quaternion.identity);
+                PlayerSpawnPointGroup playerSpawnGroup = map.GetComponentInChildren<PlayerSpawnPointGroup>();
+                if (playerSpawnGroup == null || playerSpawnGroup.spawnPoints.Length == 0)
+                {
+                    Debug.LogError("❌ Không tìm thấy điểm spawn cho Hero trong map!");
+                    return;
+                }
+
+                Transform spawnPoint = playerSpawnGroup.GetRandomSpawnPoint();
+                player = Instantiate(loaded, spawnPoint.position, spawnPoint.rotation);
+
                 var info = player.GetComponent<PlayerInfo>();
                 if (info != null && GameData.SelectedHero != null)
                 {
@@ -66,8 +75,14 @@ public class GameManagerUI : MonoBehaviour
         }
         else
         {
-            // fallback nếu chưa chọn hero
-            player = Instantiate(playerPrefab, spawnPoint.position, Quaternion.identity);
+            Transform spawnPoint = map.GetComponentInChildren<PlayerSpawnPointGroup>()?.GetRandomSpawnPoint();
+            if (spawnPoint == null)
+            {
+                Debug.LogError("❌ Không tìm thấy điểm spawn mặc định cho Hero!");
+                return;
+            }
+            player = Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
+
             Debug.LogWarning("⚠️ Chưa chọn Hero → dùng mặc định");
         }
         Camera.main.GetComponent<CameraFollow>().target = player.transform;

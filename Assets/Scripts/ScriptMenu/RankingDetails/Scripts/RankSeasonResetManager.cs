@@ -55,7 +55,7 @@ public class RankSeasonResetManager : MonoBehaviour
             currentSeasonIndex++;
         }
 
-        Debug.Log($"📆 Cập nhật thời gian reset tiếp theo: {nextResetTime} | Season #{currentSeasonIndex}");
+        // Debug.Log($"📆 Cập nhật thời gian reset tiếp theo: {nextResetTime} | Season #{currentSeasonIndex}");
 
         if (seasonNumberText != null)
             seasonNumberText.text = $"Season Rank #{currentSeasonIndex}";

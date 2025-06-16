@@ -26,7 +26,7 @@ public class BattlePassRenderer : MonoBehaviour
             var premiumSlot = premium.GetComponent<RewardSlotUI>();
             string premiumKey = $"Claimed_BattlePass_{levelData.level}_Premium";
            premiumSlot.Setup(levelData.premiumReward, unlocked, premiumKey, true);
-            Debug.Log($"Rendering level {levelData.level} | PlayerLevel = {playerLevel} | unlocked = {unlocked}");
+            // Debug.Log($"Rendering level {levelData.level} | PlayerLevel = {playerLevel} | unlocked = {unlocked}");
 
             freeSlot.SetClaimCallback(() =>
             {

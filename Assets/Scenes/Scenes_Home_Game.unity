@@ -7435,8 +7435,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 183.88885}
-  m_SizeDelta: {x: 600, y: 600}
+  m_AnchoredPosition: {x: 0, y: 144.46518}
+  m_SizeDelta: {x: 689.356, y: 689.357}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &270000564
 MonoBehaviour:
@@ -7458,7 +7458,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f67297fafc85fd44f97ddbe66865932c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 338e1284d151ac24d898c8f2676e3d49, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21824,8 +21824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00061035156, y: 1.9282837}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: -4.235491, y: 35.817223}
+  m_SizeDelta: {x: 593.194, y: 601.666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &745440800
 Animator:
@@ -38308,7 +38308,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1695.4084, y: 334.725}
+  m_SizeDelta: {x: -1719.6228, y: 334.725}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1501277096
 MonoBehaviour:
@@ -49059,7 +49059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.59082, y: 13.587097}
+  m_AnchoredPosition: {x: 138.59082, y: 13.587158}
   m_SizeDelta: {x: 465.0462, y: 168.8423}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2001099473
@@ -50185,7 +50185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.59082, y: 13.587097}
+  m_AnchoredPosition: {x: 138.59082, y: 13.587158}
   m_SizeDelta: {x: 465.0462, y: 168.8423}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2092879484
@@ -51146,7 +51146,7 @@ PrefabInstance:
     - target: {fileID: 8996397710522657810, guid: cb7318e11a180414b9a7ec4662021b79,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.499939
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 8996397710621833588, guid: cb7318e11a180414b9a7ec4662021b79,
         type: 3}
