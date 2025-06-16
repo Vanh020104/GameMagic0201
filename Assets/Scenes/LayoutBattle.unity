@@ -324,7 +324,6 @@ GameObject:
   - component: {fileID: 992667607}
   - component: {fileID: 992667608}
   - component: {fileID: 992667610}
-  - component: {fileID: 992667611}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -361,11 +360,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 2745841864948310359, guid: 813aee30bde39d24380bf07b61facc07,
     type: 3}
-  mapPrefab: {fileID: 6307795308159383831, guid: 3a842da102746624fa5aab3e19199aad,
+  mapPrefab: {fileID: 566713091559318860, guid: 3766c3ada1cfe8941bc6e288dbdafa09,
     type: 3}
   botPrefabs:
   - {fileID: 18952434338952443, guid: 7bce05c5eee3bf84e8d91cf885576103, type: 3}
   - {fileID: 4609492447879971784, guid: 77b36dcd20e6d844599c5586abb1bf51, type: 3}
+  - {fileID: 2651359933530087656, guid: 60248b90ba985764f8a4d4e11bba6351, type: 3}
+  - {fileID: 2901758508231510952, guid: 9fd61260a3272974597d5cd3679d8ccc, type: 3}
 --- !u!114 &992667610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,24 +384,6 @@ MonoBehaviour:
   shrinkAmount: 20
   shrinkInterval: 10
   zoneCenter: {x: 0, y: 0, z: 0}
---- !u!114 &992667611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992667605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e192a68799c0e604ba18dc8e844ae820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  expGemPrefab: {fileID: 3153726836249753391, guid: adc15e19ffadfa94cbd4627d2314ab60,
-    type: 3}
-  initialGemCount: 800
-  mapSize: {x: 400, y: 400}
-  height: 1.5
-  gemContainer: {fileID: 431093580}
 --- !u!1 &1068378772
 GameObject:
   m_ObjectHideFlags: 0

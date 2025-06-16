@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ReviveManager : MonoBehaviour
 {
+    [Header("UI References")]
     public GameObject revivePanel;
     public TMP_Text countdownText;
     public Button gemButton;
@@ -15,6 +16,7 @@ public class ReviveManager : MonoBehaviour
 
     private PlayerInfo player;
     private bool isCounting = false;
+    private bool isReviveBlocked = false;
 
     private int reviveCount = 0; // tổng lượt revive (gem + ads)
     private int gemReviveCount = 0; // số lượt dùng gem
@@ -23,57 +25,70 @@ public class ReviveManager : MonoBehaviour
 
     public void TriggerRevive(PlayerInfo targetPlayer)
     {
-        if (notifiText != null) notifiText.gameObject.SetActive(false);
-        if (checkGem != null) checkGem.gameObject.SetActive(false);
-
         player = targetPlayer;
 
+        // Xác định điều kiện không cho revive
         int alive = FindObjectOfType<KillInfoUIHandler>().GetAliveCount();
-        if (alive <= 3)
+        isReviveBlocked = alive <= 3;
+
+        // Hiện panel + cập nhật giao diện tương ứng
+        revivePanel.SetActive(true);
+        UpdateReviveUI();
+
+        // Bắt đầu đếm ngược
+        StartCoroutine(CountdownCoroutine());
+    }
+
+    private void UpdateReviveUI()
+    {
+        // Ẩn mặc định
+        notifiText?.gameObject.SetActive(false);
+        checkGem?.gameObject.SetActive(false);
+
+        if (isReviveBlocked)
         {
-            Debug.Log("⛔ Không thể hồi sinh khi còn ≤ 3 người.");
+            gemButton.gameObject.SetActive(false);
+            adsButton.gameObject.SetActive(false);
+            if (notifiText != null)
+            {
+                notifiText.gameObject.SetActive(true);
+                notifiText.text = "YOU CANNOT RESURRECT!";
+            }
             return;
         }
 
-        revivePanel.SetActive(true);
-
         if (reviveCount >= maxRevivesPerMatch)
         {
-            adsButton.gameObject.SetActive(false);
             gemButton.gameObject.SetActive(false);
+            adsButton.gameObject.SetActive(false);
             if (notifiText != null)
             {
                 notifiText.gameObject.SetActive(true);
                 notifiText.text = "YOUR REVIVE TURN IS OVER!";
             }
+            return;
         }
-        else
+
+        // Nếu hợp lệ → bật 2 nút revive
+        gemButton.gameObject.SetActive(true);
+        adsButton.gameObject.SetActive(true);
+
+        int currentCost = gemCosts[Mathf.Min(gemReviveCount, gemCosts.Length - 1)];
+        gemButtonText.text = $"{currentCost}";
+
+        bool canAfford = GoldGemManager.Instance.GetGem() >= currentCost;
+        gemButton.interactable = canAfford;
+
+        if (!canAfford && checkGem != null)
         {
-            adsButton.gameObject.SetActive(true);
-            gemButton.gameObject.SetActive(true);
-
-            int currentCost = gemCosts[Mathf.Min(gemReviveCount, gemCosts.Length - 1)];
-            gemButtonText.text = $"{currentCost}";
-
-            bool canAfford = GoldGemManager.Instance.GetGem() >= currentCost;
-            gemButton.interactable = canAfford;
-            if (!canAfford && checkGem != null)
-            {
-                checkGem.gameObject.SetActive(true);
-                checkGem.text = "NOT ENOUGH GEMS!";
-            }
-            else if (checkGem != null)
-            {
-                checkGem.gameObject.SetActive(false);
-            }
-
-            adsButton.interactable = AdManager.Instance != null && AdManager.Instance.HasInterstitialReady();
+            checkGem.gameObject.SetActive(true);
+            checkGem.text = "NOT ENOUGH GEMS!";
         }
 
-        StartCoroutine(CountdownCoroutine());
+        adsButton.interactable = AdManager.Instance != null && AdManager.Instance.HasInterstitialReady();
     }
 
-    IEnumerator CountdownCoroutine()
+    private IEnumerator CountdownCoroutine()
     {
         isCounting = true;
         int countdown = 5;

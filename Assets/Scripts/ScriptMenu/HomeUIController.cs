@@ -43,27 +43,18 @@ public class HomeUIController : MonoBehaviour
     /// </summary>
     private void Awake()
     {
-        if (!PlayerPrefs.HasKey("IsFirstLogin"))
+        // Chỉ hiện nếu lần đầu vào game
+        if (PlayerPrefs.GetInt("IsFirstLogin", 0) == 1)
         {
-            // PlayerPrefs.SetInt("Gold", 500);
-            // PlayerPrefs.SetInt("Gem", 20);
-            // PlayerPrefs.SetInt("IsFirstLogin", 1);
-
-            // int randomNum = Random.Range(1000, 9999);
-            // string randomName = "Player" + randomNum;
-            // PlayerPrefs.SetString("PlayerName", randomName);
-
-            // int startingLevel = 1;
-            // int giftExp = Mathf.FloorToInt(GetRequiredExp(startingLevel) * 0.3f); // 🎁 Tặng 30% exp ban đầu
-            // PlayerPrefs.SetInt("PlayerLevel", startingLevel);
-            // PlayerPrefs.SetInt("PlayerExp", giftExp);
-
-            // PlayerPrefs.Save();
-
             if (welcomeRewardPanel != null)
                 welcomeRewardPanel.SetActive(true);
+
+            // Đánh dấu đã hiện để lần sau không hiện nữa
+            PlayerPrefs.SetInt("IsFirstLogin", 2);
+            PlayerPrefs.Save();
         }
     }
+
 
     /// <summary>
     /// Khởi động UI khi vào scene.

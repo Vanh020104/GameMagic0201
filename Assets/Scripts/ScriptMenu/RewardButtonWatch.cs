@@ -28,6 +28,9 @@ public class RewardButtonWatch : MonoBehaviour
 
     private void Start()
     {
+        if (adManager == null)
+        adManager = AdManager.Instance;
+
         goldGemManager = FindObjectOfType<GoldGemManager>();
         InvokeRepeating(nameof(UpdateCooldownUI), 0f, 1f);
     }
@@ -60,6 +63,10 @@ public class RewardButtonWatch : MonoBehaviour
             return;
         }
 
+        // GÁN lại nếu thiếu
+        if (adManager == null) adManager = AdManager.Instance;
+        if (goldGemManager == null) goldGemManager = FindObjectOfType<GoldGemManager>();
+
         if (goldGemManager == null || amountText == null || adManager == null)
         {
             Debug.LogWarning("❌ RewardButtonWatch thiếu thành phần!");
@@ -81,6 +88,7 @@ public class RewardButtonWatch : MonoBehaviour
             }
         });
     }
+
 
     private bool CanWatchAdNow()
     {

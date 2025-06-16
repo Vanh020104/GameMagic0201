@@ -5,15 +5,16 @@ public class PlayerInitManager : MonoBehaviour
     public EquipDatabaseSO equipDatabase;
 
 
-    // void Start()
-    // {
-    //     PlayerPrefs.DeleteAll();
-    //     PlayerPrefs.Save();
-    //     Debug.Log("🔥 Reset PlayerPrefs: Đã xoá sạch dữ liệu, vào lại sẽ là tài khoản mới.");
-
-    // }
-    private void Awake()
+    void Start()
     {
+        // PlayerPrefs.DeleteAll();
+        // PlayerPrefs.Save();
+        // PlayerPrefs.DeleteKey("IsFirstLogin");
+        // PlayerPrefs.Save();
+
+    }
+    private void Awake()
+    {   
         if (!PlayerPrefs.HasKey("IsFirstLogin"))
         {
             InitPlayer();
@@ -35,7 +36,7 @@ public class PlayerInitManager : MonoBehaviour
         // Currency
         PlayerPrefs.SetInt("Gold", 500);
         PlayerPrefs.SetInt("Gem", 20);
-
+        PlayerPrefs.SetInt("LuckyKey", 3);
         // Rank
         PlayerPrefs.SetInt("PlayerRankIndex", 0);
         PlayerPrefs.SetInt("PlayerRankExp", 50);

@@ -3,8 +3,8 @@ using UnityEngine;
 public class BotStats : MonoBehaviour
 {
     public string botName;
-    public float maxHP = 200f;
-    public float currentHP = 200f;
+    public float maxHP = 700f;
+    public float currentHP = 700f;
     public float maxMana = 100f;
     public float currentMana = 100f;
     public GameObject floatingTextPrefab;
