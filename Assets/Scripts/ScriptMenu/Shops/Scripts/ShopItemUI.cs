@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,13 +14,19 @@ public class ShopItemUI : MonoBehaviour
 
     private ShopItemData data;
     private bool isOwned;
+    [SerializeField] private GameObject levelBlockPanel;
+    [SerializeField] private TMP_Text levelBlockText;
 
     public void Setup(ShopItemData itemData)
     {
         data = itemData;
         icon.sprite = data.icon;
         textAmount.text = data.amount.ToString("N0");
-        textPrice.text = data.priceText;
+        if (int.TryParse(data.priceText, out int parsedPrice))
+            textPrice.text = parsedPrice.ToString("N0");
+        else
+            textPrice.text = data.priceText;
+
         if (data.id.StartsWith("Hero"))
         {
             isOwned = PlayerPrefs.GetInt($"HeroUnlocked_{data.id}", 0) == 1;
@@ -33,24 +40,82 @@ public class ShopItemUI : MonoBehaviour
 
     private void UpdateUI()
     {
+        int playerLevel = PlayerPrefs.GetInt("PlayerLevel", 1);
+        bool levelRequirementMet = playerLevel >= data.requiredLevel;
+
         if (isOwned)
         {
             buttonBuy.interactable = false;
             textPrice.alpha = 0.5f;
             if (lockPanel != null) lockPanel.SetActive(true);
+            if (levelBlockPanel != null) levelBlockPanel.SetActive(false);
+            return;
         }
-        else
+
+        if (!levelRequirementMet)
         {
-            buttonBuy.interactable = true;
-            textPrice.alpha = 1f;
+            buttonBuy.interactable = false;
+            textPrice.alpha = 0.5f;
+
+            if (levelBlockPanel != null) levelBlockPanel.SetActive(true);
+            if (levelBlockText != null)
+                levelBlockText.text = $"You need to reach\nLevel {data.requiredLevel} to unlock!";
+
             if (lockPanel != null) lockPanel.SetActive(false);
-            buttonBuy.onClick.RemoveAllListeners();
-            buttonBuy.onClick.AddListener(OnBuyClick);
+            return;
         }
+
+
+        // Có thể mua
+        buttonBuy.interactable = true;
+        textPrice.alpha = 1f;
+        if (lockPanel != null) lockPanel.SetActive(false);
+        if (levelBlockPanel != null) levelBlockPanel.SetActive(false);
+
+        buttonBuy.onClick.RemoveAllListeners();
+        buttonBuy.onClick.AddListener(OnBuyClick);
     }
+
 
     private void OnBuyClick()
     {
+        if (data.isRewardedAd)
+        {
+            if (!CanWatchAdNow(out int remaining, out float wait))
+            {
+                TimeSpan t = TimeSpan.FromSeconds(wait);
+                NotificationPopupUI.Instance?.Show($"Please come back after {t.Hours:D2}:{t.Minutes:D2}:{t.Seconds:D2}", false);
+                return;
+            }
+
+            // Show ad
+            AdManager.Instance.ShowRewardedAd(() =>
+            {
+                // Thưởng
+                if (data.id.StartsWith("gold"))
+                    GoldGemManager.Instance.AddGold(data.amount);
+                else if (data.id.StartsWith("gem"))
+                    GoldGemManager.Instance.AddGem(data.amount);
+
+                NotificationPopupUI.Instance?.Show($"Reward received! {remaining - 1} more left", true);
+                string countKey = $"AdLimit_{data.id}_WatchedCount";
+                string resetKey = $"AdLimit_{data.id}_LastReset";
+                int count = PlayerPrefs.GetInt(countKey, 0);
+                PlayerPrefs.SetInt(countKey, count + 1);
+
+                if (count == 0)
+                    PlayerPrefs.SetString(resetKey, DateTime.UtcNow.Ticks.ToString());
+
+                PlayerPrefs.Save();
+                buttonBuy.interactable = false;
+                Invoke(nameof(EnableBuyButton), 3f);
+            });
+
+            return;
+        }
+
+
+
         if (data.id.StartsWith("gold"))
         {
             GoldGemManager.Instance.AddGold(data.amount);
@@ -67,7 +132,7 @@ public class ShopItemUI : MonoBehaviour
 
         if (data.id.StartsWith("Hero"))
         {
-            if (GoldGemManager.Instance.SpendGem(int.Parse(data.priceText)))
+            if (int.TryParse(data.priceText, out int gemPrice) && GoldGemManager.Instance.SpendGem(gemPrice))
             {
                 PlayerPrefs.SetInt($"HeroUnlocked_{data.id}", 1);
                 PlayerPrefs.Save();
@@ -107,4 +172,40 @@ public class ShopItemUI : MonoBehaviour
             NotificationPopupUI.Instance?.Show("Not enough Gold!", false);
         }
     }
+    private bool CanWatchAdNow(out int remainingCount, out float waitSeconds)
+    {
+        string countKey = $"AdLimit_{data.id}_WatchedCount";
+        string resetKey = $"AdLimit_{data.id}_LastReset";
+
+        int watchedCount = PlayerPrefs.GetInt(countKey, 0);
+        long lastResetTicks = long.Parse(PlayerPrefs.GetString(resetKey, "0"));
+        DateTime lastReset = new DateTime(lastResetTicks);
+        TimeSpan sinceReset = DateTime.UtcNow - lastReset;
+
+        // Nếu quá 10 tiếng -> reset
+        if (sinceReset.TotalHours >= 10)
+        {
+            PlayerPrefs.SetInt(countKey, 0);
+            PlayerPrefs.SetString(resetKey, DateTime.UtcNow.Ticks.ToString());
+            PlayerPrefs.Save();
+            watchedCount = 0;
+        }
+
+        remainingCount = 3 - watchedCount;
+
+        // Chặn nếu đã xem đủ 3 lần
+        if (watchedCount >= 3)
+        {
+            waitSeconds = (float)(TimeSpan.FromHours(10) - sinceReset).TotalSeconds;
+            return false;
+        }
+
+        waitSeconds = 0f;
+        return true;
+    }
+    private void EnableBuyButton()
+    {
+        buttonBuy.interactable = true;
+    }
+
 }

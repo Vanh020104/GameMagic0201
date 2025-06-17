@@ -15,5 +15,7 @@ MonoBehaviour:
   id: gem_600
   itemName: Gem x600
   icon: {fileID: 21300000, guid: 6feb259e591f94c548943bde8ec07132, type: 3}
-  amount: 600
-  priceText: 3.99 USD
+  amount: 55
+  priceText: 5.99 USD
+  requiredLevel: 1
+  isRewardedAd: 0

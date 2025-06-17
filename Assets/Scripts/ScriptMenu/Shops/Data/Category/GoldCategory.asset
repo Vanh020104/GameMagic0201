@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GoldCategory
   m_EditorClassIdentifier: 
   items:
+  - {fileID: 11400000, guid: 9a508c755f0c4ef4496560776822365e, type: 2}
   - {fileID: 11400000, guid: 37ac355fc88ac13448864c014daf8f9b, type: 2}
   - {fileID: 11400000, guid: 8effc75e52a001448bd30da9e7195cad, type: 2}
   - {fileID: 11400000, guid: a060c1cbcebfd494a91c5194022ee187, type: 2}

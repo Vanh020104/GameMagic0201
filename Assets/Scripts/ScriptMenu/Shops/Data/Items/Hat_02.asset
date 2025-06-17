@@ -16,4 +16,5 @@ MonoBehaviour:
   itemName: Hat_02
   icon: {fileID: 21300000, guid: 783c7978feda54571b6954c92e28b56e, type: 3}
   amount: 1
-  priceText: 100
+  priceText: 545
+  requiredLevel: 1

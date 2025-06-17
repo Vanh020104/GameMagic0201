@@ -16,4 +16,6 @@ MonoBehaviour:
   itemName: Armor_06
   icon: {fileID: 21300000, guid: fa30ecf57531041388dd57a1b277f50e, type: 3}
   amount: 1
-  priceText: 150
+  priceText: 530
+  requiredLevel: 7
+  isRewardedAd: 0

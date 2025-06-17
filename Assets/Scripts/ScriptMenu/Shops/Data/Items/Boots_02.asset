@@ -16,4 +16,5 @@ MonoBehaviour:
   itemName: Boots_02
   icon: {fileID: 21300000, guid: a154c3ccb748c412a8c488657ff14421, type: 3}
   amount: 1
-  priceText: 80
+  priceText: 436
+  requiredLevel: 1

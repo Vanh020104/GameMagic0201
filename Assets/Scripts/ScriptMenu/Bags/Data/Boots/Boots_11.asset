@@ -18,5 +18,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: a702079a8730a426a820959675581a74, type: 3}
   baseLevel: 1
   maxLevel: 10
-  baseDamage: 4
-  maxDamage: 40
+  baseDamage: 6
+  maxDamage: 60

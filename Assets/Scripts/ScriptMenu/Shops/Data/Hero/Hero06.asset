@@ -16,4 +16,5 @@ MonoBehaviour:
   itemName: Kael
   icon: {fileID: 21300000, guid: c090e53365b128140b23ee7a1ce53182, type: 3}
   amount: 1
-  priceText: 40
+  priceText: 45
+  requiredLevel: 10

@@ -15,5 +15,7 @@ MonoBehaviour:
   id: gem_1500
   itemName: Gem x1500
   icon: {fileID: 21300000, guid: b92cee43810af4d5995728a2f42c806b, type: 3}
-  amount: 1500
-  priceText: 7.99 USD
+  amount: 150
+  priceText: 8.99 USD
+  requiredLevel: 1
+  isRewardedAd: 0

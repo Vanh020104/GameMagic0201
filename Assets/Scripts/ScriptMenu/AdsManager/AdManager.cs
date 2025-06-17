@@ -131,5 +131,9 @@ public class AdManager : MonoBehaviour
             LoadRewardedAd();
         }
     }
+    public bool HasRewardedAdReady()
+    {
+        return rewardedAd != null && rewardedAd.CanShowAd();
+    }
 
 }

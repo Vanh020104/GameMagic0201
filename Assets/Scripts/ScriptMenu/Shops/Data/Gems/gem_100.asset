@@ -15,5 +15,7 @@ MonoBehaviour:
   id: gem_100
   itemName: Gem x100
   icon: {fileID: 21300000, guid: a1384bb4ee9b84ae1897c8e180a4fe68, type: 3}
-  amount: 100
-  priceText: 0.99 USD
+  amount: 15
+  priceText: 1.99 USD
+  requiredLevel: 1
+  isRewardedAd: 0

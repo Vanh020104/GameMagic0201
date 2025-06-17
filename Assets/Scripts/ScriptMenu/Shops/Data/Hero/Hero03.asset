@@ -17,3 +17,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: ced266ede0f73f44d914439ad8ac712e, type: 3}
   amount: 1
   priceText: 25
+  requiredLevel: 1

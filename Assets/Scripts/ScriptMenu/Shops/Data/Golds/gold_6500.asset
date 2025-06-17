@@ -15,5 +15,7 @@ MonoBehaviour:
   id: gold_6500
   itemName: Gold x6500
   icon: {fileID: 21300000, guid: 94a19ca5e63294a5c93d132431a0f0ec, type: 3}
-  amount: 6500
-  priceText: 7.99 USD
+  amount: 250000
+  priceText: 12.99 USD
+  requiredLevel: 1
+  isRewardedAd: 0

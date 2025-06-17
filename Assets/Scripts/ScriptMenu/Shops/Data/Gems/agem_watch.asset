@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e467f32793e1db47a3d0907764a6275, type: 3}
-  m_Name: Boots_04
+  m_Name: agem_watch
   m_EditorClassIdentifier: 
-  id: Boots_04
-  itemName: Boots_04
-  icon: {fileID: 21300000, guid: 8f8742967437d46d8ac70785d560c039, type: 3}
-  amount: 1
-  priceText: 1250
-  requiredLevel: 5
+  id: gem_watch
+  itemName: Gem Watch
+  icon: {fileID: 21300000, guid: a1384bb4ee9b84ae1897c8e180a4fe68, type: 3}
+  amount: 5
+  priceText: Watch Ads
+  requiredLevel: 1
+  isRewardedAd: 1

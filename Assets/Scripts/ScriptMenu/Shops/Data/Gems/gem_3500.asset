@@ -15,5 +15,7 @@ MonoBehaviour:
   id: gem_3500
   itemName: Gem x3500
   icon: {fileID: 21300000, guid: 80e435e6bf32546a4bd3435995540dbc, type: 3}
-  amount: 3500
-  priceText: 14.99 USD
+  amount: 350
+  priceText: 17.99 USD
+  requiredLevel: 1
+  isRewardedAd: 0

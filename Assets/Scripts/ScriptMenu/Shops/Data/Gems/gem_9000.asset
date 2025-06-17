@@ -15,5 +15,7 @@ MonoBehaviour:
   id: gem_9000
   itemName: Gem x9000
   icon: {fileID: 21300000, guid: 896ebf9e064a043cc8641b947f932f24, type: 3}
-  amount: 9000
-  priceText: 39.99 USD
+  amount: 1000
+  priceText: 45.99 USD
+  requiredLevel: 1
+  isRewardedAd: 0

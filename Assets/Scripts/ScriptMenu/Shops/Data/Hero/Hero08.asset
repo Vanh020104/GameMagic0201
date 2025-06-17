@@ -16,4 +16,5 @@ MonoBehaviour:
   itemName: Embergrim
   icon: {fileID: 21300000, guid: fce9b38086b183e43b58d6cf13ff3092, type: 3}
   amount: 1
-  priceText: 45
+  priceText: 55
+  requiredLevel: 15

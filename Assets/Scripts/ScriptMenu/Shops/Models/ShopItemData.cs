@@ -4,11 +4,13 @@ using UnityEngine;
 public class ShopItemData : ScriptableObject
 {
     [Header("Identification")]
-    public string id;             
+    public string id;
 
     [Header("Display Info")]
     public string itemName;
     public Sprite icon;
     public int amount;
     public string priceText;
+    public int requiredLevel;
+    public bool isRewardedAd;
 }

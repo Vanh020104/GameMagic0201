@@ -15,5 +15,7 @@ MonoBehaviour:
   id: gem_250
   itemName: Gem x250
   icon: {fileID: 21300000, guid: bed301d23fede4edc8a2694e7d4edbe7, type: 3}
-  amount: 250
-  priceText: 1.99 USD
+  amount: 30
+  priceText: 3.99 USD
+  requiredLevel: 1
+  isRewardedAd: 0

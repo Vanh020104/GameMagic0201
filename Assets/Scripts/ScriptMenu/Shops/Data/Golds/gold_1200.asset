@@ -15,5 +15,7 @@ MonoBehaviour:
   id: gold_1200
   itemName: Gold x1200
   icon: {fileID: 21300000, guid: 3254378c032594bc0a1da742da993e07, type: 3}
-  amount: 1200
-  priceText: 1.99 USD
+  amount: 50000
+  priceText: 2.99 USD
+  requiredLevel: 1
+  isRewardedAd: 0

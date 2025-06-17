@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GemCategory
   m_EditorClassIdentifier: 
   items:
+  - {fileID: 11400000, guid: 3bdd4e6d3e7b0234491d357768538e5c, type: 2}
   - {fileID: 11400000, guid: bab552b6b4aa13f49a7288da65bc63a5, type: 2}
   - {fileID: 11400000, guid: 3d8560c6835af9c4991a69a0043d25b3, type: 2}
   - {fileID: 11400000, guid: 8189139a293117247acdb0b2353c1e45, type: 2}

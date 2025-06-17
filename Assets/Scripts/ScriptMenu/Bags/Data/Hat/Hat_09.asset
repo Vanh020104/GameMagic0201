@@ -19,4 +19,4 @@ MonoBehaviour:
   baseLevel: 1
   maxLevel: 10
   baseDamage: 3
-  maxDamage: 30
+  maxDamage: 50
