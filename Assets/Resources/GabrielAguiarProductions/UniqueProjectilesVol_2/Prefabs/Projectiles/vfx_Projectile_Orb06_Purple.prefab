@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4436067838946300}
   - component: {fileID: 96661178915974944}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_CenterAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4233912410501934}
   - component: {fileID: 96566582106913592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_CenterAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 4045412156413320}
   - component: {fileID: 198640425973430668}
   - component: {fileID: 199794166912771656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5159,7 +5159,7 @@ GameObject:
   - component: {fileID: 4856258977473444}
   - component: {fileID: 198100983230650686}
   - component: {fileID: 199203949221740466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10089,7 +10089,7 @@ GameObject:
   - component: {fileID: 4174162888325744}
   - component: {fileID: 198494693277685822}
   - component: {fileID: 199211801420054022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BallAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15019,7 +15019,7 @@ GameObject:
   - component: {fileID: 4739372369271342}
   - component: {fileID: 198978519590288262}
   - component: {fileID: 199196479175704442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19949,7 +19949,7 @@ GameObject:
   - component: {fileID: 4968291540066840}
   - component: {fileID: 198871888253884294}
   - component: {fileID: 199151884463402044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24879,7 +24879,7 @@ GameObject:
   - component: {fileID: 4621747304500072}
   - component: {fileID: 198025341803120852}
   - component: {fileID: 199247187118750460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CircleOutterAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29810,7 +29810,7 @@ GameObject:
   - component: {fileID: 114717737076008424}
   - component: {fileID: 65188598017182028}
   - component: {fileID: 54637892525149356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_Orb06_Purple
   m_TagString: Projectile
   m_Icon: {fileID: 0}

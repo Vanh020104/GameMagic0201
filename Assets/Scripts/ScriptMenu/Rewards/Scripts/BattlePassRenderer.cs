@@ -11,7 +11,7 @@ public class BattlePassRenderer : MonoBehaviour
     private void Start()
     {
         int playerLevel = PlayerPrefs.GetInt("PlayerLevel", 1);
-        
+
         for (int i = 0; i < database.levels.Count; i++)
         {
             var levelData = database.levels[i];
@@ -25,7 +25,7 @@ public class BattlePassRenderer : MonoBehaviour
             var premium = Instantiate(rewardSlotPrefab, premiumParent);
             var premiumSlot = premium.GetComponent<RewardSlotUI>();
             string premiumKey = $"Claimed_BattlePass_{levelData.level}_Premium";
-           premiumSlot.Setup(levelData.premiumReward, unlocked, premiumKey, true);
+            premiumSlot.Setup(levelData.premiumReward, unlocked, premiumKey, true);
             // Debug.Log($"Rendering level {levelData.level} | PlayerLevel = {playerLevel} | unlocked = {unlocked}");
 
             freeSlot.SetClaimCallback(() =>
@@ -33,6 +33,8 @@ public class BattlePassRenderer : MonoBehaviour
                 ClaimReward(levelData.freeReward);
                 PlayerPrefs.SetInt(freeKey, 1);
                 PlayerPrefs.Save();
+                CheckAndUpdateNotification();
+
             });
 
             premiumSlot.SetClaimCallback(() =>
@@ -40,8 +42,12 @@ public class BattlePassRenderer : MonoBehaviour
                 ClaimReward(levelData.premiumReward);
                 PlayerPrefs.SetInt(premiumKey, 1);
                 PlayerPrefs.Save();
+                CheckAndUpdateNotification();
+
             });
         }
+        CheckAndUpdateNotification();
+
     }
     private void ClaimReward(RewardData data)
     {
@@ -85,6 +91,34 @@ public class BattlePassRenderer : MonoBehaviour
 
         // Vẽ lại toàn bộ
         Start(); // 👈 gọi lại Start() là đủ
+    }
+    public void CheckAndUpdateNotification()
+    {
+        int playerLevel = PlayerPrefs.GetInt("PlayerLevel", 1);
+
+        foreach (var levelData in database.levels)
+        {
+            bool unlocked = playerLevel >= levelData.level;
+
+            string freeKey = $"Claimed_BattlePass_{levelData.level}_Free";
+            if (unlocked && PlayerPrefs.GetInt(freeKey, 0) == 0)
+            {
+                NotificationBadgeManager.Instance.SetNotification("battlepass", true);
+                return;
+            }
+
+            if (BattlePassManager.IsActivated())
+            {
+                string premiumKey = $"Claimed_BattlePass_{levelData.level}_Premium";
+                if (unlocked && PlayerPrefs.GetInt(premiumKey, 0) == 0)
+                {
+                    NotificationBadgeManager.Instance.SetNotification("battlepass", true);
+                    return;
+                }
+            }
+        }
+
+        NotificationBadgeManager.Instance.SetNotification("battlepass", false);
     }
 
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4780035682451812}
   - component: {fileID: 198099635080506530}
   - component: {fileID: 199139868539531566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4856,7 +4856,7 @@ GameObject:
   - component: {fileID: 4556967688458106}
   - component: {fileID: 199077352637965962}
   - component: {fileID: 198989928047961524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9840,7 +9840,7 @@ GameObject:
   - component: {fileID: 4823610011552820}
   - component: {fileID: 198738063011997438}
   - component: {fileID: 199097653148531738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14686,7 +14686,7 @@ GameObject:
   - component: {fileID: 114531419541546760}
   - component: {fileID: 65051746347316348}
   - component: {fileID: 54963132292240316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_Trail03_Purple
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -14804,7 +14804,7 @@ GameObject:
   - component: {fileID: 4222431363716776}
   - component: {fileID: 198623846209143870}
   - component: {fileID: 199035522909530538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rays
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19788,7 +19788,7 @@ GameObject:
   - component: {fileID: 4108987017917126}
   - component: {fileID: 198252267203255322}
   - component: {fileID: 199406413881493672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24655,7 +24655,7 @@ GameObject:
   - component: {fileID: 4317770024156966}
   - component: {fileID: 199792152227071876}
   - component: {fileID: 198395613958416036}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beams
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29553,7 +29553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4750587274729450}
   - component: {fileID: 96657238899953524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29701,7 +29701,7 @@ GameObject:
   - component: {fileID: 4952765558641174}
   - component: {fileID: 199192835038304772}
   - component: {fileID: 198680907920311048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}

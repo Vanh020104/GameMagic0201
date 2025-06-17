@@ -175,6 +175,7 @@ public class HomeUIController : MonoBehaviour
         PlayerPrefs.SetInt("PlayerLevel", level);
         PlayerPrefs.SetInt("PlayerExp", exp);
         PlayerPrefs.Save();
+        FindObjectOfType<BattlePassRenderer>()?.CheckAndUpdateNotification();
 
         UpdateLevelUI();         // 🔁 cập nhật ở UI chính
         UpdateRankPanelUI();     // 🔁 cập nhật chỗ ảnh (rank panel)
@@ -218,7 +219,10 @@ public class HomeUIController : MonoBehaviour
     public void CloseRename() => renamePanel.SetActive(false);
 
     /// <summary> Mở chi tiết người chơi </summary>
-    public void OpenPlayerDetails() => playerDetails.SetActive(true);
+    public void OpenPlayerDetails() {
+        playerDetails.SetActive(true);
+        NotificationBadgeManager.Instance.SetNotification("character", false);
+    } 
 
     /// <summary> Đóng chi tiết người chơi </summary>
     public void ClosePlayerDetails() => playerDetails.SetActive(false);
@@ -250,7 +254,10 @@ public class HomeUIController : MonoBehaviour
     public void CloseWellcomReward() => welcomeRewardPanel.SetActive(false);
 
     /// mở lucky panel
-    public void OpenLuckPanel() => luckyPanel.SetActive(true);
+    public void OpenLuckPanel() {
+        luckyPanel.SetActive(true);
+        NotificationBadgeManager.Instance.SetNotification("lucky", false);
+    } 
 
     /// dong lucky panel
     public void CloseLuckPanel() => luckyPanel.SetActive(false);
@@ -264,6 +271,7 @@ public class HomeUIController : MonoBehaviour
         DailyTaskProgressManager.Instance.AddProgress("open_bag_panel");
         DailyTaskProgressManager.Instance.AddProgress("open_upgrade");
         DailyTaskManager.Instance?.RefreshAllTasksUI();
+        NotificationBadgeManager.Instance.SetNotification("bag", false);
     } 
     public void CloseBagPanel() => bagPanel.SetActive(false);
     public void OpenUpgradePanel()

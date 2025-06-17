@@ -76,6 +76,8 @@ public class ShopItemUI : MonoBehaviour
                 buttonBuy.interactable = false;
                 textPrice.alpha = 0.5f;
                 HeroEvents.OnHeroBought?.Invoke(data.id);
+                NotificationBadgeManager.Instance.SetNotification("character", true);
+
             }
             else
             {
@@ -97,6 +99,8 @@ public class ShopItemUI : MonoBehaviour
             isOwned = true;
             UpdateUI();
             BagEvent.InvokeItemBought();
+            NotificationBadgeManager.Instance.SetNotification("bag", true);
+
         }
         else
         {

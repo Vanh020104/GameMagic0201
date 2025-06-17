@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4417859981177078}
   - component: {fileID: 198948031866770170}
   - component: {fileID: 199099597671831828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SmokeWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4856,7 +4856,7 @@ GameObject:
   - component: {fileID: 4628627215537070}
   - component: {fileID: 198530726945654894}
   - component: {fileID: 199690500555313464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9723,7 +9723,7 @@ GameObject:
   - component: {fileID: 4861243862378866}
   - component: {fileID: 198676085510836312}
   - component: {fileID: 199603510832652882}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14568,7 +14568,7 @@ GameObject:
   - component: {fileID: 4917659662660942}
   - component: {fileID: 198864799769271540}
   - component: {fileID: 199861307798837676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19422,7 +19422,7 @@ GameObject:
   - component: {fileID: 4259321788352118}
   - component: {fileID: 198347184599840262}
   - component: {fileID: 199819657165088344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24289,7 +24289,7 @@ GameObject:
   - component: {fileID: 4634739157794646}
   - component: {fileID: 198532231874519740}
   - component: {fileID: 199424782382195384}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28990,7 +28990,7 @@ GameObject:
   - component: {fileID: 4095865164254984}
   - component: {fileID: 198421412360055250}
   - component: {fileID: 199576297770684228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33858,7 +33858,7 @@ GameObject:
   - component: {fileID: 114544048188050082}
   - component: {fileID: 65656155208262536}
   - component: {fileID: 54364863910089462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_Orb04_Blue
   m_TagString: Projectile
   m_Icon: {fileID: 0}

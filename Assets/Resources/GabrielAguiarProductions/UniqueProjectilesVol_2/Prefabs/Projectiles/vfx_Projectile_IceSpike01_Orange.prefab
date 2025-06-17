@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4587297449207456}
   - component: {fileID: 96627417736034468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 4561986670947484}
   - component: {fileID: 198822539915754334}
   - component: {fileID: 199048442743463776}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4984,7 +4984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4645266715628004}
   - component: {fileID: 96093214728771212}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_AB_Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5131,7 +5131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4755271406701676}
   - component: {fileID: 96559612086550826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_AB_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5281,7 +5281,7 @@ GameObject:
   - component: {fileID: 65468306030499414}
   - component: {fileID: 54187506388765952}
   - component: {fileID: 114125288916282004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_IceSpike01_Orange
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -5428,7 +5428,7 @@ GameObject:
   - component: {fileID: 4984110845018444}
   - component: {fileID: 198837562823470882}
   - component: {fileID: 199908137125559044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SmokeOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10273,7 +10273,7 @@ GameObject:
   - component: {fileID: 4483672215397482}
   - component: {fileID: 199649053907205536}
   - component: {fileID: 198663865746530446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spike
   m_TagString: Bullet
   m_Icon: {fileID: 0}

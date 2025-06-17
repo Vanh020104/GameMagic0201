@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4156859713939976}
   - component: {fileID: 96749485007288092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_AB_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 4480631644980238}
   - component: {fileID: 198093282437490034}
   - component: {fileID: 199145001991622844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5003,7 +5003,7 @@ GameObject:
   - component: {fileID: 4049621949306496}
   - component: {fileID: 198804686823749606}
   - component: {fileID: 199329226748892286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9847,7 +9847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4495796896551802}
   - component: {fileID: 96581485641716410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9995,7 +9995,7 @@ GameObject:
   - component: {fileID: 4644087207651006}
   - component: {fileID: 198471294951973478}
   - component: {fileID: 199886341248082614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlashAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14924,7 +14924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4010770153061272}
   - component: {fileID: 96647345506927196}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_AB_Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15073,7 +15073,7 @@ GameObject:
   - component: {fileID: 114470775584603908}
   - component: {fileID: 65075435169014980}
   - component: {fileID: 54082297258985100}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_Slash01_Orange
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -15193,7 +15193,7 @@ GameObject:
   - component: {fileID: 4284039680773072}
   - component: {fileID: 198906101554169816}
   - component: {fileID: 199583634392292044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlashAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20123,7 +20123,7 @@ GameObject:
   - component: {fileID: 4262465939616588}
   - component: {fileID: 198795365348194198}
   - component: {fileID: 199065108761976998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}

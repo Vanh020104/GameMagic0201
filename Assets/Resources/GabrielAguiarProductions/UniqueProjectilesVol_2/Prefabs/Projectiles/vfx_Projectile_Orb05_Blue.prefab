@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4666114992067214}
   - component: {fileID: 198172603832202360}
   - component: {fileID: 199314863883226196}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4878,7 +4878,7 @@ GameObject:
   - component: {fileID: 4289783147333450}
   - component: {fileID: 198033189266811438}
   - component: {fileID: 199095199582456168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9808,7 +9808,7 @@ GameObject:
   - component: {fileID: 4473721933051732}
   - component: {fileID: 198825198948860830}
   - component: {fileID: 199096919600027090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14661,7 +14661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4904611534942330}
   - component: {fileID: 96928344674110232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_AB_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14808,7 +14808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4884175659516724}
   - component: {fileID: 96601193234223240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14956,7 +14956,7 @@ GameObject:
   - component: {fileID: 4468246444343618}
   - component: {fileID: 198412716671392826}
   - component: {fileID: 199028781454764126}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19886,7 +19886,7 @@ GameObject:
   - component: {fileID: 4185335599549980}
   - component: {fileID: 198278855358304160}
   - component: {fileID: 199610880768387442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24816,7 +24816,7 @@ GameObject:
   - component: {fileID: 4892088333162714}
   - component: {fileID: 198693617046835038}
   - component: {fileID: 199761368991868124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shockwaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29683,7 +29683,7 @@ GameObject:
   - component: {fileID: 4718462404405404}
   - component: {fileID: 198710659552447622}
   - component: {fileID: 199746886545063824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SmokeWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34527,7 +34527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4454405167882966}
   - component: {fileID: 96432317269387498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_AB_Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34675,7 +34675,7 @@ GameObject:
   - component: {fileID: 4412838029540906}
   - component: {fileID: 198249226181165380}
   - component: {fileID: 199071685433237798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39530,7 +39530,7 @@ GameObject:
   - component: {fileID: 114618834105504404}
   - component: {fileID: 65075298340167262}
   - component: {fileID: 54810175089662816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_Orb05_Blue
   m_TagString: Projectile
   m_Icon: {fileID: 0}

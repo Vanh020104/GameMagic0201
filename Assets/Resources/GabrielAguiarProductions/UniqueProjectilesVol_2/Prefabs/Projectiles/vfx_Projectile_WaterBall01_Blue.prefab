@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4006053171899978}
   - component: {fileID: 198301095731657126}
   - component: {fileID: 199219392444644270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5019,7 +5019,7 @@ GameObject:
   - component: {fileID: 4624543352201480}
   - component: {fileID: 198654141189484218}
   - component: {fileID: 199971579215904730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10012,7 +10012,7 @@ GameObject:
   - component: {fileID: 4473359476899640}
   - component: {fileID: 198832833280574028}
   - component: {fileID: 199146045104911040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bubbles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14857,7 +14857,7 @@ GameObject:
   - component: {fileID: 4014242202668362}
   - component: {fileID: 198165324780169080}
   - component: {fileID: 199237300577183362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LinesIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19724,7 +19724,7 @@ GameObject:
   - component: {fileID: 4300407592399454}
   - component: {fileID: 198074793668665878}
   - component: {fileID: 199472105613171530}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24733,7 +24733,7 @@ GameObject:
   - component: {fileID: 114396528320584840}
   - component: {fileID: 65661025039034308}
   - component: {fileID: 54107007533580350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_WaterBall01_Blue
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -24846,7 +24846,7 @@ GameObject:
   - component: {fileID: 4616686377952352}
   - component: {fileID: 198930727149322618}
   - component: {fileID: 199549566280742870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waterball
   m_TagString: Bullet
   m_Icon: {fileID: 0}

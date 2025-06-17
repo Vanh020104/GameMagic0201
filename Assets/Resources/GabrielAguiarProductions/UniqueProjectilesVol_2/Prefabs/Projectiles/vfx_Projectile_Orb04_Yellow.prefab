@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4249164485455028}
   - component: {fileID: 198594989253919402}
   - component: {fileID: 199509263297712206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SmokeWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4857,7 +4857,7 @@ GameObject:
   - component: {fileID: 114750450049555390}
   - component: {fileID: 65968530755085912}
   - component: {fileID: 54446318673608082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_Orb04_Yellow
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -4974,7 +4974,7 @@ GameObject:
   - component: {fileID: 4099424916291378}
   - component: {fileID: 198389121653034886}
   - component: {fileID: 199908258215185920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9841,7 +9841,7 @@ GameObject:
   - component: {fileID: 4860964481995420}
   - component: {fileID: 198309422283417350}
   - component: {fileID: 199221634618775958}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14708,7 +14708,7 @@ GameObject:
   - component: {fileID: 4835554105611994}
   - component: {fileID: 198478380398806942}
   - component: {fileID: 199468909649347506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19575,7 +19575,7 @@ GameObject:
   - component: {fileID: 4037202601919296}
   - component: {fileID: 198328349002409372}
   - component: {fileID: 199535602318686768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24429,7 +24429,7 @@ GameObject:
   - component: {fileID: 4485908965056610}
   - component: {fileID: 198247834685739874}
   - component: {fileID: 199286956358678606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29274,7 +29274,7 @@ GameObject:
   - component: {fileID: 4900463330561412}
   - component: {fileID: 198756258899050468}
   - component: {fileID: 199374815792789520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

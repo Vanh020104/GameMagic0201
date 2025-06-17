@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4607031234147412}
   - component: {fileID: 96736496375418064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 4923835178079790}
   - component: {fileID: 198264024749809950}
   - component: {fileID: 199961181317262876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5004,7 +5004,7 @@ GameObject:
   - component: {fileID: 114851888148090326}
   - component: {fileID: 65270096430919578}
   - component: {fileID: 54133485720643496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_Trail04_Orange
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -5120,7 +5120,7 @@ GameObject:
   - component: {fileID: 4942052025456958}
   - component: {fileID: 199629774436077824}
   - component: {fileID: 198758818729024528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10104,7 +10104,7 @@ GameObject:
   - component: {fileID: 4877300298525162}
   - component: {fileID: 198052384317246000}
   - component: {fileID: 199535949105098756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14949,7 +14949,7 @@ GameObject:
   - component: {fileID: 4044787475302722}
   - component: {fileID: 198846920406226384}
   - component: {fileID: 199156811643259314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rays
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19932,7 +19932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4798721148243034}
   - component: {fileID: 96824803388997632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TrailAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}

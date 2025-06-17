@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4127595816062536}
   - component: {fileID: 198109381160501902}
   - component: {fileID: 199699497941886492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireInBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4877,7 +4877,7 @@ GameObject:
   - component: {fileID: 4700050568895818}
   - component: {fileID: 198896734003235150}
   - component: {fileID: 199055980441421854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireInOrange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9743,7 +9743,7 @@ GameObject:
   - component: {fileID: 4909652228925876}
   - component: {fileID: 198041746581704986}
   - component: {fileID: 199451540210537716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14609,7 +14609,7 @@ GameObject:
   - component: {fileID: 4446663127875064}
   - component: {fileID: 198654276882635784}
   - component: {fileID: 199855139069475082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19453,7 +19453,7 @@ GameObject:
   - component: {fileID: 4863089033034522}
   - component: {fileID: 198829513721751976}
   - component: {fileID: 199986022898389658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24296,7 +24296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4180503721334678}
   - component: {fileID: 96653141395527492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24444,7 +24444,7 @@ GameObject:
   - component: {fileID: 4656217530066574}
   - component: {fileID: 198826908912529020}
   - component: {fileID: 199701654667368870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29288,7 +29288,7 @@ GameObject:
   - component: {fileID: 4726925168675906}
   - component: {fileID: 198675886581180860}
   - component: {fileID: 199307391476709068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SmokeDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34132,7 +34132,7 @@ GameObject:
   - component: {fileID: 4973575720029210}
   - component: {fileID: 198269598310453870}
   - component: {fileID: 199465581299741216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38976,7 +38976,7 @@ GameObject:
   - component: {fileID: 4219232228706048}
   - component: {fileID: 198736432255507838}
   - component: {fileID: 199734640030544180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BallFireIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43887,7 +43887,7 @@ GameObject:
   - component: {fileID: 4454087169602992}
   - component: {fileID: 199408907784311586}
   - component: {fileID: 198035330480281148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BallFireOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48800,7 +48800,7 @@ GameObject:
   - component: {fileID: 54690089591678400}
   - component: {fileID: 135254596222893430}
   - component: {fileID: 114587219673127312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_Fireball05_Green
   m_TagString: Projectile
   m_Icon: {fileID: 0}

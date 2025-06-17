@@ -15,6 +15,8 @@ public class DailyTaskManager : MonoBehaviour
     private const string DateKey = "DailyDate";
     private List<DailyTaskItemUI> currentTaskUIs = new();
     public static DailyTaskManager Instance;
+    public List<DailyTaskItemUI> GetCurrentTaskUIs() => currentTaskUIs;
+
     void Start()
     {
         InitTasks();
@@ -51,7 +53,15 @@ public class DailyTaskManager : MonoBehaviour
             ui.Setup(task, energyBar);
             currentTaskUIs.Add(ui);
         }
+        CheckAndUpdateNotificationBadge();
+
     }
+    public void CheckAndUpdateNotificationBadge()
+    {
+        bool hasUnclaimed = currentTaskUIs.Any(t => t.IsReadyToClaim());
+        NotificationBadgeManager.Instance.SetNotification("mission", hasUnclaimed);
+    }
+
 
     private List<DailyTaskData> GetTodayTasks()
     {

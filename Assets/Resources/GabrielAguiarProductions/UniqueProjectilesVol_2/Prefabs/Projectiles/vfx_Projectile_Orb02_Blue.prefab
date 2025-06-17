@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4524552865541660}
   - component: {fileID: 198352606232915426}
   - component: {fileID: 199322856100896646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BallAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4941,7 +4941,7 @@ GameObject:
   - component: {fileID: 4092958045531510}
   - component: {fileID: 198264854901585936}
   - component: {fileID: 199631390311281756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CircleOutterAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9871,7 +9871,7 @@ GameObject:
   - component: {fileID: 4790897833899618}
   - component: {fileID: 198749667732003866}
   - component: {fileID: 199290710749255034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CircleOutterAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14801,7 +14801,7 @@ GameObject:
   - component: {fileID: 4740433381287748}
   - component: {fileID: 198493051775238960}
   - component: {fileID: 199560654245502464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19668,7 +19668,7 @@ GameObject:
   - component: {fileID: 4593341121162232}
   - component: {fileID: 198125902908025902}
   - component: {fileID: 199736896659009646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24522,7 +24522,7 @@ GameObject:
   - component: {fileID: 4493722441101156}
   - component: {fileID: 198167382615060874}
   - component: {fileID: 199667887932942808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29453,7 +29453,7 @@ GameObject:
   - component: {fileID: 114121527286138176}
   - component: {fileID: 65987945002627608}
   - component: {fileID: 54466905655516106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_Orb02_Blue
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -29567,7 +29567,7 @@ GameObject:
   - component: {fileID: 4944963764610940}
   - component: {fileID: 198035929828292308}
   - component: {fileID: 199010070873136098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}

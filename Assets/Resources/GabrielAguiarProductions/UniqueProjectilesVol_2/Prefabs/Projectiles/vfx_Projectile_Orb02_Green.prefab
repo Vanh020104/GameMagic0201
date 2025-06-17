@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4631796271546688}
   - component: {fileID: 198294426644606436}
   - component: {fileID: 199683078482625880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4941,7 +4941,7 @@ GameObject:
   - component: {fileID: 4810996685630216}
   - component: {fileID: 198185609397791100}
   - component: {fileID: 199260791252549054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CircleOutterAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9871,7 +9871,7 @@ GameObject:
   - component: {fileID: 4148977937480602}
   - component: {fileID: 198220114632016584}
   - component: {fileID: 199539269083416124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14801,7 +14801,7 @@ GameObject:
   - component: {fileID: 4725394282445874}
   - component: {fileID: 198977473828693604}
   - component: {fileID: 199935388266499642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CircleOutterAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19732,7 +19732,7 @@ GameObject:
   - component: {fileID: 114315182399230558}
   - component: {fileID: 65301198403381718}
   - component: {fileID: 54261457782959450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_Orb02_Green
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -19846,7 +19846,7 @@ GameObject:
   - component: {fileID: 4966962170742048}
   - component: {fileID: 198355175285048286}
   - component: {fileID: 199257504751097740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24700,7 +24700,7 @@ GameObject:
   - component: {fileID: 4947687971887314}
   - component: {fileID: 198454417896844992}
   - component: {fileID: 199091848551591434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BallAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29630,7 +29630,7 @@ GameObject:
   - component: {fileID: 4027771017664338}
   - component: {fileID: 198615983391083730}
   - component: {fileID: 199127810327274390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,7 @@ public class DailyTaskItemUI : MonoBehaviour
     private int currentProgress;
     private bool isClaimed;
     private bool isReadyToClaim;
+    public bool IsReadyToClaim() => !isClaimed && currentProgress >= data.requiredCount;
 
     public void Setup(DailyTaskData task, EnergyBarManager bar)
     {
@@ -43,7 +45,7 @@ public class DailyTaskItemUI : MonoBehaviour
     /// <summary>
     /// Gọi từ bên ngoài khi người chơi làm được 1 tiến trình
     /// </summary>
-   public void AddProgress(int amount)
+    public void AddProgress(int amount)
     {
         if (isClaimed) return;
 
@@ -59,6 +61,8 @@ public class DailyTaskItemUI : MonoBehaviour
         }
 
         UpdateUI();
+        DailyTaskManager.Instance.CheckAndUpdateNotificationBadge();
+
     }
 
 
@@ -71,17 +75,19 @@ public class DailyTaskItemUI : MonoBehaviour
         isReadyToClaim = false;
 
         GoldGemManager.Instance.AddGold(data.goldReward);
-        energyBar.AddEnergy(data.energyReward); 
+        energyBar.AddEnergy(data.energyReward);
         PlayerPrefs.SetInt($"DailyTaskClaimed_{data.id}", 1);
         PlayerPrefs.Save();
         UpdateUI();
+
+        DailyTaskManager.Instance.CheckAndUpdateNotificationBadge();
+
     }
 
     private void UpdateUI()
     {
         currentProgress = DailyTaskProgressManager.Instance.GetProgress(data.id, data.requiredCount);
         progressText.text = $"{currentProgress} / {data.requiredCount}";
-
         if (isClaimed)
         {
             SetButton("DONE", Color.gray, false);
@@ -96,19 +102,37 @@ public class DailyTaskItemUI : MonoBehaviour
         {
             SetButton("GO", Color.gray, false);
         }
+
+        // ✅ Luôn gán lại listener sau khi SetButton xong
+        goButton.onClick.RemoveAllListeners();
+        goButton.onClick.AddListener(OnClick);
     }
+
 
 
     private void SetButton(string label, Color bgColor, bool interactable)
     {
-        goButton.GetComponentInChildren<TMP_Text>().text = label;
+        var text = goButton.GetComponentInChildren<TMP_Text>();
+        if (text != null) text.text = label;
+
         var image = goButton.GetComponent<Image>();
         if (image != null) image.color = bgColor;
+
         goButton.interactable = interactable;
     }
+
     public void RefreshUIManually()
     {
         UpdateUI();
+    }
+
+    private bool CheckAnyUnclaimedTasks()
+    {
+        foreach (var ui in DailyTaskManager.Instance.GetCurrentTaskUIs())
+        {
+            if (ui.IsReadyToClaim()) return true;
+        }
+        return false;
     }
 
 }

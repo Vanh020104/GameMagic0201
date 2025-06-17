@@ -282,37 +282,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1 &431093579
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 431093580}
-  m_Layer: 0
-  m_Name: GemContainer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &431093580
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431093579}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &992667605
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,6 +336,11 @@ MonoBehaviour:
   - {fileID: 4609492447879971784, guid: 77b36dcd20e6d844599c5586abb1bf51, type: 3}
   - {fileID: 2651359933530087656, guid: 60248b90ba985764f8a4d4e11bba6351, type: 3}
   - {fileID: 2901758508231510952, guid: 9fd61260a3272974597d5cd3679d8ccc, type: 3}
+  - {fileID: 3797671986365382527, guid: cdc9dab7fa5847445a9fb187bd7272c0, type: 3}
+  - {fileID: 3320981198113080788, guid: 669c47d15dbdd3a408b44f111923534a, type: 3}
+  - {fileID: 2658230688310485645, guid: b0558fb7b4a007a438c22c74126e3775, type: 3}
+  - {fileID: 8412855821184778972, guid: 352fff4f059604e429f92c3751281a89, type: 3}
+  - {fileID: 7078636928559977652, guid: f68b27ed4113b3346a362e2dc21b304c, type: 3}
 --- !u!114 &992667610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,6 +636,5 @@ SceneRoots:
   - {fileID: 1146913566}
   - {fileID: 240693987}
   - {fileID: 992667607}
-  - {fileID: 431093580}
   - {fileID: 1068378775}
   - {fileID: 1446619850}

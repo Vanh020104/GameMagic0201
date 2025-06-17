@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4590064549097902}
   - component: {fileID: 198451067605509660}
   - component: {fileID: 199122763340725268}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glowing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4878,7 +4878,7 @@ GameObject:
   - component: {fileID: 4645126259917950}
   - component: {fileID: 198614818571976456}
   - component: {fileID: 199472548934445348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticlesAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9732,7 +9732,7 @@ GameObject:
   - component: {fileID: 4873320441841304}
   - component: {fileID: 198168712170335610}
   - component: {fileID: 199689909871069282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Electricity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14577,7 +14577,7 @@ GameObject:
   - component: {fileID: 4963009344968384}
   - component: {fileID: 198945354936617356}
   - component: {fileID: 199812388041618824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CircleGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19444,7 +19444,7 @@ GameObject:
   - component: {fileID: 4603876647778580}
   - component: {fileID: 198645709409230266}
   - component: {fileID: 199427422760360360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeamAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24311,7 +24311,7 @@ GameObject:
   - component: {fileID: 4052317437040284}
   - component: {fileID: 198137237368493444}
   - component: {fileID: 199475594450518752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RingsAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29178,7 +29178,7 @@ GameObject:
   - component: {fileID: 4069214513044808}
   - component: {fileID: 198217197186264058}
   - component: {fileID: 199963001815466746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Swirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34046,7 +34046,7 @@ GameObject:
   - component: {fileID: 114319037007308074}
   - component: {fileID: 65914357743795882}
   - component: {fileID: 54266746368845782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Projectile_BlackHole01_Orange
   m_TagString: Projectile
   m_Icon: {fileID: 0}
