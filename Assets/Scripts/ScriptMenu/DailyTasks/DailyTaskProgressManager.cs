@@ -43,6 +43,7 @@ public class DailyTaskProgressManager : MonoBehaviour
 
         PlayerPrefs.SetInt($"DailyTaskProgress_{taskId}", progressMap[taskId]);
         PlayerPrefs.Save();
+        DailyTaskManager.Instance?.RefreshAllTasksUI();
     }
 
     public void ResetAllProgress()

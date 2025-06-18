@@ -30,10 +30,7 @@ public class DailyTaskItemUI : MonoBehaviour
         goldText.text = data.goldReward.ToString();
         energyText.text = data.energyReward.ToString();
 
-        // 👉 Thay vì hardcode = 0 → khôi phục
-        currentProgress = PlayerPrefs.GetInt($"DailyTaskProgress_{data.id}", 0);
         isClaimed = PlayerPrefs.GetInt($"DailyTaskClaimed_{data.id}", 0) == 1;
-        isReadyToClaim = currentProgress >= data.requiredCount && !isClaimed;
 
         UpdateUI();
 
