@@ -172,7 +172,7 @@ private IEnumerator PlaySmoke()
             }
 
             ShowHero(currentData);
-            DailyTaskProgressManager.Instance.AddProgress("upgrade_hero");
+            DailyTaskBridge.Instance.TryAddProgress("upgrade_hero");
         }
         else
         {

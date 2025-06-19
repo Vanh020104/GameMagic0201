@@ -23,6 +23,7 @@ public class DailyLoginManager : MonoBehaviour
         CheckLoginReward();
     }
 
+
     // private void CheckLoginReward()
     // {
     //     PlayerPrefs.SetInt(ExtraClaimedKey, 0); // reset flag mỗi ngày
@@ -53,51 +54,59 @@ public class DailyLoginManager : MonoBehaviour
     //     if (todayRewardDay > rewardDatabase.rewards.Count)
     //         todayRewardDay = 1;
 
-    //     ShowRewardPopup(todayRewardDay);
-    //     watchAdsButton.interactable = PlayerPrefs.GetInt(ExtraClaimedKey, 0) == 0;
+    //     int lastClaimedDay = PlayerPrefs.GetInt(LastLoginDayKey, 0);
 
+    //     // ✅ Chỉ hiển thị nếu chưa nhận hôm nay
+    //     if (lastClaimedDay < todayRewardDay)
+    //     {
+    //         ShowRewardPopup(todayRewardDay);
+    //     }
+
+    //     // Cập nhật nút xem ads
+    //     watchAdsButton.interactable = PlayerPrefs.GetInt(ExtraClaimedKey, 0) == 0;
     // }
     private void CheckLoginReward()
-{
-    PlayerPrefs.SetInt(ExtraClaimedKey, 0); // reset flag mỗi ngày
-
-    DateTime now = DateTime.UtcNow.Date;
-    string lastLoginStr = PlayerPrefs.GetString(LastLoginDateKey, now.AddDays(-2).ToString());
-    DateTime lastLogin = DateTime.Parse(lastLoginStr);
-    int lastDay = PlayerPrefs.GetInt(LastLoginDayKey, 0);
-
-    bool isSameDay = (now - lastLogin).Days == 0;
-    bool isConsecutive = (now - lastLogin).Days == 1;
-
-    if (isSameDay)
     {
-        todayRewardDay = lastDay;
-    }
-    else if (isConsecutive)
-    {
-        todayRewardDay = lastDay + 1;
-    }
-    else
-    {
-        // ❌ Bỏ lỡ ngày → reset chuỗi
-        todayRewardDay = 1;
-        PlayerPrefs.SetInt(LastLoginDayKey, 0);
+        PlayerPrefs.SetInt(ExtraClaimedKey, 0); // reset flag mỗi ngày
+
+        // 💡 Chuẩn hóa theo UTC.Date toàn cầu
+        DateTime nowUtcDate = DateTime.UtcNow.Date;
+
+        string lastLoginStr = PlayerPrefs.GetString(LastLoginDateKey, nowUtcDate.AddDays(-2).ToString());
+        DateTime lastLoginDate = DateTime.Parse(lastLoginStr).Date;
+        int lastDay = PlayerPrefs.GetInt(LastLoginDayKey, 0);
+
+        bool isSameDay = (nowUtcDate - lastLoginDate).Days == 0;
+        bool isConsecutive = (nowUtcDate - lastLoginDate).Days == 1;
+
+        if (isSameDay)
+        {
+            todayRewardDay = lastDay;
+        }
+        else if (isConsecutive)
+        {
+            todayRewardDay = lastDay + 1;
+        }
+        else
+        {
+            // ❌ Bỏ lỡ ngày → reset chuỗi
+            todayRewardDay = 1;
+            PlayerPrefs.SetInt(LastLoginDayKey, 0);
+        }
+
+        if (todayRewardDay > rewardDatabase.rewards.Count)
+            todayRewardDay = 1;
+
+        int lastClaimedDay = PlayerPrefs.GetInt(LastLoginDayKey, 0);
+
+        if (lastClaimedDay < todayRewardDay)
+        {
+            ShowRewardPopup(todayRewardDay);
+        }
+
+        watchAdsButton.interactable = PlayerPrefs.GetInt(ExtraClaimedKey, 0) == 0;
     }
 
-    if (todayRewardDay > rewardDatabase.rewards.Count)
-        todayRewardDay = 1;
-
-    int lastClaimedDay = PlayerPrefs.GetInt(LastLoginDayKey, 0);
-
-    // ✅ Chỉ hiển thị nếu chưa nhận hôm nay
-    if (lastClaimedDay < todayRewardDay)
-    {
-        ShowRewardPopup(todayRewardDay);
-    }
-
-    // Cập nhật nút xem ads
-    watchAdsButton.interactable = PlayerPrefs.GetInt(ExtraClaimedKey, 0) == 0;
-}
 
 
     private void ShowRewardPopup(int day)
@@ -113,7 +122,7 @@ public class DailyLoginManager : MonoBehaviour
     public void ClaimReward()
     {
         PlayerPrefs.SetInt(LastLoginDayKey, todayRewardDay);
-        PlayerPrefs.SetString(LastLoginDateKey, DateTime.UtcNow.ToString());
+        PlayerPrefs.SetString(LastLoginDateKey, DateTime.UtcNow.Date.ToString("yyyy-MM-dd"));
         PlayerPrefs.Save();
 
         DailyReward reward = rewardDatabase.rewards.Find(r => r.day == todayRewardDay);

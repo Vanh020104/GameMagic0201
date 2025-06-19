@@ -28,21 +28,25 @@ public class DailyTaskManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
+    public bool IsTaskActive(string taskId)
+    {
+        return currentTaskUIs.Any(ui => ui != null && ui.GetTaskId() == taskId);
+    }
 
     private void InitTasks()
-{
-    string today = DateTime.Now.ToString("yyyyMMdd");
-    string savedDate = PlayerPrefs.GetString(DateKey, "");
+    {
+        string today = DateTime.Now.ToString("yyyyMMdd");
+        string savedDate = PlayerPrefs.GetString(DateKey, "");
 
-    if (savedDate != today)
-    {
-        ResetDailyTasks(); // ✨ dùng hàm tách riêng
+        if (savedDate != today)
+        {
+            ResetDailyTasks(); // ✨ dùng hàm tách riêng
+        }
+        else
+        {
+            LoadExistingTasks(); // ✨ load lại UI nếu chưa cần reset
+        }
     }
-    else
-    {
-        LoadExistingTasks(); // ✨ load lại UI nếu chưa cần reset
-    }
-}
 
     public void CheckAndUpdateNotificationBadge()
     {
@@ -76,43 +80,50 @@ public class DailyTaskManager : MonoBehaviour
         CheckAndUpdateNotificationBadge();
     }
     public void ResetDailyTasks()
-{
-    PlayerPrefs.DeleteKey(DailyKey);
-    PlayerPrefs.SetString(DateKey, DateTime.Now.ToString("yyyyMMdd"));
-    energyBar.ResetEnergyAndKeyProgress();
-    DailyTaskProgressManager.Instance.ResetAllProgress();
-
-    foreach (Transform child in contentParent)
-        Destroy(child.gameObject);
-    currentTaskUIs.Clear();
-
-    List<DailyTaskData> selectedTasks = GetTodayTasks();
-    foreach (var task in selectedTasks)
     {
-        var go = Instantiate(itemDailyPrefab, contentParent);
-        var ui = go.GetComponent<DailyTaskItemUI>();
-        ui.Setup(task, energyBar);
-        currentTaskUIs.Add(ui);
+        PlayerPrefs.DeleteKey(DailyKey);
+        PlayerPrefs.SetString(DateKey, DateTime.Now.ToString("yyyyMMdd"));
+        energyBar.ResetEnergyAndKeyProgress();
+        DailyTaskProgressManager.Instance.ResetAllProgress();
+
+        foreach (Transform child in contentParent)
+            Destroy(child.gameObject);
+        currentTaskUIs.Clear();
+
+        List<DailyTaskData> selectedTasks = GetTodayTasks();
+        foreach (var task in selectedTasks)
+        {
+            var go = Instantiate(itemDailyPrefab, contentParent);
+            var ui = go.GetComponent<DailyTaskItemUI>();
+            ui.Setup(task, energyBar);
+            currentTaskUIs.Add(ui);
+        }
+
+        CheckAndUpdateNotificationBadge();
     }
-
-    CheckAndUpdateNotificationBadge();
-}
-private void LoadExistingTasks()
-{
-    currentTaskUIs.Clear();
-    foreach (Transform child in contentParent)
-        Destroy(child.gameObject);
-
-    List<DailyTaskData> selectedTasks = GetTodayTasks();
-    foreach (var task in selectedTasks)
+    private void LoadExistingTasks()
     {
-        var go = Instantiate(itemDailyPrefab, contentParent);
-        var ui = go.GetComponent<DailyTaskItemUI>();
-        ui.Setup(task, energyBar);
-        currentTaskUIs.Add(ui);
-    }
+        currentTaskUIs.Clear();
+        foreach (Transform child in contentParent)
+            Destroy(child.gameObject);
 
-    CheckAndUpdateNotificationBadge();
-}
+        List<DailyTaskData> selectedTasks = GetTodayTasks();
+        foreach (var task in selectedTasks)
+        {
+            var go = Instantiate(itemDailyPrefab, contentParent);
+            var ui = go.GetComponent<DailyTaskItemUI>();
+            ui.Setup(task, energyBar);
+            currentTaskUIs.Add(ui);
+        }
+
+        CheckAndUpdateNotificationBadge();
+    }
+    public void TryAddProgress(string taskId, int amount = 1)
+    {
+        if (IsTaskActive(taskId))
+        {
+            DailyTaskProgressManager.Instance.AddProgress(taskId, amount);
+        }
+    }
 
 }

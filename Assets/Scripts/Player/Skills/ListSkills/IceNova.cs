@@ -56,8 +56,8 @@ public class IceNova : BaseSkill
                     bot.botStats.currentHP -= damagePerTick;
                     if (owner != null && owner.isLocalPlayer)
                     {
-                        DailyTaskProgressManager.Instance.AddProgress("deal_500_damage", damagePerTick);
-                        DailyTaskProgressManager.Instance.AddProgress("deal_1000_damage", damagePerTick);
+                        DailyTaskBridge.Instance?.TryAddProgress("deal_500_damage", damagePerTick);
+                        DailyTaskBridge.Instance?.TryAddProgress("deal_1000_damage", damagePerTick);
                     }
 
                     // Hiển thị damage

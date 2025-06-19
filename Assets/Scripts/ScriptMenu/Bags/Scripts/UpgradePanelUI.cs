@@ -75,7 +75,7 @@ public class UpgradePanelUI : MonoBehaviour
         currentLevel++;
         PlayerPrefs.SetInt($"Equip_{itemData.itemId}_Level", currentLevel);
         PlayerPrefs.Save();
-        DailyTaskProgressManager.Instance.AddProgress("upgrade_equip");
+        DailyTaskBridge.Instance.TryAddProgress("upgrade_equip");
         UpdateUI();
 
         var bag = FindObjectOfType<BagPanelController>();

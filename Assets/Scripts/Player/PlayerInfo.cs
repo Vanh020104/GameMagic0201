@@ -124,8 +124,8 @@ public class PlayerInfo : MonoBehaviour
 
         _animator.SetTrigger("Revive");
         isInvincible = true;
-        DailyTaskProgressManager.Instance.AddProgress("revive_1_time");
-        DailyTaskProgressManager.Instance.AddProgress("revive_3_time");
+        DailyTaskBridge.Instance.TryAddProgress("revive_1_time");
+        DailyTaskBridge.Instance.TryAddProgress("revive_3_time");
         StartCoroutine(WaitForReviveAnimation());
     }
 

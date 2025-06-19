@@ -207,8 +207,8 @@ public class PlayerController : MonoBehaviour
             Destroy(vfx, 3f);
         }
         StartCoroutine(playerInfo.HealOverTime(totalHealAmount));
-        DailyTaskProgressManager.Instance.AddProgress("use_skill_10");
-        DailyTaskProgressManager.Instance.AddProgress("use_heal_5");
+        DailyTaskBridge.Instance.TryAddProgress("use_skill_10");
+        DailyTaskBridge.Instance.TryAddProgress("use_heal_5");
         StartCoroutine(FirstSkillCooldown());
     }
 
@@ -256,7 +256,7 @@ public class PlayerController : MonoBehaviour
 
         // Gọi kỹ năng
         skill2.Activate(playerInfo, skill01Prosition);
-        DailyTaskProgressManager.Instance.AddProgress("use_skill_10");
+        DailyTaskBridge.Instance.TryAddProgress("use_skill_10");
 
         // Bắt đầu hồi chiêu
         StartCoroutine(SkillCooldown(
@@ -274,7 +274,7 @@ public class PlayerController : MonoBehaviour
         canUseThirdSkill = false;
 
         skill3.Activate(playerInfo, skill02Prosition);
-        DailyTaskProgressManager.Instance.AddProgress("use_skill_10");
+        DailyTaskBridge.Instance.TryAddProgress("use_skill_10");
         StartCoroutine(SkillCooldown(
             cooldownOverlayThirdSkill,
             thirdCooldownText,

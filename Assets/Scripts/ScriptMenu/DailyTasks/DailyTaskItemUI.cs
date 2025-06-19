@@ -19,6 +19,7 @@ public class DailyTaskItemUI : MonoBehaviour
     private bool isClaimed;
     private bool isReadyToClaim;
     public bool IsReadyToClaim() => !isClaimed && currentProgress >= data.requiredCount;
+    public string GetTaskId() => data.id;
 
     public void Setup(DailyTaskData task, EnergyBarManager bar)
     {

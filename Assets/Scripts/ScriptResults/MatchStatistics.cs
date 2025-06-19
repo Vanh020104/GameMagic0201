@@ -33,35 +33,35 @@ public class MatchStatistics : MonoBehaviour
         if (upgradeLevelRankPanel != null)
             upgradeLevelRankPanel.SetActive(false);
 
-        DailyTaskProgressManager.Instance.AddProgress("kill_1", GameResultData.killCount);
-        DailyTaskProgressManager.Instance.AddProgress("kill_10", GameResultData.killCount);
+        DailyTaskBridge.Instance?.TryAddProgress("kill_1", GameResultData.killCount);
+        DailyTaskBridge.Instance?.TryAddProgress("kill_10", GameResultData.killCount);
 
        if (GameResultData.battleLevel >= 5)
-            DailyTaskProgressManager.Instance.AddProgress("reach_level_5", 1);
+            DailyTaskBridge.Instance?.TryAddProgress("reach_level_5", 1);
 
         if (GameResultData.battleLevel >= 10)
-            DailyTaskProgressManager.Instance.AddProgress("reach_level_10", 1);
+            DailyTaskBridge.Instance?.TryAddProgress("reach_level_10", 1);
 
 
         // Nếu đã xem quảng cáo x2
         if (hasClaimedDouble)
-            DailyTaskProgressManager.Instance.AddProgress("watch_ads");
+            DailyTaskBridge.Instance?.TryAddProgress("watch_ads");
 
         // Nếu người chơi đã đạt Top 1
         if (GameResultData.playerRank == 1)
         {
-            DailyTaskProgressManager.Instance.AddProgress("win_match");
-            DailyTaskProgressManager.Instance.AddProgress("win_3_match");
+            DailyTaskBridge.Instance?.TryAddProgress("win_match");
+            DailyTaskBridge.Instance?.TryAddProgress("win_3_match");
         }
         
         // 🎯 Nhiệm vụ sống sót theo thời gian
         int matchSeconds = Mathf.FloorToInt(GameResultData.matchTime);
 
         if (matchSeconds >= 60)
-            DailyTaskProgressManager.Instance.AddProgress("survive_60s", matchSeconds);
+            DailyTaskBridge.Instance?.TryAddProgress("survive_60s", matchSeconds);
 
         if (matchSeconds >= 180)
-            DailyTaskProgressManager.Instance.AddProgress("survive_180s", matchSeconds);
+            DailyTaskBridge.Instance?.TryAddProgress("survive_180s", matchSeconds);
 
         ShowRankMessage(); // hiển thị quote dựa trên playerRank
         topText.text = GetRankWithSuffix(GameResultData.playerRank); // hiển thị TOP 1, TOP 2...

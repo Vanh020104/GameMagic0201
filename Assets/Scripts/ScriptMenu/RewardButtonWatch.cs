@@ -83,8 +83,8 @@ public class RewardButtonWatch : MonoBehaviour
                     goldGemManager.AddGem(amount);
 
                 RecordAdWatched();
-                DailyTaskProgressManager.Instance.AddProgress("watch_ad");
-                DailyTaskProgressManager.Instance.AddProgress("watch_ad_3");
+                DailyTaskBridge.Instance.TryAddProgress("watch_ad");
+                DailyTaskBridge.Instance.TryAddProgress("watch_ad_3");
             }
         });
     }

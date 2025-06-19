@@ -16,5 +16,6 @@ MonoBehaviour:
   itemName: Pyroskull
   icon: {fileID: 21300000, guid: f67297fafc85fd44f97ddbe66865932c, type: 3}
   amount: 1
-  priceText: 20
+  priceText: 25
   requiredLevel: 1
+  isRewardedAd: 0

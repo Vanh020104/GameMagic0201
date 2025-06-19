@@ -34,8 +34,8 @@ public class AttackTrick02 : BaseSkill
                     botTarget.currentHP -= damage;
                     if (owner != null && owner.isLocalPlayer)
                     {
-                        DailyTaskProgressManager.Instance.AddProgress("deal_500_damage", damage);
-                        DailyTaskProgressManager.Instance.AddProgress("deal_1000_damage", damage);
+                        DailyTaskBridge.Instance?.TryAddProgress("deal_500_damage", damage);
+                        DailyTaskBridge.Instance?.TryAddProgress("deal_1000_damage", damage);
                     }
 
                     // Hiển thị số damage

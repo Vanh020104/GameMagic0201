@@ -16,5 +16,6 @@ MonoBehaviour:
   itemName: Aurelion
   icon: {fileID: 21300000, guid: e65981c0a5f79b54ebc5e92543de801d, type: 3}
   amount: 1
-  priceText: 30
+  priceText: 35
   requiredLevel: 4
+  isRewardedAd: 0

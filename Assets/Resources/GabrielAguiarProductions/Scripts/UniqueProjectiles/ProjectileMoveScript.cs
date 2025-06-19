@@ -121,8 +121,8 @@ public class ProjectileMoveScript : MonoBehaviour
             FindObjectOfType<KillInfoUIHandler>()?.AddKill();
 
             // ✅ Ghi nhận nhiệm vụ giết địch
-            DailyTaskProgressManager.Instance.AddProgress("kill_10_enemies");
-            DailyTaskProgressManager.Instance.AddProgress("kill_20_enemies");
+            DailyTaskBridge.Instance?.TryAddProgress("kill_10_enemies");
+            DailyTaskBridge.Instance?.TryAddProgress("kill_20_enemies");
         }
 
 
@@ -145,8 +145,8 @@ public class ProjectileMoveScript : MonoBehaviour
             botInfo.currentHP -= damage;
             if (owner != null && owner.isLocalPlayer)
             {
-                DailyTaskProgressManager.Instance.AddProgress("deal_500_damage", damage);
-                DailyTaskProgressManager.Instance.AddProgress("deal_1000_damage", damage);
+                DailyTaskBridge.Instance?.TryAddProgress("deal_500_damage", damage);
+                DailyTaskBridge.Instance?.TryAddProgress("deal_1000_damage", damage);
             }
 
             if (botInfo.floatingTextPrefab && botInfo.popupPoint)

@@ -186,7 +186,7 @@ public class HomeUIController : MonoBehaviour
     /// <summary> Mở shop </summary>
     public void OpenShop() {
         shopPanel.SetActive(true);
-        DailyTaskProgressManager.Instance.AddProgress("open_shop");
+        DailyTaskBridge.Instance.TryAddProgress("open_shop");
         DailyTaskManager.Instance?.RefreshAllTasksUI();
     } 
 
@@ -204,7 +204,7 @@ public class HomeUIController : MonoBehaviour
     public void OpenSetting()
     {
         settingPanel.SetActive(true);
-        DailyTaskProgressManager.Instance.AddProgress("open_setting");
+        DailyTaskBridge.Instance.TryAddProgress("open_setting");
         DailyTaskManager.Instance?.RefreshAllTasksUI();
     }
         
@@ -268,8 +268,8 @@ public class HomeUIController : MonoBehaviour
     public void OpenBagPanel()
     {
         bagPanel.SetActive(true);
-        DailyTaskProgressManager.Instance.AddProgress("open_bag_panel");
-        DailyTaskProgressManager.Instance.AddProgress("open_upgrade");
+        DailyTaskBridge.Instance.TryAddProgress("open_bag_panel");
+        DailyTaskBridge.Instance.TryAddProgress("open_upgrade");
         DailyTaskManager.Instance?.RefreshAllTasksUI();
         NotificationBadgeManager.Instance.SetNotification("bag", false);
     } 
