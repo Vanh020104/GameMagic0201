@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7d7b6793cdd278a4084fd1e487655b7e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d7b6793cdd278a4084fd1e487655b7e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d7b6793cdd278a4084fd1e487655b7e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d7b6793cdd278a4084fd1e487655b7e,
         type: 3}
@@ -76,7 +76,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7d7b6793cdd278a4084fd1e487655b7e,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 7d7b6793cdd278a4084fd1e487655b7e,
         type: 3}
@@ -123,20 +123,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845c415f3181b4840ab566c40e714752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRotating: 1
+  isRotating: 0
   rotateX: 0
-  rotateY: 1
+  rotateY: 0
   rotateZ: 0
-  rotationSpeed: 85.67
-  isFloating: 1
-  useEasingForFloating: 1
-  floatHeight: 1.93
-  floatSpeed: 0.4
-  startScale: {x: 0.6, y: 0.6, z: 0.6}
-  endScale: {x: 0.8, y: 0.8, z: 0.8}
+  rotationSpeed: 90
+  isFloating: 0
+  useEasingForFloating: 0
+  floatHeight: 1
+  floatSpeed: 1
+  startScale: {x: 0.8, y: 0.8, z: 0.8}
+  endScale: {x: 1, y: 1, z: 1}
   isScaling: 1
-  useEasingForScaling: 1
-  scaleLerpSpeed: 1.11
+  useEasingForScaling: 0
+  scaleLerpSpeed: 1
 --- !u!65 &-2192885808503198642
 BoxCollider:
   m_ObjectHideFlags: 0

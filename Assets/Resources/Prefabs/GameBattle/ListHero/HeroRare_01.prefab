@@ -934,6 +934,7 @@ MonoBehaviour:
   baseDamage: 50
   hpText: {fileID: 0}
   hpFillImage: {fileID: 0}
+  isDead: 0
 --- !u!114 &5022811257760771857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,7 +951,7 @@ MonoBehaviour:
   _animator: {fileID: 2989805100702244548}
   fixedJoystick: {fileID: 0}
   _rigidbody: {fileID: 6487094537920252838}
-  speedPlayer: 18
+  speedPlayer: 20
   rotationSpeed: 15
   normal_attack_button: {fileID: 0}
   first_attack_button: {fileID: 0}

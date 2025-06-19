@@ -99,7 +99,14 @@ public class PlayerController : MonoBehaviour
         moveDirection = new Vector3(moveX, 0, moveZ).normalized;
 
         _animator.SetBool("Move", moveDirection.magnitude > 0.1f);
-
+         if (ZoneManager.Instance != null && !ZoneManager.Instance.IsInsideZone(transform.position))
+        {
+            playerInfo._hp -= Mathf.RoundToInt(Time.deltaTime * 10f);
+            if (playerInfo._hp <= 0)
+            {
+                // xử lý chết
+            }
+        }
         if (Input.GetKeyDown(KeyCode.C))
         {
             _animator.SetTrigger("Attack");
@@ -124,6 +131,11 @@ public class PlayerController : MonoBehaviour
         {
             _rigidbody.velocity = Vector3.zero;
         }
+        if (!_rigidbody.isKinematic && !_rigidbody.IsSleeping())
+        {
+            _rigidbody.AddForce(Vector3.down * 250f, ForceMode.Acceleration); 
+        }
+
     }
 
     /// <summary>
@@ -207,8 +219,8 @@ public class PlayerController : MonoBehaviour
             Destroy(vfx, 3f);
         }
         StartCoroutine(playerInfo.HealOverTime(totalHealAmount));
-        DailyTaskBridge.Instance.TryAddProgress("use_skill_10");
-        DailyTaskBridge.Instance.TryAddProgress("use_heal_5");
+        DailyTaskManager.Instance.TryAddProgress("use_skill_10");
+        DailyTaskManager.Instance.TryAddProgress("use_heal_5");
         StartCoroutine(FirstSkillCooldown());
     }
 
@@ -256,7 +268,7 @@ public class PlayerController : MonoBehaviour
 
         // Gọi kỹ năng
         skill2.Activate(playerInfo, skill01Prosition);
-        DailyTaskBridge.Instance.TryAddProgress("use_skill_10");
+        DailyTaskManager.Instance.TryAddProgress("use_skill_10");
 
         // Bắt đầu hồi chiêu
         StartCoroutine(SkillCooldown(
@@ -274,7 +286,7 @@ public class PlayerController : MonoBehaviour
         canUseThirdSkill = false;
 
         skill3.Activate(playerInfo, skill02Prosition);
-        DailyTaskBridge.Instance.TryAddProgress("use_skill_10");
+        DailyTaskManager.Instance.TryAddProgress("use_skill_10");
         StartCoroutine(SkillCooldown(
             cooldownOverlayThirdSkill,
             thirdCooldownText,

@@ -627,9 +627,13 @@ MonoBehaviour:
   currentHP: 700
   maxMana: 100
   currentMana: 100
+  baseDamage: 50
   floatingTextPrefab: {fileID: 5342096560126195339, guid: 87a2614f99614934e8ba2e4308898173,
     type: 3}
   popupPoint: {fileID: 3299534976950388704}
+  isDead: 0
+  healHeartPrefab: {fileID: 621584630249350254, guid: af9d1131c788d454fa7dae4544fa99d2,
+    type: 3}
 --- !u!4 &7599699460091268622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 164879de6b7cd6949b562176760bd20c,

@@ -7,8 +7,12 @@ public class BotStats : MonoBehaviour
     public float currentHP = 700f;
     public float maxMana = 100f;
     public float currentMana = 100f;
+    public int baseDamage = 50;
     public GameObject floatingTextPrefab;
     public Transform popupPoint;
+    public bool isDead = false;
+    public GameObject healHeartPrefab; 
+    public float lastHealTime = -999f;
     private static readonly string[] RandomNames =
     {
         "DarkWolf", "Shadow", "FlameZ", "NoobMaster", "Pro999", "BotDemon", "MagicBoy", "QueenAI", "Zetta", "Raze","Peter",

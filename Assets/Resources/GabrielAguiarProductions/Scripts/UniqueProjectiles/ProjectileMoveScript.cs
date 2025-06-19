@@ -129,20 +129,25 @@ public class ProjectileMoveScript : MonoBehaviour
 
         FindObjectOfType<KillFeedUI>()?.ShowKill(killerName, victimName);
     }
-
     void OnCollisionEnter(Collision co)
     {
+        if (collided) return;
+        collided = true;
+
         var heroInfo = co.GetContact(0).otherCollider.GetComponentInParent<PlayerInfo>();
         var botInfo = co.GetContact(0).otherCollider.GetComponentInParent<BotStats>();
+
         if ((heroInfo != null && heroInfo == owner) || (botInfo != null && botInfo == ownerBot))
         {
             return;
         }
 
+        // === DAMAGE HANDLING ===
         if (botInfo != null && botInfo != ownerBot)
         {
-           int damage = owner != null ? owner.baseDamage : 50;
-            botInfo.currentHP -= damage;
+            int damage = owner != null ? owner.baseDamage : 50;
+            botInfo.currentHP = Mathf.Max(0, botInfo.currentHP - damage);
+
             if (owner != null && owner.isLocalPlayer)
             {
                 DailyTaskBridge.Instance?.TryAddProgress("deal_500_damage", damage);
@@ -155,85 +160,96 @@ public class ProjectileMoveScript : MonoBehaviour
                 var text = popup.GetComponent<TMPro.TextMeshPro>();
                 if (text != null)
                 {
-                   text.text = damage.ToString();
+                    text.text = damage.ToString();
                     text.color = Color.red;
                 }
             }
-            if (botInfo.currentHP <= 0)
+
+            if (botInfo.currentHP <= 0 && !botInfo.isDead)
             {
+                botInfo.currentHP = 0;
+                botInfo.isDead = true;
                 HandleKill(owner, ownerBot, botInfo.botName);
+                // Spawn Heal nếu đủ điều kiện
+                if (botInfo.healHeartPrefab != null && Random.value < 0.7f && GameManagerUI.currentHealItemCount < GameManagerUI.maxHealItems)
+                {
+                    Instantiate(botInfo.healHeartPrefab, botInfo.transform.position + Vector3.up * 4f, Quaternion.identity);
+                    GameManagerUI.currentHealItemCount++;
+                }
+
+
             }
         }
         else if (heroInfo != null && heroInfo != owner)
         {
             if (heroInfo.isInvincible) return;
-            int damage = owner != null ? owner.baseDamage : 50;
-            heroInfo._hp -= damage;
 
+            int damage = owner != null ? owner.baseDamage : (ownerBot != null ? ownerBot.baseDamage : 50);
+            heroInfo._hp = Mathf.Max(0, heroInfo._hp - damage);
 
-            if (heroInfo._hp <= 0)
+            if (heroInfo._hp <= 0 && !heroInfo.isDead)
             {
+                heroInfo.isDead = true;
                 HandleKill(owner, ownerBot, heroInfo.playerName);
             }
         }
 
-
-
-
-
+        // === EFFECTS / TRAILS / DESTROY ===
         if (!bounce)
         {
-            if (co.gameObject.tag != "Bullet" && !collided)
+            if (trails.Count > 0)
             {
-                collided = true;
-
-                if (trails.Count > 0)
+                foreach (var trail in trails)
                 {
-                    for (int i = 0; i < trails.Count; i++)
+                    trail.transform.parent = null;
+                    var ps = trail.GetComponent<ParticleSystem>();
+                    if (ps != null)
                     {
-                        trails[i].transform.parent = null;
-                        var ps = trails[i].GetComponent<ParticleSystem>();
-                        if (ps != null)
-                        {
-                            ps.Stop();
-                            Destroy(ps.gameObject, ps.main.duration + ps.main.startLifetime.constantMax);
-                        }
+                        ps.Stop();
+                        Destroy(ps.gameObject, ps.main.duration + ps.main.startLifetime.constantMax);
                     }
                 }
-
-                speed = 0;
-                GetComponent<Rigidbody>().isKinematic = true;
-
-                ContactPoint contact = co.contacts[0];
-                Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
-                Vector3 pos = contact.point;
-
-                if (hitPrefab != null)
-                {
-                    var hitVFX = Instantiate(hitPrefab, pos, rot) as GameObject;
-
-                    var ps = hitVFX.GetComponent<ParticleSystem>();
-                    if (ps == null)
-                    {
-                        var psChild = hitVFX.transform.GetChild(0).GetComponent<ParticleSystem>();
-                        Destroy(hitVFX, psChild.main.duration);
-                    }
-                    else
-                        Destroy(hitVFX, ps.main.duration);
-                }
-
-                StartCoroutine(DestroyParticle(0f));
             }
+
+            speed = 0;
+            if (rb != null)
+            {
+                rb.isKinematic = true;
+                rb.detectCollisions = false; // 🛡 Ngăn collision thêm lần nào nữa
+            }
+
+            ContactPoint contact = co.contacts[0];
+            Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
+            Vector3 pos = contact.point;
+
+            if (hitPrefab != null)
+            {
+                var hitVFX = Instantiate(hitPrefab, pos, rot);
+                var ps = hitVFX.GetComponent<ParticleSystem>();
+                if (ps != null)
+                    Destroy(hitVFX, ps.main.duration);
+                else
+                {
+                    var psChild = hitVFX.transform.GetChild(0).GetComponent<ParticleSystem>();
+                    Destroy(hitVFX, psChild.main.duration);
+                }
+            }
+
+            StartCoroutine(DestroyParticle(0f));
         }
         else
         {
-            rb.useGravity = true;
-            rb.drag = 0.5f;
-            ContactPoint contact = co.contacts[0];
-            rb.AddForce(Vector3.Reflect((contact.point - startPos).normalized, contact.normal) * bounceForce, ForceMode.Impulse);
+            if (rb != null)
+            {
+                rb.useGravity = true;
+                rb.drag = 0.5f;
+                ContactPoint contact = co.contacts[0];
+                rb.AddForce(Vector3.Reflect((contact.point - startPos).normalized, contact.normal) * bounceForce, ForceMode.Impulse);
+            }
             Destroy(this);
         }
     }
+
 
     public IEnumerator DestroyParticle(float waitTime)
     {

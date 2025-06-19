@@ -631,7 +631,7 @@ MonoBehaviour:
   _animator: {fileID: 2005744255888575695}
   fixedJoystick: {fileID: 0}
   _rigidbody: {fileID: 4191388329258793537}
-  speedPlayer: 17
+  speedPlayer: 19
   rotationSpeed: 15
   normal_attack_button: {fileID: 0}
   first_attack_button: {fileID: 0}
@@ -683,6 +683,10 @@ MonoBehaviour:
     type: 3}
   vfxAttachPoint: {fileID: 921170797028885829}
   levelUI: {fileID: 0}
+  baseDamage: 50
+  hpText: {fileID: 0}
+  hpFillImage: {fileID: 0}
+  isDead: 0
 --- !u!95 &2005744255888575695
 Animator:
   serializedVersion: 7

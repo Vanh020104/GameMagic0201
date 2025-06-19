@@ -9,7 +9,7 @@ public static class CombatUtils
         var controller = owner.GetComponent<PlayerController>();
         if (controller != null && controller.levelUI != null)
         {
-            controller.levelUI.AddExp(30); // hoặc tùy chỉnh
+            controller.levelUI.AddExp(50); // hoặc tùy chỉnh
         }
 
         if (owner.isLocalPlayer)

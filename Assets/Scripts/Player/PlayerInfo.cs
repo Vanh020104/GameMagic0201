@@ -24,6 +24,7 @@ public class PlayerInfo : MonoBehaviour
     public int baseDamage = 50;
     public TMPro.TMP_Text hpText;
     public Image hpFillImage;
+    public bool isDead = false;
 
     void Start()
     {

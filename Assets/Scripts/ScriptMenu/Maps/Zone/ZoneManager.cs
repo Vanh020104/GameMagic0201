@@ -1,65 +1,92 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ZoneManager : MonoBehaviour
 {
     public static ZoneManager Instance;
 
-    public Transform zoneVisual;
-    public float zoneRadius = 150f;
-    public float shrinkAmount = 20f;
+    [Header("Bo Settings")]
+    public float startRadius = 550f;
+    public float shrinkRate = 30f; // mỗi lần thu giảm 20 đơn vị
     public float shrinkInterval = 10f;
+    public float damagePerSecond = 10f;
 
-    private float shrinkTimer = 0f;
-    public Vector3 zoneCenter;
+    private float currentRadius;
+    private Transform zoneVisual;
 
     void Awake()
     {
         Instance = this;
-        zoneCenter = transform.position;
     }
 
     void Start()
     {
-        UpdateVisual();
+        currentRadius = startRadius;
+        zoneVisual = transform;
+        SetVisualScale();
+
+        InvokeRepeating(nameof(ShrinkZone), shrinkInterval, shrinkInterval);
     }
+public Vector3 GetSafePoint(Vector3 currentPosition)
+{
+    Vector3 dirToCenter = (transform.position - currentPosition).normalized;
+    float safeDistance = currentRadius - 2f; // 2f là khoảng lệch an toàn
+    Vector3 safePoint = transform.position + dirToCenter * safeDistance;
+
+    NavMeshHit hit;
+    if (NavMesh.SamplePosition(safePoint, out hit, 20f, NavMesh.AllAreas))
+        return hit.position;
+
+    return currentPosition; // fallback nếu không tìm thấy trên navmesh
+}
 
     void Update()
     {
-        shrinkTimer += Time.deltaTime;
-        if (shrinkTimer >= shrinkInterval)
+        foreach (var obj in GameObject.FindGameObjectsWithTag("Player"))
         {
-            shrinkTimer = 0f;
-            ShrinkZone();
+            if (IsOutsideZone(obj.transform.position))
+            {
+                var info = obj.GetComponent<PlayerInfo>();
+                if (info != null && !info.hasDied)
+                {
+                    info._hp -= (int)(damagePerSecond * Time.deltaTime);
+                }
+            }
+        }
+
+        foreach (var bot in GameObject.FindGameObjectsWithTag("Bot"))
+        {
+            var stats = bot.GetComponent<BotStats>();
+            if (stats != null && stats.currentHP > 0 && IsOutsideZone(bot.transform.position))
+            {
+                stats.currentHP -= damagePerSecond * Time.deltaTime;
+            }
         }
     }
 
     void ShrinkZone()
     {
-        zoneRadius -= shrinkAmount;
-        if (zoneRadius < 10f) zoneRadius = 10f;
-
-        // Di chuyển bo nhẹ để tránh predict dễ
-        zoneCenter += new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
-        UpdateVisual();
+        currentRadius -= shrinkRate;
+        if (currentRadius < 10f) currentRadius = 10f;
+        SetVisualScale();
     }
 
-    void UpdateVisual()
+    void SetVisualScale()
     {
         if (zoneVisual != null)
         {
-            zoneVisual.position = zoneCenter;
-            zoneVisual.localScale = new Vector3(zoneRadius * 2f, 0.1f, zoneRadius * 2f);
+            float diameter = currentRadius * 2f;
+            zoneVisual.localScale = new Vector3(diameter, 0.1f, diameter); // scale XZ
         }
     }
 
-    public bool IsInsideZone(Vector3 pos)
+    public bool IsOutsideZone(Vector3 position)
     {
-        return Vector3.Distance(pos, zoneCenter) <= zoneRadius;
+        return Vector3.Distance(transform.position, position) > currentRadius;
     }
 
-    public Vector3 GetSafePoint(Vector3 pos)
+    public bool IsInsideZone(Vector3 position)
     {
-        Vector3 dir = (pos - zoneCenter).normalized;
-        return zoneCenter + dir * (zoneRadius - 1f);
+        return !IsOutsideZone(position);
     }
 }

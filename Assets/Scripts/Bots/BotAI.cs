@@ -3,6 +3,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections.Generic;
+using System.Linq;
 
 public class BotAI : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class BotAI : MonoBehaviour
     public float cooldownMoveDistance = 50f;
     public float moveSpeed = 15f;
     public float attackCooldown = 2f;
+    [SerializeField] float healSearchRange = 80f;
 
     [Header("Runtime")]
     public Transform target;
@@ -38,7 +40,7 @@ public class BotAI : MonoBehaviour
 
     private float pointThreshold = 1.2f;
 
-    enum State { Wander, Chase, Attack, Cooldown, Die }
+    enum State { Wander, Chase, Attack, Cooldown, Die, SeekHeal }
     private State currentState;
 
     [Header("Attack Settings")]
@@ -50,7 +52,8 @@ public class BotAI : MonoBehaviour
 
     private float pathTickTimer = 0f;
     private float pathTickRate = 0.5f;
-
+    [SerializeField] float healCooldown = 5f;
+    private float lastHealTime = -999f;
     private float animSpeed = 0f;
     void Start()
     {
@@ -89,17 +92,51 @@ public class BotAI : MonoBehaviour
             case State.Chase: HandleChase(); break;
             case State.Attack: HandleAttack(); break;
             case State.Cooldown: HandleCooldown(); break;
+            case State.SeekHeal: HandleSeekHeal(); break;
+
         }
     }
 
     void UpdateStateLogic()
     {
-        // if (ZoneManager.Instance != null && !ZoneManager.Instance.IsInsideZone(transform.position))
-        // {
-        //     cooldownTarget = ZoneManager.Instance.GetSafePoint(transform.position);
-        //     currentState = State.Cooldown;
-        //     return;
-        // }
+        if (ZoneManager.Instance != null && !ZoneManager.Instance.IsInsideZone(transform.position))
+        {
+            cooldownTarget = ZoneManager.Instance.GetSafePoint(transform.position);
+            currentState = State.Cooldown;
+            return;
+        }
+        if (Time.time - lastHealTime < healCooldown)
+            return;
+        if (botStats.currentHP < botStats.maxHP * 0.3f)
+        {
+            float playerDist = target != null ? Vector3.Distance(transform.position, target.position) : Mathf.Infinity;
+
+            // Nếu có kẻ địch gần và đủ mana thì bắn trước đã
+            if (playerDist <= attackRange && botStats.currentMana >= 5f)
+            {
+                currentState = State.Attack;
+                return;
+            }
+
+            if (Random.value < 0.6f)
+            {
+                GameObject heal = FindClosestHeal();
+                if (heal != null)
+                {
+                    cooldownTarget = heal.transform.position;
+                    currentState = State.SeekHeal;
+                    lastHealTime = Time.time;
+                    return;
+                }
+            }
+        }
+        if (target != null && Vector3.Distance(transform.position, target.position) < fleeDistance)
+        {
+            currentState = State.Cooldown; // chạy trốn
+            cooldownTarget = GetFleePosition();
+            return;
+        }
+
         Transform newTarget = FindClosestTarget();
         if (newTarget == null)
         {
@@ -149,6 +186,77 @@ public class BotAI : MonoBehaviour
         else
             currentState = State.Wander;
     }
+    void HandleSeekHeal()
+    {
+        if (cooldownTarget != Vector3.zero)
+        {
+            GameObject targetHeal = GameObject.FindGameObjectsWithTag("HealPrefab")
+                .FirstOrDefault(h => Vector3.Distance(h.transform.position, cooldownTarget) < 1f);
+
+            if (targetHeal == null)
+            {
+                currentState = State.Wander;
+                return;
+            }
+        }
+
+        if (target != null && Vector3.Distance(transform.position, target.position) < minAttackDistance)
+        {
+            cooldownTarget = GetFleePosition();
+            currentState = State.Cooldown;
+            return;
+        }
+
+        ResetPathIfTargetChanged(cooldownTarget);
+        if (target != null)
+        {
+            float dist = Vector3.Distance(transform.position, target.position);
+
+            if (dist <= attackRange && botStats.currentMana >= 5f)
+            {
+                currentState = State.Attack;
+                return;
+            }
+        }
+
+        MoveAlongPath(cooldownTarget);
+
+        if (Vector3.Distance(transform.position, cooldownTarget) < 2f)
+        {
+            currentState = State.Wander;
+        }
+    }
+
+
+    GameObject FindClosestHeal()
+    {
+        GameObject[] heals = GameObject.FindGameObjectsWithTag("HealPrefab");
+
+        float closestDist = Mathf.Infinity;
+        GameObject closest = null;
+
+        foreach (var h in heals)
+        {
+            var healComp = h.GetComponent<HeartPickup>();
+            if (healComp == null || healComp.isClaimed) continue;
+
+            float dist = Vector3.Distance(transform.position, h.transform.position);
+
+            // Chỉ xét những heal nằm trong phạm vi cho phép
+            if (dist < healSearchRange && dist < closestDist)
+            {
+                closest = h;
+                closestDist = dist;
+            }
+        }
+
+        if (closest != null)
+            closest.GetComponent<HeartPickup>().isClaimed = true;
+
+        return closest;
+    }
+
+
 
     Transform FindClosestTarget()
     {
@@ -234,6 +342,8 @@ public class BotAI : MonoBehaviour
         }
 
         LookAtTargetSmooth();
+        if (Time.time - lastAttackTime < attackCooldown)
+            return;
         if (IsFacingTarget() && botStats.currentMana >= 5)
         {
             Shoot();
@@ -361,10 +471,59 @@ public class BotAI : MonoBehaviour
 
     Vector3 GetFleePosition()
     {
-        Vector3 away = (transform.position - target.position).normalized;
-        Vector3 candidate = transform.position + away * fleeDistance * 1.5f + Random.insideUnitSphere * 4f;
-        return ClampToNavMesh(candidate);
+        Vector3 fleeDir = Vector3.zero;
+        int count = 0;
+
+        float spacingFactor = 0.6f;
+        float separationRadius = attackRange * spacingFactor;
+
+        // Né bot khác
+        foreach (var bot in GameObject.FindGameObjectsWithTag("Bot"))
+        {
+            if (bot == gameObject) continue;
+
+            float dist = Vector3.Distance(transform.position, bot.transform.position);
+            if (dist < separationRadius)
+            {
+                Vector3 away = (transform.position - bot.transform.position).normalized;
+                float weight = separationRadius - dist;
+                fleeDir += away * weight;
+                count++;
+            }
+        }
+
+        // Né player
+        foreach (var player in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            var info = player.GetComponent<PlayerInfo>();
+            if (info != null && info.hasDied) continue;
+
+            float dist = Vector3.Distance(transform.position, player.transform.position);
+            if (dist < separationRadius)
+            {
+                Vector3 away = (transform.position - player.transform.position).normalized;
+                float weight = separationRadius - dist;
+                fleeDir += away * weight;
+                count++;
+            }
+        }
+
+        if (count > 0)
+        {
+            fleeDir /= count;
+            Vector3 fleeTarget = transform.position + fleeDir.normalized * fleeDistance;
+            return ClampToNavMesh(fleeTarget);
+        }
+
+        // fallback
+        Vector3 randomDir = Random.insideUnitSphere * fleeDistance;
+        randomDir.y = 0;
+        return ClampToNavMesh(transform.position + randomDir);
     }
+
+
+
+
 
     void RegenMana()
     {
@@ -417,6 +576,14 @@ public class BotAI : MonoBehaviour
 
     void CheckStuckAndResetIfNeeded()
     {
+        if (!NavMesh.SamplePosition(transform.position + transform.forward * 4f, out NavMeshHit hit, 4f, NavMesh.AllAreas))
+        {
+            // Gần mép map, thì chuyển sang chạy ngược
+            cooldownTarget = GetFleePosition() + Random.insideUnitSphere * 4f;
+            currentState = State.Cooldown;
+            return;
+        }
+
         if (Vector3.Distance(transform.position, lastPos) < 0.1f)
             stuckTimer += Time.deltaTime;
         else
@@ -453,28 +620,29 @@ public class BotAI : MonoBehaviour
     }
 
 
-private float originalSpeed;
+    private float originalSpeed;
 
-void Awake()
-{
-    originalSpeed = moveSpeed;
-}
+    void Awake()
+    {
+        originalSpeed = moveSpeed;
+    }
 
-public void SetSpeed(float newSpeed)
-{
-    moveSpeed = newSpeed;
-}
+    public void SetSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
+    }
 
-public void ResetSpeed()
-{
-    moveSpeed = originalSpeed;
-}
+    public void ResetSpeed()
+    {
+        moveSpeed = originalSpeed;
+    }
 
-public void ForceDie()
-{
-    if (botStats.currentHP <= 0) return;
-    botStats.currentHP = 0;
-    HandleDeath();
-}
+    public void ForceDie()
+    {
+        if (botStats.currentHP <= 0) return;
+        botStats.currentHP = 0;
+        HandleDeath();
+    }
+
 
 }

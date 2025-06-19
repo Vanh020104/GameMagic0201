@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Map_04
   m_EditorClassIdentifier: 
   mapId: MAP_04
-  mapName: LATALIA
-  thumbnail: {fileID: 21300000, guid: 5fdd67d61c5d9574a98b89504357883a, type: 3}
-  prefabPath: Prefabs/GameBattle/Maps/Map_02
+  mapName: HALLOWGRAVE
+  thumbnail: {fileID: 21300000, guid: 87a2245dc1a52824d8ecd10015e11d3c, type: 3}
+  prefabPath: Prefabs/GameBattle/Maps/Map_04

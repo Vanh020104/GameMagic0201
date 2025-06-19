@@ -10,16 +10,30 @@ public class GameManagerUI : MonoBehaviour
 
     private GameObject botContainer;
     private GameObject player;
+    public static int currentHealItemCount = 0;
+    public static int maxHealItems = 10;
     void Start()
     {
         GameObject map;
-
+        currentHealItemCount = 0;
         if (GameData.SelectedMap != null)
         {
             var loaded = Resources.Load<GameObject>(GameData.SelectedMap.prefabPath);
             if (loaded != null)
             {
                 map = Instantiate(loaded, Vector3.zero, Quaternion.identity);
+
+
+
+            GameObject zonePrefab = Resources.Load<GameObject>("ZoneManager");
+            if (zonePrefab != null)
+            {
+                GameObject zone = Instantiate(zonePrefab);
+
+                // dùng bound của collider map
+                Collider mapCol = map.GetComponentInChildren<Collider>();
+                zone.transform.position = mapCol != null ? mapCol.bounds.center : Vector3.zero;
+            }
 
             }
             else
@@ -110,9 +124,32 @@ public class GameManagerUI : MonoBehaviour
 
             // Đóng bot vào container
             bot.transform.SetParent(botContainer.transform);
+            var botStats = bot.GetComponent<BotStats>();
+            var playerInfo = player.GetComponent<PlayerInfo>();
+            if (botStats != null && playerInfo != null)
+            {
+                InitBotStats(botStats, playerInfo);
+            }
         }
 
         int total = totalSpawnPoints + 1; // 1 player chính
         FindObjectOfType<KillInfoUIHandler>()?.Init(total);
     }
+
+
+    private void InitBotStats(BotStats botStats, PlayerInfo playerInfo)
+    {
+        int playerHP = playerInfo._hpMax;
+        int playerDamage = playerInfo.baseDamage;
+
+        int botHP = Mathf.RoundToInt(Random.Range(playerHP * 0.8f, playerHP * 1.2f));
+        int botDamage = Mathf.RoundToInt(Random.Range(playerDamage * 0.8f, playerDamage * 1f));
+        botStats.maxHP = botHP;
+        botStats.currentHP = botHP;
+        botStats.baseDamage = botDamage;
+
+        botStats.maxMana = 100;
+        botStats.currentMana = 100;
+    }
+
 }

@@ -642,7 +642,7 @@ MonoBehaviour:
   _animator: {fileID: 4510666373543593629}
   fixedJoystick: {fileID: 0}
   _rigidbody: {fileID: 3233515835781141485}
-  speedPlayer: 17
+  speedPlayer: 19
   rotationSpeed: 15
   normal_attack_button: {fileID: 0}
   first_attack_button: {fileID: 0}
@@ -694,6 +694,10 @@ MonoBehaviour:
     type: 3}
   vfxAttachPoint: {fileID: 3249836615297088198}
   levelUI: {fileID: 0}
+  baseDamage: 50
+  hpText: {fileID: 0}
+  hpFillImage: {fileID: 0}
+  isDead: 0
 --- !u!4 &3422829602562898514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ffadf310df06bd14a86079f7a17bb156,
