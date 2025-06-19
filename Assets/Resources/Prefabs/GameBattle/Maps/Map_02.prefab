@@ -1727,7 +1727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e192a68799c0e604ba18dc8e844ae820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expGemPrefab: {fileID: 2407383341070934252, guid: 1bc7e9316b7d1cb4e9b346ae272aadd7,
+  expGemPrefab: {fileID: 7063743252289416628, guid: f9368726f996fae4a9cedf84c01a2ff0,
     type: 3}
   initialGemCount: 500
   mapSize: {x: 1000, y: 1000}
