@@ -99,12 +99,6 @@ public class BotAI : MonoBehaviour
 
     void UpdateStateLogic()
     {
-        if (ZoneManager.Instance != null && !ZoneManager.Instance.IsInsideZone(transform.position))
-        {
-            cooldownTarget = ZoneManager.Instance.GetSafePoint(transform.position);
-            currentState = State.Cooldown;
-            return;
-        }
         if (Time.time - lastHealTime < healCooldown)
             return;
         if (botStats.currentHP < botStats.maxHP * 0.3f)

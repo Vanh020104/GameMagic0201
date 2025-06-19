@@ -99,14 +99,6 @@ public class PlayerController : MonoBehaviour
         moveDirection = new Vector3(moveX, 0, moveZ).normalized;
 
         _animator.SetBool("Move", moveDirection.magnitude > 0.1f);
-         if (ZoneManager.Instance != null && !ZoneManager.Instance.IsInsideZone(transform.position))
-        {
-            playerInfo._hp -= Mathf.RoundToInt(Time.deltaTime * 10f);
-            if (playerInfo._hp <= 0)
-            {
-                // xử lý chết
-            }
-        }
         if (Input.GetKeyDown(KeyCode.C))
         {
             _animator.SetTrigger("Attack");
