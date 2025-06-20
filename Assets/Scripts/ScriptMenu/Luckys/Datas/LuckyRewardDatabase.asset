@@ -22,13 +22,13 @@ MonoBehaviour:
   - id: gold002
     rewardName: Gold2
     rewardIcon: {fileID: 21300000, guid: f2fdb9b17dc0a4f0682afc764e2aab0d, type: 3}
-    amount: 30
+    amount: 100
     tier: 1
     rewardType: 0
   - id: gold003
     rewardName: Gold3
     rewardIcon: {fileID: 21300000, guid: 19153f657a43d4a1789cb568e9791be7, type: 3}
-    amount: 100
+    amount: 300
     tier: 2
     rewardType: 0
   - id: gem001
@@ -40,26 +40,26 @@ MonoBehaviour:
   - id: gem002
     rewardName: Gem02
     rewardIcon: {fileID: 21300000, guid: 6d91f8e68e42f40ce9ae75f1443d3370, type: 3}
-    amount: 10
+    amount: 8
     tier: 0
     rewardType: 1
   - id: gem003
     rewardName: Gem03
     rewardIcon: {fileID: 21300000, guid: 896ebf9e064a043cc8641b947f932f24, type: 3}
-    amount: 50
+    amount: 15
     tier: 2
     rewardType: 1
   - id: gold004
     rewardName: Gold04
     rewardIcon: {fileID: 21300000, guid: c8b5c899f26d84dcf8d1c8cc66ab5271, type: 3}
-    amount: 80
-    tier: 2
+    amount: 150
+    tier: 0
     rewardType: 0
   - id: gold005
     rewardName: Gold05
     rewardIcon: {fileID: 21300000, guid: f2fdb9b17dc0a4f0682afc764e2aab0d, type: 3}
     amount: 150
-    tier: 2
+    tier: 0
     rewardType: 0
   - id: gold006
     rewardName: Gold06
@@ -70,19 +70,19 @@ MonoBehaviour:
   - id: Gem004
     rewardName: Gem4
     rewardIcon: {fileID: 21300000, guid: b92cee43810af4d5995728a2f42c806b, type: 3}
-    amount: 80
+    amount: 16
     tier: 1
     rewardType: 1
   - id: Gem005
     rewardName: Gem5
     rewardIcon: {fileID: 21300000, guid: ef471fb8d8de3474bbb41b339d3656d3, type: 3}
-    amount: 120
-    tier: 1
+    amount: 20
+    tier: 2
     rewardType: 1
   - id: Gem006
     rewardName: Gem6
     rewardIcon: {fileID: 21300000, guid: 298ca0950c4cd4f3ab57b16d0da39d13, type: 3}
-    amount: 110
+    amount: 23
     tier: 2
     rewardType: 1
   - id: Key001
@@ -106,14 +106,8 @@ MonoBehaviour:
   - id: Key005
     rewardName: Key05
     rewardIcon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
-    amount: 5
-    tier: 2
-    rewardType: 2
-  - id: Key006
-    rewardName: Key06
-    rewardIcon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
-    amount: 6
-    tier: 2
+    amount: 1
+    tier: 0
     rewardType: 2
   - id: Armor_09
     rewardName: Armor_09

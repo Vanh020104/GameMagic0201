@@ -66,13 +66,17 @@ public class BattlePassRenderer : MonoBehaviour
                 PlayerPrefs.SetInt("LuckyKey", key + data.quantity);
                 PlayerPrefs.Save();
                 KeyEvent.InvokeKeyChanged();
+                NotificationBadgeManager.Instance.SetNotification("lucky", true);
                 break;
 
             case RewardTypeItem.Item:
-                PlayerPrefs.SetInt($"Equip_{data.rewardName}_Unlocked", 1);
+                string id = data.itemId ?? data.rewardName; 
+                PlayerPrefs.SetInt($"Equip_{id}_Unlocked", 1);
+                PlayerPrefs.SetInt($"Equip_{id}_Level", 1);
                 PlayerPrefs.Save();
                 BagEvent.InvokeItemBought();
                 break;
+
 
             case RewardTypeItem.Hero:
                 PlayerPrefs.SetInt($"HeroUnlocked_{data.rewardName}", 1);

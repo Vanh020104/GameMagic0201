@@ -3,6 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public class RewardData
 {
+    public string? itemId;
     public Sprite icon;
     public int quantity;
     public string rewardName;

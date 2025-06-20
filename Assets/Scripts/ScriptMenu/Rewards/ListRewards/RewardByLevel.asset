@@ -15,6 +15,7 @@ MonoBehaviour:
   levels:
   - level: 1
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: b07aa74ee0e384a70899d165d4ce92dd, type: 3}
       quantity: 50
       rewardName: Gold Star
@@ -22,6 +23,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 0
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 19153f657a43d4a1789cb568e9791be7, type: 3}
       quantity: 100
       rewardName: Gold VIP
@@ -30,6 +32,7 @@ MonoBehaviour:
       type: 0
   - level: 2
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 35ba5a695a8654d5ea01b2ea828a58e1, type: 3}
       quantity: 100
       rewardName: Gold
@@ -37,6 +40,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
       type: 0
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c8b5c899f26d84dcf8d1c8cc66ab5271, type: 3}
       quantity: 200
       rewardName: Gold
@@ -45,6 +49,7 @@ MonoBehaviour:
       type: 0
   - level: 3
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c2dfda4a635ee4a75980715563084b79, type: 3}
       quantity: 2
       rewardName: Key01
@@ -52,6 +57,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 2
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
       quantity: 4
       rewardName: Key
@@ -60,6 +66,7 @@ MonoBehaviour:
       type: 2
   - level: 4
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 236c91a2e390045a8a2c1aed4f78ff2b, type: 3}
       quantity: 5
       rewardName: Gem
@@ -67,6 +74,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 1
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: b92cee43810af4d5995728a2f42c806b, type: 3}
       quantity: 10
       rewardName: Gem
@@ -75,6 +83,7 @@ MonoBehaviour:
       type: 1
   - level: 5
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: b07aa74ee0e384a70899d165d4ce92dd, type: 3}
       quantity: 130
       rewardName: Gold
@@ -82,6 +91,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
       type: 0
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: f2fdb9b17dc0a4f0682afc764e2aab0d, type: 3}
       quantity: 340
       rewardName: Hero01
@@ -90,6 +100,7 @@ MonoBehaviour:
       type: 0
   - level: 6
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c2dfda4a635ee4a75980715563084b79, type: 3}
       quantity: 3
       rewardName: Key02
@@ -97,6 +108,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 2
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
       quantity: 6
       rewardName: Key03
@@ -105,6 +117,7 @@ MonoBehaviour:
       type: 2
   - level: 7
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c2dfda4a635ee4a75980715563084b79, type: 3}
       quantity: 6
       rewardName: Key04
@@ -112,6 +125,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 2
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
       quantity: 12
       rewardName: Key05
@@ -120,6 +134,7 @@ MonoBehaviour:
       type: 2
   - level: 8
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: dc9f747fbfa5d402894e6331bbd00273, type: 3}
       quantity: 200
       rewardName: Gold
@@ -127,6 +142,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 0
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 19153f657a43d4a1789cb568e9791be7, type: 3}
       quantity: 400
       rewardName: Gold
@@ -135,6 +151,7 @@ MonoBehaviour:
       type: 0
   - level: 9
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c2dfda4a635ee4a75980715563084b79, type: 3}
       quantity: 2
       rewardName: Key01
@@ -142,6 +159,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 2
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
       quantity: 4
       rewardName: Key lucky
@@ -150,6 +168,7 @@ MonoBehaviour:
       type: 2
   - level: 10
     freeReward:
+      itemId: 
       icon: {fileID: -5821098215714624906, guid: aa0422cf1c09b344a9a411fc1cba743e,
         type: 3}
       quantity: 3
@@ -158,15 +177,16 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
       type: 1
     premiumReward:
-      icon: {fileID: -5821098215714624906, guid: aa0422cf1c09b344a9a411fc1cba743e,
-        type: 3}
-      quantity: 6
-      rewardName: Gem
+      itemId: Armor_13
+      icon: {fileID: 21300000, guid: 6d677d91bda564c6293e5d14faaa890c, type: 3}
+      quantity: 1
+      rewardName: reward
       background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
-      type: 1
+      type: 3
   - level: 11
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c2dfda4a635ee4a75980715563084b79, type: 3}
       quantity: 2
       rewardName: Key01
@@ -174,6 +194,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 2
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 35ba5a695a8654d5ea01b2ea828a58e1, type: 3}
       quantity: 30
       rewardName: gold
@@ -182,6 +203,7 @@ MonoBehaviour:
       type: 0
   - level: 12
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c2dfda4a635ee4a75980715563084b79, type: 3}
       quantity: 2
       rewardName: Key01
@@ -189,6 +211,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 2
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 80e435e6bf32546a4bd3435995540dbc, type: 3}
       quantity: 4
       rewardName: Gem
@@ -197,6 +220,7 @@ MonoBehaviour:
       type: 1
   - level: 13
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 35ba5a695a8654d5ea01b2ea828a58e1, type: 3}
       quantity: 88
       rewardName: Gold
@@ -204,6 +228,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 0
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 19153f657a43d4a1789cb568e9791be7, type: 3}
       quantity: 200
       rewardName: Gold
@@ -212,6 +237,7 @@ MonoBehaviour:
       type: 0
   - level: 14
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c2dfda4a635ee4a75980715563084b79, type: 3}
       quantity: 2
       rewardName: Key01
@@ -219,6 +245,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 2
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
       quantity: 5
       rewardName: Hero01
@@ -227,6 +254,7 @@ MonoBehaviour:
       type: 2
   - level: 15
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c2dfda4a635ee4a75980715563084b79, type: 3}
       quantity: 1
       rewardName: Key01
@@ -234,6 +262,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
       type: 2
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
       quantity: 2
       rewardName: Key
@@ -242,6 +271,7 @@ MonoBehaviour:
       type: 2
   - level: 16
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 94a19ca5e63294a5c93d132431a0f0ec, type: 3}
       quantity: 100
       rewardName: Gold
@@ -249,6 +279,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 0
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: f2fdb9b17dc0a4f0682afc764e2aab0d, type: 3}
       quantity: 1
       rewardName: 200
@@ -257,6 +288,7 @@ MonoBehaviour:
       type: 0
   - level: 17
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 80e435e6bf32546a4bd3435995540dbc, type: 3}
       quantity: 5
       rewardName: Gem
@@ -264,6 +296,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
       type: 1
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 6d91f8e68e42f40ce9ae75f1443d3370, type: 3}
       quantity: 10
       rewardName: Gem
@@ -272,6 +305,7 @@ MonoBehaviour:
       type: 1
   - level: 18
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 236c91a2e390045a8a2c1aed4f78ff2b, type: 3}
       quantity: 12
       rewardName: Gem
@@ -279,6 +313,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 1
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: ef471fb8d8de3474bbb41b339d3656d3, type: 3}
       quantity: 15
       rewardName: Gem
@@ -287,6 +322,7 @@ MonoBehaviour:
       type: 1
   - level: 19
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c2dfda4a635ee4a75980715563084b79, type: 3}
       quantity: 2
       rewardName: Key01
@@ -294,6 +330,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 2
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
       quantity: 4
       rewardName: Key
@@ -302,6 +339,7 @@ MonoBehaviour:
       type: 2
   - level: 20
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c2dfda4a635ee4a75980715563084b79, type: 3}
       quantity: 3
       rewardName: Key01
@@ -309,6 +347,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
       type: 2
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
       quantity: 5
       rewardName: Key
@@ -317,6 +356,7 @@ MonoBehaviour:
       type: 2
   - level: 21
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 35ba5a695a8654d5ea01b2ea828a58e1, type: 3}
       quantity: 300
       rewardName: Gold
@@ -324,6 +364,7 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
       type: 0
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: f2fdb9b17dc0a4f0682afc764e2aab0d, type: 3}
       quantity: 350
       rewardName: Gold
@@ -332,6 +373,7 @@ MonoBehaviour:
       type: 0
   - level: 22
     freeReward:
+      itemId: 
       icon: {fileID: 21300000, guid: c2dfda4a635ee4a75980715563084b79, type: 3}
       quantity: 2
       rewardName: Key01
@@ -339,9 +381,180 @@ MonoBehaviour:
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 2
     premiumReward:
+      itemId: 
       icon: {fileID: 21300000, guid: 19153f657a43d4a1789cb568e9791be7, type: 3}
+      quantity: 5000
+      rewardName: Gold Vip
+      background: {fileID: 21300000, guid: 13850e631958a4ee0a70481adf755f9b, type: 3}
+      border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
+      type: 0
+  - level: 23
+    freeReward:
+      itemId: Armor_12
+      icon: {fileID: 21300000, guid: 0beebbdf37fe449c7a65b2c1daab28a5, type: 3}
+      quantity: 1
+      rewardName: Reward 01
+      background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
+      border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
+      type: 3
+    premiumReward:
+      itemId: Hat_13
+      icon: {fileID: 21300000, guid: 803fbe7dcd5674bdfbc62e1916ebf656, type: 3}
       quantity: 1
       rewardName: Gold Vip
       background: {fileID: 21300000, guid: 5df159b86e30c4cbc9d0a527d9f77153, type: 3}
       border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
+      type: 3
+  - level: 24
+    freeReward:
+      itemId: 
+      icon: {fileID: 21300000, guid: 35ba5a695a8654d5ea01b2ea828a58e1, type: 3}
+      quantity: 450
+      rewardName: Gold
+      background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
+      border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
       type: 0
+    premiumReward:
+      itemId: 
+      icon: {fileID: 21300000, guid: 19153f657a43d4a1789cb568e9791be7, type: 3}
+      quantity: 1
+      rewardName: Gold Vip
+      background: {fileID: 21300000, guid: 5d18467c549cb415fa8f8d560f8430d9, type: 3}
+      border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
+      type: 0
+  - level: 25
+    freeReward:
+      itemId: Armor_14
+      icon: {fileID: 21300000, guid: 022540aab50ce49c894032a27992178d, type: 3}
+      quantity: 1
+      rewardName: reward
+      background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
+      border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
+      type: 3
+    premiumReward:
+      itemId: Boots_12
+      icon: {fileID: 21300000, guid: d12c0287e9dd64d438893d463a35b45e, type: 3}
+      quantity: 1
+      rewardName: reward
+      background: {fileID: 21300000, guid: 5df159b86e30c4cbc9d0a527d9f77153, type: 3}
+      border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
+      type: 3
+  - level: 26
+    freeReward:
+      itemId: Armor_15
+      icon: {fileID: 21300000, guid: f7440046831b14dae8f1b561ee3687bc, type: 3}
+      quantity: 1
+      rewardName: reward
+      background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
+      border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
+      type: 3
+    premiumReward:
+      itemId: Boots_13
+      icon: {fileID: 21300000, guid: b6e55094f99214db99784ea7e6a3fd87, type: 3}
+      quantity: 1
+      rewardName: reward
+      background: {fileID: 21300000, guid: 5df159b86e30c4cbc9d0a527d9f77153, type: 3}
+      border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
+      type: 3
+  - level: 27
+    freeReward:
+      itemId: 
+      icon: {fileID: 21300000, guid: 19153f657a43d4a1789cb568e9791be7, type: 3}
+      quantity: 600
+      rewardName: gold
+      background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
+      border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
+      type: 0
+    premiumReward:
+      itemId: 
+      icon: {fileID: 21300000, guid: c8b5c899f26d84dcf8d1c8cc66ab5271, type: 3}
+      quantity: 1200
+      rewardName: gold
+      background: {fileID: 21300000, guid: 5df159b86e30c4cbc9d0a527d9f77153, type: 3}
+      border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
+      type: 0
+  - level: 28
+    freeReward:
+      itemId: 
+      icon: {fileID: 21300000, guid: b92cee43810af4d5995728a2f42c806b, type: 3}
+      quantity: 8
+      rewardName: gem
+      background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
+      border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
+      type: 1
+    premiumReward:
+      itemId: 
+      icon: {fileID: 21300000, guid: 298ca0950c4cd4f3ab57b16d0da39d13, type: 3}
+      quantity: 15
+      rewardName: gem
+      background: {fileID: 21300000, guid: 5df159b86e30c4cbc9d0a527d9f77153, type: 3}
+      border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
+      type: 1
+  - level: 29
+    freeReward:
+      itemId: 
+      icon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
+      quantity: 1
+      rewardName: key
+      background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
+      border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
+      type: 2
+    premiumReward:
+      itemId: Boots_14
+      icon: {fileID: 21300000, guid: 67718a37bde164bb5adf857b5a0318a8, type: 3}
+      quantity: 1
+      rewardName: reward
+      background: {fileID: 21300000, guid: 5df159b86e30c4cbc9d0a527d9f77153, type: 3}
+      border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
+      type: 3
+  - level: 30
+    freeReward:
+      itemId: Boots_15
+      icon: {fileID: 21300000, guid: 3ab450d44276c456285f6f7f45aa77e2, type: 3}
+      quantity: 1
+      rewardName: reward
+      background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
+      border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
+      type: 3
+    premiumReward:
+      itemId: Boots_16
+      icon: {fileID: 21300000, guid: 29c5b9db57c4d437bbea6ba49fd9a9df, type: 3}
+      quantity: 1
+      rewardName: reward
+      background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
+      border: {fileID: 21300000, guid: 711dd8e52d5b045ea91301f0f683e0c6, type: 3}
+      type: 3
+  - level: 31
+    freeReward:
+      itemId: Hat_14
+      icon: {fileID: 21300000, guid: b66e5671d29dd49aabc7cc3348993b0d, type: 3}
+      quantity: 1
+      rewardName: reward
+      background: {fileID: 21300000, guid: 84ac0ac68a5e04390974b51834b9f48c, type: 3}
+      border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
+      type: 3
+    premiumReward:
+      itemId: Hat_15
+      icon: {fileID: 21300000, guid: 82bf80fe3334a4af1880411db2f60b7a, type: 3}
+      quantity: 1
+      rewardName: reward
+      background: {fileID: 21300000, guid: b657ff67b14d84508bdeef875c972101, type: 3}
+      border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
+      type: 3
+  - level: 32
+    freeReward:
+      itemId: 
+      icon: {fileID: 21300000, guid: dc9f747fbfa5d402894e6331bbd00273, type: 3}
+      quantity: 765
+      rewardName: golg
+      background: {fileID: 21300000, guid: b657ff67b14d84508bdeef875c972101, type: 3}
+      border: {fileID: 21300000, guid: 11a3abb899a3e499db1ad6781eccce74, type: 3}
+      type: 0
+    premiumReward:
+      itemId: Boots_17
+      icon: {fileID: 21300000, guid: 8efbfb53cf32a485aa2c36b3cd0fb29e, type: 3}
+      quantity: 1
+      rewardName: reward
+      background: {fileID: 21300000, guid: b657ff67b14d84508bdeef875c972101, type: 3}
+      border: {fileID: 21300000, guid: 12936fab4a54245f5aa7188bbbaedde4, type: 3}
+      type: 3
