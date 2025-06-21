@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-This Google Mobile Ads plugin library manifest will get merged with your
-application's manifest, adding the necessary metadata
-required for displaying ads.
--->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.google.unity.ads"
-    android:versionName="1.0"
-    android:versionCode="1">
-    <uses-sdk android:minSdkVersion="21"/>
-  <application>
-    <uses-library android:required="false" android:name="org.apache.http.legacy"/>
-  </application>
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!-- SDK hỗ trợ từ Android 5.0 trở lên -->
+    <uses-sdk android:minSdkVersion="21" />
+
+    <!-- Permissions cần thiết để chạy Google Ads -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application>
+        <!-- Dành cho Unity + HTTP (legacy support) -->
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <!-- App ID của Google AdMob (bắt buộc) -->
+        <!-- Nếu bạn chưa có app thật, có thể dùng ID test bên dưới -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+    </application>
 </manifest>

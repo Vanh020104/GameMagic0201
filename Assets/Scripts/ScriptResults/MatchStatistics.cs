@@ -29,14 +29,14 @@ public class MatchStatistics : MonoBehaviour
 
         // Gắn sự kiện x2 nếu có
         doubleRewardButton.onClick.AddListener(HandleDoubleRewardAd);
-          // Ẩn panel UpgradeLevelRank nếu có
+        // Ẩn panel UpgradeLevelRank nếu có
         if (upgradeLevelRankPanel != null)
             upgradeLevelRankPanel.SetActive(false);
 
         DailyTaskBridge.Instance?.TryAddProgress("kill_1", GameResultData.killCount);
         DailyTaskBridge.Instance?.TryAddProgress("kill_10", GameResultData.killCount);
 
-       if (GameResultData.battleLevel >= 5)
+        if (GameResultData.battleLevel >= 5)
             DailyTaskBridge.Instance?.TryAddProgress("reach_level_5", 1);
 
         if (GameResultData.battleLevel >= 10)
@@ -53,7 +53,7 @@ public class MatchStatistics : MonoBehaviour
             DailyTaskBridge.Instance?.TryAddProgress("win_match");
             DailyTaskBridge.Instance?.TryAddProgress("win_3_match");
         }
-        
+
         // 🎯 Nhiệm vụ sống sót theo thời gian
         int matchSeconds = Mathf.FloorToInt(GameResultData.matchTime);
 
@@ -69,7 +69,25 @@ public class MatchStatistics : MonoBehaviour
 
         // Bắt đầu coroutine delay 1s → show panel
         StartCoroutine(ShowUpgradePanelDelayed());
+        StartCoroutine(ShowRankPanelIfNeeded());
     }
+
+    private IEnumerator ShowRankPanelIfNeeded()
+    {
+        yield return new WaitForSeconds(2f); 
+
+        var rankPanel = FindObjectOfType<RankUpgradeRewardManager>();
+        if (rankPanel != null)
+        {
+            Debug.Log("🟢 Hiển thị Panel Upgrade Rank");
+            rankPanel.ShowRankUpgradePanel(GameResultData.rankBefore, GameResultData.rankAfter);
+        }
+        else
+        {
+            Debug.LogWarning("❌ Không tìm thấy RankUpgradeRewardManager (panel có bị inactive?)");
+        }
+    }
+
     private IEnumerator ShowUpgradePanelDelayed()
     {
         yield return new WaitForSeconds(0.5f);
