@@ -16,3 +16,4 @@ MonoBehaviour:
   mapName: HALLOWGRAVE
   thumbnail: {fileID: 21300000, guid: 87a2245dc1a52824d8ecd10015e11d3c, type: 3}
   prefabPath: Prefabs/GameBattle/Maps/Map_04
+  requiredLevel: 14

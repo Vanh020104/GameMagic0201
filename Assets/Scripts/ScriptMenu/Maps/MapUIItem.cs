@@ -8,6 +8,8 @@ public class MapUIItem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mapNameText;
     [SerializeField] private Button playButton;
 
+    [SerializeField] private GameObject panelBlock;  
+    [SerializeField] private TextMeshProUGUI numberConfirmText;
     private MapData currentMap;
 
     public void Setup(MapData data)
@@ -16,8 +18,21 @@ public class MapUIItem : MonoBehaviour
         thumbnail.sprite = data.thumbnail;
         mapNameText.text = data.mapName;
 
+        int playerLevel = PlayerPrefs.GetInt("PlayerLevel", 1); 
+
+        bool isUnlocked = playerLevel >= data.requiredLevel;
+        panelBlock.SetActive(!isUnlocked);
+
+        if (numberConfirmText != null)
+            numberConfirmText.text = $"Must be level {data.requiredLevel} to unlock!";
+
+        playButton.interactable = isUnlocked;
         playButton.onClick.RemoveAllListeners();
-        playButton.onClick.AddListener(OnPlayClicked);
+
+        if (isUnlocked)
+            playButton.onClick.AddListener(OnPlayClicked);
+        else
+            playButton.onClick.AddListener(() => AudioManager.Instance.PlaySFX(AudioManager.Instance.sfxClick));
     }
 
     private void OnPlayClicked()

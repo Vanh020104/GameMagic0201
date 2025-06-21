@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6634652964578084899}
   - component: {fileID: 3395436239424336345}
   - component: {fileID: 5982666669125630996}
+  - component: {fileID: 2225294411190726121}
   m_Layer: 5
   m_Name: 'EquipItemUI '
   m_TagString: Untagged
@@ -137,6 +138,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 7041037454831942666}
   selectedFrame: {fileID: 6210628993703945643}
+--- !u!114 &2225294411190726121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930691627952122009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee64744f5fc08546b449ad7621d4d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5276762635781789344
 GameObject:
   m_ObjectHideFlags: 0

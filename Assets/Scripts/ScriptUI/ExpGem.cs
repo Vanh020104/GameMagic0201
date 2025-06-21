@@ -17,6 +17,8 @@ public class ExpGem : MonoBehaviour
         {
             if (player.levelUI != null)
             {
+                if (AudioManager.Instance != null && AudioManager.Instance.sfxEatGem != null)
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.sfxEatGem);
                 player.levelUI.AddExp(expAmount);
                 if (spawner != null)
                     spawner.RespawnAfterDelay(3f);

@@ -13,6 +13,11 @@ public class AttackTrick02 : BaseSkill
         if (owner._mana < manaCost) return;
         owner._mana -= (int)manaCost;
         owner.GetComponent<Animator>()?.SetTrigger("Attack02");
+          if (AudioManager.Instance != null && AudioManager.Instance.sfxSwordSlash != null)
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.sfxSwordSlash);
+            }
+
         // DÙNG TÂM HERO để tính vùng chém
         Vector3 origin = owner.transform.position;
 

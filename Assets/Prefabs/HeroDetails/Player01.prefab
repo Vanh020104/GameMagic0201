@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 7442974442475462173}
   - component: {fileID: 5451885566146535211}
   - component: {fileID: 5749765694852748797}
+  - component: {fileID: 3066090282986821559}
   m_Layer: 5
   m_Name: Player01
   m_TagString: Untagged
@@ -395,3 +396,15 @@ MonoBehaviour:
   icon: {fileID: 5958296728079642448}
   button: {fileID: 3689238935446116818}
   levelText: {fileID: 9036119198608242782}
+--- !u!114 &3066090282986821559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8180668699303456062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee64744f5fc08546b449ad7621d4d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

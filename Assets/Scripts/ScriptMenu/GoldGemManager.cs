@@ -49,6 +49,11 @@ public class GoldGemManager : MonoBehaviour
     public void AddGold(int amount)
     {
         goldAmount += amount;
+        if (AudioManager.Instance != null && AudioManager.Instance.sfxGoldGain != null)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.sfxGoldGain);
+        }
+
         Debug.Log($" AddGold called: +{amount} → {goldAmount}");
         UpdateUI();
         SaveCurrencies();
@@ -58,6 +63,11 @@ public class GoldGemManager : MonoBehaviour
     public void AddGem(int amount)
     {
         gemAmount += amount;
+        if (AudioManager.Instance != null && AudioManager.Instance.sfxGoldGain != null)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.sfxGoldGain);
+        }
+
         Debug.Log($"💎 AddGem called: +{amount} → {gemAmount}");
         UpdateUI();
         SaveCurrencies();

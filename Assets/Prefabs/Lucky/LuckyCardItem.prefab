@@ -627,6 +627,7 @@ GameObject:
   - component: {fileID: 4053309317542162830}
   - component: {fileID: 4799455792401658254}
   - component: {fileID: 5996783966933648289}
+  - component: {fileID: 1752968877522907321}
   m_Layer: 5
   m_Name: LuckyCardItem
   m_TagString: Untagged
@@ -780,3 +781,15 @@ MonoBehaviour:
   iconLucky: {fileID: 4105902867845228570}
   luckyNameText: {fileID: 4117649836458018016}
   rewardAmountText: {fileID: 2426898708228053921}
+--- !u!114 &1752968877522907321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945741322002349624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee64744f5fc08546b449ad7621d4d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

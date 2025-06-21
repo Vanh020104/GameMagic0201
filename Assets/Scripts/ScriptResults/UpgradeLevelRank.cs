@@ -33,7 +33,21 @@ public class UpgradeLevelRank : MonoBehaviour
                 GameResultData.rankExpGained
             );
         }
+
+        // ✅ Chỉ hiển thị panel sau khi cộng EXP rank xong
+        if (GameResultData.rankAfter > GameResultData.rankBefore)
+        {
+            yield return new WaitForSeconds(0.3f); // delay nhẹ cho mượt
+
+            var rankPanel = FindObjectOfType<RankUpgradeRewardManager>();
+            if (rankPanel != null)
+            {
+                Debug.Log("🟢 Hiển thị Panel Upgrade Rank sau khi cộng xong EXP");
+                rankPanel.ShowRankUpgradePanel(GameResultData.rankBefore, GameResultData.rankAfter);
+            }
+        }
     }
+
     private IEnumerator AnimateLevelExp()
     {
         int level = GameResultData.levelBefore;

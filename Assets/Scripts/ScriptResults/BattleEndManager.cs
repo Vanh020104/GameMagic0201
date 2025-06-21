@@ -74,7 +74,6 @@ public class BattleEndManager : MonoBehaviour
             levelExp += 40;
             rankExp += 50;
         }
-
         Debug.Log($"[EXP] Level: {levelExp}, Rank: {rankExp}");
 
         // ========== 4. Cập nhật Level ==========
@@ -143,14 +142,6 @@ public class BattleEndManager : MonoBehaviour
         // ========== 8. Load Result Scene ==========
         SceneManager.LoadScene("Scene_Result");
     }
-
-    // private int GetExpToNextLevel(int level)
-    // {
-    //     return Mathf.RoundToInt(100 * Mathf.Pow(1.5f, level - 1));
-    // }
-
-
-
     public void ForceEndMatchByQuit()
     {
         Debug.Log("🏳️ Người chơi thoát trận giữa chừng → EndMatch()");

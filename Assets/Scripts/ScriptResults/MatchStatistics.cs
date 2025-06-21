@@ -69,12 +69,11 @@ public class MatchStatistics : MonoBehaviour
 
         // Bắt đầu coroutine delay 1s → show panel
         StartCoroutine(ShowUpgradePanelDelayed());
-        StartCoroutine(ShowRankPanelIfNeeded());
     }
 
     private IEnumerator ShowRankPanelIfNeeded()
     {
-        yield return new WaitForSeconds(2f); 
+        yield return new WaitForSeconds(4f); 
 
         var rankPanel = FindObjectOfType<RankUpgradeRewardManager>();
         if (rankPanel != null)
@@ -112,7 +111,7 @@ public class MatchStatistics : MonoBehaviour
             // Cập nhật lại UI sau khi cộng x2
             goldText.text = (GameResultData.gold * 2).ToString();
             gemText.text = (GameResultData.gem * 2).ToString();
-            keyText.text = (GameResultData.key * 2).ToString();
+            keyText.text = (GameResultData.key * 1).ToString();
 
             doubleRewardButton.interactable = false;
             hasClaimedDouble = true;

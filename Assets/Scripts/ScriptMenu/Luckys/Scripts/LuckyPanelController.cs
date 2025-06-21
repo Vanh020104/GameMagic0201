@@ -135,6 +135,11 @@ public class LuckyPanelController : MonoBehaviour
 
     public void DealCards(System.Action onComplete)
     {
+        if (AudioManager.Instance != null && AudioManager.Instance.sfxDealCards != null)
+        {
+            AudioManager.Instance.PlaySFXLoop(AudioManager.Instance.sfxDealCards);
+        }
+
         GameObject oldCard = cards.Count > 0 ? cards[0] : null;
         if (oldCard != null) Destroy(oldCard);
 
@@ -165,7 +170,14 @@ public class LuckyPanelController : MonoBehaviour
               .SetDelay(i * 0.05f);
         }
 
-        StartCoroutine(InvokeAfterDelay(0.6f + 9 * 0.05f, onComplete));
+        StartCoroutine(InvokeAfterDelay(0.6f + 9 * 0.05f, () =>
+        {
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.StopSFXLoop();
+
+            onComplete?.Invoke();
+        }));
+
     }
 
     private IEnumerator PreviewSequence()

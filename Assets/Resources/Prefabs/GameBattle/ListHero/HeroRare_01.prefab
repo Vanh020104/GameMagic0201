@@ -951,7 +951,7 @@ MonoBehaviour:
   _animator: {fileID: 2989805100702244548}
   fixedJoystick: {fileID: 0}
   _rigidbody: {fileID: 6487094537920252838}
-  speedPlayer: 20
+  speedPlayer: 22
   rotationSpeed: 15
   normal_attack_button: {fileID: 0}
   first_attack_button: {fileID: 0}

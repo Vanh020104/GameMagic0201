@@ -9,4 +9,6 @@ public class MapData : ScriptableObject
 
     [Header("Path trong Resources (ví dụ: Prefabs/GameBattle/Maps/Map_01)")]
     public string prefabPath;
+    [Header("Unlock Condition")]
+    public int requiredLevel = 1;
 }

@@ -559,7 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  offset: {x: 0, y: 56, z: -22}
+  offset: {x: 0, y: 65, z: -22}
   smoothTime: 0.15
   enableSmoothRotation: 0
   rotationSmoothSpeed: 10

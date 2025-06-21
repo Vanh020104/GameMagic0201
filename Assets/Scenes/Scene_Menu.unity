@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 33674783}
   - component: {fileID: 33674782}
   - component: {fileID: 33674784}
+  - component: {fileID: 33674785}
   m_Layer: 5
   m_Name: TapToPlayText
   m_TagString: Untagged
@@ -312,6 +313,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &33674785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33674780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee64744f5fc08546b449ad7621d4d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &38309411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,6 +1942,12 @@ MonoBehaviour:
   bgmHome: {fileID: 8300000, guid: 8f6c47f1a3291f34aacbd3c7df9a421d, type: 3}
   bgmCombat: {fileID: 8300000, guid: 453e265127897b44bad8e8f817e26d15, type: 3}
   bgmLoading: {fileID: 0}
+  sfxClick: {fileID: 8300000, guid: b8e76112f1005d447a1b97cea070d586, type: 3}
+  sfxEatGem: {fileID: 8300000, guid: b8e76112f1005d447a1b97cea070d586, type: 3}
+  sfxNormalAttack: {fileID: 8300000, guid: ae05bd6e6c5c58a4698394a58cf7452e, type: 3}
+  sfxSwordSlash: {fileID: 8300000, guid: fb8b5df5418da474f97db4dbf3c33d49, type: 3}
+  sfxDealCards: {fileID: 8300000, guid: b031a5bb165b9c343a8cd6d8088f71a1, type: 3}
+  sfxGoldGain: {fileID: 8300000, guid: eec60989de3128b4d83845786b77adf9, type: 3}
 --- !u!4 &1594418331
 Transform:
   m_ObjectHideFlags: 0

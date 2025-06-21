@@ -310,6 +310,7 @@ MonoBehaviour:
   homeScene: Scenes_Home_Game
   battleScene: LayoutBattle
   delayBeforeLoad: 1.5
+  loadingPanel: {fileID: 0}
 --- !u!114 &5214783211234528987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5594,6 +5595,7 @@ GameObject:
   - component: {fileID: 4829979580667916429}
   - component: {fileID: 841982863706621066}
   - component: {fileID: 7317643656998250374}
+  - component: {fileID: 3210257675858792184}
   m_Layer: 0
   m_Name: ButtonSetting
   m_TagString: Untagged
@@ -5714,6 +5716,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3210257675858792184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785443712085772060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee64744f5fc08546b449ad7621d4d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4802099964325454000
 GameObject:
   m_ObjectHideFlags: 0
@@ -10133,7 +10147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf7fbff8c2f1c314592fe6697be11bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlockLevel: 10
+  unlockLevel: 8
   lockGroup: {fileID: 2515619399406832365}
   unlockButton: {fileID: 291094723959610949}
   glowBorder: {fileID: 6703400838415783012}
@@ -10834,12 +10848,12 @@ PrefabInstance:
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 256
+      value: 342.91193
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 256
+      value: 297.11642
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
@@ -10860,6 +10874,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fixed Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: snapX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2929252285020698103, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}

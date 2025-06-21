@@ -163,7 +163,12 @@ public class PlayerController : MonoBehaviour
         newProjectile.transform.forward = _transform.forward;
         newProjectile.transform.SetParent(null);
         newProjectile.transform.position = projectileProsition.position;
+        if (AudioManager.Instance != null && AudioManager.Instance.sfxNormalAttack != null)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.sfxNormalAttack);
+        }
         Destroy(newProjectile, 2f);
+        
     }
 
     private IEnumerator NormalAttackCooldown()
