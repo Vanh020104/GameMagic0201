@@ -37,6 +37,7 @@ public class AudioManager : MonoBehaviour
         sfxSource = gameObject.AddComponent<AudioSource>();
         sfxSource.loop = false;
         sfxSource.playOnAwake = false;
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 
     public void PlayMusic(AudioClip clip)
