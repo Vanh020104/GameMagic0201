@@ -16,7 +16,7 @@ MonoBehaviour:
   heroName: Aurelion
   heroIcon: {fileID: 21300000, guid: e65981c0a5f79b54ebc5e92543de801d, type: 3}
   baseHealth: 1342
-  baseDamage: 80
+  baseDamage: 212
   baseSpeed: 17
   defaultLevel: 1
   maxLevel: 45

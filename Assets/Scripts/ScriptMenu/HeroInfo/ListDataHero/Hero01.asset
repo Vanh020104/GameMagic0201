@@ -16,7 +16,7 @@ MonoBehaviour:
   heroName: Zyric
   heroIcon: {fileID: 21300000, guid: 338e1284d151ac24d898c8f2676e3d49, type: 3}
   baseHealth: 1253
-  baseDamage: 80
+  baseDamage: 212
   baseSpeed: 17
   defaultLevel: 1
   maxLevel: 30

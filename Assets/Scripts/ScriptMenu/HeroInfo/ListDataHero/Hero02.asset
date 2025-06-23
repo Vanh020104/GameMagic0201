@@ -16,7 +16,7 @@ MonoBehaviour:
   heroName: Pyroskull
   heroIcon: {fileID: 21300000, guid: 496cf4eb09c2bbd498129fc66de51ebd, type: 3}
   baseHealth: 1253
-  baseDamage: 80
+  baseDamage: 235
   baseSpeed: 17
   defaultLevel: 1
   maxLevel: 30

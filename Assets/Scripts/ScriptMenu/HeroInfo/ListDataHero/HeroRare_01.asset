@@ -16,7 +16,7 @@ MonoBehaviour:
   heroName: Elowen
   heroIcon: {fileID: 21300000, guid: 591cb7b43f1c3b34f84d79ab72c7b728, type: 3}
   baseHealth: 1600
-  baseDamage: 80
+  baseDamage: 287
   baseSpeed: 17
   defaultLevel: 1
   maxLevel: 45

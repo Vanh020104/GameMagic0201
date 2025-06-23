@@ -36,11 +36,12 @@ public class RankDataManager : MonoBehaviour
         CurrentRankExp += amount;
 
         while (CurrentRankIndex + 1 < rankDatabase.ranks.Length &&
-               CurrentRankExp >= rankDatabase.ranks[CurrentRankIndex + 1].requiredExp)
+       CurrentRankExp >= rankDatabase.ranks[CurrentRankIndex + 1].requiredExp)
         {
+            CurrentRankExp -= rankDatabase.ranks[CurrentRankIndex + 1].requiredExp;
             CurrentRankIndex++;
-            CurrentRankExp = 0;
         }
+
 
         SaveRank();
     }

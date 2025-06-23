@@ -88,7 +88,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.1737089, z: 1.1737089}
-  m_LocalScale: {x: 0.9389671, y: 0.9389671, z: 0.9389671}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9190623526661101670}
@@ -694,12 +694,14 @@ MonoBehaviour:
   cooldownMoveDistance: 50
   moveSpeed: 15
   attackCooldown: 2
+  healSearchRange: 80
   target: {fileID: 0}
   botStats: {fileID: 0}
   projectilePrefab: {fileID: 1189473170883990, guid: 14160a901e83cfc43a147eee3b4315d8,
     type: 3}
   projectileSpawnPoint: {fileID: 1769436925086417032}
   projectileLifetime: 2
+  healCooldown: 5
 --- !u!114 &4101973411424571110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,6 +741,7 @@ MonoBehaviour:
   isDead: 0
   healHeartPrefab: {fileID: 621584630249350254, guid: af9d1131c788d454fa7dae4544fa99d2,
     type: 3}
+  lastHealTime: -999
 --- !u!4 &9190623526661101670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c80a4a38f020bd84ba1c865d2ee9fefe,

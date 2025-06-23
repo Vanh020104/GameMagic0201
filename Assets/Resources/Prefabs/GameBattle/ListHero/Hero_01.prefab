@@ -854,7 +854,7 @@ MonoBehaviour:
     type: 3}
   vfxAttachPoint: {fileID: 1601974896915195323}
   levelUI: {fileID: 0}
-  baseDamage: 50
+  baseDamage: 200
   hpText: {fileID: 0}
   hpFillImage: {fileID: 0}
   isDead: 0

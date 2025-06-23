@@ -16,7 +16,7 @@ MonoBehaviour:
   heroName: Gravehex
   heroIcon: {fileID: 21300000, guid: 87eca09b4be76654a840d443415aae4e, type: 3}
   baseHealth: 1450
-  baseDamage: 80
+  baseDamage: 273
   baseSpeed: 17
   defaultLevel: 1
   maxLevel: 45

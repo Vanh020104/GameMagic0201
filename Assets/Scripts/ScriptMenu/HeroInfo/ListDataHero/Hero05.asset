@@ -16,7 +16,7 @@ MonoBehaviour:
   heroName: Nyra
   heroIcon: {fileID: 21300000, guid: 4741360025777c446bbbc4780e894c65, type: 3}
   baseHealth: 1342
-  baseDamage: 80
+  baseDamage: 253
   baseSpeed: 17
   defaultLevel: 1
   maxLevel: 45

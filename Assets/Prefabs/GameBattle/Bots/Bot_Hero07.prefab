@@ -24,9 +24,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205786207570950969}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.91435194, y: 1.1737089, z: 1.5911245}
-  m_LocalScale: {x: 0.9389671, y: 0.9389671, z: 0.9389671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.25, z: 1.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3434062983191967799}
@@ -55,9 +55,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2324911716686811770}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.91435194, y: 2.8169012, z: 0.41741562}
-  m_LocalScale: {x: 0.9389671, y: 0.9389671, z: 0.9389671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3434062983191967799}
@@ -86,9 +86,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4991176431783349799}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.91435194, y: 3.0516431, z: 0.41741562}
-  m_LocalScale: {x: 0.9389671, y: 0.9389671, z: 0.9389671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.26, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3434062983191967799}
@@ -584,12 +584,14 @@ MonoBehaviour:
   cooldownMoveDistance: 50
   moveSpeed: 15
   attackCooldown: 2
+  healSearchRange: 80
   target: {fileID: 0}
   botStats: {fileID: 0}
   projectilePrefab: {fileID: 1189473170883990, guid: aa5a629ac38ea7e458e01f129df1437e,
     type: 3}
   projectileSpawnPoint: {fileID: 2637855676578169673}
   projectileLifetime: 2
+  healCooldown: 5
 --- !u!114 &-6664590208464195951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,6 +631,7 @@ MonoBehaviour:
   isDead: 0
   healHeartPrefab: {fileID: 621584630249350254, guid: af9d1131c788d454fa7dae4544fa99d2,
     type: 3}
+  lastHealTime: -999
 --- !u!4 &3434062983191967799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6081cae3b85d9284bae9023e852f953f,

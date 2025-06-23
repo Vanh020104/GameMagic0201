@@ -140,13 +140,14 @@ public class PlayerController : MonoBehaviour
     /// Chiêu Normal bắn đạn 
     public void NormalAttack()
     {
-        if (!canUserNormalAttack) return;
-        // playerInfo._mana -= 5;
+        if (!canUserNormalAttack || playerInfo == null || playerInfo.hasDied || playerInfo._hp <= 0)
+            return;
+
         _animator.SetTrigger("Attack");
         StartCoroutine(DelayAddBullet());
-        // hồi chiêuchiêu
         StartCoroutine(NormalAttackCooldown());
     }
+
     // ham đợi để bắn chiêu cho trùng với aniamtion chémchém
     private IEnumerator DelayAddBullet()
     {

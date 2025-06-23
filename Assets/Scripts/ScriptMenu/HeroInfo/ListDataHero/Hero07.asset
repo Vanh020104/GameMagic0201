@@ -16,7 +16,7 @@ MonoBehaviour:
   heroName: Voltash
   heroIcon: {fileID: 21300000, guid: c41208cf8cbf90342981030cb7bf8a78, type: 3}
   baseHealth: 1450
-  baseDamage: 80
+  baseDamage: 215
   baseSpeed: 17
   defaultLevel: 1
   maxLevel: 45

@@ -16,7 +16,7 @@ MonoBehaviour:
   heroName: Kael
   heroIcon: {fileID: 21300000, guid: c090e53365b128140b23ee7a1ce53182, type: 3}
   baseHealth: 1342
-  baseDamage: 80
+  baseDamage: 245
   baseSpeed: 17
   defaultLevel: 1
   maxLevel: 45

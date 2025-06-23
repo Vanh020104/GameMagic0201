@@ -57,6 +57,8 @@ public class RankUIController : MonoBehaviour
             if (rankExpText != null)
                 rankExpText.text = $"{data.CurrentRankExp} / {nextExp}";
         }
+        Debug.Log($"[RankUI] RankIndex: {data.CurrentRankIndex}, Exp: {data.CurrentRankExp}");
+
     }
 
     public IEnumerator AnimateRankGain(int beforeIndex, int beforeExp, int gainedExp)

@@ -145,7 +145,10 @@ public class ProjectileMoveScript : MonoBehaviour
         // === DAMAGE HANDLING ===
         if (botInfo != null && botInfo != ownerBot)
         {
-            int damage = owner != null ? owner.baseDamage : 50;
+            int damage = owner != null 
+            ? owner.baseDamage 
+            : (ownerBot != null ? ownerBot.baseDamage : 50); 
+
             botInfo.currentHP = Mathf.Max(0, botInfo.currentHP - damage);
 
             if (owner != null && owner.isLocalPlayer)
