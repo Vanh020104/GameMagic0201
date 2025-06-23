@@ -328,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 2745841864948310359, guid: 813aee30bde39d24380bf07b61facc07,
     type: 3}
-  mapPrefab: {fileID: 4389655451339081302, guid: 03420cadc0a55924d95a0711c5f060da,
+  mapPrefab: {fileID: 3546187913135522255, guid: 6ad5bb5fa67361f4d92b5dfd8d4b7b9f,
     type: 3}
   botPrefabs:
   - {fileID: 18952434338952443, guid: 7bce05c5eee3bf84e8d91cf885576103, type: 3}
