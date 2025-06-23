@@ -75,7 +75,7 @@ public class RankUIController : MonoBehaviour
             if (currentExp >= expToNext)
             {
                 currentIndex++;
-                currentExp = 0;
+                currentExp -= expToNext;
             }
 
             UpdateAnimatedUI(currentIndex, currentExp);

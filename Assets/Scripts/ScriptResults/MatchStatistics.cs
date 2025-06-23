@@ -71,22 +71,6 @@ public class MatchStatistics : MonoBehaviour
         StartCoroutine(ShowUpgradePanelDelayed());
     }
 
-    private IEnumerator ShowRankPanelIfNeeded()
-    {
-        yield return new WaitForSeconds(4f); 
-
-        var rankPanel = FindObjectOfType<RankUpgradeRewardManager>();
-        if (rankPanel != null)
-        {
-            Debug.Log("🟢 Hiển thị Panel Upgrade Rank");
-            rankPanel.ShowRankUpgradePanel(GameResultData.rankBefore, GameResultData.rankAfter);
-        }
-        else
-        {
-            Debug.LogWarning("❌ Không tìm thấy RankUpgradeRewardManager (panel có bị inactive?)");
-        }
-    }
-
     private IEnumerator ShowUpgradePanelDelayed()
     {
         yield return new WaitForSeconds(0.5f);

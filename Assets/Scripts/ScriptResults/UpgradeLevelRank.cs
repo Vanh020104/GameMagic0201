@@ -37,12 +37,10 @@ public class UpgradeLevelRank : MonoBehaviour
         // ✅ Chỉ hiển thị panel sau khi cộng EXP rank xong
         if (GameResultData.rankAfter > GameResultData.rankBefore)
         {
-            yield return new WaitForSeconds(0.3f); // delay nhẹ cho mượt
-
+            yield return new WaitForSeconds(0.2f);
             var rankPanel = FindObjectOfType<RankUpgradeRewardManager>();
             if (rankPanel != null)
             {
-                Debug.Log("🟢 Hiển thị Panel Upgrade Rank sau khi cộng xong EXP");
                 rankPanel.ShowRankUpgradePanel(GameResultData.rankBefore, GameResultData.rankAfter);
             }
         }
