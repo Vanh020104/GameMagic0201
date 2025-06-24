@@ -158,6 +158,10 @@ public class PlayerInfo : MonoBehaviour
         hasDied = false;
     }
 
+    public void PlayVictoryAnimation()
+    {   
+        GetComponent<Animator>()?.SetTrigger("Cheer");
+    }
 
     public void FinishDeath()
     {

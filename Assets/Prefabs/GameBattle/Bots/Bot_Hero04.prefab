@@ -538,8 +538,8 @@ Rigidbody:
   m_GameObject: {fileID: 2901758508231510952}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 3
+  m_AngularDrag: 5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -617,15 +617,18 @@ MonoBehaviour:
   attackRange: 40
   minAttackDistance: 15
   fleeDistance: 25
-  cooldownMoveDistance: 50
   moveSpeed: 15
   attackCooldown: 2
-  target: {fileID: 0}
-  botStats: {fileID: 0}
+  healSearchRange: 80
   projectilePrefab: {fileID: 1635929141316648, guid: 15921147cf9a2b84091518f0a6d7c2b4,
     type: 3}
   projectileSpawnPoint: {fileID: 2659217708494778653}
   projectileLifetime: 2
+  target: {fileID: 0}
+  currentState: 0
+  moveDestination: {x: 0, y: 0, z: 0}
+  botStats: {fileID: 0}
+  healCooldown: 5
 --- !u!114 &-6098164564431821013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,3 +668,4 @@ MonoBehaviour:
   isDead: 0
   healHeartPrefab: {fileID: 621584630249350254, guid: af9d1131c788d454fa7dae4544fa99d2,
     type: 3}
+  lastHealTime: -999

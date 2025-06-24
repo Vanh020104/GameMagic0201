@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e109967f00c8943b306e1ec5ed4b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 2745841864948310359, guid: 813aee30bde39d24380bf07b61facc07,
+  playerPrefab: {fileID: 3539661821103264745, guid: e3316c79a73da4d4aa6b19a1b6534a97,
     type: 3}
   mapPrefab: {fileID: 3546187913135522255, guid: 6ad5bb5fa67361f4d92b5dfd8d4b7b9f,
     type: 3}
@@ -539,13 +539,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146913562}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433915}
+  m_LocalRotation: {x: 0.46174863, y: 0, z: 0, w: 0.8870109}
   m_LocalPosition: {x: -145, y: 60.13333, z: 84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 65, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 55, y: 0, z: 0}
 --- !u!114 &1146913567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  offset: {x: 0, y: 65, z: -22}
+  offset: {x: 0, y: 60, z: -38}
   smoothTime: 0.15
   enableSmoothRotation: 0
   rotationSmoothSpeed: 10

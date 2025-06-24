@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -30,15 +31,26 @@ public class KillInfoUIHandler : MonoBehaviour
         UpdateUI();
         if (totalPlayers == 1 && FindObjectOfType<PlayerInfo>()?.isLocalPlayer == true)
         {
+            GameResultData.playerRank = 1;
+
+            var player = FindObjectOfType<PlayerInfo>();
+            player?.PlayVictoryAnimation();
+
             var endManager = FindObjectOfType<BattleEndManager>();
             if (endManager != null)
             {
-                GameResultData.playerRank = 1;
                 endManager.isWin = true;
-                endManager.EndMatch();
+                endManager.StartCoroutine(DelayEndMatch(endManager, 4f));
             }
         }
+
     }
+    private IEnumerator DelayEndMatch(BattleEndManager endManager, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        endManager.EndMatch();
+    }
+
 
     private void UpdateUI()
     {

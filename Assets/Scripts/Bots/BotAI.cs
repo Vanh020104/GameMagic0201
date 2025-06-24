@@ -46,10 +46,10 @@ public class BotAI : MonoBehaviour
     public Transform projectileSpawnPoint;
     public float projectileLifetime = 1f;
     private float aiTickTimer = 0f;
-    private float aiTickRate = 0.2f;
+    private float aiTickRate = 0.1f;
 
     private float pathTickTimer = 0f;
-    private float pathTickRate = 0.08f;
+    private float pathTickRate = 0.05f;
     [SerializeField] float healCooldown = 5f;
     private float lastHealTime = -999f;
     private float animSpeed = 0f;
@@ -63,7 +63,7 @@ public class BotAI : MonoBehaviour
         botStats = GetComponent<BotStats>();
         path = new NavMeshPath();
         lastPos = transform.position;
-        aiTickRate += Random.Range(-0.08f, 0.08f);
+        aiTickRate += Random.Range(-0.05f, 0.05f);
         InvokeRepeating(nameof(ChooseWanderTarget), 0f, 5f);
         InvokeRepeating(nameof(RegenMana), 1f, 1f);
     }
@@ -222,10 +222,18 @@ public class BotAI : MonoBehaviour
 
         if (isTooClose)
         {
+            if (botStats.currentMana >= 5f && IsFacingTarget() && HasClearLineOfSightTo())
+            {
+                currentState = State.Attack; // vẫn cho bắn gần nếu xoay mặt đc
+                return;
+            }
+
+            // Nếu không thể bắn thì né ra
             cooldownTarget = GetFleePosition();
             currentState = State.Cooldown;
             return;
         }
+
 
         if (Time.time - lastAttackTime < attackCooldown)
         {
@@ -420,13 +428,16 @@ public class BotAI : MonoBehaviour
     float dist = Vector3.Distance(transform.position, target.position);
 
     // ✅ Nếu không có tầm nhìn, di chuyển để tìm góc bắn
-    if (!HasClearLineOfSightTo())
+   if (!HasClearLineOfSightTo())
     {
+        // Nếu đã từng bắn và mất tầm nhìn → đổi vị trí né ra
         cooldownTarget = GetCooldownDestination();
-        ResetPathIfTargetChanged(cooldownTarget);
-        MoveAlongPath(cooldownTarget);
+        currentState = State.Cooldown;
+        pathPoints.Clear();
+        currentPathIndex = 0;
         return;
     }
+
 
     // Nếu không thể bắn do cooldown hoặc chưa quay mặt
     if (!CanShootNow())
@@ -581,15 +592,30 @@ public class BotAI : MonoBehaviour
         Vector3 dest = transform.position + away * cooldownMoveDistance;
 
         // 🛑 Nếu NavMesh không hợp lệ thì fallback
+        Vector3 safePos;
+
         if (!NavMesh.SamplePosition(dest, out NavMeshHit hit, 8f, NavMesh.AllAreas))
         {
-            // fallback đi thẳng ra giữa map (hoặc random)
-            Vector3 fallback = transform.position + Random.insideUnitSphere * 20f;
-            fallback.y = 0;
-            return ClampToNavMesh(fallback);
+            // fallback đi gần trung tâm map
+            Vector3 fallback = transform.position + (Vector3.zero - transform.position).normalized * 30f;
+
+            if (!NavMesh.SamplePosition(fallback, out hit, 12f, NavMesh.AllAreas))
+            {
+                safePos = transform.position + Random.insideUnitSphere * 10f;
+                safePos.y = 0;
+            }
+            else
+            {
+                safePos = hit.position;
+            }
+        }
+        else
+        {
+            safePos = hit.position;
         }
 
-        return hit.position;
+        return safePos;
+
     }
 
 
@@ -792,3 +818,4 @@ public class BotAI : MonoBehaviour
     }
 
 }
+

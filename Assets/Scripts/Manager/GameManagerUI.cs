@@ -23,18 +23,6 @@ public class GameManagerUI : MonoBehaviour
             {
                 map = Instantiate(loaded, Vector3.zero, Quaternion.identity);
 
-
-
-            GameObject zonePrefab = Resources.Load<GameObject>("ZoneManager");
-            if (zonePrefab != null)
-            {
-                GameObject zone = Instantiate(zonePrefab);
-
-                // dùng bound của collider map
-                Collider mapCol = map.GetComponentInChildren<Collider>();
-                zone.transform.position = mapCol != null ? mapCol.bounds.center : Vector3.zero;
-            }
-
             }
             else
             {
@@ -113,37 +101,109 @@ public class GameManagerUI : MonoBehaviour
             return;
         }
 
+
+        /// Spawn Bot
         int totalSpawnPoints = spawnGroup.spawnPoints.Length;
+
+        int playerLevel = PlayerPrefs.GetInt("PlayerLevel", 1);
+
+        // 🧠 Xác định tỷ lệ bot theo từng mốc level rõ ràng
+        float weakRate, mediumRate, strongRate;
+
+        if (playerLevel <= 2)
+        {
+            weakRate = 0.8f; mediumRate = 0.2f; strongRate = 0f;
+        }
+        else if (playerLevel <= 4)
+        {
+            weakRate = 0.6f; mediumRate = 0.4f; strongRate = 0f;
+        }
+        else if (playerLevel == 5)
+        {
+            weakRate = 0.4f; mediumRate = 0.5f; strongRate = 0.1f;
+        }
+        else if (playerLevel <= 7)
+        {
+            weakRate = 0.3f; mediumRate = 0.5f; strongRate = 0.2f;
+        }
+        else if (playerLevel <= 9)
+        {
+            weakRate = 0.2f; mediumRate = 0.5f; strongRate = 0.3f;
+        }
+        else if (playerLevel <= 12)
+        {
+            weakRate = 0.1f; mediumRate = 0.4f; strongRate = 0.5f;
+        }
+        else
+        {
+            weakRate = 0.1f; mediumRate = 0.3f; strongRate = 0.6f;
+        }
+
+        Debug.Log($"[SpawnBot] Level {playerLevel} → Yếu: {weakRate:P0}, Trung: {mediumRate:P0}, Mạnh: {strongRate:P0}");
 
         for (int i = 0; i < totalSpawnPoints; i++)
         {
-            GameObject botPrefab = botPrefabs[i % botPrefabs.Count];
-            Transform spawnPos = spawnGroup.spawnPoints[i];
+            float roll = Random.value;
+            int botLevel;
 
-            GameObject bot = Instantiate(botPrefab, spawnPos.position, spawnPos.rotation);
+            if (roll < weakRate)
+                botLevel = 0;
+            else if (roll < weakRate + mediumRate)
+                botLevel = 1;
+            else
+                botLevel = 2;
 
-            // Đóng bot vào container
-            bot.transform.SetParent(botContainer.transform);
-            var botStats = bot.GetComponent<BotStats>();
-            var playerInfo = player.GetComponent<PlayerInfo>();
-            if (botStats != null && playerInfo != null)
-            {
-                InitBotStats(botStats, playerInfo);
-            }
+            SpawnBot(spawnGroup.spawnPoints[i], player.GetComponent<PlayerInfo>(), botLevel);
         }
+
 
         int total = totalSpawnPoints + 1; // 1 player chính
         FindObjectOfType<KillInfoUIHandler>()?.Init(total);
     }
 
+    private void SpawnBot(Transform spawnPoint, PlayerInfo playerInfo, int botLevel)
+    {
+        GameObject botPrefab = botPrefabs[Random.Range(0, botPrefabs.Count)];
+        GameObject bot = Instantiate(botPrefab, spawnPoint.position, spawnPoint.rotation);
+        bot.transform.SetParent(botContainer.transform);
 
-    private void InitBotStats(BotStats botStats, PlayerInfo playerInfo)
+        var botStats = bot.GetComponent<BotStats>();
+        if (botStats != null)
+        {
+            InitBotStats(botStats, playerInfo, botLevel);
+        }
+    }
+
+    private void InitBotStats(BotStats botStats, PlayerInfo playerInfo, int botLevel)
     {
         int playerHP = playerInfo._hpMax;
         int playerDamage = playerInfo.baseDamage;
 
-        int botHP = Mathf.RoundToInt(Random.Range(playerHP * 0.8f, playerHP * 1.2f));
-        int botDamage = Mathf.RoundToInt(Random.Range(playerDamage * 0.8f, playerDamage * 1f));
+        float hpMultiplier, dmgMultiplier;
+
+        switch (botLevel)
+        {
+            case 0: // yếu
+                hpMultiplier = Random.Range(0.8f, 1.0f);
+                dmgMultiplier = Random.Range(0.7f, 0.9f);
+                break;
+            case 1: // trung bình
+                hpMultiplier = Random.Range(1.0f, 1.3f);
+                dmgMultiplier = Random.Range(0.9f, 1.1f);
+                break;
+            case 2: // mạnh
+                hpMultiplier = Random.Range(1.3f, 1.6f);
+                dmgMultiplier = Random.Range(1.1f, 1.4f);
+                break;
+            default:
+                hpMultiplier = 1f;
+                dmgMultiplier = 1f;
+                break;
+        }
+
+        int botHP = Mathf.RoundToInt(playerHP * hpMultiplier);
+        int botDamage = Mathf.RoundToInt(playerDamage * dmgMultiplier);
+
         botStats.maxHP = botHP;
         botStats.currentHP = botHP;
         botStats.baseDamage = botDamage;
@@ -151,5 +211,6 @@ public class GameManagerUI : MonoBehaviour
         botStats.maxMana = 100;
         botStats.currentMana = 100;
     }
+
 
 }
