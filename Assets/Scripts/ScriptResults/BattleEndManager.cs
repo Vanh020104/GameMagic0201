@@ -132,7 +132,7 @@ public class BattleEndManager : MonoBehaviour
 
         int key = 0;
         if (killCount >= 5 || timer >= 90)
-            key = Random.Range(1, 4);
+            key = Random.Range(1, 3);
         else if (killCount >= 2)
             key = 1;
 

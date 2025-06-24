@@ -190,23 +190,65 @@ public class MatchStatistics : MonoBehaviour
     }
 
 
+    // public void RetryCurrentMap()
+    // {
+    //     if (GameData.SelectedMap != null)
+    //     {
+    //         Debug.Log($"🔁 Retry map: {GameData.SelectedMap.mapName}");
+
+    //         // Dùng Loading nếu có
+    //         if (GlobalLoadingController.Instance != null)
+    //             GlobalLoadingController.Instance.LoadSceneWithDelay("LayoutBattle", 2f);
+    //         else
+    //             UnityEngine.SceneManagement.SceneManager.LoadScene("LayoutBattle");
+    //     }
+    //     else
+    //     {
+    //         Debug.LogWarning("⚠️ GameData.SelectedMap is null. Can't retry!");
+    //     }
+    // }
     public void RetryCurrentMap()
     {
-        if (GameData.SelectedMap != null)
+        if (GameData.SelectedMap == null)
         {
-            Debug.Log($"🔁 Retry map: {GameData.SelectedMap.mapName}");
+            Debug.LogWarning("⚠️ GameData.SelectedMap is null. Can't retry!");
+            return;
+        }
 
-            // Dùng Loading nếu có
-            if (GlobalLoadingController.Instance != null)
-                GlobalLoadingController.Instance.LoadSceneWithDelay("LayoutBattle", 2f);
-            else
-                UnityEngine.SceneManagement.SceneManager.LoadScene("LayoutBattle");
+        // Lấy số lần đã chơi lại
+        int retryCounter = PlayerPrefs.GetInt("RetryCounter", 0);
+        retryCounter++;
+        PlayerPrefs.SetInt("RetryCounter", retryCounter);
+        PlayerPrefs.Save();
+
+        Debug.Log($"🔁 Retry count: {retryCounter}");
+
+        // Cứ mỗi 2 lần thì bắt xem quảng cáo
+        if (retryCounter % 2 == 0)
+        {
+            Debug.Log("📺 Show ad before retrying...");
+
+            AdManager.Instance.ShowRewardedAd(() =>
+            {
+                ReloadBattleScene();
+                DailyTaskBridge.Instance?.TryAddProgress("watch_ads");
+            });
         }
         else
         {
-            Debug.LogWarning("⚠️ GameData.SelectedMap is null. Can't retry!");
+            ReloadBattleScene();
         }
     }
+    private void ReloadBattleScene()
+    {
+        Debug.Log($"🔁 Reloading map: {GameData.SelectedMap.mapName}");
+
+        if (GlobalLoadingController.Instance != null)
+            GlobalLoadingController.Instance.LoadSceneWithDelay("LayoutBattle", 2f);
+        else
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LayoutBattle");
+    }
+
 
 
     //     void ShowRankMessage()

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class BattleLayout : MonoBehaviour
 {
+    public GameObject gameplayScenePopupVictory;
+
     public FixedJoystick joystick;
     public Button normalAttackBtn;
     public Button firstSkillBtn;

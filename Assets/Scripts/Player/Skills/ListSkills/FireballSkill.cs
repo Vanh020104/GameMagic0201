@@ -82,6 +82,7 @@ public class FireballSkill : BaseSkill
 
             if (owner.isLocalPlayer)
             {
+                FindObjectOfType<KillNotificationUI>()?.Show();
                 FindObjectOfType<KillInfoUIHandler>()?.AddKill();
             }
 

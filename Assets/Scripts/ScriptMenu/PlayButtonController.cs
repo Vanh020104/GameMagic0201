@@ -45,17 +45,18 @@ public class PlayButtonController : MonoBehaviour
     }
     public void ExitBattle()
     {
-        if (adManager != null && adManager.HasInterstitialReady())
-        {
-            adManager.ShowInterstitialAd(() =>
-            {
-                TriggerForcedEnd(); // ← xử lý kết quả trước khi chuyển scene
-            });
-        }
-        else
-        {
-            TriggerForcedEnd();
-        }
+        TriggerForcedEnd();
+        // if (adManager != null && adManager.HasInterstitialReady())
+        // {
+        //     adManager.ShowInterstitialAd(() =>
+        //     {
+        //         TriggerForcedEnd(); // ← xử lý kết quả trước khi chuyển scene
+        //     });
+        // }
+        // else
+        // {
+        //     TriggerForcedEnd();
+        // }
     }
 
     private void TriggerForcedEnd()

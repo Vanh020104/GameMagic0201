@@ -118,6 +118,7 @@ public class ProjectileMoveScript : MonoBehaviour
 
         if (owner != null && owner.isLocalPlayer)
         {
+            FindObjectOfType<KillNotificationUI>()?.Show();
             FindObjectOfType<KillInfoUIHandler>()?.AddKill();
 
             // ✅ Ghi nhận nhiệm vụ giết địch

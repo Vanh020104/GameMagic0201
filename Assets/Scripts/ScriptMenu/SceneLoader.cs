@@ -54,7 +54,7 @@ public class SceneLoader : MonoBehaviour
         }
 
         loadingText.text = "Loading... 100%";
-        yield return new WaitForSeconds(0.5f);
+        // yield return new WaitForSeconds(0.5f);
 
         SceneManager.LoadScene(sceneToLoad);
     }

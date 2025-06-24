@@ -11,6 +11,7 @@ public class KillInfoUIHandler : MonoBehaviour
     private int totalPlayers = 0;
     private int kills = 0;
 
+
     public void Init(int total)
     {
         totalPlayers = total;
@@ -29,6 +30,7 @@ public class KillInfoUIHandler : MonoBehaviour
     {
         totalPlayers--;
         UpdateUI();
+
         if (totalPlayers == 1 && FindObjectOfType<PlayerInfo>()?.isLocalPlayer == true)
         {
             GameResultData.playerRank = 1;
@@ -36,21 +38,21 @@ public class KillInfoUIHandler : MonoBehaviour
             var player = FindObjectOfType<PlayerInfo>();
             player?.PlayVictoryAnimation();
 
-            var endManager = FindObjectOfType<BattleEndManager>();
-            if (endManager != null)
-            {
-                endManager.isWin = true;
-                endManager.StartCoroutine(DelayEndMatch(endManager, 4f));
-            }
+            StartCoroutine(ShowVictoryPopupAfterDelay(2f));
         }
-
     }
-    private IEnumerator DelayEndMatch(BattleEndManager endManager, float delay)
+    private IEnumerator ShowVictoryPopupAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        endManager.EndMatch();
-    }
 
+        // Lấy popup Victory từ BattleLayout
+        var layout = UIManager.Instance?.GetLayout();
+        if (layout != null)
+        {
+            layout.gameplayScenePopupVictory?.SetActive(true);
+
+        }
+    }
 
     private void UpdateUI()
     {

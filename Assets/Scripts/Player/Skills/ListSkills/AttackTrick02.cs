@@ -86,6 +86,7 @@ public class AttackTrick02 : BaseSkill
 
             if (owner.isLocalPlayer)
             {
+                FindObjectOfType<KillNotificationUI>()?.Show();
                 FindObjectOfType<KillInfoUIHandler>()?.AddKill();
             }
 
