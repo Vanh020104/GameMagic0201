@@ -63,7 +63,9 @@ public class BotAI : MonoBehaviour
         botStats = GetComponent<BotStats>();
         path = new NavMeshPath();
         lastPos = transform.position;
-        aiTickRate += Random.Range(-0.05f, 0.05f);
+        aiTickRate = 0.2f + Random.Range(-0.03f, 0.03f);
+        pathTickRate = 0.2f;
+
         InvokeRepeating(nameof(ChooseWanderTarget), 0f, 5f);
         InvokeRepeating(nameof(RegenMana), 1f, 1f);
     }
@@ -81,8 +83,10 @@ public class BotAI : MonoBehaviour
         if (aiTickTimer >= aiTickRate)
         {
             aiTickTimer = 0f;
+            ForceMoveIfIdle(); // Đưa lên đây
             UpdateStateLogic();
         }
+
 
         ForceMoveIfIdle();
         CheckStuckAndResetIfNeeded();
@@ -224,11 +228,22 @@ public class BotAI : MonoBehaviour
         float dist = Vector3.Distance(transform.position, target.position);
 
         // Bỏ điều kiện minAttackDistance để bot luôn có thể bắn nếu đủ điều kiện
-        if (dist <= attackRange && CanShootNow()) // Kiểm tra CanShootNow ở đây
+        if (dist <= attackRange)
         {
-            currentState = State.Attack;
-            return;
+            if (CanShootNow())
+            {
+                currentState = State.Attack;
+                return;
+            }
+            else
+            {
+                cooldownTarget = GetCooldownDestination();
+                currentState = State.Cooldown;
+                ResetPathIfTargetChanged(cooldownTarget);
+                return;
+            }
         }
+
 
         // Nếu không thể bắn (do cooldown, mana, hoặc không đối mặt/chắn tầm nhìn)
         if (Time.time - lastAttackTime < attackCooldown || botStats.currentMana < 5f || !IsFacingTarget() || !HasClearLineOfSightTo())
@@ -239,7 +254,7 @@ public class BotAI : MonoBehaviour
                 pathPoints.Clear();
                 currentPathIndex = 0;
                 currentState = State.Cooldown;
-                 isForcingMovement = false;
+                isForcingMovement = false;
             }
             return;
         }
@@ -250,7 +265,7 @@ public class BotAI : MonoBehaviour
             currentState = State.Wander;
     }
 
-private bool isForcingMovement = false;
+    private bool isForcingMovement = false;
     bool HasClearLineOfSightTo(Transform targetToCheck = null)
     {
         if (targetToCheck == null) targetToCheck = target;
@@ -409,6 +424,7 @@ private bool isForcingMovement = false;
         ResetPathIfTargetChanged(chasePos);
         MoveAlongPath(chasePos);
     }
+    private float attackHoldTimer = 0f;
 
     void HandleAttack()
     {
@@ -431,30 +447,23 @@ private bool isForcingMovement = false;
         }
 
         // Nếu không thể bắn do cooldown hoặc chưa quay mặt ĐỦ
-        if (Time.time - lastAttackTime < attackCooldown || !IsFacingTarget())
+        if (!CanShootNow())
         {
-            // Vẫn ở trạng thái Attack nhưng không bắn, và chuyển sang Cooldown nếu cần né
-            if (dist < minAttackDistance) // Nếu quá gần thì vẫn né ra
+            // Cho bot thời gian quay đầu trước khi bỏ bắn
+            attackHoldTimer += Time.deltaTime;
+            LookAtTargetSmooth();
+
+            if (attackHoldTimer > 0.4f)
             {
-                cooldownTarget = GetFleePosition();
-                currentState = State.Cooldown;
-            }
-            else // Nếu không quá gần nhưng chưa đủ điều kiện bắn, vẫn ở trạng thái Attack nhưng không di chuyển hoặc di chuyển nhẹ
-            {
-                // Có thể thêm logic di chuyển nhẹ nhàng xung quanh target để duy trì tầm nhìn
-                if (Random.value < 0.5f)
-                {
-                    cooldownTarget = ClampToNavMesh(target.position + (transform.position - target.position).normalized * (minAttackDistance + Random.Range(2f, 5f)));
-                }
-                else
-                {
-                    cooldownTarget = GetCooldownDestination();
-                }
+                cooldownTarget = GetCooldownDestination();
                 currentState = State.Cooldown;
                 ResetPathIfTargetChanged(cooldownTarget);
+                attackHoldTimer = 0f;
             }
             return;
         }
+
+
 
         // Đã facing + đủ mana + có tầm nhìn → bắn
         LookAtTargetSmooth();
@@ -520,9 +529,13 @@ private bool isForcingMovement = false;
     {
         if (pathPoints.Count == 0 || currentPathIndex >= pathPoints.Count)
         {
-            anim.SetFloat("Speed", 0f);
+            cooldownTarget = GetCooldownDestination();
+            ResetPathIfTargetChanged(cooldownTarget);
+            anim.SetFloat("Speed", 1f); // vẫn chạy animation di chuyển
             return;
         }
+
+
 
         Vector3 currentPos = ClampToNavMesh(transform.position);
         Vector3 targetPoint = pathPoints[currentPathIndex];
@@ -547,15 +560,18 @@ private bool isForcingMovement = false;
         dir.Normalize();
 
         // Di chuyển bot
-        rb.MovePosition(currentPos + dir * moveSpeed * Time.deltaTime);
+        Vector3 velocity = dir * moveSpeed;
+        rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
+
 
         // Quay bot mượt mà hơn
-        if (dir.sqrMagnitude > 0.01f)
+        // Trong đoạn xử lý rotation
+        if (currentState != State.Attack && dir.sqrMagnitude > 0.01f)
         {
-            // Điều chỉnh tốc độ quay để mượt mà hơn, ví dụ 20f
-            Quaternion lookRot = Quaternion.LookRotation(new Vector3(dir.x, 0, dir.z)); // Chỉ xoay trên mặt phẳng XZ
-            rb.rotation = Quaternion.Slerp(rb.rotation, lookRot, Time.deltaTime * 12f); // Đặt trực tiếp rb.rotation cho mượt hơn
+            Quaternion lookRot = Quaternion.LookRotation(new Vector3(dir.x, 0, dir.z));
+            rb.rotation = Quaternion.Slerp(rb.rotation, lookRot, Time.deltaTime * 12f);
         }
+
 
         anim.SetFloat("Speed", 1f);
     }
@@ -728,22 +744,29 @@ private bool isForcingMovement = false;
 
     void ForceMoveIfIdle()
     {
-        if (anim.GetFloat("Speed") <= 0.01f && currentState != State.Die) // Chỉ kiểm tra khi bot không chết
+        float moveDelta = Vector3.Distance(transform.position, lastPos);
+        lastPos = transform.position;
+
+        if (moveDelta < 0.05f)
             noMoveTimer += Time.deltaTime;
         else
             noMoveTimer = 0f;
 
-        // Giảm thời gian chờ để bot phản ứng nhanh hơn
-        if (noMoveTimer > 0.3f) // ⏱ Tăng lên để nhạy hơn
+        if (noMoveTimer > 0.3f)
         {
-            // Khi bot đứng yên quá lâu, ép nó di chuyển đến một vị trí ngẫu nhiên hoặc vị trí cooldown
             cooldownTarget = GetCooldownDestination();
             currentState = State.Cooldown;
+
             pathPoints.Clear();
             currentPathIndex = 0;
-            noMoveTimer = 0f; // Reset timer
+
+            ResetPathIfTargetChanged(cooldownTarget); // 👈 Bắt bot đi lại liền
+
+            noMoveTimer = 0f;
         }
+
     }
+
 
     void OnDrawGizmos()
     {
@@ -781,7 +804,7 @@ private bool isForcingMovement = false;
         }
 
         // Nếu bot bị kẹt quá lâu
-        if (stuckTimer > 1.5f && !isForcingMovement) // Giảm thời gian kẹt xuống
+        if (stuckTimer > 0.8f && !isForcingMovement)
         {
             cooldownTarget = GetFleePosition(); // Hoặc một điểm đến ngẫu nhiên khác
             currentState = State.Cooldown;
@@ -801,12 +824,11 @@ private bool isForcingMovement = false;
 
 
     public void SetWorldUI(GameObject ui) => worldUI = ui;
-
     bool IsFacingTarget()
     {
         if (!target) return false;
         Vector3 dir = (target.position - transform.position).normalized;
-        return Vector3.Dot(transform.forward, dir) > 0.55f;
+        return Vector3.Dot(transform.forward, dir) > 0.4f; // Giảm từ 0.55 → 0.4
     }
 
     bool IsTargetDead(Transform t)

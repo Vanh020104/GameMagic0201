@@ -327,17 +327,16 @@ MonoBehaviour:
   attackRange: 40
   minAttackDistance: 15
   fleeDistance: 25
-  moveSpeed: 15
+  cooldownMoveDistance: 50
+  moveSpeed: 20
   attackCooldown: 2
   healSearchRange: 80
+  target: {fileID: 0}
+  botStats: {fileID: 0}
   projectilePrefab: {fileID: 1737381284161942, guid: b8745ef0ea7bca949a6f69de8538afbc,
     type: 3}
   projectileSpawnPoint: {fileID: 4952494726652359019}
   projectileLifetime: 2
-  target: {fileID: 0}
-  currentState: 0
-  moveDestination: {x: 0, y: 0, z: 0}
-  botStats: {fileID: 0}
   healCooldown: 5
 --- !u!114 &3341797746012046274
 MonoBehaviour:
