@@ -1,0 +1,279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: LanguageVanh_es-ES
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es-ES
+  m_SharedData: {fileID: 11400000, guid: 71d0b3bd61dd7964b8cbf6f05e3dc49b, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 7771334766592
+    m_Localized: TOCA PARA EMPEZAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960896
+    m_Localized: DESBLOQUEAR PASE DE BATALLA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960897
+    m_Localized: 'Recompensa  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960898
+    m_Localized: "Desbloquear Pase Premium por 2,99\u202F$"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960899
+    m_Localized: "Misi\xF3n  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960900
+    m_Localized: 'CANCELAR  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960901
+    m_Localized: 'Personaje  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960902
+    m_Localized: 'DESBLOQUEAR  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960903
+    m_Localized: Ver anuncio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960904
+    m_Localized: Puedes cambiar tu nombre en cualquier momento.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960905
+    m_Localized: 'Regalo  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960906
+    m_Localized: 'Mejorar  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960907
+    m_Localized: 'Suerte  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960908
+    m_Localized: 'Cantidad actual: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960909
+    m_Localized: 'PASE DE BATALLA '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960910
+    m_Localized: 'Comenzar  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960911
+    m_Localized: 'Pase de batalla '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960912
+    m_Localized: "H\xE9roe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960913
+    m_Localized: 'ACTIVAR  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960914
+    m_Localized: "NUEVA MISI\xD3N SIGUIENTE "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960915
+    m_Localized: Pase gratis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960916
+    m_Localized: Otros paquetes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960917
+    m_Localized: "M\xFAsica  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349504
+    m_Localized: "Gr\xE1ficos  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349505
+    m_Localized: 'Sonido  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349506
+    m_Localized: 'Idioma  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349507
+    m_Localized: Tienes un regalo especial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349508
+    m_Localized: 'Comprar ahora  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349509
+    m_Localized: 'SALIR  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349510
+    m_Localized: ' Lista de mapas '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349511
+    m_Localized: 'Cargando  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349512
+    m_Localized: No hay suficiente oro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349513
+    m_Localized: Oro gratis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349514
+    m_Localized: Pila de oro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349515
+    m_Localized: 'RECOMPENSAS INMEDIATAS! '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349516
+    m_Localized: 'Recibir  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349517
+    m_Localized: 'Reclamar  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349518
+    m_Localized: 'Abrir tienda una vez '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349519
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349520
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349521
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349522
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349523
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349524
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349525
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349526
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349527
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349528
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349529
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349530
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349531
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349532
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349533
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349534
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349535
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349536
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349537
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349538
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349539
+    m_Localized: Paquetes de oro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349540
+    m_Localized: Paquetes de gemas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349541
+    m_Localized: "Paquetes de h\xE9roes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16039834677248
+    m_Localized: 'Jugar  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18093013594112
+    m_Localized: Cargando
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20850307100672
+    m_Localized: 'Jugador  '
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

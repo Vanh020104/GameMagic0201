@@ -1,0 +1,287 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: LanguageVanh Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: LanguageVanh
+  m_TableCollectionNameGuidString: 71d0b3bd61dd7964b8cbf6f05e3dc49b
+  m_Entries:
+  - m_Id: 7771334766592
+    m_Key: tap_to_start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960896
+    m_Key: unlock_battle_pass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960897
+    m_Key: reward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960898
+    m_Key: unlock_premium_battle_pass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960899
+    m_Key: mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960900
+    m_Key: cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960901
+    m_Key: character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960902
+    m_Key: unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960903
+    m_Key: watch_ads
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960904
+    m_Key: change_name_anytime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960905
+    m_Key: gift
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960906
+    m_Key: upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960907
+    m_Key: lucky
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960908
+    m_Key: current_amount
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960909
+    m_Key: battlepass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960910
+    m_Key: start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960911
+    m_Key: battle_pass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960912
+    m_Key: hero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960913
+    m_Key: activate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960914
+    m_Key: new_mission_next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960915
+    m_Key: free_pass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960916
+    m_Key: other_packs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960917
+    m_Key: music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349504
+    m_Key: graphics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349505
+    m_Key: sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349506
+    m_Key: 'language_setting
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349507
+    m_Key: special_gift
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349508
+    m_Key: buy_now
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349509
+    m_Key: exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349510
+    m_Key: list_map
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349511
+    m_Key: loading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349512
+    m_Key: enough_gold_gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349513
+    m_Key: gold_free
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349514
+    m_Key: pile_of_gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349515
+    m_Key: instant_rewards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349516
+    m_Key: receive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349517
+    m_Key: claim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349518
+    m_Key: open_shop_once
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349519
+    m_Key: watch_1_ad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349520
+    m_Key: watch_3_ad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349521
+    m_Key: upgrade_hero_once
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349522
+    m_Key: use_lucky_spin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349523
+    m_Key: open_settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349524
+    m_Key: open_your_bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349525
+    m_Key: reach_level_5_match
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349526
+    m_Key: survive_180_seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349527
+    m_Key: survive_60_seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349528
+    m_Key: deal_10000_damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349529
+    m_Key: deal_5000_damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349530
+    m_Key: use_heal_5_times
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349531
+    m_Key: use_skill_10_times
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349532
+    m_Key: kill_20_enemies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349533
+    m_Key: kill_10_enemies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349534
+    m_Key: open_upgrade_panel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349535
+    m_Key: revive_1_time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349536
+    m_Key: win_3_match
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349537
+    m_Key: win_1_match
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349538
+    m_Key: reach_level_10_match
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349539
+    m_Key: gold_packs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349540
+    m_Key: gem_packs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349541
+    m_Key: hero_packs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16039834677248
+    m_Key: 'play  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18093013594112
+    m_Key: 'loading  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20850307100672
+    m_Key: player
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3015745469218816104
+  references:
+    version: 2
+    RefIds:
+    - rid: 3015745469218816104
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1750859701396

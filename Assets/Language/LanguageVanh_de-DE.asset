@@ -1,0 +1,279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: LanguageVanh_de-DE
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de-DE
+  m_SharedData: {fileID: 11400000, guid: 71d0b3bd61dd7964b8cbf6f05e3dc49b, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 7771334766592
+    m_Localized: TIPPE ZUM STARTEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960896
+    m_Localized: 'BATTLE PASS FREISCHALTEN  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960897
+    m_Localized: 'Belohnung  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960898
+    m_Localized: "Premium Battle Pass f\xFCr 2,99\u202F$ freischalten "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960899
+    m_Localized: Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960900
+    m_Localized: 'ABBRECHEN  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960901
+    m_Localized: 'Charakter  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960902
+    m_Localized: 'ENTFERREN  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960903
+    m_Localized: Anzeige ansehen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960904
+    m_Localized: "Sie k\xF6nnen Ihren Namen jederzeit \xE4ndern.  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960905
+    m_Localized: 'Geschenk  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960906
+    m_Localized: "Aufr\xFCsten  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960907
+    m_Localized: "Gl\xFCcklich  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960908
+    m_Localized: 'Aktueller Betrag:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960909
+    m_Localized: BATTLEPASS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960910
+    m_Localized: 'Starten  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960911
+    m_Localized: Battle Pass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960912
+    m_Localized: 'Held  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960913
+    m_Localized: 'AKTIVIEREN  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960914
+    m_Localized: " NEUE MISSION ALS N\xC4CHSTES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960915
+    m_Localized: Gratis-Pass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960916
+    m_Localized: Andere Pakete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771338960917
+    m_Localized: Musik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349504
+    m_Localized: 'Grafiken  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349505
+    m_Localized: 'Sound  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349506
+    m_Localized: Sprache
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349507
+    m_Localized: 'Du hast ein besonderes Geschenk '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349508
+    m_Localized: Jetzt kaufen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349509
+    m_Localized: 'BEENDEN  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349510
+    m_Localized: 'Kartenliste '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349511
+    m_Localized: "Laden\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349512
+    m_Localized: Nicht genug Gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349513
+    m_Localized: Kostenloses Gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349514
+    m_Localized: Haufen Gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349515
+    m_Localized: SOFORTIGE BELOHNUNGEN!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349516
+    m_Localized: Empfangen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349517
+    m_Localized: Beanspruchen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349518
+    m_Localized: "Laden einmal \xF6ffnen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349519
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349520
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349521
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349522
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349523
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349524
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349525
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349526
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349527
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349528
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349529
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349530
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349531
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349532
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349533
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349534
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349535
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349536
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349537
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349538
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349539
+    m_Localized: Goldpakete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349540
+    m_Localized: Edelsteinpakete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349541
+    m_Localized: Heldenpakete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16039834677248
+    m_Localized: 'Spielen  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18093013594112
+    m_Localized: Wird geladen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20850307100672
+    m_Localized: 'Spieler  '
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
