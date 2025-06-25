@@ -1,0 +1,5 @@
+D:/Users/My Game 01/GameMagic0201/.utmp/RelWithDebInfo/2292o3b2/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/Users/My Game 01/GameMagic0201/.utmp/RelWithDebInfo/2292o3b2/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+D:/Users/My Game 01/GameMagic0201/.utmp/RelWithDebInfo/2292o3b2/armeabi-v7a/GameActivity/CMakeFiles/game.dir
+D:/Users/My Game 01/GameMagic0201/.utmp/RelWithDebInfo/2292o3b2/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
+D:/Users/My Game 01/GameMagic0201/.utmp/RelWithDebInfo/2292o3b2/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir
