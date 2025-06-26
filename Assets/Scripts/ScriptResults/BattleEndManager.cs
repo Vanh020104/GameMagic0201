@@ -132,13 +132,21 @@ public class BattleEndManager : MonoBehaviour
 
         int key = 0;
         if (killCount >= 5 || timer >= 90)
-            key = Random.Range(1, 6);
+            key = Random.Range(2, 6);
         else if (killCount >= 2)
-            key = 1;
+            key = 2;
 
         GameResultData.gold = gold;
         GameResultData.gem = gem;
         GameResultData.key = key;
+        // 🎁 Thưởng nếu Top 1 (đã được gán sẵn ở KillInfoUIHandler)
+        if (GameResultData.playerRank == 1)
+        {
+            GameResultData.key += 5;
+            GameResultData.gem += 5;
+            Debug.Log("🎉 TOP 1 BONUS: +5 key, +5 gem!");
+        }
+
         // ========== 8. Load Result Scene ==========
         SceneManager.LoadScene("Scene_Result");
     }

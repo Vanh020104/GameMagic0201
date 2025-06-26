@@ -23,9 +23,8 @@ public class MatchStatistics : MonoBehaviour
         GoldGemManager.Instance.AddGold(GameResultData.gold);
         GoldGemManager.Instance.AddGem(GameResultData.gem);
 
-        int currentKey = PlayerPrefs.GetInt("LuckyKey", 0);
-        PlayerPrefs.SetInt("LuckyKey", currentKey + GameResultData.key);
-        PlayerPrefs.Save();
+        GoldGemManager.Instance.AddKey(GameResultData.key);
+
 
         // Gắn sự kiện x2 nếu có
         doubleRewardButton.onClick.AddListener(HandleDoubleRewardAd);
@@ -87,10 +86,8 @@ public class MatchStatistics : MonoBehaviour
         {
             GoldGemManager.Instance.AddGold(GameResultData.gold);
             GoldGemManager.Instance.AddGem(GameResultData.gem);
+            GoldGemManager.Instance.AddKey(GameResultData.key);
 
-            int currentKey = PlayerPrefs.GetInt("LuckyKey", 0);
-            PlayerPrefs.SetInt("LuckyKey", currentKey + GameResultData.key);
-            PlayerPrefs.Save();
 
             // Cập nhật lại UI sau khi cộng x2
             goldText.text = (GameResultData.gold * 2).ToString();

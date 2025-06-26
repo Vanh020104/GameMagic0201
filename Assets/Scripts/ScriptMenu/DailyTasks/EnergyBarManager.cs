@@ -69,10 +69,7 @@ public class EnergyBarManager : MonoBehaviour
                 PlayerPrefs.SetInt(key, 1);
                 PlayerPrefs.Save();
 
-                int luckyKey = PlayerPrefs.GetInt("LuckyKey", 0);
-                luckyKey += keyReward;
-                PlayerPrefs.SetInt("LuckyKey", luckyKey);
-                PlayerPrefs.Save();
+                GoldGemManager.Instance.AddKey(keyReward);
                 KeyEvent.InvokeKeyChanged();
                 NotificationPopupUI.Instance?.Show($" You've received {keyReward} Lucky Key for reaching {milestone} energy!");
                 NotificationBadgeManager.Instance.SetNotification("lucky", true);

@@ -18,7 +18,7 @@ public class KeyAmountUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        int key = PlayerPrefs.GetInt("LuckyKey", 0);
-        keyText.text = key.ToString();
+       keyText.text = GoldGemManager.Instance.GetKey().ToString();
+
     }
 }

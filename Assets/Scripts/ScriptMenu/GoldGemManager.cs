@@ -7,9 +7,11 @@ public class GoldGemManager : MonoBehaviour
 
     public TextMeshProUGUI goldText;
     public TextMeshProUGUI gemText;
+    public TextMeshProUGUI keyText;
 
     private int goldAmount;
     private int gemAmount;
+    private int keyAmount;
     public static event System.Action OnCurrencyChanged;
 
     private void NotifyCurrencyChange()
@@ -32,18 +34,21 @@ public class GoldGemManager : MonoBehaviour
     {
         goldAmount = PlayerPrefs.GetInt("Gold", 0);
         gemAmount = PlayerPrefs.GetInt("Gem", 0);
+        keyAmount = PlayerPrefs.GetInt("LuckyKey", 0);
     }
 
     private void SaveCurrencies()
     {
         PlayerPrefs.SetInt("Gold", goldAmount);
         PlayerPrefs.SetInt("Gem", gemAmount);
+        PlayerPrefs.SetInt("LuckyKey", keyAmount);
     }
 
     private void UpdateUI()
     {
         goldText.text = goldAmount.ToString("N0");
         gemText.text = gemAmount.ToString("N0");
+        keyText.text = keyAmount.ToString("N0");
     }
 
     public void AddGold(int amount)
@@ -97,6 +102,29 @@ public class GoldGemManager : MonoBehaviour
         }
         return false;
     }
+    public void AddKey(int amount)
+    {
+        keyAmount += amount;
+        Debug.Log($"🔑 AddKey called: +{amount} → {keyAmount}");
+        UpdateUI();
+        SaveCurrencies();
+        NotifyCurrencyChange();
+    }
+
+    public bool SpendKey(int amount)
+    {
+        if (keyAmount >= amount)
+        {
+            keyAmount -= amount;
+            UpdateUI();
+            SaveCurrencies();
+            NotifyCurrencyChange();
+            return true;
+        }
+        return false;
+    }
+
+    public int GetKey() => keyAmount;
 
 
     public int GetGold() => goldAmount;

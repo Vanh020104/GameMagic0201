@@ -188,12 +188,9 @@ public class DailyLoginManager : MonoBehaviour
 
     private void AddLuckyKey(int amount)
     {
-        int luckyKey = PlayerPrefs.GetInt("LuckyKey", 0);
-        luckyKey += amount;
-        PlayerPrefs.SetInt("LuckyKey", luckyKey);
-        PlayerPrefs.Save();
-
+        GoldGemManager.Instance.AddKey(amount);
         KeyEvent.InvokeKeyChanged();
+
         NotificationPopupUI.Instance?.Show("You have received a new key!", true);
         NotificationBadgeManager.Instance.SetNotification("lucky", true);
     }

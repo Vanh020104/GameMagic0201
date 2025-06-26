@@ -54,8 +54,33 @@ public class AdManager : MonoBehaviour
         });
     }
 
+    // public void ShowRewardedAd(Action onRewarded)
+    // {
+    //     if (rewardedAd != null && rewardedAd.CanShowAd())
+    //     {
+    //         onRewardedCallback = onRewarded;
+
+    //         rewardedAd.Show((GoogleMobileAds.Api.Reward reward) =>
+    //         {
+    //             onRewardedCallback?.Invoke();
+    //         });
+    //     }
+    //     else
+    //     {
+    //         NotificationPopupUI.Instance.Show("Check your internet!", false);
+    //         Debug.Log("Rewarded ad not ready");
+    //     }
+    // }
     public void ShowRewardedAd(Action onRewarded)
     {
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            Debug.LogWarning("❌ Không có kết nối mạng — không thể hiển thị quảng cáo.");
+            // Tùy hệ thống popup của mày, có thể gọi PopupManager.Instance.Show(...)
+            ShowNoInternetPopup();
+            return;
+        }
+
         if (rewardedAd != null && rewardedAd.CanShowAd())
         {
             onRewardedCallback = onRewarded;
@@ -68,8 +93,20 @@ public class AdManager : MonoBehaviour
         else
         {
             Debug.Log("Rewarded ad not ready");
+            // Cũng có thể hiện popup "Không có quảng cáo sẵn sàng"
+            ShowAdNotReadyPopup();
         }
     }
+    private void ShowNoInternetPopup()
+    {
+        NotificationPopupUI.Instance.Show("No network connection!", false);
+    }
+
+    private void ShowAdNotReadyPopup()
+    {
+        NotificationPopupUI.Instance.Show("Ad not ready!", false);
+    }
+
     #endregion
 
     #region Interstitial

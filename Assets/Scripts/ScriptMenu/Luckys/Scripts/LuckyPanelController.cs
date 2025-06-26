@@ -51,7 +51,7 @@ public class LuckyPanelController : MonoBehaviour
 
     void Start()
     {
-        currentKeyCount = PlayerPrefs.GetInt("LuckyKey", 3);
+        currentKeyCount = GoldGemManager.Instance.GetKey();
         UpdateKeyUI();
 
         buttonStart.gameObject.SetActive(false);
@@ -69,8 +69,9 @@ public class LuckyPanelController : MonoBehaviour
         {
             if (currentKeyCount <= 0) return;
 
-            currentKeyCount--;
-            PlayerPrefs.SetInt("LuckyKey", currentKeyCount);
+            GoldGemManager.Instance.SpendKey(1);
+            currentKeyCount = GoldGemManager.Instance.GetKey();
+
             UpdateKeyUI();
             DailyTaskBridge.Instance.TryAddProgress("use_spin");
 
@@ -332,13 +333,11 @@ public class LuckyPanelController : MonoBehaviour
                 GoldGemManager.Instance.AddGem(reward.amount);
                 break;
             case RewardType.Key:
-                int key = PlayerPrefs.GetInt("LuckyKey", 0);
-                key += reward.amount;
-                PlayerPrefs.SetInt("LuckyKey", key);
-                PlayerPrefs.Save();
+                GoldGemManager.Instance.AddKey(reward.amount);
                 UpdateKeyUI(); 
                 KeyEvent.InvokeKeyChanged();
                 break;
+
                 
             case RewardType.Item:
                 PlayerPrefs.SetInt($"Equip_{reward.id}_Unlocked", 1);

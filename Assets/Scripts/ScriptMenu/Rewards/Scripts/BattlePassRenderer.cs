@@ -62,12 +62,11 @@ public class BattlePassRenderer : MonoBehaviour
                 break;
 
             case RewardTypeItem.LuckyKey:
-                int key = PlayerPrefs.GetInt("LuckyKey", 0);
-                PlayerPrefs.SetInt("LuckyKey", key + data.quantity);
-                PlayerPrefs.Save();
+                GoldGemManager.Instance.AddKey(data.quantity);
                 KeyEvent.InvokeKeyChanged();
                 NotificationBadgeManager.Instance.SetNotification("lucky", true);
                 break;
+
 
             case RewardTypeItem.Item:
                 string id = data.itemId ?? data.rewardName; 
