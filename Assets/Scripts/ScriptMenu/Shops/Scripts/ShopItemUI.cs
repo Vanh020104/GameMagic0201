@@ -22,10 +22,19 @@ public class ShopItemUI : MonoBehaviour
         data = itemData;
         icon.sprite = data.icon;
         textAmount.text = data.amount.ToString("N0");
-        if (int.TryParse(data.priceText, out int parsedPrice))
+        if (data.isKeyPurchase)
+        {
+            textPrice.text = $"{data.priceText}";
+        }
+        else if (int.TryParse(data.priceText, out int parsedPrice))
+        {
             textPrice.text = parsedPrice.ToString("N0");
+        }
         else
+        {
             textPrice.text = data.priceText;
+        }
+
 
         if (data.id.StartsWith("Hero"))
         {
@@ -79,6 +88,37 @@ public class ShopItemUI : MonoBehaviour
 
     private void OnBuyClick()
     {
+        // --- MUA BẰNG LUCKY KEY ---
+        if (data.isKeyPurchase)
+        {
+            if (!int.TryParse(data.priceText, out int keyCost))
+            {
+                Debug.LogWarning($"❌ Invalid key cost: {data.priceText}");
+                return;
+            }
+
+            int keys = PlayerPrefs.GetInt("LuckyKey", 0);
+            if (keys < keyCost)
+            {
+                NotificationPopupUI.Instance?.Show($"You need {keyCost} keys!", false);
+                return;
+            }
+
+            PlayerPrefs.SetInt("LuckyKey", keys - keyCost);
+            PlayerPrefs.Save();
+
+            if (data.id.StartsWith("gold"))
+                GoldGemManager.Instance.AddGold(data.amount);
+            else if (data.id.StartsWith("gem"))
+                GoldGemManager.Instance.AddGem(data.amount);
+
+            NotificationPopupUI.Instance?.Show($"You spent {keyCost} keys to claim {data.amount}!");
+
+            // ❌ Không disable nút mua để cho mua tiếp
+            return;
+        }
+
+        // --- ADS (nếu vẫn còn giữ) ---
         if (data.isRewardedAd)
         {
             if (!CanWatchAdNow(out int remaining, out float wait))
@@ -88,16 +128,15 @@ public class ShopItemUI : MonoBehaviour
                 return;
             }
 
-            // Show ad
             AdManager.Instance.ShowRewardedAd(() =>
             {
-                // Thưởng
                 if (data.id.StartsWith("gold"))
                     GoldGemManager.Instance.AddGold(data.amount);
                 else if (data.id.StartsWith("gem"))
                     GoldGemManager.Instance.AddGem(data.amount);
 
                 NotificationPopupUI.Instance?.Show($"Reward received! {remaining - 1} more left", true);
+
                 string countKey = $"AdLimit_{data.id}_WatchedCount";
                 string resetKey = $"AdLimit_{data.id}_LastReset";
                 int count = PlayerPrefs.GetInt(countKey, 0);
@@ -114,8 +153,7 @@ public class ShopItemUI : MonoBehaviour
             return;
         }
 
-
-
+        // --- GÓI GOLD/GEM BÌNH THƯỜNG (không key, không ad) ---
         if (data.id.StartsWith("gold"))
         {
             GoldGemManager.Instance.AddGold(data.amount);
@@ -130,6 +168,7 @@ public class ShopItemUI : MonoBehaviour
             return;
         }
 
+        // --- GÓI HERO (mua 1 lần duy nhất) ---
         if (data.id.StartsWith("Hero"))
         {
             if (int.TryParse(data.priceText, out int gemPrice) && GoldGemManager.Instance.SpendGem(gemPrice))
@@ -142,7 +181,6 @@ public class ShopItemUI : MonoBehaviour
                 textPrice.alpha = 0.5f;
                 HeroEvents.OnHeroBought?.Invoke(data.id);
                 NotificationBadgeManager.Instance.SetNotification("character", true);
-
             }
             else
             {
@@ -151,6 +189,7 @@ public class ShopItemUI : MonoBehaviour
             return;
         }
 
+        // --- GÓI ITEM (mua 1 lần duy nhất) ---
         if (!int.TryParse(data.priceText, out int price)) return;
 
         if (PlayerPrefs.GetInt($"Equip_{data.id}_Unlocked", 0) == 1) return;
@@ -165,13 +204,13 @@ public class ShopItemUI : MonoBehaviour
             UpdateUI();
             BagEvent.InvokeItemBought();
             NotificationBadgeManager.Instance.SetNotification("bag", true);
-
         }
         else
         {
             NotificationPopupUI.Instance?.Show("Not enough Gold!", false);
         }
     }
+
     private bool CanWatchAdNow(out int remainingCount, out float waitSeconds)
     {
         string countKey = $"AdLimit_{data.id}_WatchedCount";

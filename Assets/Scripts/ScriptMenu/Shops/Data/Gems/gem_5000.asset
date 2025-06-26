@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Gem x5000
   icon: {fileID: 21300000, guid: ef471fb8d8de3474bbb41b339d3656d3, type: 3}
   amount: 600
-  priceText: 29.99 USD
+  priceText: 260
   requiredLevel: 1
   isRewardedAd: 0
+  isKeyPurchase: 1

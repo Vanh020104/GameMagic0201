@@ -13,4 +13,5 @@ public class ShopItemData : ScriptableObject
     public string priceText;
     public int requiredLevel;
     public bool isRewardedAd;
+    public bool isKeyPurchase;
 }

@@ -94,20 +94,20 @@ MonoBehaviour:
   - id: Key002
     rewardName: Key02
     rewardIcon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
-    amount: 2
+    amount: 3
     tier: 0
     rewardType: 2
   - id: Key003
     rewardName: Key03
     rewardIcon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
-    amount: 3
+    amount: 5
     tier: 1
     rewardType: 2
   - id: Key005
     rewardName: Key05
     rewardIcon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
-    amount: 1
-    tier: 0
+    amount: 10
+    tier: 2
     rewardType: 2
   - id: Armor_09
     rewardName: Armor_09

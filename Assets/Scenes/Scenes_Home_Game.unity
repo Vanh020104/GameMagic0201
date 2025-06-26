@@ -6029,7 +6029,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Unlock Premium Battle Pass\nFor 2.99$
+  m_text: Unlock Premium Battle Pass with\n 500 keys!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -51314,7 +51314,7 @@ PrefabInstance:
     - target: {fileID: 3091652427709819454, guid: 54931bd3c43fa2346bb4d1cb3ba2a0e0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3091652427709819454, guid: 54931bd3c43fa2346bb4d1cb3ba2a0e0,
         type: 3}
@@ -51614,7 +51614,7 @@ PrefabInstance:
     - target: {fileID: 6532760008915239621, guid: 54931bd3c43fa2346bb4d1cb3ba2a0e0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6532760008915239621, guid: 54931bd3c43fa2346bb4d1cb3ba2a0e0,
         type: 3}

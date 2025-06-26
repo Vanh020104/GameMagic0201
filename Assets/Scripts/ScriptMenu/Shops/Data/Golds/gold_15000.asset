@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Gold x15000
   icon: {fileID: 21300000, guid: 35ba5a695a8654d5ea01b2ea828a58e1, type: 3}
   amount: 500000
-  priceText: 29.99 USD
+  priceText: 379
   requiredLevel: 1
   isRewardedAd: 0
+  isKeyPurchase: 1
