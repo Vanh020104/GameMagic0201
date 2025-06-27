@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Localization;
 
 public class MatchStatistics : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class MatchStatistics : MonoBehaviour
     public Button doubleRewardButton;
     private bool hasClaimedDouble = false;
     public GameObject upgradeLevelRankPanel;
+    private LocalizedString topLocalized;
+    private LocalizedString quoteLocalized;
+
     void Start()
     {
         // Hiển thị kết quả
@@ -129,81 +133,43 @@ public class MatchStatistics : MonoBehaviour
     {
         int rank = GameResultData.playerRank;
 
-        string[] top1Msgs = {
-        "CHIẾN THẮNG! GÀ ĐÃ VÀO NỒI!",
-        "Top 1 không ai cản nổi!",
-        "Đỉnh của chóp, trận này là của bạn!",
-        "Gánh team không một vết xước!",
-    };
+        string[] top1Keys = { "match_victory_1", "match_victory_2", "match_victory_3", "match_victory_4" };
+        string[] top2to5Keys = { "match_rank_2to5_1", "match_rank_2to5_2", "match_rank_2to5_3", "match_rank_2to5_4", "match_rank_2to5_5" };
+        string[] top6to10Keys = { "match_rank_6to10_1", "match_rank_6to10_2", "match_rank_6to10_3", "match_rank_6to10_4" };
+        string[] top11to20Keys = { "match_rank_11to20_1", "match_rank_11to20_2", "match_rank_11to20_3", "match_rank_11to20_4", "match_rank_11to20_5" };
 
-        string[] top2to5Msgs = {
-        "Suýt nữa thôi... Gà gần tới tay!",
-        "Top cao thật đó, nhưng chưa đủ gắt!",
-        "Gục trước cửa thiên đường...",
-        "Thiếu chút may mắn, nhưng trình thì có!",
-        "Được đấy! Nhưng còn phải luyện thêm!"
-    };
-
-        string[] top6to10Msgs = {
-        "Khá ổn, nhưng vẫn bị out trình!",
-        "Bắn ngon nhưng vẫn gãy, tiếc ghê!",
-        "Top giữa... Ừ thì cũng không tệ!",
-        "Chơi vậy là được rồi, nhưng chưa nổi bật!",
-    };
-
-        string[] top11to20Msgs = {
-        "Vào game làm nền à?",
-        "Vẫn đang khởi động thôi mà đúng không?",
-        "Vừa loot được cây súng thì... die!",
-        "Gà chưa kịp gáy, người đã toang!",
-        "Trận sau nhớ bật aim nha bạn ơi!"
-    };
+        string selectedKey = null;
 
         if (rank == 1)
         {
-            resultMessageText.text = GetRandom(top1Msgs);
-            resultMessageText.color = new Color32(0, 255, 0, 255); // Xanh lá
+            selectedKey = top1Keys[Random.Range(0, top1Keys.Length)];
+            resultMessageText.color = new Color32(0, 255, 0, 255); // Green
         }
         else if (rank <= 5)
         {
-            resultMessageText.text = GetRandom(top2to5Msgs);
-            resultMessageText.color = new Color32(255, 204, 0, 255); // Vàng cam
+            selectedKey = top2to5Keys[Random.Range(0, top2to5Keys.Length)];
+            resultMessageText.color = new Color32(255, 204, 0, 255); // Orange
         }
         else if (rank <= 10)
         {
-            resultMessageText.text = GetRandom(top6to10Msgs);
-            resultMessageText.color = new Color32(255, 136, 0, 255); // Cam sáng
+            selectedKey = top6to10Keys[Random.Range(0, top6to10Keys.Length)];
+            resultMessageText.color = new Color32(255, 136, 0, 255); // Light Orange
         }
         else
         {
-            resultMessageText.text = GetRandom(top11to20Msgs);
-            resultMessageText.color = new Color32(255, 68, 68, 255); // Đỏ hồng
+            selectedKey = top11to20Keys[Random.Range(0, top11to20Keys.Length)];
+            resultMessageText.color = new Color32(255, 68, 68, 255); // Red
         }
+
+        quoteLocalized = new LocalizedString("LanguageVanh", selectedKey);
+        quoteLocalized.StringChanged += val => resultMessageText.text = val;
     }
+
 
     string GetRandom(string[] messages)
     {
         return messages[Random.Range(0, messages.Length)];
     }
-
-
-    // public void RetryCurrentMap()
-    // {
-    //     if (GameData.SelectedMap != null)
-    //     {
-    //         Debug.Log($"🔁 Retry map: {GameData.SelectedMap.mapName}");
-
-    //         // Dùng Loading nếu có
-    //         if (GlobalLoadingController.Instance != null)
-    //             GlobalLoadingController.Instance.LoadSceneWithDelay("LayoutBattle", 2f);
-    //         else
-    //             UnityEngine.SceneManagement.SceneManager.LoadScene("LayoutBattle");
-    //     }
-    //     else
-    //     {
-    //         Debug.LogWarning("⚠️ GameData.SelectedMap is null. Can't retry!");
-    //     }
-    // }
     public void RetryCurrentMap()
     {
         if (GameData.SelectedMap == null)
@@ -245,70 +211,5 @@ public class MatchStatistics : MonoBehaviour
         else
             UnityEngine.SceneManagement.SceneManager.LoadScene("LayoutBattle");
     }
-
-
-
-    //     void ShowRankMessage()
-    // {
-    //     int rank = GameResultData.playerRank;
-
-    //     string[] top1Msgs = {
-    //         "VICTORY! Dinner is served!",
-    //         "Top 1! Nobody even came close!",
-    //         "Absolutely legendary performance!",
-    //         "Carried the whole game without a scratch!",
-    //         "Don’t ask why you won. Ask why they even tried!"
-    //     };
-
-    //     string[] top2to5Msgs = {
-    //         "So close… but no chicken!",
-    //         "Great effort, but not quite enough!",
-    //         "Knocked out at heaven’s gate!",
-    //         "You’ve got the skills, just need a bit of luck!",
-    //         "Nice one! But greatness takes more!"
-    //     };
-
-    //     string[] top6to10Msgs = {
-    //         "Decent, but still outplayed!",
-    //         "Solid game, but not enough fire!",
-    //         "Middle of the pack… not bad!",
-    //         "Could've been better. Could've been worse.",
-    //         "You're improving, but you're not there yet!"
-    //     };
-
-    //     string[] top11to20Msgs = {
-    //         "What was that? A warm-up match?",
-    //         "Didn't even get to loot properly!",
-    //         "Blink and you're dead!",
-    //         "Were you even trying?",
-    //         "Tip: The trigger goes *pew*, not *panic*."
-    //     };
-
-    //     if (rank == 1)
-    //     {
-    //         resultMessageText.text = GetRandom(top1Msgs);
-    //         resultMessageText.color = new Color32(0, 255, 0, 255); // Green
-    //     }
-    //     else if (rank <= 5)
-    //     {
-    //         resultMessageText.text = GetRandom(top2to5Msgs);
-    //         resultMessageText.color = new Color32(255, 204, 0, 255); // Gold
-    //     }
-    //     else if (rank <= 10)
-    //     {
-    //         resultMessageText.text = GetRandom(top6to10Msgs);
-    //         resultMessageText.color = new Color32(255, 136, 0, 255); // Orange
-    //     }
-    //     else
-    //     {
-    //         resultMessageText.text = GetRandom(top11to20Msgs);
-    //         resultMessageText.color = new Color32(255, 68, 68, 255); // Red
-    //     }
-    // }
-
-    // string GetRandom(string[] messages)
-    // {
-    //     return messages[Random.Range(0, messages.Length)];
-    // }
 
 }

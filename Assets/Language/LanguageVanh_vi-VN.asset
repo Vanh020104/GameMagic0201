@@ -526,6 +526,30 @@ MonoBehaviour:
     m_Localized: Wormhole
     m_Metadata:
       m_Items: []
+  - m_Id: 717215093878784
+    m_Localized: "B\u1EA1n \u0111\xE3 d\xF9ng h\u1EBFt l\u01B0\u1EE3t h\u1ED3i sinh!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717215941128192
+    m_Localized: "B\u1EA1n kh\xF4ng th\u1EC3 h\u1ED3i sinh!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717218751311872
+    m_Localized: "Th\u1ED1ng k\xEA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738047451066368
+    m_Localized: "Ph\u1EA7n th\u01B0\u1EDFng"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865000607744
+    m_Localized: "Ch\u01A1i l\u1EA1i"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865956909056
+    m_Localized: "Nh\u1EADn x2"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

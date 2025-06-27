@@ -2,7 +2,8 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.Localization;
+   
 public class DailyTaskItemUI : MonoBehaviour
 {
     public Image icon;
@@ -20,6 +21,7 @@ public class DailyTaskItemUI : MonoBehaviour
     private bool isReadyToClaim;
     public bool IsReadyToClaim() => !isClaimed && currentProgress >= data.requiredCount;
     public string GetTaskId() => data.id;
+    private LocalizedString localizedDescription;
 
     public void Setup(DailyTaskData task, EnergyBarManager bar)
     {
@@ -27,7 +29,13 @@ public class DailyTaskItemUI : MonoBehaviour
         energyBar = bar;
 
         icon.sprite = data.icon;
-        descriptionText.text = data.description;
+        localizedDescription = new LocalizedString("LanguageVanh", data.descriptionKey);
+        localizedDescription.StringChanged += (localizedValue) =>
+        {
+            if (descriptionText != null)
+                descriptionText.text = localizedValue;
+        };
+
         goldText.text = data.goldReward.ToString();
         energyText.text = data.energyReward.ToString();
 

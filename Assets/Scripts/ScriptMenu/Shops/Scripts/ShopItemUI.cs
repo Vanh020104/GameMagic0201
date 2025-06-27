@@ -3,6 +3,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static NotificationPopupUI;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class ShopItemUI : MonoBehaviour
 {
@@ -67,8 +69,10 @@ public class ShopItemUI : MonoBehaviour
             textPrice.alpha = 0.5f;
 
             if (levelBlockPanel != null) levelBlockPanel.SetActive(true);
-            if (levelBlockText != null)
-                levelBlockText.text = $"You need to reach\nLevel {data.requiredLevel} to unlock!";
+            var loc = new LocalizedString("LanguageVanh", "need_level_to_unlock");
+            loc.Arguments = new object[] { data.requiredLevel };
+            loc.StringChanged += val => levelBlockText.text = val;
+
 
             if (lockPanel != null) lockPanel.SetActive(false);
             return;
@@ -100,7 +104,10 @@ public class ShopItemUI : MonoBehaviour
             int keys = PlayerPrefs.GetInt("LuckyKey", 0);
             if (keys < keyCost)
             {
-                NotificationPopupUI.Instance?.Show($"You need {keyCost} keys!", false);
+                var keyNeeded = new LocalizedString("LanguageVanh", "not_enough_keys");
+                keyNeeded.Arguments = new object[] { keyCost };
+                keyNeeded.StringChanged += val => NotificationPopupUI.Instance?.Show(val);
+
                 return;
             }
 
@@ -112,7 +119,10 @@ public class ShopItemUI : MonoBehaviour
             else if (data.id.StartsWith("gem"))
                 GoldGemManager.Instance.AddGem(data.amount);
 
-            NotificationPopupUI.Instance?.Show($"You spent {keyCost} keys to claim {data.amount}!");
+            var loc = new LocalizedString("LanguageVanh", "spent_keys_get_item");
+            loc.Arguments = new object[] { keyCost, data.amount };
+            loc.StringChanged += val => NotificationPopupUI.Instance?.Show(val);
+
 
             // ❌ Không disable nút mua để cho mua tiếp
             return;
@@ -124,7 +134,12 @@ public class ShopItemUI : MonoBehaviour
             if (!CanWatchAdNow(out int remaining, out float wait))
             {
                 TimeSpan t = TimeSpan.FromSeconds(wait);
-                NotificationPopupUI.Instance?.Show($"Please come back after {t.Hours:D2}:{t.Minutes:D2}:{t.Seconds:D2}", false);
+                string timeString = $"{t.Hours:D2}:{t.Minutes:D2}:{t.Seconds:D2}";
+
+                var loc = new LocalizedString("LanguageVanh", "come_back_after_time");
+                loc.Arguments = new object[] { timeString };
+                loc.StringChanged += val => NotificationPopupUI.Instance?.Show(val, false);
+
                 return;
             }
 
@@ -135,7 +150,10 @@ public class ShopItemUI : MonoBehaviour
                 else if (data.id.StartsWith("gem"))
                     GoldGemManager.Instance.AddGem(data.amount);
 
-                NotificationPopupUI.Instance?.Show($"Reward received! {remaining - 1} more left", true);
+                var loc = new LocalizedString("LanguageVanh", "reward_received_left");
+                loc.Arguments = new object[] { remaining - 1 };
+                loc.StringChanged += val => NotificationPopupUI.Instance?.Show(val, true);
+
 
                 string countKey = $"AdLimit_{data.id}_WatchedCount";
                 string resetKey = $"AdLimit_{data.id}_LastReset";
@@ -157,14 +175,16 @@ public class ShopItemUI : MonoBehaviour
         if (data.id.StartsWith("gold"))
         {
             GoldGemManager.Instance.AddGold(data.amount);
-            NotificationPopupUI.Instance?.Show("Purchase successful!");
+            var loc = new LocalizedString("LanguageVanh", "purchase_successful");
+            loc.StringChanged += val => NotificationPopupUI.Instance?.Show(val);
             return;
         }
 
         if (data.id.StartsWith("gem"))
         {
             GoldGemManager.Instance.AddGem(data.amount);
-            NotificationPopupUI.Instance?.Show("Purchase successful!");
+            var loc = new LocalizedString("LanguageVanh", "purchase_successful");
+            loc.StringChanged += val => NotificationPopupUI.Instance?.Show(val);
             return;
         }
 
@@ -175,7 +195,9 @@ public class ShopItemUI : MonoBehaviour
             {
                 PlayerPrefs.SetInt($"HeroUnlocked_{data.id}", 1);
                 PlayerPrefs.Save();
-                NotificationPopupUI.Instance?.Show("Hero unlocked!");
+                var loc = new LocalizedString("LanguageVanh", "hero_unlocked");
+                loc.StringChanged += val => NotificationPopupUI.Instance?.Show(val);
+
                 if (lockPanel != null) lockPanel.SetActive(true);
                 buttonBuy.interactable = false;
                 textPrice.alpha = 0.5f;
@@ -184,7 +206,9 @@ public class ShopItemUI : MonoBehaviour
             }
             else
             {
-                NotificationPopupUI.Instance?.Show("Not enough Gems!", false);
+                var notEnoughGems = new LocalizedString("LanguageVanh", "not_enough_gems");
+                notEnoughGems.StringChanged += val => NotificationPopupUI.Instance?.Show(val, false);
+
             }
             return;
         }
@@ -199,7 +223,9 @@ public class ShopItemUI : MonoBehaviour
             PlayerPrefs.SetInt($"Equip_{data.id}_Unlocked", 1);
             PlayerPrefs.SetInt($"Equip_{data.id}_Level", 1);
             PlayerPrefs.Save();
-            NotificationPopupUI.Instance?.Show("Item purchased!");
+            var loc = new LocalizedString("LanguageVanh", "item_purchased");
+            loc.StringChanged += val => NotificationPopupUI.Instance?.Show(val);
+
             isOwned = true;
             UpdateUI();
             BagEvent.InvokeItemBought();
@@ -207,7 +233,9 @@ public class ShopItemUI : MonoBehaviour
         }
         else
         {
-            NotificationPopupUI.Instance?.Show("Not enough Gold!", false);
+            var loc = new LocalizedString("LanguageVanh", "not_enough_gold");
+            loc.StringChanged += val => NotificationPopupUI.Instance?.Show(val, false);
+
         }
     }
 

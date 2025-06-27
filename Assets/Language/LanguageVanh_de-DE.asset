@@ -518,6 +518,30 @@ MonoBehaviour:
     m_Localized: Wurmloch
     m_Metadata:
       m_Items: []
+  - m_Id: 717215093878784
+    m_Localized: Deine Wiederbelebungsversuche sind aufgebraucht!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717215941128192
+    m_Localized: Du kannst dich nicht wiederbeleben!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717218751311872
+    m_Localized: Statistik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738047451066368
+    m_Localized: Belohnung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865000607744
+    m_Localized: Erneut spielen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865956909056
+    m_Localized: Erhalten x2
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -519,6 +519,30 @@ MonoBehaviour:
     m_Localized: Trou de Ver
     m_Metadata:
       m_Items: []
+  - m_Id: 717215093878784
+    m_Localized: "Vous avez \xE9puis\xE9 vos chances de r\xE9surrection !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717215941128192
+    m_Localized: Vous ne pouvez pas vous ressusciter !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717218751311872
+    m_Localized: Statistiques
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738047451066368
+    m_Localized: "R\xE9compense"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865000607744
+    m_Localized: Rejouer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865956909056
+    m_Localized: Recevoir x2
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

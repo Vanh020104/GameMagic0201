@@ -24,13 +24,40 @@ MonoBehaviour:
   skills:
   - skillName: Regenerate
     skillIcon: {fileID: 21300000, guid: f180b2ea0f9eb4e64b9e095b37b1fee4, type: 3}
-    description: Maximum healing
+    description:
+      m_TableReference:
+        m_TableCollectionName: GUID:71d0b3bd61dd7964b8cbf6f05e3dc49b
+      m_TableEntryReference:
+        m_KeyId: 398431170719744
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     cooldown: 30
   - skillName: Arc Slash
     skillIcon: {fileID: 21300000, guid: 7014dc5a8fae9420db6939857c08cfb5, type: 3}
-    description: Slash forward with magical force
+    description:
+      m_TableReference:
+        m_TableCollectionName: GUID:71d0b3bd61dd7964b8cbf6f05e3dc49b
+      m_TableEntryReference:
+        m_KeyId: 398433871851520
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     cooldown: 30
   - skillName: Arcane Surge
     skillIcon: {fileID: 21300000, guid: d5537b4eb27414eaa9abbb800c5c9872, type: 3}
-    description: Channel arcane energy to empower yourself.
+    description:
+      m_TableReference:
+        m_TableCollectionName: GUID:71d0b3bd61dd7964b8cbf6f05e3dc49b
+      m_TableEntryReference:
+        m_KeyId: 403484254269440
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     cooldown: 35
+  references:
+    version: 2
+    RefIds: []

@@ -8,6 +8,7 @@ public class LanguageBootstrap : MonoBehaviour
 
     private void Awake()
     {
+         DontDestroyOnLoad(gameObject); 
         string savedLang = PlayerPrefs.GetString(PLAYER_PREFS_KEY, "");
         if (!string.IsNullOrEmpty(savedLang))
         {

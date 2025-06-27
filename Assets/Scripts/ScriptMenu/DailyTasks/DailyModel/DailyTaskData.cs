@@ -9,4 +9,5 @@ public class DailyTaskData
     public int requiredCount;
     public int goldReward;
     public int energyReward;
+    public string descriptionKey;
 }

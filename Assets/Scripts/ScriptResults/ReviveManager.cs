@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Localization;
 
 public class ReviveManager : MonoBehaviour
 {
@@ -52,7 +53,8 @@ public class ReviveManager : MonoBehaviour
             if (notifiText != null)
             {
                 notifiText.gameObject.SetActive(true);
-                notifiText.text = "YOU CANNOT RESURRECT!";
+                var reviveBlocked = new LocalizedString("LanguageVanh", "revive_not_allowed");
+                reviveBlocked.StringChanged += val => notifiText.text = val;
             }
             return;
         }
@@ -64,7 +66,8 @@ public class ReviveManager : MonoBehaviour
             if (notifiText != null)
             {
                 notifiText.gameObject.SetActive(true);
-                notifiText.text = "YOUR REVIVE TURN IS OVER!";
+                var reviveLimit = new LocalizedString("LanguageVanh", "revive_turn_over");
+                reviveLimit.StringChanged += val => notifiText.text = val;
             }
             return;
         }
@@ -82,7 +85,9 @@ public class ReviveManager : MonoBehaviour
         if (!canAfford && checkGem != null)
         {
             checkGem.gameObject.SetActive(true);
-            checkGem.text = "NOT ENOUGH GEMS!";
+            var notEnoughGems = new LocalizedString("LanguageVanh", "not_enough_gems");
+            notEnoughGems.StringChanged += val => checkGem.text = val;
+
         }
 
         adsButton.interactable = AdManager.Instance != null && AdManager.Instance.HasInterstitialReady();

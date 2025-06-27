@@ -524,6 +524,30 @@ MonoBehaviour:
     m_Localized: Wormhole
     m_Metadata:
       m_Items: []
+  - m_Id: 717215093878784
+    m_Localized: Your revive turn is over!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717215941128192
+    m_Localized: You cannot resurrect!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717218751311872
+    m_Localized: STATISTICAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738047451066368
+    m_Localized: REWARD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865000607744
+    m_Localized: RETRY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865956909056
+    m_Localized: Receive x2
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

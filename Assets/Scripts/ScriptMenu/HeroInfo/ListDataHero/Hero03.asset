@@ -24,13 +24,40 @@ MonoBehaviour:
   skills:
   - skillName: ' Heal'
     skillIcon: {fileID: 21300000, guid: f180b2ea0f9eb4e64b9e095b37b1fee4, type: 3}
-    description: Maximum healing
+    description:
+      m_TableReference:
+        m_TableCollectionName: GUID:71d0b3bd61dd7964b8cbf6f05e3dc49b
+      m_TableEntryReference:
+        m_KeyId: 398429945982976
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     cooldown: 30
   - skillName: Power Slash
     skillIcon: {fileID: 21300000, guid: 38d206433dc134e87a225b7227bfd582, type: 3}
-    description: Shoot Magic
+    description:
+      m_TableReference:
+        m_TableCollectionName: GUID:71d0b3bd61dd7964b8cbf6f05e3dc49b
+      m_TableEntryReference:
+        m_KeyId: 398432043134976
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     cooldown: 30
   - skillName: Frostfall
     skillIcon: {fileID: 21300000, guid: 490ce39c0656043e688bfff17fa7c776, type: 3}
-    description: Drop an icy spike from above
+    description:
+      m_TableReference:
+        m_TableCollectionName: GUID:71d0b3bd61dd7964b8cbf6f05e3dc49b
+      m_TableEntryReference:
+        m_KeyId: 398432982659072
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     cooldown: 35
+  references:
+    version: 2
+    RefIds: []

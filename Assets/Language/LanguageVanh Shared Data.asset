@@ -116,9 +116,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349506
-    m_Key: 'language_setting
-
-'
+    m_Key: language_setting
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349507
@@ -208,9 +206,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349528
-    m_Key: 'use_skill_10
-
-'
+    m_Key: use_skill_10
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349529
@@ -266,11 +262,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16039834677248
-    m_Key: 'play  '
+    m_Key: play
     m_Metadata:
       m_Items: []
   - m_Id: 18093013594112
-    m_Key: 'loading  '
+    m_Key: 'loading '
     m_Metadata:
       m_Items: []
   - m_Id: 20850307100672
@@ -414,9 +410,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 368892617027584
-    m_Key: 'upgrade
-
-'
+    m_Key: upgrade2
     m_Metadata:
       m_Items: []
   - m_Id: 368893640437760
@@ -521,6 +515,30 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 405751367856128
     m_Key: skill_wormhole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717215093878784
+    m_Key: revive_turn_over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717215941128192
+    m_Key: revive_not_allowed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717218751311872
+    m_Key: statistical
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738047451066368
+    m_Key: reward_result
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865000607744
+    m_Key: retry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865956909056
+    m_Key: receive_x2
     m_Metadata:
       m_Items: []
   m_Metadata:

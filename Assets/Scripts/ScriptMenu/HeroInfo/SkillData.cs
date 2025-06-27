@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Localization;
 
 [System.Serializable]
 public class SkillData
 {
     public string skillName;
     public Sprite skillIcon;
-    public string description;
+    public LocalizedString description;
     public float cooldown;
 }

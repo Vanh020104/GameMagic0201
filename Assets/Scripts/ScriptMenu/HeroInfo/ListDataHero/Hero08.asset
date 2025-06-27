@@ -24,13 +24,40 @@ MonoBehaviour:
   skills:
   - skillName: Regenerate
     skillIcon: {fileID: 21300000, guid: e232c984bd6bd4636b912938cd4eb8d6, type: 3}
-    description: Maximum healing
+    description:
+      m_TableReference:
+        m_TableCollectionName: GUID:71d0b3bd61dd7964b8cbf6f05e3dc49b
+      m_TableEntryReference:
+        m_KeyId: 398431170719744
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     cooldown: 30
   - skillName: Arc Slash
     skillIcon: {fileID: 21300000, guid: 38d206433dc134e87a225b7227bfd582, type: 3}
-    description: Slash forward with magical force
+    description:
+      m_TableReference:
+        m_TableCollectionName: GUID:71d0b3bd61dd7964b8cbf6f05e3dc49b
+      m_TableEntryReference:
+        m_KeyId: 398433871851520
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     cooldown: 30
   - skillName: Gravity Well
     skillIcon: {fileID: 21300000, guid: 26b9c2fe684df47b99014f3449571aa9, type: 3}
-    description: Pull enemies into a gravity zone.
+    description:
+      m_TableReference:
+        m_TableCollectionName: GUID:71d0b3bd61dd7964b8cbf6f05e3dc49b
+      m_TableEntryReference:
+        m_KeyId: 404865874784256
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     cooldown: 35
+  references:
+    version: 2
+    RefIds: []

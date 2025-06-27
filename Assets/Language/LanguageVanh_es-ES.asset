@@ -520,6 +520,30 @@ MonoBehaviour:
     m_Localized: Agujero de Gusano
     m_Metadata:
       m_Items: []
+  - m_Id: 717215093878784
+    m_Localized: "\xA1Se han agotado tus intentos de reanimaci\xF3n!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717215941128192
+    m_Localized: "\xA1No puedes revivir!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 717218751311872
+    m_Localized: "Estad\xEDsticas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738047451066368
+    m_Localized: Recompensa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865000607744
+    m_Localized: Reintentar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738865956909056
+    m_Localized: Recibir x2
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

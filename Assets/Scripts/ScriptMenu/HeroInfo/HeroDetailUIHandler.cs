@@ -27,6 +27,7 @@ public class HeroDetailUIHandler : MonoBehaviour
     private Coroutine smokeRoutine;
 
 
+    public TMP_Text[] skillDescriptions;
 
     private void Awake() => Instance = this;
 
@@ -91,6 +92,17 @@ public class HeroDetailUIHandler : MonoBehaviour
         {
             skillIcons[i].sprite = data.skills[i].skillIcon;
             skillNames[i].text = data.skills[i].skillName;
+             // 🎯 Gán mô tả từ LocalizedString
+            if (i < skillDescriptions.Length)
+            {
+                var localizedDesc = data.skills[i].description;
+                int index = i; // capture index cho closure
+                localizedDesc.StringChanged += val =>
+                {
+                    skillDescriptions[index].text = val;
+                };
+                localizedDesc.RefreshString(); // ⚠️ để trigger hiển thị ngay khi mở
+            }
         }
 
         upgradeCostText.text = GetUpgradeCost(currentPlayerHero.currentLevel).ToString();
