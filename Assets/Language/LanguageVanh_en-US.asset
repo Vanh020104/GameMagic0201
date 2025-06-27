@@ -175,83 +175,83 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349519
-    m_Localized: 
+    m_Localized: Watch 1 ad
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349520
-    m_Localized: 
+    m_Localized: Watch 3 ad
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349521
-    m_Localized: 
+    m_Localized: Upgrade hero
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349522
-    m_Localized: 
+    m_Localized: Use the lucky spin
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349523
-    m_Localized: 
+    m_Localized: Open settings
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349524
-    m_Localized: 
+    m_Localized: Open inventory
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349525
-    m_Localized: 
+    m_Localized: Open upgrade screen
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349526
-    m_Localized: 
+    m_Localized: Kill 10 enemies
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349527
-    m_Localized: 
+    m_Localized: Kill 20 enemies
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349528
-    m_Localized: 
+    m_Localized: Use 10 skills
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349529
-    m_Localized: 
+    m_Localized: Use heal 5 times
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349530
-    m_Localized: 
+    m_Localized: Deal 5000 damage
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349531
-    m_Localized: 
+    m_Localized: Deal 10000 damage
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349532
-    m_Localized: 
+    m_Localized: Survive 60 seconds
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349533
-    m_Localized: 
+    m_Localized: Survive 180 seconds
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349534
-    m_Localized: 
+    m_Localized: Reach level 5
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349535
-    m_Localized: 
+    m_Localized: Reach level 10
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349536
-    m_Localized: 
+    m_Localized: Win 3 matches
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349537
-    m_Localized: 
+    m_Localized: Win 1 matches
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349538
-    m_Localized: 
+    m_Localized: Revive 1 time
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349539
@@ -278,6 +278,250 @@ MonoBehaviour:
     m_Localized: 'Player
 
 '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360374300176384
+    m_Localized: VICTORY! Dinner is served!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360544874131456
+    m_Localized: Top 1! Nobody even came close!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360545847209984
+    m_Localized: Legendary! You dominated!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360546757373952
+    m_Localized: Carried the team with no scratch!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360547722063872
+    m_Localized: So close! Almost got it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360548644810752
+    m_Localized: You're great, but not quite enough
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360549672415232
+    m_Localized: Knocked at heaven's door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360550561607680
+    m_Localized: Great skills! Luck is missing!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360551484354560
+    m_Localized: Good job! But needs more training
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360552457433088
+    m_Localized: Decent, but outplayed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360553413734400
+    m_Localized: Shot well but unlucky!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360554403590144
+    m_Localized: Middle of the pack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360555280199680
+    m_Localized: Not bad, but not standout
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360556215529472
+    m_Localized: Were you warming up?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360557222162432
+    m_Localized: Still warming up, right?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360558061023232
+    m_Localized: Just looted and died!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362859496599552
+    m_Localized: Chicken didn't even crow...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362861434368000
+    m_Localized: Next time, aim better!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368873876877312
+    m_Localized: You need to reach\nLevel {0} to unlock!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368875613319168
+    m_Localized: You need {0} keys!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368876552843264
+    m_Localized: You spent {0} keys to claim {1}!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368877475590144
+    m_Localized: Please come back after {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368880143167488
+    m_Localized: Reward received! {0} more left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368881183354880
+    m_Localized: Purchase successful!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368882139656192
+    m_Localized: Hero unlocked!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368883045625856
+    m_Localized: Not enough Gems!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368884035481600
+    m_Localized: Item purchased!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368885130194944
+    m_Localized: Not enough Gold!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368885956472832
+    m_Localized: Chestplate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368886824693760
+    m_Localized: Helmet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368887667748864
+    m_Localized: Boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368888607272960
+    m_Localized: Equipment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368889681014784
+    m_Localized: Level {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368891509731328
+    m_Localized: Damage {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368892617027584
+    m_Localized: Upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368893640437760
+    m_Localized: Upgrade equipment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 385708533870592
+    m_Localized: Revive 3 time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387562865029120
+    m_Localized: You've received {0} Lucky Key for reaching {1} energy!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387574235787264
+    m_Localized: Coming soon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387768578863104
+    m_Localized: MAX RANK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387773335203840
+    m_Localized: Season Rank
+    m_Metadata:
+      m_Items: []
+  - m_Id: 391845345882112
+    m_Localized: 'Season ends in: {0}d {1}h{2}m{3}s'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398429945982976
+    m_Localized: Heal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398431170719744
+    m_Localized: Regenerate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398432043134976
+    m_Localized: Power_Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398432982659072
+    m_Localized: Frostfall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398433871851520
+    m_Localized: Arc Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398434706518016
+    m_Localized: Arcane Burst
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398435448909824
+    m_Localized: Spider Trap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398436287770624
+    m_Localized: Wormhole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398437898383360
+    m_Localized: Blood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398444420526080
+    m_Localized: Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398445934669824
+    m_Localized: Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403481930625024
+    m_Localized: Meteor Shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403482580742144
+    m_Localized: Web Snare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403483419602944
+    m_Localized: Flame Rain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403484254269440
+    m_Localized: Arcane Surge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404865874784256
+    m_Localized: Gravity Well
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404867955159040
+    m_Localized: Meteor Pearl
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404869431554048
+    m_Localized: Mystic Boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405751367856128
+    m_Localized: Wormhole
     m_Metadata:
       m_Items: []
   references:

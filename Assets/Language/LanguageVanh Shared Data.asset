@@ -166,75 +166,79 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349518
-    m_Key: open_shop_once
+    m_Key: open_shop
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349519
-    m_Key: watch_1_ad
+    m_Key: watch_ad
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349520
-    m_Key: watch_3_ad
+    m_Key: watch_ad_3
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349521
-    m_Key: upgrade_hero_once
+    m_Key: upgrade_hero
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349522
-    m_Key: use_lucky_spin
+    m_Key: use_spin
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349523
-    m_Key: open_settings
+    m_Key: open_setting
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349524
-    m_Key: open_your_bag
+    m_Key: open_bag_panel
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349525
-    m_Key: reach_level_5_match
+    m_Key: open_upgrade
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349526
-    m_Key: survive_180_seconds
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7771347349527
-    m_Key: survive_60_seconds
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7771347349528
-    m_Key: deal_10000_damage
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7771347349529
-    m_Key: deal_5000_damage
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7771347349530
-    m_Key: use_heal_5_times
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7771347349531
-    m_Key: use_skill_10_times
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7771347349532
-    m_Key: kill_20_enemies
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7771347349533
     m_Key: kill_10_enemies
     m_Metadata:
       m_Items: []
+  - m_Id: 7771347349527
+    m_Key: 'kill_20_enemies
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349528
+    m_Key: 'use_skill_10
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349529
+    m_Key: use_heal_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349530
+    m_Key: deal_500_damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349531
+    m_Key: deal_1000_damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349532
+    m_Key: survive_60s
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7771347349533
+    m_Key: survive_180s
+    m_Metadata:
+      m_Items: []
   - m_Id: 7771347349534
-    m_Key: open_upgrade_panel
+    m_Key: reach_level_5
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349535
-    m_Key: revive_1_time
+    m_Key: reach_level_10
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349536
@@ -242,11 +246,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349537
-    m_Key: win_1_match
+    m_Key: win_match
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349538
-    m_Key: reach_level_10_match
+    m_Key: revive_1_time
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349539
@@ -271,6 +275,252 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 20850307100672
     m_Key: player
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360374300176384
+    m_Key: match_victory_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360544874131456
+    m_Key: match_victory_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360545847209984
+    m_Key: match_victory_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360546757373952
+    m_Key: match_victory_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360547722063872
+    m_Key: match_rank_2to5_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360548644810752
+    m_Key: match_rank_2to5_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360549672415232
+    m_Key: match_rank_2to5_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360550561607680
+    m_Key: match_rank_2to5_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360551484354560
+    m_Key: match_rank_2to5_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360552457433088
+    m_Key: match_rank_6to10_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360553413734400
+    m_Key: match_rank_6to10_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360554403590144
+    m_Key: match_rank_6to10_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360555280199680
+    m_Key: match_rank_6to10_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360556215529472
+    m_Key: match_rank_11to20_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360557222162432
+    m_Key: match_rank_11to20_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360558061023232
+    m_Key: match_rank_11to20_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362859496599552
+    m_Key: match_rank_11to20_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362861434368000
+    m_Key: match_rank_11to20_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368873876877312
+    m_Key: need_level_to_unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368875613319168
+    m_Key: not_enough_keys
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368876552843264
+    m_Key: spent_keys_get_item
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368877475590144
+    m_Key: come_back_after_time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368880143167488
+    m_Key: reward_received_left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368881183354880
+    m_Key: purchase_successful
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368882139656192
+    m_Key: hero_unlocked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368883045625856
+    m_Key: not_enough_gems
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368884035481600
+    m_Key: item_purchased
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368885130194944
+    m_Key: not_enough_gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368885956472832
+    m_Key: tab_armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368886824693760
+    m_Key: tab_hat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368887667748864
+    m_Key: tab_boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368888607272960
+    m_Key: tab_equipment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368889681014784
+    m_Key: item_level_prefix
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368891509731328
+    m_Key: item_damage_prefix
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368892617027584
+    m_Key: 'upgrade
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368893640437760
+    m_Key: upgrade_equip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 385708533870592
+    m_Key: revive_3_time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387562865029120
+    m_Key: energy_reward_notification
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387574235787264
+    m_Key: coming_soon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387768578863104
+    m_Key: max_rank
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387773335203840
+    m_Key: season_rank
+    m_Metadata:
+      m_Items: []
+  - m_Id: 391845345882112
+    m_Key: season_ends_in_format
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398429945982976
+    m_Key: Heal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398431170719744
+    m_Key: Regenerate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398432043134976
+    m_Key: Power_Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398432982659072
+    m_Key: Frostfall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398433871851520
+    m_Key: Arc_Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398434706518016
+    m_Key: Arcane_Burst
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398435448909824
+    m_Key: Spider_Trap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398436287770624
+    m_Key: Wormhole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398437898383360
+    m_Key: stat_blood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398444420526080
+    m_Key: stat_speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398445934669824
+    m_Key: stat_damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403481930625024
+    m_Key: skill_meteor_shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403482580742144
+    m_Key: skill_web_snare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403483419602944
+    m_Key: skill_flame_rain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403484254269440
+    m_Key: skill_arcane_surge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404865874784256
+    m_Key: skill_gravity_well
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404867955159040
+    m_Key: skill_meteor_pearl
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404869431554048
+    m_Key: skill_mystic_boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405751367856128
+    m_Key: skill_wormhole
     m_Metadata:
       m_Items: []
   m_Metadata:

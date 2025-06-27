@@ -171,83 +171,83 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349519
-    m_Localized: 
+    m_Localized: Ver 1 anuncio
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349520
-    m_Localized: 
+    m_Localized: Ver 3 anuncio
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349521
-    m_Localized: 
+    m_Localized: "Mejorar h\xE9roe"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349522
-    m_Localized: 
+    m_Localized: Usar la ruleta de la suerte
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349523
-    m_Localized: 
+    m_Localized: "Abrir configuraci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349524
-    m_Localized: 
+    m_Localized: Abrir inventario
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349525
-    m_Localized: 
+    m_Localized: Abrir mejoras
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349526
-    m_Localized: 
+    m_Localized: Matar a 10 enemigos
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349527
-    m_Localized: 
+    m_Localized: Matar a 20 enemigos
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349528
-    m_Localized: 
+    m_Localized: Usar 10 habilidades
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349529
-    m_Localized: 
+    m_Localized: "Usar curaci\xF3n 5 veces"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349530
-    m_Localized: 
+    m_Localized: "Infligir 5000 de da\xF1o"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349531
-    m_Localized: 
+    m_Localized: "Infligir 10000 de da\xF1o"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349532
-    m_Localized: 
+    m_Localized: Sobrevive 60 segundos
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349533
-    m_Localized: 
+    m_Localized: Sobrevive 180 segundos
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349534
-    m_Localized: 
+    m_Localized: Alcanzar nivel 5
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349535
-    m_Localized: 
+    m_Localized: Alcanzar nivel 10
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349536
-    m_Localized: 
+    m_Localized: Ganar 3 partidas
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349537
-    m_Localized: 
+    m_Localized: Ganar 1 partidas
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349538
-    m_Localized: 
+    m_Localized: Revivir 1 vez
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349539
@@ -272,6 +272,252 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 20850307100672
     m_Localized: 'Jugador  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360374300176384
+    m_Localized: "\xA1VICTORIA! \xA1La cena est\xE1 servida!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360544874131456
+    m_Localized: "Top 1! Niemand kam auch nur in die N\xE4he!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360545847209984
+    m_Localized: "\xA1Legendario! \xA1Dominas!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360546757373952
+    m_Localized: "\xA1Cargaste al equipo sin rasgu\xF1os!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360547722063872
+    m_Localized: "\xA1Tan cerca! \xA1Casi lo logras!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360548644810752
+    m_Localized: "\xA1Eres bueno, pero no fue suficiente!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360549672415232
+    m_Localized: Llamaste a las puertas del cielo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360550561607680
+    m_Localized: "\xA1Grandes habilidades! Falt\xF3 suerte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360551484354560
+    m_Localized: "\xA1Buen trabajo! \xA1Pero entrena m\xE1s!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360552457433088
+    m_Localized: Decente, pero superado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360553413734400
+    m_Localized: Buen disparo, pero mala suerte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360554403590144
+    m_Localized: Mitad del grupo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360555280199680
+    m_Localized: "No est\xE1 mal, pero no destacas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360556215529472
+    m_Localized: "\xBFEstabas calentando?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360557222162432
+    m_Localized: "\xBFTodav\xEDa est\xE1s calentando?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360558061023232
+    m_Localized: "\xA1Apenas looteaste y ya est\xE1s muerto!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362859496599552
+    m_Localized: "El pollo ni siquiera cant\xF3\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362861434368000
+    m_Localized: "\xA1La pr\xF3xima vez apunta mejor!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368873876877312
+    m_Localized: "\xA1Necesitas alcanzar el nivel {0} para desbloquearlo!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368875613319168
+    m_Localized: "\xA1Necesitas {0} llaves!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368876552843264
+    m_Localized: "\xA1Gastaste {0} llaves para conseguir {1}!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368877475590144
+    m_Localized: "Vuelve despu\xE9s de {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368880143167488
+    m_Localized: "\xA1Recompensa recibida! Quedan {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368881183354880
+    m_Localized: "\xA1Compra exitosa!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368882139656192
+    m_Localized: "\xA1H\xE9roe desbloqueado!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368883045625856
+    m_Localized: "\xA1No tienes suficientes gemas!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368884035481600
+    m_Localized: "\xA1Objeto comprado!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368885130194944
+    m_Localized: "\xA1No tienes suficiente oro!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368885956472832
+    m_Localized: Pechera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368886824693760
+    m_Localized: Casco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368887667748864
+    m_Localized: Botas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368888607272960
+    m_Localized: Equipo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368889681014784
+    m_Localized: Nivel {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368891509731328
+    m_Localized: "Da\xF1o {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368892617027584
+    m_Localized: Mejorar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368893640437760
+    m_Localized: Mejorar equipamiento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 385708533870592
+    m_Localized: Revivir 3 vez
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387562865029120
+    m_Localized: "\xA1Has recibido {0} Llave de la Suerte al alcanzar {1} energ\xEDa!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387574235787264
+    m_Localized: "Pr\xF3ximamente\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387768578863104
+    m_Localized: "RANGO M\xC1XIMO"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387773335203840
+    m_Localized: Rango de Temporada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 391845345882112
+    m_Localized: 'Termina en: {0}d {1}h{2}m{3}s'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398429945982976
+    m_Localized: Curar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398431170719744
+    m_Localized: Regenerar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398432043134976
+    m_Localized: Golpe Poderoso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398432982659072
+    m_Localized: "Ca\xEDda de Escarcha"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398433871851520
+    m_Localized: "Corte M\xE1gico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398434706518016
+    m_Localized: "Explosi\xF3n Arcana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398435448909824
+    m_Localized: "Trampa de Ara\xF1a"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398436287770624
+    m_Localized: 'Agujero de gusano
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398437898383360
+    m_Localized: Sangre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398444420526080
+    m_Localized: Velocidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398445934669824
+    m_Localized: "Da\xF1o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403481930625024
+    m_Localized: Escudo Meteoro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403482580742144
+    m_Localized: "Trampa de Telara\xF1a"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403483419602944
+    m_Localized: Lluvia de Fuego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403484254269440
+    m_Localized: Oleada Arcana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404865874784256
+    m_Localized: Pozo Gravitacional
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404867955159040
+    m_Localized: Perla Meteoro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404869431554048
+    m_Localized: "Impulso M\xEDstico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405751367856128
+    m_Localized: Agujero de Gusano
     m_Metadata:
       m_Items: []
   references:

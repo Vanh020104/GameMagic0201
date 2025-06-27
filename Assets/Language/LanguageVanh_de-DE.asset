@@ -171,83 +171,83 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349519
-    m_Localized: 
+    m_Localized: "1 Anzeige ansehen\t"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349520
-    m_Localized: 
+    m_Localized: "3 Anzeige ansehen\t"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349521
-    m_Localized: 
+    m_Localized: Held verbessern
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349522
-    m_Localized: 
+    m_Localized: "Gl\xFCcksrad benutzen"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349523
-    m_Localized: 
+    m_Localized: "Einstellungen \xF6ffnen"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349524
-    m_Localized: 
+    m_Localized: "Inventar \xF6ffnen"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349525
-    m_Localized: 
+    m_Localized: "Upgrade-Men\xFC \xF6ffnen"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349526
-    m_Localized: 
+    m_Localized: 10 Feinde besiegen
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349527
-    m_Localized: 
+    m_Localized: 20 Feinde besiegen
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349528
-    m_Localized: 
+    m_Localized: "10 F\xE4higkeiten benutzen"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349529
-    m_Localized: 
+    m_Localized: 5-mal heilen
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349530
-    m_Localized: 
+    m_Localized: 5000 Schaden verursachen
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349531
-    m_Localized: 
+    m_Localized: 10000 Schaden verursachen
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349532
-    m_Localized: 
+    m_Localized: "60 Sekunden \xFCberleben"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349533
-    m_Localized: 
+    m_Localized: "180 Sekunden \xFCberleben"
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349534
-    m_Localized: 
+    m_Localized: Level 5 erreichen
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349535
-    m_Localized: 
+    m_Localized: Level 10 erreichen
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349536
-    m_Localized: 
+    m_Localized: 3 Spiele gewinnen
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349537
-    m_Localized: 
+    m_Localized: 1 Spiele gewinnen
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349538
-    m_Localized: 
+    m_Localized: 1-mal wiederbeleben
     m_Metadata:
       m_Items: []
   - m_Id: 7771347349539
@@ -272,6 +272,250 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 20850307100672
     m_Localized: 'Spieler  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360374300176384
+    m_Localized: SIEG! Das Abendessen ist serviert!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360544874131456
+    m_Localized: "Top 1! Niemand kam auch nur in die N\xE4he!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360545847209984
+    m_Localized: "Legend\xE4r! Du hast dominiert!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360546757373952
+    m_Localized: Du hast das Team makellos getragen!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360547722063872
+    m_Localized: So knapp! Fast geschafft!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360548644810752
+    m_Localized: Du bist gut, aber nicht ganz genug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360549672415232
+    m_Localized: "An der Himmelst\xFCr gescheitert"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360550561607680
+    m_Localized: "Gute Skills! Es fehlte nur das Gl\xFCck"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360551484354560
+    m_Localized: Gut gemacht! Aber noch mehr Training!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360552457433088
+    m_Localized: "Solide, aber \xFCbertrumpft"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360553413734400
+    m_Localized: "Gut geschossen, aber ungl\xFCcklich!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360554403590144
+    m_Localized: Mitte des Feldes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360555280199680
+    m_Localized: Nicht schlecht, aber nicht herausragend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360556215529472
+    m_Localized: "War das nur Aufw\xE4rmen?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360557222162432
+    m_Localized: "Noch im Aufw\xE4rmen, oder?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360558061023232
+    m_Localized: Gerade gelootet und schon tot!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362859496599552
+    m_Localized: "Das Huhn hat nicht mal gekr\xE4ht\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362861434368000
+    m_Localized: "N\xE4chstes Mal besser zielen!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368873876877312
+    m_Localized: Du musst Level {0} erreichen, um es freizuschalten!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368875613319168
+    m_Localized: "Du brauchst {0} Schl\xFCssel!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368876552843264
+    m_Localized: "Du hast {0} Schl\xFCssel verwendet, um {1} zu erhalten!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368877475590144
+    m_Localized: "Komm nach {0} zur\xFCck"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368880143167488
+    m_Localized: "Belohnung erhalten! Noch {0} \xFCbrig"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368881183354880
+    m_Localized: Kauf erfolgreich!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368882139656192
+    m_Localized: Held freigeschaltet!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368883045625856
+    m_Localized: Nicht genug Edelsteine!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368884035481600
+    m_Localized: Gegenstand gekauft!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368885130194944
+    m_Localized: Nicht genug Gold!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368885956472832
+    m_Localized: Brustpanzer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368886824693760
+    m_Localized: Helm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368887667748864
+    m_Localized: Stiefel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368888607272960
+    m_Localized: "Ausr\xFCstung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368889681014784
+    m_Localized: Stufe {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368891509731328
+    m_Localized: Schaden {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368892617027584
+    m_Localized: Aufwerten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368893640437760
+    m_Localized: "Ausr\xFCstung verbessern"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 385708533870592
+    m_Localized: 3-mal wiederbeleben
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387562865029120
+    m_Localized: "Du hast {0} Gl\xFCcksschl\xFCssel f\xFCr {1} Energie erhalten!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387574235787264
+    m_Localized: "Bald verf\xFCgbar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387768578863104
+    m_Localized: MAXIMALSTUFE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387773335203840
+    m_Localized: Rangliste Saison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 391845345882112
+    m_Localized: 'Saison endet in: {0}T {1}h{2}m{3}s'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398429945982976
+    m_Localized: Heilen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398431170719744
+    m_Localized: Regenerieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398432043134976
+    m_Localized: "M\xE4chtiger Schlag"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398432982659072
+    m_Localized: Frostfall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398433871851520
+    m_Localized: Magischer Hieb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398434706518016
+    m_Localized: Arkane Explosion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398435448909824
+    m_Localized: Spinnenfalle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398436287770624
+    m_Localized: Wurmloch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398437898383360
+    m_Localized: Blut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398444420526080
+    m_Localized: Tempo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 398445934669824
+    m_Localized: Schaden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403481930625024
+    m_Localized: Meteorschild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403482580742144
+    m_Localized: Netzfalle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403483419602944
+    m_Localized: "Flammenregen\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 403484254269440
+    m_Localized: Arkanschub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404865874784256
+    m_Localized: Gravitationsbrunnen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404867955159040
+    m_Localized: Meteorperle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404869431554048
+    m_Localized: Mystischer Schub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405751367856128
+    m_Localized: Wurmloch
     m_Metadata:
       m_Items: []
   references:
