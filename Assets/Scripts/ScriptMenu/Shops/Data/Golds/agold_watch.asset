@@ -19,3 +19,4 @@ MonoBehaviour:
   priceText: Watch Ads
   requiredLevel: 1
   isRewardedAd: 1
+  isKeyPurchase: 0

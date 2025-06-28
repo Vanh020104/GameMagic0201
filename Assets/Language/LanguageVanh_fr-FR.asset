@@ -519,6 +519,10 @@ MonoBehaviour:
     m_Localized: Trou de Ver
     m_Metadata:
       m_Items: []
+  - m_Id: 1103182619340800
+    m_Localized: Veux-tu ressusciter ?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

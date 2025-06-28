@@ -526,6 +526,10 @@ MonoBehaviour:
     m_Localized: Wormhole
     m_Metadata:
       m_Items: []
+  - m_Id: 1103182619340800
+    m_Localized: "B\u1EA1n c\xF3 mu\u1ED1n h\u1ED3i sinh kh\xF4ng?"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

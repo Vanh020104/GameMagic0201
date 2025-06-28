@@ -523,6 +523,10 @@ MonoBehaviour:
     m_Key: skill_wormhole
     m_Metadata:
       m_Items: []
+  - m_Id: 1103182619340800
+    m_Key: do_you_want_to_resurrect
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

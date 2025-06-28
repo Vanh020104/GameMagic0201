@@ -15,6 +15,7 @@ public class PlayButtonController : MonoBehaviour
         adManager = FindObjectOfType<AdManager>();
     }
 
+
     public void OnClickPlay()
     {
         SceneManager.LoadScene(battleScene, LoadSceneMode.Single);
@@ -27,36 +28,39 @@ public class PlayButtonController : MonoBehaviour
 
     private IEnumerator ShowLoadingThenBackHome()
     {
-        if (loadingPanel != null) loadingPanel.SetActive(true);
+        if (loadingPanel != null)
+            loadingPanel.SetActive(true);
 
-        yield return new WaitForSeconds(delayBeforeLoad); // chờ 1.5s
+        yield return new WaitForSeconds(delayBeforeLoad);
 
-        if (adManager != null && adManager.HasInterstitialReady())
+        // Đọc số lần đã về Home
+        int backHomeCount = PlayerPrefs.GetInt("BackHomeCount", 0);
+        backHomeCount++;
+
+        if (backHomeCount >= 3)
         {
-            adManager.ShowInterstitialAd(() =>
+            PlayerPrefs.SetInt("BackHomeCount", 0); // Reset về 0
+            if (adManager != null && adManager.HasInterstitialReady())
             {
-                SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
-            });
+                adManager.ShowInterstitialAd(() =>
+                {
+                    SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
+                });
+                yield break;
+            }
         }
         else
         {
-            SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
+            PlayerPrefs.SetInt("BackHomeCount", backHomeCount); // Lưu lại
         }
+
+        SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
     }
+
     public void ExitBattle()
     {
         TriggerForcedEnd();
-        // if (adManager != null && adManager.HasInterstitialReady())
-        // {
-        //     adManager.ShowInterstitialAd(() =>
-        //     {
-        //         TriggerForcedEnd(); // ← xử lý kết quả trước khi chuyển scene
-        //     });
-        // }
-        // else
-        // {
-        //     TriggerForcedEnd();
-        // }
+
     }
 
     private void TriggerForcedEnd()

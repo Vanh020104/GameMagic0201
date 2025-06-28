@@ -703,14 +703,16 @@ MonoBehaviour:
   minAttackDistance: 15
   fleeDistance: 25
   cooldownMoveDistance: 50
-  moveSpeed: 15
+  moveSpeed: 25
   attackCooldown: 2
+  healSearchRange: 80
   target: {fileID: 0}
   botStats: {fileID: 0}
   projectilePrefab: {fileID: 1200594170926508, guid: 00a4ddc61a2102c42a81034f7dbd8402,
     type: 3}
   projectileSpawnPoint: {fileID: 9158200622281688134}
   projectileLifetime: 2
+  healCooldown: 5
 --- !u!114 &1781026187916966727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,9 +745,13 @@ MonoBehaviour:
   currentHP: 200
   maxMana: 100
   currentMana: 100
+  baseDamage: 50
   floatingTextPrefab: {fileID: 5342096560126195339, guid: 87a2614f99614934e8ba2e4308898173,
     type: 3}
   popupPoint: {fileID: 1498599984434460553}
+  isDead: 0
+  healHeartPrefab: {fileID: 0}
+  lastHealTime: -999
 --- !u!1 &2448019305283400177
 GameObject:
   m_ObjectHideFlags: 0

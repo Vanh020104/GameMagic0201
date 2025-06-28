@@ -18,7 +18,7 @@ public class RewardButtonWatch : MonoBehaviour
     private GoldGemManager goldGemManager;
 
     private const string KeyLastAdTime = "LastRewardAdTime";
-    private const int cooldownSeconds = 30; 
+    private const int cooldownSeconds = 120; 
 
     private void Awake()
     {

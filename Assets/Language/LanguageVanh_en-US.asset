@@ -524,6 +524,10 @@ MonoBehaviour:
     m_Localized: Wormhole
     m_Metadata:
       m_Items: []
+  - m_Id: 1103182619340800
+    m_Localized: DO YOU WANT TO RESURRECT?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

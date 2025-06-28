@@ -7,11 +7,21 @@ public class TestBattlePassPurchase : MonoBehaviour
 
     public void OnClickBuyPass()
     {
-        BattlePassManager.Activate();
-        NotificationPopupUI.Instance?.Show(" Battle Pass activated!");
-        UpdateStatus();
-        RefreshBattlePassUI();
+        int requiredKey = 200;
+
+        if (GoldGemManager.Instance != null && GoldGemManager.Instance.SpendKey(requiredKey))
+        {
+            BattlePassManager.Activate();
+            NotificationPopupUI.Instance?.Show("Battle Pass activated!");
+            UpdateStatus();
+            RefreshBattlePassUI();
+        }
+        else
+        {
+            NotificationPopupUI.Instance?.Show(" Not enough Lucky Keys!", false);
+        }
     }
+
 
     private void UpdateStatus()
     {

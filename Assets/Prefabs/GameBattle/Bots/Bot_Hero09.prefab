@@ -587,7 +587,7 @@ MonoBehaviour:
   minAttackDistance: 15
   fleeDistance: 25
   cooldownMoveDistance: 50
-  moveSpeed: 20
+  moveSpeed: 25
   attackCooldown: 2
   healSearchRange: 80
   target: {fileID: 0}

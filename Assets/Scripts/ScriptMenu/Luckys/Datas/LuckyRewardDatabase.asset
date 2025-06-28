@@ -109,6 +109,12 @@ MonoBehaviour:
     amount: 10
     tier: 2
     rewardType: 2
+  - id: Key006
+    rewardName: Key06
+    rewardIcon: {fileID: 21300000, guid: b0529ef7d6db147f1adb4904a30e0c6f, type: 3}
+    amount: 15
+    tier: 2
+    rewardType: 2
   - id: Armor_09
     rewardName: Armor_09
     rewardIcon: {fileID: 21300000, guid: e3d82774f0e0e40d2beb154c1f51023a, type: 3}

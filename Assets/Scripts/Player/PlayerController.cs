@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public Animator _animator;
     public FixedJoystick fixedJoystick;
     public Rigidbody _rigidbody;
-    public float speedPlayer = 10f;
+    public float speedPlayer = 26f;
     public float rotationSpeed = 10f;
 
     private Vector3 moveDirection;
