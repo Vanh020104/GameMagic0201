@@ -224,7 +224,7 @@ public class BotAI : MonoBehaviour
             float currDist = Vector3.Distance(transform.position, target.position);
             float newDist = Vector3.Distance(transform.position, newTarget.position);
 
-            if (newTarget != target && newDist + 5f < currDist) // Giảm nhạy
+            if (newTarget != target && newDist + 3f < currDist) // Giảm nhạy
             {
                 target = newTarget;
             }
@@ -901,41 +901,7 @@ Transform FindClosestTarget()
             ResetPathIfTargetChanged(cooldownTarget);
             noMoveTimer = 0f;
         }
-
-
     }
-
-
-    void OnDrawGizmos()
-{
-    Gizmos.color = Color.red;
-    Gizmos.DrawLine(transform.position, transform.position + transform.forward * 4f);
-
-    // 🎯 Vẽ vùng detect
-    Gizmos.color = new Color(0f, 1f, 0f, 0.2f); // Xanh lá mờ
-    Gizmos.DrawWireSphere(transform.position, detectRange);
-
-    // 🔥 Vẽ vùng tấn công
-    Gizmos.color = new Color(1f, 0.5f, 0f, 0.3f); // Cam mờ
-    Gizmos.DrawWireSphere(transform.position, attackRange);
-
-    // ⚠️ Vẽ vùng quá gần phải lùi
-    Gizmos.color = new Color(1f, 0f, 0f, 0.4f); // Đỏ mờ
-    Gizmos.DrawWireSphere(transform.position, minAttackDistance);
-
-    // 🏃 Vẽ vùng bỏ chạy
-    Gizmos.color = new Color(0.5f, 0.5f, 1f, 0.3f); // Xanh dương nhạt
-    Gizmos.DrawWireSphere(transform.position, fleeDistance);
-
-    // 🟡 Vẽ vị trí bot đang di chuyển đến trong cooldown
-    if (cooldownTarget != Vector3.zero)
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, cooldownTarget);
-        Gizmos.DrawSphere(cooldownTarget, 1f);
-    }
-}
-
 
     void CheckStuckAndResetIfNeeded()
     {
@@ -990,7 +956,7 @@ Transform FindClosestTarget()
     {
         if (!target) return false;
         Vector3 dir = (target.position - transform.position).normalized;
-        return Vector3.Dot(transform.forward, dir) > 0.8f;
+        return Vector3.Dot(transform.forward, dir) > 0.4f;
     }
 
     bool IsTargetDead(Transform t)
