@@ -28,12 +28,17 @@ public class PlayerInfo : MonoBehaviour
 
     void Start()
     {
+        BotManager.Instance?.RegisterPlayer(this);
         int equipDamage = PlayerPrefs.GetInt("TotalEquipDamage", 0);
         baseDamage += equipDamage;
 
         Debug.Log($"🗡️ BaseDamage = {baseDamage} (Gốc + Trang bị)");
         StartCoroutine(RegenerateMana());
         reviveManager = FindObjectOfType<ReviveManager>();
+    }
+    void OnDestroy()
+    {
+        BotManager.Instance?.UnregisterPlayer(this);
     }
 
     void Update()

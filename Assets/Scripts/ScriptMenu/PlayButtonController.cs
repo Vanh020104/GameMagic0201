@@ -9,6 +9,7 @@ public class PlayButtonController : MonoBehaviour
     [SerializeField] private float delayBeforeLoad = 1.5f; // thời gian chờ sau khi show ads
     public GameObject loadingPanel;
     private AdManager adManager;
+    private bool isReturningHome = false;
 
     private void Start()
     {
@@ -23,6 +24,9 @@ public class PlayButtonController : MonoBehaviour
 
     public void BackHome()
     {
+        if (isReturningHome) return; 
+        isReturningHome = true;
+
         StartCoroutine(ShowLoadingThenBackHome());
     }
 
@@ -33,29 +37,42 @@ public class PlayButtonController : MonoBehaviour
 
         yield return new WaitForSeconds(delayBeforeLoad);
 
-        // Đọc số lần đã về Home
+        // Đếm số lần về Home
         int backHomeCount = PlayerPrefs.GetInt("BackHomeCount", 0);
         backHomeCount++;
 
-        if (backHomeCount >= 3)
+        bool shouldShowAd = backHomeCount >= 3;
+        PlayerPrefs.SetInt("BackHomeCount", shouldShowAd ? 0 : backHomeCount); // Reset nếu tới ngưỡng
+
+        // Nếu cần hiện quảng cáo
+        if (shouldShowAd)
         {
-            PlayerPrefs.SetInt("BackHomeCount", 0); // Reset về 0
-            if (adManager != null && adManager.HasInterstitialReady())
+            // Nếu có mạng và quảng cáo sẵn sàng
+            if (adManager != null 
+                && adManager.HasInterstitialReady()
+                && Application.internetReachability != NetworkReachability.NotReachable)
             {
+                Debug.Log("📺 Showing interstitial ad before returning home...");
+
                 adManager.ShowInterstitialAd(() =>
                 {
                     SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
+                    isReturningHome = false;
                 });
+
                 yield break;
             }
-        }
-        else
-        {
-            PlayerPrefs.SetInt("BackHomeCount", backHomeCount); // Lưu lại
+            else
+            {
+                Debug.Log("📴 No internet or ad not ready → skipping ad.");
+            }
         }
 
+        // Không cần quảng cáo hoặc không có mạng
         SceneManager.LoadScene(homeScene, LoadSceneMode.Single);
+        isReturningHome = false;
     }
+
 
     public void ExitBattle()
     {

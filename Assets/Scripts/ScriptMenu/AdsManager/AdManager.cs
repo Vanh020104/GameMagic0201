@@ -9,8 +9,15 @@ public class AdManager : MonoBehaviour
     private InterstitialAd interstitialAd;
     private Action onInterstitialClosed;
     [Header("Ad Unit IDs")]
-    [SerializeField] private string rewardedAdUnitId = "ca-app-pub-3940256099942544/5224354917";      // TEST rewarded
-    [SerializeField] private string interstitialAdUnitId = "ca-app-pub-3940256099942544/1033173712";  // TEST interstitial
+
+    // // test Ads
+    // [SerializeField] private string rewardedAdUnitId = "ca-app-pub-3940256099942544/5224354917";      // TEST rewarded
+    // [SerializeField] private string interstitialAdUnitId = "ca-app-pub-3940256099942544/1033173712";  // TEST interstitial
+
+
+    // Ads thật 
+    [SerializeField] private string rewardedAdUnitId = "ca-app-pub-9519709669762677/2155360165";     
+    [SerializeField] private string interstitialAdUnitId = "ca-app-pub-9519709669762677/6005576462"; 
 
     private Action onRewardedCallback;
     public static AdManager Instance;

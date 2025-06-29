@@ -56,9 +56,11 @@ public class BotAI : MonoBehaviour
     private float lastEscapeFromBehindTime = -10f;
     private float escapeCooldown = 1.2f;
     private float lastAttackCooldownSetTime = -999f;
+    private float cooldownLockUntil = 0f;
 
     void Start()
     {
+        BotManager.Instance?.RegisterBot(this);
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         botStats = GetComponent<BotStats>();
@@ -69,6 +71,10 @@ public class BotAI : MonoBehaviour
 
         InvokeRepeating(nameof(ChooseWanderTarget), 0f, 5f);
         InvokeRepeating(nameof(RegenMana), 1f, 1f);
+    }
+    void OnDestroy()
+    {
+        BotManager.Instance?.UnregisterBot(this);
     }
 
     void Update()
@@ -164,6 +170,8 @@ public class BotAI : MonoBehaviour
     {
         if (Time.time - lastHealTime < healCooldown)
             return;
+        if (currentState == State.Cooldown && Time.time < cooldownLockUntil)
+            return;
         if (botStats.currentHP < botStats.maxHP * 0.3f)
         {
             float playerDist = target != null ? Vector3.Distance(transform.position, target.position) : Mathf.Infinity;
@@ -242,26 +250,19 @@ public class BotAI : MonoBehaviour
             }
             else
             {
-                // 🧠 Nếu quá gần thì di chuyển ra xa 1 chút để bắn
-                float currentDist = Vector3.Distance(transform.position, target.position);
-                if (currentDist < minAttackDistance)
-                {
-                    cooldownTarget = ClampToNavMesh(transform.position - (target.position - transform.position).normalized * (minAttackDistance + 4f));
-                }
+                // ✳️ Fallback: nếu không bắn được do facing hoặc line-of-sight thì phải cooldown né ra
+                Vector3 escapeDir = (transform.position - target.position).normalized;
+                if (escapeDir.sqrMagnitude < 0.01f) escapeDir = Random.insideUnitSphere;
 
-                else
-                {
-                    // Di chuyển ngang hoặc xung quanh để giữ khoảng cách
-                    Vector3 dir = (transform.position - target.position).normalized;
-                    Vector3 side = Quaternion.Euler(0, Random.Range(-70f, 70f), 0) * dir;
-                    cooldownTarget = ClampToNavMesh(transform.position + side * 20f);
-                }
-
+                cooldownTarget = ClampToNavMesh(transform.position + escapeDir * cooldownMoveDistance);
                 currentState = State.Cooldown;
+                pathPoints.Clear();
+                currentPathIndex = 0;
                 ResetPathIfTargetChanged(cooldownTarget);
                 return;
             }
         }
+
 
 
 
@@ -371,103 +372,36 @@ public class BotAI : MonoBehaviour
         return closest;
     }
 
-
-
-    // Transform FindClosestTarget()
-    // {
-    //     float closestDistance = Mathf.Infinity;
-    //     Transform closest = null;
-
-    //     // 🎯 Tính xác suất ưu tiên Player
-    //     bool preferPlayer = Random.value < 0.5f; // 50% ưu tiên Player
-
-    //     if (preferPlayer)
-    //     {
-    //         // Ưu tiên Player trước
-    //         foreach (var obj in GameObject.FindGameObjectsWithTag("Player"))
-    //         {
-    //             if (obj == gameObject || obj.GetComponent<PlayerInfo>()?.hasDied == true) continue;
-    //             float dist = Vector3.Distance(transform.position, obj.transform.position);
-    //             if (dist < closestDistance)
-    //             {
-    //                 closestDistance = dist;
-    //                 closest = obj.transform;
-    //             }
-    //         }
-
-    //         // Nếu không có Player hoặc Player chết, fallback tìm bot
-    //         if (closest == null)
-    //         {
-    //             foreach (var bot in GameObject.FindGameObjectsWithTag("Bot"))
-    //             {
-    //                 if (bot == gameObject || bot.GetComponent<BotStats>()?.currentHP <= 0) continue;
-    //                 float dist = Vector3.Distance(transform.position, bot.transform.position);
-    //                 if (dist < closestDistance)
-    //                 {
-    //                     closestDistance = dist;
-    //                     closest = bot.transform;
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     else
-    //     {
-    //         // Ưu tiên bot trước
-    //         foreach (var bot in GameObject.FindGameObjectsWithTag("Bot"))
-    //         {
-    //             if (bot == gameObject || bot.GetComponent<BotStats>()?.currentHP <= 0) continue;
-    //             float dist = Vector3.Distance(transform.position, bot.transform.position);
-    //             if (dist < closestDistance)
-    //             {
-    //                 closestDistance = dist;
-    //                 closest = bot.transform;
-    //             }
-    //         }
-
-    //         // Nếu không có bot nào sống, fallback tìm Player
-    //         if (closest == null)
-    //         {
-    //             foreach (var obj in GameObject.FindGameObjectsWithTag("Player"))
-    //             {
-    //                 if (obj == gameObject || obj.GetComponent<PlayerInfo>()?.hasDied == true) continue;
-    //                 float dist = Vector3.Distance(transform.position, obj.transform.position);
-    //                 if (dist < closestDistance)
-    //                 {
-    //                     closestDistance = dist;
-    //                     closest = obj.transform;
-    //                 }
-    //             }
-    //         }
-    //     }
-
-    //     return closest;
-    // }
-Transform FindClosestTarget()
-{
-    float closestDistance = Mathf.Infinity;
-    Transform closest = null;
-
-    // Gộp tất cả "Bot" và "Player" vào cùng danh sách
-    var allTargets = GameObject.FindGameObjectsWithTag("Bot")
-                    .Concat(GameObject.FindGameObjectsWithTag("Player"));
-
-    foreach (var obj in allTargets)
+    Transform FindClosestTarget()
     {
-        if (obj == gameObject) continue;
+        float closestDistance = Mathf.Infinity;
+        Transform closest = null;
 
-        if (obj.CompareTag("Bot") && obj.GetComponent<BotStats>()?.currentHP <= 0) continue;
-        if (obj.CompareTag("Player") && obj.GetComponent<PlayerInfo>()?.hasDied == true) continue;
+        var allTargets = BotManager.Instance.allPlayers.Cast<MonoBehaviour>()
+                        .Concat(BotManager.Instance.allBots.Cast<MonoBehaviour>());
 
-        float dist = Vector3.Distance(transform.position, obj.transform.position);
-        if (dist < closestDistance)
+        foreach (var target in allTargets)
         {
-            closestDistance = dist;
-            closest = obj.transform;
+            if (target == this) continue;
+
+            if (target is PlayerInfo player && player.hasDied) continue;
+            if (target is BotAI bot && bot.botStats.currentHP <= 0) continue;
+
+            float dist = Vector3.Distance(transform.position, target.transform.position);
+            if (dist < closestDistance)
+            {
+                // ✳️ Check có line-of-sight không từ đây luôn
+                if (!HasClearLineOfSightTo(target.transform)) continue;
+
+                closestDistance = dist;
+                closest = target.transform;
+            }
         }
+
+        return closest;
     }
 
-    return closest;
-}
+
 
     void HandleWander()
     {
@@ -539,9 +473,11 @@ Transform FindClosestTarget()
 
             // 👉 Sau khi bắn xong, ép cooldownTarget là NGƯỢC hướng với enemy
             Vector3 offset = (transform.position - target.position).normalized;
-            Vector3 escapeDir = Quaternion.Euler(0, Random.Range(-30f, 30f), 0) * offset;
+            Vector3 escapeDir = Quaternion.Euler(0, Random.Range(-90f, 90f), 0) * offset;
 
-            cooldownTarget = ClampToNavMesh(transform.position + escapeDir * cooldownMoveDistance);
+            float escapeDistance = cooldownMoveDistance * Random.Range(1.5f, 2f); // chạy xa hơn
+            cooldownTarget = ClampToNavMesh(transform.position + escapeDir * escapeDistance);
+
             lastAttackCooldownSetTime = Time.time;
 
             // ✅ Ép quay NGAY lập tức về hướng trốn
@@ -550,10 +486,13 @@ Transform FindClosestTarget()
 
             // 👉 Ép state chuyển luôn sang Cooldown (không chờ ai)
             currentState = State.Cooldown;
+            cooldownLockUntil = Time.time + 1.4f;
             pathPoints.Clear();
             currentPathIndex = 0;
             ResetPathIfTargetChanged(cooldownTarget);
-            return; // Ngắt tại đây
+            MoveAlongPath(cooldownTarget);
+            return;
+
         }
 
 
@@ -575,19 +514,29 @@ Transform FindClosestTarget()
         // Nếu đến nơi rồi, thì chọn điểm cooldown mới
         if (Vector3.Distance(transform.position, cooldownTarget) < 4f)
         {
-            // 👉 Nếu đã hết cooldown và đủ mana thì quay lại chase
-            if (Time.time - lastAttackTime >= attackCooldown && botStats.currentMana >= 5f)
+            // 🔁 Nếu chưa hồi chiêu hoặc chưa đủ mana thì tiếp tục cooldown
+            if (Time.time - lastAttackTime < attackCooldown || botStats.currentMana < 5f)
             {
-                currentState = State.Chase;
+                cooldownTarget = GetCooldownDestination();
+                pathPoints.Clear();
+                currentPathIndex = 0;
+                ResetPathIfTargetChanged(cooldownTarget);
                 return;
             }
 
-            // 🌀 Tiếp tục cooldown - chọn hướng mới
-            cooldownTarget = GetCooldownDestination();
-            pathPoints.Clear();
-            currentPathIndex = 0;
-            ResetPathIfTargetChanged(cooldownTarget);
+            // ✅ Nếu quá xa địch, không chase mà chuyển sang Wander
+            if (target != null && Vector3.Distance(transform.position, target.position) > detectRange)
+            {
+                currentState = State.Wander;
+                return;
+            }
+
+            // ✅ Ngược lại: đã sẵn sàng chiến → Chase lại
+            currentState = State.Chase;
+            return;
         }
+
+
     }
 
 
@@ -698,7 +647,7 @@ Transform FindClosestTarget()
         if (pathTickTimer < pathTickRate) return;
         pathTickTimer = 0f;
 
-        if (pathPoints.Count == 0 || Vector3.Distance(destination, pathPoints[^1]) > 2f)
+        if (pathPoints.Count == 0 || Vector3.Distance(destination, pathPoints[^1]) > 5f)
         {
             Vector3 currentPos = ClampToNavMesh(transform.position);
             Vector3 destPos = ClampToNavMesh(destination);
@@ -779,77 +728,14 @@ Transform FindClosestTarget()
         return dest;
     }
 
-
-
-
-    Vector3 GetFleePosition()
-    {
-        Vector3 fleeDir = Vector3.zero;
-        int count = 0;
-
-        float spacingFactor = 0.6f;
-        float separationRadius = attackRange * spacingFactor;
-
-        // Né bot khác
-        foreach (var bot in GameObject.FindGameObjectsWithTag("Bot"))
-        {
-            if (bot == gameObject) continue;
-
-            float dist = Vector3.Distance(transform.position, bot.transform.position);
-            if (dist < separationRadius)
-            {
-                Vector3 away = (transform.position - bot.transform.position).normalized;
-                float weight = separationRadius - dist;
-                fleeDir += away * weight;
-                count++;
-            }
-        }
-
-        // Né player
-        foreach (var player in GameObject.FindGameObjectsWithTag("Player"))
-        {
-            var info = player.GetComponent<PlayerInfo>();
-            if (info != null && info.hasDied) continue;
-
-            float dist = Vector3.Distance(transform.position, player.transform.position);
-            if (dist < separationRadius)
-            {
-                Vector3 away = (transform.position - player.transform.position).normalized;
-                float weight = separationRadius - dist;
-                fleeDir += away * weight;
-                count++;
-            }
-        }
-
-        if (count > 0)
-        {
-            fleeDir /= count;
-            Vector3 fleeTarget = transform.position + fleeDir.normalized * fleeDistance;
-            return ClampToNavMesh(fleeTarget);
-        }
-        if (stuckTimer > 0.8f)
-        {
-            cooldownTarget = ClampToNavMesh(transform.position + Random.insideUnitSphere * 20f);
-            currentState = State.Cooldown;
-            pathPoints.Clear();
-            currentPathIndex = 0;
-        }
-
-        // fallback
-        Vector3 randomDir = Random.insideUnitSphere * fleeDistance;
-        randomDir.y = 0;
-        return ClampToNavMesh(transform.position + randomDir);
-    }
-
-
-
-
-
     void RegenMana()
     {
         if (botStats == null) return;
         botStats.currentMana += 3f;
         if (botStats.currentMana > botStats.maxMana) botStats.currentMana = botStats.maxMana;
+          botStats.currentHP += 3f;
+        if (botStats.currentHP > botStats.maxHP)
+            botStats.currentHP = botStats.maxHP;
     }
 
     void HandleDeath()
@@ -885,7 +771,7 @@ Transform FindClosestTarget()
         else
             noMoveTimer = 0f;
 
-        if (noMoveTimer > 0.3f)
+        if (noMoveTimer > 0.2f)
         {
             Vector3 dir = (target != null) ? (transform.position - target.position).normalized : Random.insideUnitSphere;
             dir.y = 0;

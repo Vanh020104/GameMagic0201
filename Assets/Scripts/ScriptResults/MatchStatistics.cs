@@ -9,6 +9,7 @@ public class MatchStatistics : MonoBehaviour
     public Button doubleRewardButton;
     private bool hasClaimedDouble = false;
     public GameObject upgradeLevelRankPanel;
+    private bool isRetrying = false;
     void Start()
     {
         // Hiển thị kết quả
@@ -206,9 +207,13 @@ public class MatchStatistics : MonoBehaviour
     // }
     public void RetryCurrentMap()
     {
+        if (isRetrying) return; // ⛔ Chống spam nút
+        isRetrying = true;
+
         if (GameData.SelectedMap == null)
         {
             Debug.LogWarning("⚠️ GameData.SelectedMap is null. Can't retry!");
+            isRetrying = false;
             return;
         }
 
@@ -220,20 +225,21 @@ public class MatchStatistics : MonoBehaviour
 
         Debug.Log($"🔁 Retry count: {retryCounter}");
 
-        // Cứ mỗi 2 lần thì bắt xem quảng cáo
-        if (retryCounter % 2 == 0)
-        {
-            Debug.Log("📺 Show ad before retrying...");
+        bool requireAd = (retryCounter % 2 == 0);
 
+        if (requireAd && Application.internetReachability != NetworkReachability.NotReachable)
+        {
+            Debug.Log("📺 Show rewarded ad before retrying...");
             AdManager.Instance.ShowRewardedAd(() =>
             {
                 ReloadBattleScene();
-                DailyTaskBridge.Instance?.TryAddProgress("watch_ads");
+                isRetrying = false;
             });
         }
         else
         {
             ReloadBattleScene();
+            isRetrying = false;
         }
     }
     private void ReloadBattleScene()
