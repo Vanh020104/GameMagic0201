@@ -109,7 +109,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 1H_Melee_Attack_Slice_Horizontal
-  m_Speed: 6
+  m_Speed: 7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7971931744185430611}
@@ -199,7 +199,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 1H_Melee_Attack_Stab
-  m_Speed: 6
+  m_Speed: 7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2297376631867631523}
@@ -547,7 +547,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 1H_Melee_Attack_Stab 0
-  m_Speed: 6
+  m_Speed: 7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7926096218671478556}
